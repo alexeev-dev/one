@@ -33,7 +33,7 @@
 
 // list items
 ul.item-list {
-	display: flex; flex-wrap: wrap; margin: -10px;
+	display: flex; flex-wrap: wrap; margin: -10px; 
 	li {
 		text-align: left;
 		width: calc(25% - 20px); margin: 10px;
@@ -115,8 +115,6 @@ ul.item-list {
 		select {
 
 		}
-		/*	общие стили для .section-header находятся выше, здесь только стили для позиционирования элементов данного модуля
-			плюс стили для селекта, после прочтения данных коментов - эти комменты удалить */
 	}
 
 	a.view-more {
@@ -220,7 +218,9 @@ ul.item-list {
 
 				ul {
 					li {
-
+						a {
+							
+						}
 					}
 				}
 			}

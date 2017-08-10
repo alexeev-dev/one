@@ -8171,9 +8171,7 @@ ul.item-list {
     -webkit-box-pack: justify;
     -webkit-justify-content: space-between;
     -ms-flex-pack: justify;
-    justify-content: space-between;
-    /*	общие стили для .section-header находятся выше, здесь только стили для позиционирования элементов данного модуля
-			плюс стили для селекта, после прочтения данных коментов - эти комменты удалить */ }
+    justify-content: space-between; }
   .search-result a.view-more {
     display: inline-block; }
     .search-result a.view-more span {
