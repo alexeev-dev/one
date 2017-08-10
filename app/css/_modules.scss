@@ -1,0 +1,229 @@
+/*********************************/
+/********** Typography ***********/
+/*********************************/
+
+
+
+
+/*********************************/
+/*********** Buttons *************/
+/*********************************/
+
+.btn {
+	line-height: initial;
+	padding: 0; margin: 0; vertical-align: baseline;
+	border: none;
+}
+
+
+
+/*********************************/
+/******** Class Helpers **********/
+/*********************************/
+.icon {
+	display: inline-block;
+}
+
+
+
+
+/*********************************/
+/*********** Modules *************/
+/*********************************/
+
+// list items
+ul.item-list {
+	display: flex; flex-wrap: wrap; margin: -10px;
+	li {
+		text-align: left;
+		width: calc(25% - 20px); margin: 10px;
+		figure {
+			img {
+				width: 100%;
+			}
+		}
+	}
+}
+
+// section header
+.section-header {
+	h1 {
+
+	}
+}
+
+// header
+.header {
+	display: flex; justify-content: space-between;
+
+	a.logo {
+
+	}
+
+	ul {
+		display: flex;
+	}
+}
+
+// login form
+.login {
+
+	h2 {
+
+	}
+
+	& > ul {
+		display: flex;
+		& > li {
+			width: 50%;
+
+			form {
+				input {
+					display: block; width: 100%;
+				}
+				& > a {
+
+				}
+				ul {
+					display: flex; justify-content: flex-end;
+					li {
+						a {
+
+							&.btn {
+
+							}
+						}
+					}
+				}
+			}
+
+			a.login-social {
+				display: block;
+				&:last-child {
+					margin-bottom: 0;
+				}
+			}
+		}
+	}
+}
+
+// search result
+.search-result {
+	text-align: center;
+	.section-header {
+		display: flex; justify-content: space-between;
+		select {
+
+		}
+		/*	общие стили для .section-header находятся выше, здесь только стили для позиционирования элементов данного модуля
+			плюс стили для селекта, после прочтения данных коментов - эти комменты удалить */
+	}
+
+	a.view-more {
+		display: inline-block;
+		span {
+			text-align: left;
+			display: block;
+		}
+		em {
+			text-align: left;
+			display: block; width: 33px; height: 33px; position: relative; padding: 11px 0 0 11px; margin: 0 auto;
+			border: 1px solid #4489ff; border-radius: 50%;
+			i {
+				vertical-align: top;
+			}
+		}
+	}
+}
+
+// new posts
+.new-post {
+	.project {
+		& > a {
+
+		}
+		& > p {
+
+		}
+		ul.lists {
+			display: flex;
+			& > li {
+				width: 33.33333%;
+
+				ul.list {
+					& > li {
+
+					}
+				}
+			}
+		}
+	}
+}
+
+
+
+// partners
+.partners {
+	& > ul {
+		display: flex;
+		& > li {
+			&:first-child {
+				width: 70%;
+				ul {
+					display: flex; flex-wrap: wrap; flex-wrap: wrap;
+					li {
+						width: 14.285714%;
+					}
+				}
+			}
+			&:last-child {
+				width: 30%;
+				ul {
+					display: flex;
+					li {
+						width: 50%;
+					}
+				}
+			}
+		}
+	}
+}
+
+// footer
+.footer {
+	ul {
+		&.info {
+			display: flex;
+			li {
+				width: 50%;
+				&:first-child {
+					text-align: right;
+				}
+			}
+		}
+		&.contacts {
+			display: flex;
+			& > li {
+				&:first-child {
+					width: 20%;
+				}
+				&:nth-child(2) {
+					width: 30%;
+				}
+				&:nth-child(3) {
+					width: 30%;
+				}
+				&:last-child {
+					text-align: right;
+					width: 20%;
+				}
+
+				ul {
+					li {
+
+					}
+				}
+			}
+		}
+	}
+}

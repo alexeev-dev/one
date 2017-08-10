@@ -1,0 +1,14 @@
+/* Welcome to Compass. Use this file to define print styles.
+ * Import this file using the following HTML or equivalent:
+ * <link href="/css/print.css" media="print" rel="stylesheet" type="text/css"> 
+ */
+ 
+@media print {
+	
+    * {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster: h5bp.com/s */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+}

@@ -1,0 +1,102 @@
+/*
+Icon classes can be used entirely standalone. They are named after their original file names.
+
+Example usage in HTML:
+
+`display: block` sprite:
+<div class="icon-home"></div>
+
+To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+
+// CSS
+.icon {
+  display: inline-block;
+}
+
+// HTML
+<i class="icon icon-home"></i>
+*/
+.icon-buy-bicycle {
+  background-image: url(../img/sprite.png);
+  background-position: -39px 0px;
+  width: 48px;
+  height: 28px;
+}
+.icon-buy-bone {
+  background-image: url(../img/sprite.png);
+  background-position: -87px -35px;
+  width: 35px;
+  height: 35px;
+}
+.icon-buy-comb {
+  background-image: url(../img/sprite.png);
+  background-position: -87px 0px;
+  width: 35px;
+  height: 35px;
+}
+.icon-buy-easel {
+  background-image: url(../img/sprite.png);
+  background-position: -122px 0px;
+  width: 26px;
+  height: 38px;
+}
+.icon-buy-home {
+  background-image: url(../img/sprite.png);
+  background-position: -41px -38px;
+  width: 36px;
+  height: 31px;
+}
+.icon-buy-pram {
+  background-image: url(../img/sprite.png);
+  background-position: 0px 0px;
+  width: 39px;
+  height: 38px;
+}
+.icon-buy-search {
+  background-image: url(../img/sprite.png);
+  background-position: -122px -38px;
+  width: 16px;
+  height: 16px;
+}
+.icon-buy-stand {
+  background-image: url(../img/sprite.png);
+  background-position: 0px -70px;
+  width: 32px;
+  height: 31px;
+}
+.icon-buy-tv {
+  background-image: url(../img/sprite.png);
+  background-position: 0px -38px;
+  width: 41px;
+  height: 32px;
+}
+.icon-header_plus {
+  background-image: url(../img/sprite.png);
+  background-position: -138px -38px;
+  width: 10px;
+  height: 10px;
+}
+.icon-header_search {
+  background-image: url(../img/sprite.png);
+  background-position: -135px -68px;
+  width: 12px;
+  height: 11px;
+}
+.icon-heart-big {
+  background-image: url(../img/sprite.png);
+  background-position: -122px -54px;
+  width: 16px;
+  height: 14px;
+}
+.icon-heart {
+  background-image: url(../img/sprite.png);
+  background-position: -122px -68px;
+  width: 13px;
+  height: 12px;
+}
+.icon-view-more {
+  background-image: url(../img/sprite.png);
+  background-position: -138px -54px;
+  width: 10px;
+  height: 10px;
+}

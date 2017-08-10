@@ -1,0 +1,112 @@
+@import 'bower_components/bootstrap/dist/css/bootstrap.min';
+@import 'bower_components/font-awesome/scss/font-awesome';
+
+// Используй это миксин для всего конфига!
+@mixin font-type($font-family, $font-size, $line-height, $letter-spacing) {
+	font-family: $font-family;
+	font-size: $font-size;
+	line-height: $line-height;
+	letter-spacing: $letter-spacing;
+}
+
+// responsive
+@mixin respond-to($media) {
+
+	// mobile first
+	@if $media == mobile {@media (max-width: 400px) {@content;}}
+
+	// grid
+	@else if $media == xs {@media (max-width: 480px) {@content;}}
+	@else if $media == sm {@media (max-width: 767px) {@content;}}
+	@else if $media == md {@media (max-width: 991px) {@content;}}
+	@else if $media == lg {@media (max-width: 1199px) {@content;}}
+	@else if $media == desktop {@media (max-width: 1299px) {@content;}}
+	@else {@media (max-width: $media) {@content;}}
+}
+
+// fonts
+@mixin font-face($file-path, $font-family) {
+
+	@font-face {
+		font-family: $font-family;
+		src: url('../fonts/' + $file-path + '/' + $file-path + '.eot');
+		src: url('../fonts/' + $file-path + '/' + $file-path + '.eot') format('embedded-opentype'),
+		url('../fonts/' + $file-path + '/' + $file-path + '.woff2') format('woff2'),
+		url('../fonts/' + $file-path + '/' + $file-path + '.woff') format('woff'),
+		url('../fonts/' + $file-path + '/' + $file-path + '.ttf') format('truetype'),
+		url('../fonts/' + $file-path + '/' + $file-path + '.svg##{$file-path}') format('svg');      
+
+		font-weight: normal;
+		font-style: normal;
+	}
+
+	@media screen and (-webkit-min-device-pixel-ratio: 0) {
+		@font-face {
+			font-family: $font-family;
+			src: url('../fonts/' + $file-path + '/' + $file-path + '.svg##{$file-path}') format('svg');
+		}
+	}
+}
+
+
+/* Определяем шрифты */
+$main-font: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+body {
+	height: auto !important;
+	&.onload {overflow:hidden;}
+
+	/* устанавливаем оптимальный вертикальный ритм */
+	@include font-type($main-font, 14px, 20px, 0px);
+
+	* {
+		-webkit-font-smoothing: antialiased !important;
+	}
+}
+
+/* В дополнение от Bootstrap, <p> (параграфы) получают нижний отступ в половину калькулируемой высоты строки (изначально 10px) */
+h1,h2,h3,h4,h5,h6,p, ul {
+	margin: 0;
+}
+
+a {
+	text-decoration: none;
+
+	&:hover,
+	&:focus,
+	&:active {
+		text-decoration: none;
+	}
+}
+
+audio,
+canvas,
+img,
+video {
+    vertical-align: middle;
+}
+
+form {
+	input,
+	select,
+	textarea {
+		-webkit-appearance: none;
+		text-overflow: ellipsis;
+		outline: none;
+
+		&:focus,
+		&:active {
+			text-overflow: ellipsis;
+		}
+	}
+
+	textarea {
+    	resize: vertical;
+	}
+}
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}

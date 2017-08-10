@@ -1,0 +1,24 @@
+{
+  "name": "One",
+  "description": "One",
+  "main": "",
+  "authors": [
+    "Alexeev"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "normalize-css": "^6.0.0",
+    "font-awesome": "^4.7.0",
+    "animate.css": "^3.5.2",
+    "bootstrap": "^3.3.7",
+    "jquery": "2.2.4"
+  }
+}

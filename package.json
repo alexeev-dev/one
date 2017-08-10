@@ -1,0 +1,26 @@
+{
+  "name": "One",
+  "version": "1.0.0",
+  "description": "One",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Alexeev",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.14.0",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-cssmin": "^0.1.7",
+    "gulp-imagemin": "^3.2.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-rigger": "^0.5.8",
+    "gulp-sass": "^2.3.2",
+    "gulp-uglify": "^2.1.2",
+    "gulp-uncss": "^1.0.6",
+    "gulp.spritesmith": "^6.4.0",
+    "merge-stream": "^1.0.1",
+    "vinyl-buffer": "^1.0.0"
+  }
+}
