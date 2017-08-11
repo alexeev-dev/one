@@ -54,9 +54,8 @@ ul.item-list {
 
 // header
 .wr-header {
-	position: relative;
-	background: #fff;
-	box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+	position: relative; background: #fff; box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+	z-index: 1;
 }
 .header {
 	display: flex; justify-content: space-between;
@@ -66,22 +65,16 @@ ul.item-list {
 	}
 
 	ul {
-		display: flex;
-		margin-top: 25px;
+		display: flex; margin-top: 25px;
 		li {
 			margin-left: 40px;
 			&.active {
 				a {
-					display: inline-block;
-					border-bottom-color: #4489ff;
+					display: inline-block; border-bottom-color: #4489ff;
 				}
 			}
 			a {
-				//@include font-type($CormacEL, 14px, 19px, 0.5px);
-				font-size: 14px;
-				font-family: $CormacEL;
-				line-height: 19px;
-				letter-spacing: 0.5px;	
+				@include font-type($CormacEL, 14px, 19px, 0.5px);	
 				padding-bottom: 17px;
 				border-bottom: 2px solid transparent;
 				color: $main-color-text;

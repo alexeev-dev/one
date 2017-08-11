@@ -8144,7 +8144,8 @@ ul.item-list {
   position: relative;
   background: #fff;
   -webkit-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05); }
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  z-index: 1; }
 
 .header {
   display: -webkit-box;
@@ -8169,8 +8170,8 @@ ul.item-list {
         display: inline-block;
         border-bottom-color: #4489ff; }
       .header ul li a {
-        font-size: 14px;
         font-family: "Cormac-ExtraLight", sans-serif;
+        font-size: 14px;
         line-height: 19px;
         letter-spacing: 0.5px;
         padding-bottom: 17px;
