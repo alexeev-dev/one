@@ -7989,85 +7989,103 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
 */
 .icon-buy-bicycle {
   background-image: url(../img/sprite.png);
-  background-position: -39px 0px;
+  background-position: 0px -77px;
   width: 48px;
   height: 28px; }
 
 .icon-buy-bone {
   background-image: url(../img/sprite.png);
-  background-position: -87px -35px;
+  background-position: -118px -67px;
   width: 35px;
   height: 35px; }
 
 .icon-buy-comb {
   background-image: url(../img/sprite.png);
-  background-position: -87px 0px;
+  background-position: -118px -32px;
   width: 35px;
   height: 35px; }
 
 .icon-buy-easel {
   background-image: url(../img/sprite.png);
-  background-position: -122px 0px;
+  background-position: -159px 0px;
   width: 26px;
   height: 38px; }
 
 .icon-buy-home {
   background-image: url(../img/sprite.png);
-  background-position: -41px -38px;
+  background-position: -79px -38px;
   width: 36px;
   height: 31px; }
 
 .icon-buy-pram {
   background-image: url(../img/sprite.png);
-  background-position: 0px 0px;
+  background-position: -79px 0px;
   width: 39px;
   height: 38px; }
 
 .icon-buy-search {
   background-image: url(../img/sprite.png);
-  background-position: -122px -38px;
+  background-position: -159px -38px;
   width: 16px;
   height: 16px; }
 
 .icon-buy-stand {
   background-image: url(../img/sprite.png);
-  background-position: 0px -70px;
+  background-position: 0px -105px;
   width: 32px;
   height: 31px; }
 
 .icon-buy-tv {
   background-image: url(../img/sprite.png);
-  background-position: 0px -38px;
+  background-position: -118px 0px;
   width: 41px;
   height: 32px; }
 
+.icon-clock {
+  background-image: url(../img/sprite.png);
+  background-position: -159px -80px;
+  width: 11px;
+  height: 11px; }
+
+.icon-empty {
+  background-image: url(../img/sprite.png);
+  background-position: 0px 0px;
+  width: 79px;
+  height: 77px; }
+
 .icon-header_plus {
   background-image: url(../img/sprite.png);
-  background-position: -138px -38px;
+  background-position: -175px -38px;
   width: 10px;
   height: 10px; }
 
 .icon-header_search {
   background-image: url(../img/sprite.png);
-  background-position: -135px -68px;
+  background-position: -172px -68px;
   width: 12px;
   height: 11px; }
 
 .icon-heart-big {
   background-image: url(../img/sprite.png);
-  background-position: -122px -54px;
+  background-position: -159px -54px;
   width: 16px;
   height: 14px; }
 
 .icon-heart {
   background-image: url(../img/sprite.png);
-  background-position: -122px -68px;
+  background-position: -159px -68px;
   width: 13px;
   height: 12px; }
 
+.icon-marker {
+  background-image: url(../img/sprite.png);
+  background-position: -170px -80px;
+  width: 8px;
+  height: 11px; }
+
 .icon-view-more {
   background-image: url(../img/sprite.png);
-  background-position: -138px -54px;
+  background-position: -175px -54px;
   width: 10px;
   height: 10px; }
 
@@ -8120,9 +8138,109 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
 .icon {
   display: inline-block; }
 
+@media all and (min-width: 1250px) {
+  .container {
+    width: 1210px; } }
+
+.content-block {
+  background: #ffffff; }
+
 /*********************************/
 /*********** Modules *************/
 /*********************************/
+.rating p {
+  text-align: right; }
+
+.rating ul li {
+  display: inline-block; }
+  .rating ul li i {
+    color: #c0d1dd; }
+
+.rating.rating-0 ul li:nth-child(0) i {
+  color: #f5a623; }
+
+.rating.rating-1 ul li:nth-child(0) i {
+  color: #f5a623; }
+
+.rating.rating-1 ul li:nth-child(1) i {
+  color: #f5a623; }
+
+.rating.rating-2 ul li:nth-child(0) i {
+  color: #f5a623; }
+
+.rating.rating-2 ul li:nth-child(1) i {
+  color: #f5a623; }
+
+.rating.rating-2 ul li:nth-child(2) i {
+  color: #f5a623; }
+
+.rating.rating-3 ul li:nth-child(0) i {
+  color: #f5a623; }
+
+.rating.rating-3 ul li:nth-child(1) i {
+  color: #f5a623; }
+
+.rating.rating-3 ul li:nth-child(2) i {
+  color: #f5a623; }
+
+.rating.rating-3 ul li:nth-child(3) i {
+  color: #f5a623; }
+
+.rating.rating-4 ul li:nth-child(0) i {
+  color: #f5a623; }
+
+.rating.rating-4 ul li:nth-child(1) i {
+  color: #f5a623; }
+
+.rating.rating-4 ul li:nth-child(2) i {
+  color: #f5a623; }
+
+.rating.rating-4 ul li:nth-child(3) i {
+  color: #f5a623; }
+
+.rating.rating-4 ul li:nth-child(4) i {
+  color: #f5a623; }
+
+.rating.rating-5 ul li:nth-child(0) i {
+  color: #f5a623; }
+
+.rating.rating-5 ul li:nth-child(1) i {
+  color: #f5a623; }
+
+.rating.rating-5 ul li:nth-child(2) i {
+  color: #f5a623; }
+
+.rating.rating-5 ul li:nth-child(3) i {
+  color: #f5a623; }
+
+.rating.rating-5 ul li:nth-child(4) i {
+  color: #f5a623; }
+
+.rating.rating-5 ul li:nth-child(5) i {
+  color: #f5a623; }
+
+ul.profile-table > li > ul {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between; }
+
+.breadcrumbs {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between; }
+  .breadcrumbs ul li {
+    display: inline-block; }
+
 ul.item-list {
   display: -webkit-box;
   display: -webkit-flex;
@@ -8307,6 +8425,119 @@ ul.item-list {
   .new-post .project ul.lists > li {
     width: 33.33333%; }
 
+.profile-tabs {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex; }
+
+.profile .doings .masonry-grid:after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 0;
+  clear: both; }
+
+.profile .doings .masonry-item {
+  width: 50%;
+  float: left; }
+  .profile .doings .masonry-item > ul > li {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center; }
+
+.profile .purchases table, .profile .advertisement table {
+  width: 100%; }
+  .profile .purchases table tr, .profile .advertisement table tr {
+    overflow: hidden;
+    position: relative; }
+    .profile .purchases table tr td .item-info, .profile .advertisement table tr td .item-info {
+      position: absolute;
+      top: 18px;
+      left: 0;
+      width: 100%;
+      padding-left: 59px; }
+
+.profile .bookmarks > ul > li {
+  padding-left: 176px;
+  padding-right: 101px;
+  position: relative;
+  height: 135px;
+  margin-bottom: 10px;
+  background: #f6f8fb; }
+  .profile .bookmarks > ul > li:last-child {
+    margin-bottom: 0; }
+  .profile .bookmarks > ul > li figure {
+    position: absolute;
+    left: 0;
+    top: 0; }
+  .profile .bookmarks > ul > li ul.item-info {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between; }
+    .profile .bookmarks > ul > li ul.item-info > li:last-child {
+      text-align: right; }
+    .profile .bookmarks > ul > li ul.item-info > li ul li {
+      display: inline-block; }
+  .profile .bookmarks > ul > li > a {
+    display: block;
+    width: 44px;
+    height: 44px;
+    position: absolute;
+    right: 25px;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    background: #ffffff;
+    -webkit-border-radius: 50%;
+    border-radius: 50%; }
+    .profile .bookmarks > ul > li > a i {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%); }
+
+.profile .reviews > ul > li {
+  position: relative;
+  padding: 27px 340px 38px 28px;
+  margin-bottom: 10px;
+  background: #f6f8fb; }
+  .profile .reviews > ul > li:last-child {
+    margin-bottom: 0; }
+  .profile .reviews > ul > li:after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 0;
+    clear: both; }
+  .profile .reviews > ul > li figure {
+    float: left;
+    margin-right: 70px;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    overflow: hidden; }
+  .profile .reviews > ul > li .rating {
+    position: absolute;
+    right: 20px;
+    top: 30px; }
+
 .wr-partners {
   background: #fff; }
 
@@ -8369,7 +8600,9 @@ ul.item-list {
 .app {
   min-width: 320px;
   overflow-x: hidden;
-  background: #e6f2f7; }
+  background: #eceff4; }
+  .app .wr-profile {
+    margin-bottom: 50px; }
   .app .wr-partners {
     background: #ffffff; }
   .app .wr-footer {
