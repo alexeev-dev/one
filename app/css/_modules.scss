@@ -101,7 +101,6 @@ ul.item-list {
 		text-align: left;
 		width: calc(25% - 20px); margin: 10px;
 		background: #fff; border-radius: 5px; box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.1);
-		cursor: pointer;
 		&:hover {
 			figcaption {
 				opacity: 1;
@@ -126,11 +125,24 @@ ul.item-list {
 
 		.item-body {
 			padding: 20px;
-			p {
-				color: #8d8d8d; font-size: 12px;
-				span {
-					display: block;
+			h4 {
+				margin-bottom: 10px;
+				a {
+					@include font-type($CormacEL, 18px, 1, -0.5px); color: $main-color-text; color: #000;
 				}
+			}
+			.item-text {
+				display: flex; justify-content: space-between;
+				p {
+					color: #8d8d8d; font-size: 12px;
+					span {
+						font-size: 12px;
+						display: block;
+					}
+				}
+				span {
+						@include font-type($CormacEL, 18px, 1, -0.5px);
+					}
 			}
 		}
 	}
@@ -144,10 +156,6 @@ ul.item-list {
 }
 
 // header
-.wr-header {
-	position: relative; z-index: 1; 
-	background: #fff; box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-}
 .header {
 	display: flex; justify-content: space-between;
 
@@ -182,9 +190,6 @@ ul.item-list {
 }
 
 // login form
-.wr-login {
-	background: #fff;
-}
 .login {
 
 	h2 {
@@ -227,10 +232,6 @@ ul.item-list {
 }
 
 //buy
-.wr-buy {
-	background: #fff;
-}
-
 .buy {
 	position: relative; padding-bottom: 1px;
 	&:after {
@@ -339,10 +340,11 @@ ul.item-list {
 	}
 
 	a.view-more {
-		display: inline-block;
+		color: rgba(0, 0, 0, 0.7);
+		display: inline-block; margin-top: 30px;
 		span {
 			text-align: left;
-			display: block;
+			display: block; margin-bottom: 10px;
 		}
 		em {
 			text-align: left;
@@ -564,16 +566,17 @@ ul.item-list {
 
 
 // partners
-.wr-partners {
-	background: #fff;
-}
-
 .partners {
 	& > ul {
 		display: flex;
 		& > li {
+			h4 {
+				@include font-type($Helvetica, 14px, 18px, 0.5px); text-align: center; text-transform: uppercase; color: #4a4a4a;
+				margin: 40px 0;
+			}
 			&:first-child {
 				width: 70%;
+
 				ul {
 					display: flex; flex-wrap: wrap; flex-wrap: wrap;
 					li {
@@ -595,23 +598,35 @@ ul.item-list {
 }
 
 // footer
-.wr-footer {
-	background: #3f86ff;
-}
-
 .footer {
+	padding-top: 20px;
 	ul {
 		&.info {
 			display: flex;
 			li {
-				width: 50%;
+				width: 50%; padding-left: 20px;
 				&:first-child {
 					text-align: right;
+					padding: 20px 20px 20px 0;
+					border-right: 1px solid #79abff;
+					p {
+						color: #fff; font-size: 24px;
+						margin-bottom: 20px;
+					}
+					a {
+						@include font-type($HelveticaL, 22px, 18px, 0.5px); color: #fff;
+					}
 				}
 			}
 		}
 		&.contacts {
-			display: flex;
+			display: flex; position: relative; padding-top: 20px; padding-bottom: 20px; margin-top: 20px;
+			&:after {
+				content: '';
+				position: absolute; top:0; left:50%; margin-left: -5000px; width:10000px; height: 1px; 
+				background: #79abff;
+			}
+
 			& > li {
 				&:first-child {
 					width: 20%;
@@ -630,7 +645,7 @@ ul.item-list {
 				ul {
 					li {
 						a {
-							
+							color: #fff;
 						}
 					}
 				}

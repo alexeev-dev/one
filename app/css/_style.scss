@@ -1,24 +1,26 @@
 .app {
-<<<<<<< HEAD
+
 	min-width: 320px; overflow-x: hidden;
-	background: $main-color;
-=======
-	min-width: 320px;
-	overflow-x: hidden;
-	background: #eceff4;
->>>>>>> 864d196e5a018e786e88ad989f0c181480ff8ea5
+	background: #f6f8fb;
+
 
 	.wr {
 		&-header {
-			
+			position: relative; z-index: 1; 
+			background: #fff; box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
 		}
 
-<<<<<<< HEAD
-		&-search-result {
-			border-top: 1px solid #d9e4ea;
-=======
-		&-search-reuslt {
+		&-login {
+			background: #fff;
+		}
 
+		&-buy {
+			background: #fff;
+		}
+
+		&-search-result {
+			padding-bottom: 30px;
+			border-top: 1px solid #d9e4ea; border-bottom: 2px solid #edf2f5;
 		}
 
 		&-new_post {
@@ -31,10 +33,11 @@
 
 		&-fonds {
 			
->>>>>>> 864d196e5a018e786e88ad989f0c181480ff8ea5
+
 		}
 
 		&-partners {
+			padding-bottom: 30px;
 			background: #ffffff;
 		}
 		
