@@ -1,28 +1,18 @@
 .app {
-<<<<<<< HEAD
 	min-width: 320px; overflow-x: hidden;
-	background: $main-color;
-=======
-	min-width: 320px;
-	overflow-x: hidden;
 	background: #eceff4;
->>>>>>> 864d196e5a018e786e88ad989f0c181480ff8ea5
 
 	.wr {
 		&-header {
 			
 		}
 
-<<<<<<< HEAD
 		&-search-result {
 			border-top: 1px solid #d9e4ea;
-=======
-		&-search-reuslt {
-
 		}
 
 		&-new_post {
-
+			margin-bottom: 50px;
 		}
 
 		&-profile {
@@ -30,8 +20,7 @@
 		}
 
 		&-fonds {
-			
->>>>>>> 864d196e5a018e786e88ad989f0c181480ff8ea5
+
 		}
 
 		&-partners {
