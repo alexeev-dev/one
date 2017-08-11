@@ -1,13 +1,20 @@
 .app {
+
 	min-width: 320px; overflow-x: hidden;
-	background: #eceff4;
+	background: #f6f8fb;
 
 	.wr {
 		&-header {
-			
+			position: relative; z-index: 1; 
+			background: #fff; box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
 		}
 
 		&-search-result {
+			border-top: 1px solid #d9e4ea;
+		}
+
+		&-search-result {
+			padding-bottom: 30px;
 			border-top: 1px solid #d9e4ea;
 		}
 
@@ -20,10 +27,19 @@
 		}
 
 		&-fonds {
+			
+		}
 
+		&-login {
+			background: #fff;
+		}
+
+		&-buy {
+			background: #fff;
 		}
 
 		&-partners {
+			padding-bottom: 30px;
 			background: #ffffff;
 		}
 		
