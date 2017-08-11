@@ -53,19 +53,74 @@ ul.item-list {
 }
 
 // header
+.wr-header {
+	position: relative;
+	background: #fff;
+	box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+}
 .header {
 	display: flex; justify-content: space-between;
 
 	a.logo {
-
+		margin-top: 20px;
 	}
 
 	ul {
 		display: flex;
+		margin-top: 25px;
+		li {
+			margin-left: 40px;
+			&.active {
+				a {
+					display: inline-block;
+					border-bottom-color: #4489ff;
+				}
+			}
+			a {
+				//@include font-type($CormacEL, 14px, 19px, 0.5px);
+				font-size: 14px;
+				font-family: $CormacEL;
+				line-height: 19px;
+				letter-spacing: 0.5px;	
+				padding-bottom: 17px;
+				border-bottom: 2px solid transparent;
+				color: $main-color-text;
+
+				i {
+					margin-right: 5px;
+				}
+
+				&:hover {
+					border-bottom-color: #4489ff;
+				}
+			}
+		}
+	}
+}
+
+//content
+.content-wrap {
+	margin-bottom: 50px;
+	padding: 30px 0;
+	background: #fff;
+	box-shadow: 0 1px 12px 0 rgba(0, 0, 0, 0.05);
+
+	&.container {
+		padding:0 ;
+	}
+
+	& > .row {
+		margin: 0;
+			& > div {
+				padding: 0;
+			}
 	}
 }
 
 // login form
+.wr-login {
+	background: #fff;
+}
 .login {
 
 	h2 {
@@ -106,6 +161,81 @@ ul.item-list {
 		}
 	}
 }
+
+//buy
+.wr-buy {
+	border-bottom: 1px solid #d9e4ea;	
+}
+
+.buy {
+	.buy-nav {
+		ul {
+			display: flex;
+			justify-content: space-around;
+			padding-top: 25px;
+
+			li {
+				text-align: center;
+				&.active {
+					a {
+						border-bottom-color: #4489ff;
+					}
+					
+				}
+				
+				a {
+					display: block;
+					color: #4a4a4a;
+					padding-bottom: 15px;
+					border-bottom: 2px solid transparent;	
+					&:hover {
+						border-bottom-color: #4489ff;
+					}
+
+					span.icon-buy-wrapp {
+						display: block;
+						height: 35px;
+						margin: 0 auto 13px auto;
+
+						i {
+
+						}
+					}
+					
+
+					span {
+						display: inline-block;
+					}
+				}	
+			}
+		}
+	}
+}
+
+//search 
+.wr-search {}
+
+.search-block {
+	display: flex; justify-content: space-between;
+
+	.search-area {
+		input {
+			background: #f6f8fb;
+			border: none;
+			color: #4a4a4a;
+		}
+		button {
+			background: $btn-color;
+			border: none;
+		}
+	}
+
+	.price {
+
+	}
+}
+
+
 
 // search result
 .search-result {
@@ -161,6 +291,10 @@ ul.item-list {
 
 
 // partners
+.wr-partners {
+	background: #fff;
+}
+
 .partners {
 	& > ul {
 		display: flex;
@@ -188,6 +322,10 @@ ul.item-list {
 }
 
 // footer
+.wr-footer {
+	background: #3f86ff;
+}
+
 .footer {
 	ul {
 		&.info {

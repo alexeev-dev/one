@@ -8071,6 +8071,24 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
   width: 10px;
   height: 10px; }
 
+@font-face {
+  font-family: Cormac-ExtraLight;
+  src: url("../fonts/Cormac-ExtraLight/Cormac-ExtraLight.eot");
+  src: url("../fonts/Cormac-ExtraLight/Cormac-ExtraLight.eot") format("embedded-opentype"), url("../fonts/Cormac-ExtraLight/Cormac-ExtraLight.woff2") format("woff2"), url("../fonts/Cormac-ExtraLight/Cormac-ExtraLight.woff") format("woff"), url("../fonts/Cormac-ExtraLight/Cormac-ExtraLight.ttf") format("truetype"), url("../fonts/Cormac-ExtraLight/Cormac-ExtraLight.svg#Cormac-ExtraLight") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  @font-face {
+    font-family: Cormac-ExtraLight;
+    src: url("../fonts/Cormac-ExtraLight/Cormac-ExtraLight.svg#Cormac-ExtraLight") format("svg"); } }
+
+/***********************/
+/******** Colors *******/
+/***********************/
+/***********************/
+/******** Fonts ********/
+/***********************/
 /*********************************/
 /********** Typography ***********/
 /*********************************/
@@ -8122,6 +8140,12 @@ ul.item-list {
     ul.item-list li figure img {
       width: 100%; }
 
+.wr-header {
+  position: relative;
+  background: #fff;
+  -webkit-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05); }
+
 .header {
   display: -webkit-box;
   display: -webkit-flex;
@@ -8131,11 +8155,47 @@ ul.item-list {
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between; }
+  .header a.logo {
+    margin-top: 20px; }
   .header ul {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
-    display: flex; }
+    display: flex;
+    margin-top: 25px; }
+    .header ul li {
+      margin-left: 40px; }
+      .header ul li.active a {
+        display: inline-block;
+        border-bottom-color: #4489ff; }
+      .header ul li a {
+        font-size: 14px;
+        font-family: "Cormac-ExtraLight", sans-serif;
+        line-height: 19px;
+        letter-spacing: 0.5px;
+        padding-bottom: 17px;
+        border-bottom: 2px solid transparent;
+        color: #000; }
+        .header ul li a i {
+          margin-right: 5px; }
+        .header ul li a:hover {
+          border-bottom-color: #4489ff; }
+
+.content-wrap {
+  margin-bottom: 50px;
+  padding: 30px 0;
+  background: #fff;
+  -webkit-box-shadow: 0 1px 12px 0 rgba(0, 0, 0, 0.05);
+  box-shadow: 0 1px 12px 0 rgba(0, 0, 0, 0.05); }
+  .content-wrap.container {
+    padding: 0; }
+  .content-wrap > .row {
+    margin: 0; }
+    .content-wrap > .row > div {
+      padding: 0; }
+
+.wr-login {
+  background: #fff; }
 
 .login > ul {
   display: -webkit-box;
@@ -8160,6 +8220,53 @@ ul.item-list {
       display: block; }
       .login > ul > li a.login-social:last-child {
         margin-bottom: 0; }
+
+.wr-buy {
+  border-bottom: 1px solid #d9e4ea; }
+
+.buy .buy-nav ul {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  padding-top: 25px; }
+  .buy .buy-nav ul li {
+    text-align: center; }
+    .buy .buy-nav ul li.active a {
+      border-bottom-color: #4489ff; }
+    .buy .buy-nav ul li a {
+      display: block;
+      color: #4a4a4a;
+      padding-bottom: 15px;
+      border-bottom: 2px solid transparent; }
+      .buy .buy-nav ul li a:hover {
+        border-bottom-color: #4489ff; }
+      .buy .buy-nav ul li a span.icon-buy-wrapp {
+        display: block;
+        height: 35px;
+        margin: 0 auto 13px auto; }
+      .buy .buy-nav ul li a span {
+        display: inline-block; }
+
+.search-block {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between; }
+  .search-block .search-area input {
+    background: #f6f8fb;
+    border: none;
+    color: #4a4a4a; }
+  .search-block .search-area button {
+    background: #4489ff;
+    border: none; }
 
 .search-result {
   text-align: center; }
@@ -8199,6 +8306,9 @@ ul.item-list {
   .new-post .project ul.lists > li {
     width: 33.33333%; }
 
+.wr-partners {
+  background: #fff; }
+
 .partners > ul {
   display: -webkit-box;
   display: -webkit-flex;
@@ -8226,6 +8336,9 @@ ul.item-list {
       display: flex; }
       .partners > ul > li:last-child ul li {
         width: 50%; }
+
+.wr-footer {
+  background: #3f86ff; }
 
 .footer ul.info {
   display: -webkit-box;
@@ -8255,7 +8368,7 @@ ul.item-list {
 .app {
   min-width: 320px;
   overflow-x: hidden;
-  background: #ffffff; }
+  background: #e6f2f7; }
   .app .wr-partners {
     background: #ffffff; }
   .app .wr-footer {
