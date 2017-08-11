@@ -1,11 +1,14 @@
 .app {
-	min-width: 320px;
-	overflow-x: hidden;
+	min-width: 320px; overflow-x: hidden;
 	background: $main-color;
 
 	.wr {
 		&-header {
 			
+		}
+
+		&-search-result {
+			border-top: 1px solid #d9e4ea;
 		}
 
 		&-partners {
