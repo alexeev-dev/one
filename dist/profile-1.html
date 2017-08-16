@@ -63,37 +63,7 @@
 		</header>
 
 		<!-- Login Form -->
-		<section class="wr-login">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-12">
-						
-						<!-- Login Form -->
-						<div class="login">
-							<h2>Вход</h2>
-							<ul>
-								<li>
-									<form action="#">
-										<input type="text" placeholder="E-mail">
-										<input type="password" placeholder="Пароль">
-										<a href="#">Напомнить пароль</a>
-										<ul>
-											<li><a href="#">Зарегистрироваться</a></li>
-											<li><a href="#" class="btn">Войти</a></li>
-										</ul>
-									</form>
-								</li>
-								<li>
-									<a href="#" class="login-social"><i class="fa fa-vk"></i>В контакте</a>
-									<a href="#" class="login-social"><i class="fa fa-facebook"></i>Facebook</a>
-								</li>
-							</ul>
-						</div>
-		
-					</div>
-				</div>
-			</div>
-		</section>
+		<!--//= tpl/login.html-->
 
 		<!-- Profile -->
 		<section class="wr-profile">
@@ -109,7 +79,7 @@
 									<li><a href="#">Личный кабинет</a></li>
 								</ul>
 								<ul class="share">
-									<li>Поделиться</li>
+									<li>Поделиться:</li>
 									<li><a href="#"><i class="fa fa-vk"></i></a></li>
 									<li><a href="#"><i class="fa fa-facebook"></i></a></li>
 								</ul>
@@ -120,12 +90,14 @@
 									<figure>
 										<img src="assets/img/user-1.png">
 									</figure>
-									<h1>Василий Раушенберг</h1>
-									<ul>
-										<li><span>18 325 <em>₽</em></span> Вы пожертвовали</li>
-										<li><span>24</span> Людям помогли</li>
-										<li><span>2</span> Фонда поддержали</li>
-									</ul>
+									<section>
+										<h1>Василий Раушенберг</h1>
+										<ul>
+											<li><span>18 325 <span class="rub">a</span></span> Вы пожертвовали</li>
+											<li><span>24</span> Людям помогли</li>
+											<li><span>2</span> Фонда поддержали</li>
+										</ul>
+									</section>
 								</div>
 								<ul class="profile-tabs">
 									<li class="active"><a href="#">Добрые дела<span> 3</span></a></li>
@@ -140,80 +112,87 @@
 									<ul class="doings-tabs">
 										<li>Направления</li>
 										<li class="active"><a href="#">Фонды</a></li>
-										<li><a href="#">Проекты</a></li>
+										<li><a href="#"> Проекты</a></li>
 										<li><a href="#">Люди</a></li>
 									</ul>
 									<div class="masonry-grid">
 										<div class="masonry-item">
 											<div class="item-header">
 												<figure>
-													<img src="" alt="">
+													<img src="assets/img/doings-img.png" alt="">
 												</figure>
-												<h3>Фонд «Дар»</h3>
-												<p>Благотворительный частный фонд, учрежденный в 2005 году по инициативе Никиты Анатольевича Мишина.</p>
+												<section>
+													<h3>Фонд «Дар»</h3>
+													<p>Благотворительный частный фонд, учрежденный в 2005 году по инициативе Никиты Анатольевича Мишина.</p>
+												</section>	
 											</div>
+
 											<ul>
 												<li>
 													<p>Магнитола SONY</p>
 													<ul>
-														<li>+ 2 000 ₽</li>
+														<li>+ 2 000 <span class="rub">a</span></li>
 														<li><a href="#">Отчет</a></li>
 													</ul>
 												</li>
 												<li>
 													<p>Лампа настольная Pixar</p>
 													<ul>
-														<li>+ 800 ₽</li>
+														<li>+ 800 <span class="rub">a</span></li>
 														<li><a href="#">Отчет</a></li>
 													</ul>
 												</li>
 												<li>
 													<p>Macbook Pro Late 2015 Retina display</p>
 													<ul>
-														<li>+ 15 000 ₽  </li>
+														<li>+ 15 000 <span class="rub">a</span></li>
 														<li><a href="#">Отчет</a></li>
 													</ul>
 												</li>
 											</ul>
-											<p>Вы пожертвовали: <span>17 325 ₽</span></p>
+											<p>Вы пожертвовали: <span>17 325 <span class="rub">a</span></span></p>
 										</div>
 										<div class="masonry-item">
 											<div class="item-header">
 												<figure>
-													<img src="" alt="">
+													<img src="assets/img/doings-img.png" alt="">
 												</figure>
-												<h3>Фонд «Дар»</h3>
-												<p>Благотворительный частный фонд, учрежденный в 2005 году по инициативе Никиты Анатольевича Мишина.</p>
+												<section>
+													<h3>Фонд «Дар»</h3>
+													<p>Благотворительный частный фонд, учрежденный в 2005 году по инициативе Никиты Анатольевича Мишина.</p>
+												</section>
 											</div>
 											<ul>
 												<li>
 													<p>Магнитола SONY</p>
 													<ul>
-														<li>+ 2 000 ₽</li>
+														<li>+ 2 000 <span class="rub">a</span></li>
 														<li><a href="#">Отчет</a></li>
 													</ul>
 												</li>
 											</ul>
-											<p>Вы пожертвовали: <span>2 000 ₽</span></p>
+											<p>Вы пожертвовали: <span>2 000 <span class="rub">a</span></span></p>
 										</div>
 										<div class="masonry-item">
 											<div class="item-header">
 												<figure>
-													<img src="" alt="">
+													<img src="assets/img/doings-img1.png" alt="">
 												</figure>
-												<h3>Кораблик - Благотворительный фонд помощи детям</h3>
-												<p>Благотворительный частный фонд, учрежденный в 2005 году по инициативе Никиты Анатольевича Мишина.</p>
+												<section>
+													<h3>Кораблик - Благотворительный фонд помощи детям</h3>
+													<p>Благотворительный частный фонд, учрежденный в 2005 году по инициативе Никиты Анатольевича Мишина.</p>
+												</section>
 											</div>
 											<ul>
 												<li>
 													<p>Магнитола SONY</p>
 													<ul>
-														<li>+ 300 ₽</li>
+														<li>+ 300 <span class="rub">a</span></li>
 														<li><a href="#">Отчет</a></li>
 													</ul>
 												</li>
 											</ul>
-											<p>Вы пожертвовали: <span>300 ₽</span></p>
+											<p>Вы пожертвовали: <span>300 <span class="rub">a</span></span></p>
 										</div>
 									</div>
 								</div>
@@ -229,50 +208,27 @@
 										<tr>
 											<td>
 												<a href="#">Магнитола SONY</a>
-												<!-- <div class="item-info">
-													<div class="customer">
-														<p><a href="#">Василий Раушенберг</a> забронировал этот товар</p>
-														<span>Свяжитесь с покупателем что бы договориться о месте и времени покупки</span>
-														<a href="#">Пожаловаться</a>
-													</div>
-													<ul>
-														<li>
-															<ul class="contacts">
-																<li>
-																	<a href="tel:+73453453476">+7 (345) 345-34-76</a>
-																</li>
-																<li><a href="mailto:vasya@raush.ru">vasya@raush.ru</a></li>
-															</ul>
-														</li>
-														<li>
-															<ul class="actions">
-																<li><a href="#">Отменить бронь</a></li>
-																<li><a href="#" class="btn">Вещь передана покупателю</a></li>
-															</ul>
-														</li>
-													</ul>
-												</div> -->
 											</td>
 											<td>23.05.2017</td>
-											<td>2 300 ₽ </td>
+											<td>2 300 <span class="rub">a</span></td>
 											<td>Активно</td>
 										</tr>
 										<tr>
-											<td>Лампа настольная Pixar</td>
+											<td><a href="#">Лампа настольная Pixar</a></td>
 											<td>23.05.2017</td>
-											<td>2 300 ₽ </td>
+											<td>2 300 <span class="rub">a</span></td>
 											<td>Бронь</td>
 										</tr>
 										<tr>
-											<td>Macbook Pro Late 2015 Retina display</td>
+											<td><a href="#">Macbook Pro Late 2015 Retina display</a></td>
 											<td>23.05.2017</td>
-											<td>2 300 ₽ </td>
+											<td>2 300 <span class="rub">a</span></td>
 											<td>Оплачено</td>
 										</tr>
 									</table>
 								</div>
 								<!-- tab 3 -->
-								<div class="pusrchases">
+								<div class="purchases">
 									<table>
 										<tr>
 											<th>Название</th>
@@ -283,54 +239,57 @@
 										<tr>
 											<td>
 												<a href="#">Магнитола SONY</a>
+											</td>
+											<td>23.05.2017</td>
+											<td>2 300 <span class="rub">a</span></td>
+											<td>Активно</td>
+										</tr>
+										<tr class="active">
+											<td colspan="4">
+												<div class="bg-top"></div>
 												<div class="item-info">
 													<div class="customer">
-														<p><a href="#">Василий Раушенберг</a> забронировал этот товар</p>
+														<p>Продавец: <a href="#">Мирабелла Глинка</a></p>
 														<span>Свяжитесь с покупателем что бы договориться о месте и времени покупки</span>
 														<a href="#">Пожаловаться</a>
 													</div>
 													<ul>
 														<li>
 															<ul class="contacts">
-																<li>
+																<li class="tel">
 																	<a href="tel:+73453453476">+7 (345) 345-34-76</a>
 																</li>
 																<li><a href="mailto:vasya@raush.ru">vasya@raush.ru</a></li>
 															</ul>
 														</li>
-														<li>
-															<ul class="actions">
-																<li><a href="#">Отменить бронь</a></li>
-																<li><a href="#" class="btn">Вещь передана покупателю</a></li>
-															</ul>
+														<li class="actions">
+															<a href="#">Отменить бронь</a>
 														</li>
 													</ul>
 												</div>
 											</td>
-											<td>23.05.2017</td>
-											<td>2 300 ₽ </td>
-											<td>Активно</td>
 										</tr>
 										<tr>
-											<td>Лампа настольная Pixar</td>
+											<td><a href="#">Лампа настольная Pixar</a></td>
 											<td>23.05.2017</td>
-											<td>2 300 ₽ </td>
+											<td>2 300 <span class="rub">a</span></td>
 											<td>Бронь</td>
 										</tr>
 										<tr>
-											<td>Macbook Pro Late 2015 Retina display</td>
+											<td><a href="#">Macbook Pro Late 2015 Retina display</a></td>
 											<td>23.05.2017</td>
-											<td>2 300 ₽ </td>
+											<td>2 300 <span class="rub">a</span></td>
 											<td>Оплачено</td>
 										</tr>
 									</table>
 								</div>
 								<!-- tab 4 -->
 								<div class="bookmarks">
+									<div class="title">Описание вещи</div>
 									<ul>
 										<li>
 											<figure>
-												<img src="">
+												<img src="assets/img/search-item-1.jpg" alt="">
 											</figure>
 											<ul class="item-info">
 												<li>
@@ -341,7 +300,7 @@
 													</ul>
 												</li>
 												<li>
-													<p>2 300 ₽</p>
+													<p>2 300 <span class="rub">a</span></p>
 													<span>В фонд “Дар” (Поддержка детей инвалидов)</span>
 												</li>
 											</ul>
@@ -349,7 +308,7 @@
 										</li>
 										<li>
 											<figure>
-												<img src="">
+												<img src="assets/img/search-item-2.jpg" alt="">
 											</figure>
 											<ul class="item-info">
 												<li>
@@ -360,7 +319,7 @@
 													</ul>
 												</li>
 												<li>
-													<p>400 ₽</p>
+													<p>400 <span class="rub">a</span></p>
 													<span>В фонд “Дар” (Поддержка детей инвалидов)</span>
 												</li>
 											</ul>
@@ -368,7 +327,7 @@
 										</li>
 										<li>
 											<figure>
-												<img src="">
+												<img src="assets/img/search-item-1.jpg" alt="">
 											</figure>
 											<ul class="item-info">
 												<li>
@@ -379,7 +338,7 @@
 													</ul>
 												</li>
 												<li>
-													<p>1 200 ₽</p>
+													<p>1 200 <span class="rub">a</span></p>
 													<span>В фонд “Дар” (Поддержка детей инвалидов)</span>
 												</li>
 											</ul>
@@ -387,7 +346,7 @@
 										</li>
 										<li>
 											<figure>
-												<img src="">
+												<img src="assets/img/search-item-2.jpg" alt="">
 											</figure>
 											<ul class="item-info">
 												<li>
@@ -398,7 +357,7 @@
 													</ul>
 												</li>
 												<li>
-													<p>800 ₽</p>
+													<p>800 <span class="rub">a</span></p>
 													<span>В фонд “Дар” (Поддержка детей инвалидов)</span>
 												</li>
 											</ul>
@@ -500,6 +459,7 @@
 										<li><img src="assets/img/fonds-7.png"></li>
 									</ul>
 								</li>
+								<li class="line-sep"></li>
 								<li>
 									<h4>Партнеры</h4>
 									<ul>
@@ -524,10 +484,11 @@
 						<div class="col-md-12">
 							<ul class="info">
 								<li>
-									<p>Просто и безопасно</p>
+									<p class="intro">Просто и безопасно</p>
 									<a href="#">Узнать больше <i class="fa fa-angle-right"></i></a>
 								</li>
-								<li>
+								<li class="line-sep"></li>
+								<li class="footer-logo">
 									<img src="assets/img/footer-1.png">
 								</li>
 							</ul>

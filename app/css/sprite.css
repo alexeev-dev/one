@@ -16,6 +16,12 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
 // HTML
 <i class="icon icon-home"></i>
 */
+.icon-bell {
+  background-image: url(../img/sprite.png);
+  background-position: -159px -80px;
+  width: 11px;
+  height: 12px;
+}
 .icon-buy-bicycle {
   background-image: url(../img/sprite.png);
   background-position: 0px -77px;
@@ -42,7 +48,7 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
 }
 .icon-buy-home {
   background-image: url(../img/sprite.png);
-  background-position: -79px -38px;
+  background-position: 0px -105px;
   width: 36px;
   height: 31px;
 }
@@ -60,7 +66,7 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
 }
 .icon-buy-stand {
   background-image: url(../img/sprite.png);
-  background-position: 0px -105px;
+  background-position: -36px -105px;
   width: 32px;
   height: 31px;
 }
@@ -72,7 +78,7 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
 }
 .icon-clock {
   background-image: url(../img/sprite.png);
-  background-position: -159px -80px;
+  background-position: -170px -80px;
   width: 11px;
   height: 11px;
 }
@@ -108,9 +114,15 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
 }
 .icon-marker {
   background-image: url(../img/sprite.png);
-  background-position: -170px -80px;
+  background-position: -159px -92px;
   width: 8px;
   height: 11px;
+}
+.icon-plus-add {
+  background-image: url(../img/sprite.png);
+  background-position: -79px -38px;
+  width: 37px;
+  height: 37px;
 }
 .icon-view-more {
   background-image: url(../img/sprite.png);

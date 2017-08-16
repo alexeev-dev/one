@@ -18,7 +18,7 @@
 		//= tpl/header.html
 
 		<!-- Login Form -->
-		//= tpl/login.html
+		<!--//= tpl/login.html-->
 
 		<!-- New Post -->
 		<section class="wr-new_post">
@@ -235,36 +235,49 @@
 												</li>
 											</ul>
 										</div>
-										<div class="address">
-											<ul>
-												<li>
-													<input type="text" placeholder="Город">
-													<p>Город местоположения товара</p>
-												</li>
-												<li>
-													<input type="text" placeholder="Метро">
-													<p>Ближайшее метро</p>
-												</li>
-											</ul>
-										</div>
-										<select class="category">
-											<option>Категория товара</option>
-										</select>
-										<div class="info">
-											<ul>
-												<li>
-													<input type="text" placeholder="Название">
-													<p>Полное название, модель и пр.</p>
-												</li>
-												<li>
-													<input type="text" placeholder="Цена">
-												</li>
-											</ul>
-										</div>
-										<textarea class="description" placeholder="Описание"></textarea>
-										<div class="photos"></div>
-										<a href="#" class="add-item"><img src="assets/img/add-item.png"> добавить еще один товар</a>
-									</div>
+										<div class="choose-product">
+											<div class="address">
+												<ul>
+													<li>
+														<input type="text" placeholder="Город">
+														<p>Город местоположения товара</p>
+													</li>
+													<li>
+														<input type="text" placeholder="Метро">
+														<p>Ближайшее метро</p>
+													</li>
+												</ul>
+											</div>
+											<select class="category">
+												<option>Категория товара</option>
+												<option>Личные вещи</option>
+												<option>Электроника</option>
+												<option>Спорт</option>
+												<option>Дом и дача</option>
+												<option>Детям</option>
+												<option>Бизнесу</option>
+											</select>
+											<div class="info">
+												<ul>
+													<li>
+														<input type="text" placeholder="Название">
+														<p>Полное название, модель и пр.</p>
+													</li>
+													<li>
+														<input type="text" placeholder="Цена">
+													</li>
+												</ul>
+											</div>
+											<textarea class="description" placeholder="Описание"></textarea>
+											<div class="photos">
+												<h4>Фотографии</h4>
+												<p>Перетащите сюда фотографии, <br>
+												или нажмите <a href="#">загрузить</a></p>
+											</div>
+											<a href="#" class="add-item"><img src="assets/img/add-item.png"> добавить еще один товар</a>
+										</div>	
+									</div> <!--/.item-info -->
+
 									<div class="contacts">
 										<h3>Контакты</h3>
 										<p>Вася Раушенберг</p>
