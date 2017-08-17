@@ -4,7 +4,8 @@
 $main-color: #f6f8fb;
 $main-color-text: #000;
 
-$btn-color: #4489ff;
+$link-color: #4489ff;
+$btn-color: #4489ff; 
 
 
 /***********************/
@@ -18,5 +19,13 @@ $helv: Helvetica, sans-serif;
 $CormacEL:'Cormac-ExtraLight', sans-serif;
 
 //Helvetica
-$Helvetica: 'Helvetica', sans-serif;
-$HelveticaL: 'Helvetica-Light', sans-serif;
+$HelveticaT: 'HelveticaThin', sans-serif; //100
+$HelveticaL: 'HelveticaLight', sans-serif; //300
+$HelveticaR: 'HelveticaRegular', sans-serif; //400
+$HelveticaM: 'HelveticaMedium', sans-serif; //500
+$HelveticaBld: 'HelveticaBold', sans-serif; //600
+$HelveticaH: 'HelveticaHeavy', sans-serif; //700
+$HelveticaB: 'HelveticaBlack', sans-serif; //900
+
+//ruble
+$ruble: 'rouble';

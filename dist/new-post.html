@@ -63,37 +63,7 @@
 		</header>
 
 		<!-- Login Form -->
-		<section class="wr-login">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-12">
-						
-						<!-- Login Form -->
-						<div class="login">
-							<h2>Вход</h2>
-							<ul>
-								<li>
-									<form action="#">
-										<input type="text" placeholder="E-mail">
-										<input type="password" placeholder="Пароль">
-										<a href="#">Напомнить пароль</a>
-										<ul>
-											<li><a href="#">Зарегистрироваться</a></li>
-											<li><a href="#" class="btn">Войти</a></li>
-										</ul>
-									</form>
-								</li>
-								<li>
-									<a href="#" class="login-social"><i class="fa fa-vk"></i>В контакте</a>
-									<a href="#" class="login-social"><i class="fa fa-facebook"></i>Facebook</a>
-								</li>
-							</ul>
-						</div>
-		
-					</div>
-				</div>
-			</div>
-		</section>
+		<!--//= tpl/login.html-->
 
 		<!-- New Post -->
 		<section class="wr-new_post">
@@ -310,36 +280,49 @@
 												</li>
 											</ul>
 										</div>
-										<div class="address">
-											<ul>
-												<li>
-													<input type="text" placeholder="Город">
-													<p>Город местоположения товара</p>
-												</li>
-												<li>
-													<input type="text" placeholder="Метро">
-													<p>Ближайшее метро</p>
-												</li>
-											</ul>
-										</div>
-										<select class="category">
-											<option>Категория товара</option>
-										</select>
-										<div class="info">
-											<ul>
-												<li>
-													<input type="text" placeholder="Название">
-													<p>Полное название, модель и пр.</p>
-												</li>
-												<li>
-													<input type="text" placeholder="Цена">
-												</li>
-											</ul>
-										</div>
-										<textarea class="description" placeholder="Описание"></textarea>
-										<div class="photos"></div>
-										<a href="#" class="add-item"><img src="assets/img/add-item.png"> добавить еще один товар</a>
-									</div>
+										<div class="choose-product">
+											<div class="address">
+												<ul>
+													<li>
+														<input type="text" placeholder="Город">
+														<p>Город местоположения товара</p>
+													</li>
+													<li>
+														<input type="text" placeholder="Метро">
+														<p>Ближайшее метро</p>
+													</li>
+												</ul>
+											</div>
+											<select class="category">
+												<option>Категория товара</option>
+												<option>Личные вещи</option>
+												<option>Электроника</option>
+												<option>Спорт</option>
+												<option>Дом и дача</option>
+												<option>Детям</option>
+												<option>Бизнесу</option>
+											</select>
+											<div class="info">
+												<ul>
+													<li>
+														<input type="text" placeholder="Название">
+														<p>Полное название, модель и пр.</p>
+													</li>
+													<li>
+														<input type="text" placeholder="Цена">
+													</li>
+												</ul>
+											</div>
+											<textarea class="description" placeholder="Описание"></textarea>
+											<div class="photos">
+												<h4>Фотографии</h4>
+												<p>Перетащите сюда фотографии, <br>
+												или нажмите <a href="#">загрузить</a></p>
+											</div>
+											<a href="#" class="add-item"><img src="assets/img/add-item.png"> добавить еще один товар</a>
+										</div>	
+									</div> <!--/.item-info -->
+
 									<div class="contacts">
 										<h3>Контакты</h3>
 										<p>Вася Раушенберг</p>
@@ -401,6 +384,7 @@
 										<li><img src="assets/img/fonds-7.png"></li>
 									</ul>
 								</li>
+								<li class="line-sep"></li>
 								<li>
 									<h4>Партнеры</h4>
 									<ul>
@@ -425,10 +409,11 @@
 						<div class="col-md-12">
 							<ul class="info">
 								<li>
-									<p>Просто и безопасно</p>
+									<p class="intro">Просто и безопасно</p>
 									<a href="#">Узнать больше <i class="fa fa-angle-right"></i></a>
 								</li>
-								<li>
+								<li class="line-sep"></li>
+								<li class="footer-logo">
 									<img src="assets/img/footer-1.png">
 								</li>
 							</ul>
