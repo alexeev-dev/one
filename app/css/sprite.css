@@ -18,7 +18,7 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
 */
 .icon-bell {
   background-image: url(../img/sprite.png);
-  background-position: -159px -80px;
+  background-position: -172px -90px;
   width: 11px;
   height: 12px;
 }
@@ -60,7 +60,7 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
 }
 .icon-buy-search {
   background-image: url(../img/sprite.png);
-  background-position: -159px -38px;
+  background-position: -159px -60px;
   width: 16px;
   height: 16px;
 }
@@ -78,9 +78,15 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
 }
 .icon-clock {
   background-image: url(../img/sprite.png);
-  background-position: -170px -80px;
+  background-position: -171px -102px;
   width: 11px;
   height: 11px;
+}
+.icon-close {
+  background-image: url(../img/sprite.png);
+  background-position: -68px -105px;
+  width: 28px;
+  height: 28px;
 }
 .icon-empty {
   background-image: url(../img/sprite.png);
@@ -88,33 +94,45 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
   width: 79px;
   height: 77px;
 }
+.icon-filter {
+  background-image: url(../img/sprite.png);
+  background-position: -48px -77px;
+  width: 32px;
+  height: 27px;
+}
 .icon-header_plus {
   background-image: url(../img/sprite.png);
-  background-position: -175px -38px;
+  background-position: -175px -60px;
   width: 10px;
   height: 10px;
 }
 .icon-header_search {
   background-image: url(../img/sprite.png);
-  background-position: -172px -68px;
+  background-position: -159px -102px;
   width: 12px;
   height: 11px;
 }
 .icon-heart-big {
   background-image: url(../img/sprite.png);
-  background-position: -159px -54px;
+  background-position: -159px -76px;
   width: 16px;
   height: 14px;
 }
+.icon-heart-empty {
+  background-image: url(../img/sprite.png);
+  background-position: -159px -38px;
+  width: 26px;
+  height: 22px;
+}
 .icon-heart {
   background-image: url(../img/sprite.png);
-  background-position: -159px -68px;
+  background-position: -159px -90px;
   width: 13px;
   height: 12px;
 }
 .icon-marker {
   background-image: url(../img/sprite.png);
-  background-position: -159px -92px;
+  background-position: -159px -113px;
   width: 8px;
   height: 11px;
 }
@@ -126,7 +144,7 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
 }
 .icon-view-more {
   background-image: url(../img/sprite.png);
-  background-position: -175px -54px;
+  background-position: -175px -76px;
   width: 10px;
   height: 10px;
 }

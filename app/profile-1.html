@@ -54,14 +54,17 @@
 										</ul>
 									</section>
 								</div>
-								<ul class="profile-tabs">
-									<li class="active"><a href="#">Добрые дела<span> 3</span></a></li>
-									<li><a href="#">Мои объявления<span> 4</span></a></li>
-									<li><a href="#">Покупки<span> 3</span></a></li>
-									<li><a href="#">Закладки<span> 6</span></a></li>
-									<li><a href="#">Отзывы<span> 3</span></a></li>
-									<li><a href="#">Настройки</a></li>
-								</ul>
+								<div class="profile-tabs">
+									<a href="#" class="my-menu">Моё меню <i class="fa fa-angle-down"></i></a>
+									<ul>
+										<li class="active"><a href="#">Добрые дела<span> 3</span></a></li>
+										<li><a href="#">Мои объявления<span> 4</span></a></li>
+										<li><a href="#">Покупки<span> 3</span></a></li>
+										<li><a href="#">Закладки<span> 6</span></a></li>
+										<li><a href="#">Отзывы<span> 3</span></a></li>
+										<li><a href="#">Настройки</a></li>
+									</ul>
+								</div>
 								<!-- tab 1 -->
 								<div class="doings">
 									<ul class="doings-tabs">
@@ -70,6 +73,7 @@
 										<li><a href="#"> Проекты</a></li>
 										<li><a href="#">Люди</a></li>
 									</ul>
+									<h3 class="tabs-title-mobile">Добрые дела</h3>
 									<div class="masonry-grid">
 										<div class="masonry-item">
 											<div class="item-header">
@@ -153,6 +157,7 @@
 								</div>
 								<!-- tab 2 -->
 								<div class="advertisement">
+									<h3 class="tabs-title-mobile">Мои объявления</h3>
 									<table>
 										<tr>
 											<th>Название</th>
@@ -164,26 +169,27 @@
 											<td>
 												<a href="#">Магнитола SONY</a>
 											</td>
-											<td>23.05.2017</td>
-											<td>2 300 <span class="rub">a</span></td>
-											<td>Активно</td>
+											<td><span class="value">Дата</span> 23.05.2017</td>
+											<td><span class="value">Цена</span> 2 300 <span class="rub">a</span></td>
+											<td><span class="value">Статус</span> Активно</td>
 										</tr>
 										<tr>
 											<td><a href="#">Лампа настольная Pixar</a></td>
-											<td>23.05.2017</td>
-											<td>2 300 <span class="rub">a</span></td>
-											<td>Бронь</td>
+											<td><span class="value">Дата</span> 23.05.2017</td>
+											<td><span class="value">Цена</span> 2 300 <span class="rub">a</span></td>
+											<td><span class="value">Статус</span> Активно</td>
 										</tr>
 										<tr>
 											<td><a href="#">Macbook Pro Late 2015 Retina display</a></td>
-											<td>23.05.2017</td>
-											<td>2 300 <span class="rub">a</span></td>
-											<td>Оплачено</td>
+											<td><span class="value">Дата</span> 23.05.2017</td>
+											<td><span class="value">Цена</span> 2 300 <span class="rub">a</span></td>
+											<td><span class="value">Статус</span> Активно</td>
 										</tr>
 									</table>
 								</div>
 								<!-- tab 3 -->
 								<div class="purchases">
+									<h3 class="tabs-title-mobile">Покупки</h3>
 									<table>
 										<tr>
 											<th>Название</th>
@@ -195,9 +201,9 @@
 											<td>
 												<a href="#">Магнитола SONY</a>
 											</td>
-											<td>23.05.2017</td>
-											<td>2 300 <span class="rub">a</span></td>
-											<td>Активно</td>
+											<td><span class="value">Дата</span> 23.05.2017</td>
+											<td><span class="value">Цена</span> 2 300 <span class="rub">a</span></td>
+											<td><span class="value">Статус</span> Активно</td>
 										</tr>
 										<tr class="active">
 											<td colspan="4">
@@ -218,7 +224,9 @@
 															</ul>
 														</li>
 														<li class="actions">
-															<a href="#">Отменить бронь</a>
+															<ul>
+																<li><a href="#">Отменить бронь</a></li>
+															</ul>
 														</li>
 													</ul>
 												</div>
@@ -226,20 +234,21 @@
 										</tr>
 										<tr>
 											<td><a href="#">Лампа настольная Pixar</a></td>
-											<td>23.05.2017</td>
-											<td>2 300 <span class="rub">a</span></td>
-											<td>Бронь</td>
+											<td><span class="value">Дата</span> 23.05.2017</td>
+											<td><span class="value">Цена</span> 2 300 <span class="rub">a</span></td>
+											<td><span class="value">Статус</span> Активно</td>
 										</tr>
 										<tr>
 											<td><a href="#">Macbook Pro Late 2015 Retina display</a></td>
-											<td>23.05.2017</td>
-											<td>2 300 <span class="rub">a</span></td>
-											<td>Оплачено</td>
+											<td><span class="value">Дата</span> 23.05.2017</td>
+											<td><span class="value">Цена</span> 2 300 <span class="rub">a</span></td>
+											<td><span class="value">Статус</span> Активно</td>
 										</tr>
 									</table>
 								</div>
 								<!-- tab 4 -->
 								<div class="bookmarks">
+									<h3 class="tabs-title-mobile">Закладки</h3>
 									<div class="title">Описание вещи</div>
 									<ul>
 										<li>
@@ -322,6 +331,7 @@
 								</div>
 								<!-- tab 5 -->
 								<div class="reviews">
+									<h3 class="tabs-title-mobile">Отзывы</h3>
 									<ul>
 										<li>
 											<figure>
@@ -377,7 +387,9 @@
 									</ul>
 								</div>
 								<!-- tab 6 -->
-								<div class="settings"></div>
+								<div class="settings">
+									<h3 class="tabs-title-mobile">Настройки</h3>
+								</div>
 							</div>
 
 						</div>

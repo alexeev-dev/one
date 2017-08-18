@@ -1,21 +1,16 @@
 .app {
 
-	min-width: 320px; overflow-x: hidden;
+	min-width: 320px; overflow-x: hidden; padding-top: 65px;
 	background: #f6f8fb;
 
 	.wr {
 		&-header {
-			position: relative; z-index: 1; 
+			position: fixed; height: 63px; left:0; top:0; right:0; z-index: 10001; 
 			background: #fff; box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.08);
 		}
 
 		&-search-result {
-			border-top: 1px solid #d9e4ea;
-		}
-
-		&-search-result {
 			padding-bottom: 30px;
-			border-top: 1px solid #d9e4ea;
 		}
 
 		&-new_post {
@@ -34,11 +29,17 @@
 		}
 
 		&-login {
-			background: #fff;
+			display: none;
+			position: fixed; left:0; top:0; width: 100%; height: 100%; padding-top: 63px; z-index: 10000;
+			background: rgba(255, 255, 255, 0.7);
+			&.active {
+				display: block;
+			}
 		}
 
 		&-buy {
-			background: #fff;
+			position: relative;
+			background: #fff; border-bottom: 1px solid #d9e4ea;
 		}
 
 		&-partners {

@@ -47,14 +47,21 @@
 						<!-- header -->
 						<div class="header">
 							<a href="index.html" class="logo"><img src="assets/img/logo.png"></a>
-							<ul>
-								<li class="active"><a href="new-post.html"><i class="icon icon-header_plus"></i>Продать</a></li>
-								<li><a href="index.html"><i class="icon icon-header_search"></i>Купить</a></li>
-								<li><a href="#">О проекте</a></li>
-								<li><a href="#">Фонды</a></li>
-								<li><a href="#">Войти</a></li>
-								<li><a href="#">1 <i class="icon icon-heart"></i></a></li>
-							</ul>
+							<nav class="main-menu">
+								<a href="#" class="responsive-menu">
+									<span></span>
+									<span></span>
+									<span></span>
+								</a>
+								<ul>
+									<li class="active"><a href="new-post.html"><i class="icon icon-header_plus"></i>Продать</a></li>
+									<li><a href="index.html"><i class="icon icon-header_search"></i>Купить</a></li>
+									<li><a href="#">О проекте</a></li>
+									<li><a href="#">Фонды</a></li>
+									<li><a href="#">Войти</a></li>
+									<li><a href="#">1 <i class="icon icon-heart"></i></a></li>
+								</ul>
+							</nav>	
 						</div>
 						
 					</div>
@@ -72,6 +79,10 @@
 					<div class="col-md-12">
 		
 						<div class="notice">
+							<div class="close-block">
+								<a href="#" class="close">
+									<i class="icon icon-close"></i>
+								</a></div>
 							<h3>У вас есть незавершенные сделки</h3>
 							<ul>
 								<li><a href="#">Позже</a></li>
@@ -116,14 +127,18 @@
 										<p>Купите или продайте первую вещь на сайте, и следите за статистикой ваших пожертвований</p>
 									</section>
 								</div>
-								<ul class="profile-tabs">
-									<li class="active"><a href="#">Добрые дела</a></li>
-									<li><a href="#">Мои объявления<span> 4</span></a></li>
-									<li><a href="#">Покупки</a></li>
-									<li><a href="#">Закладки</a></li>
-									<li><a href="#">Отзывы</a></li>
-									<li><a href="#">Настройки</a></li>
-								</ul>
+								<div class="profile-tabs">
+										<a href="#" class="my-menu">Моё меню <i class="fa fa-angle-down"></i></a>
+									<ul>
+										<li class="active"><a href="#">Добрые дела</a></li>
+										<li><a href="#">Мои объявления<span> 4</span></a></li>
+										<li><a href="#">Покупки</a></li>
+										<li><a href="#">Закладки</a></li>
+										<li><a href="#">Отзывы</a></li>
+										<li><a href="#">Настройки</a></li>
+									</ul>
+								</div>
+								
 								<!-- tab 1 -->
 								<div class="doings">
 									<ul class="doings-tabs">
@@ -149,50 +164,27 @@
 										<tr>
 											<td>
 												<a href="#">Магнитола SONY</a>
-												<!-- <div class="item-info">
-													<div class="customer">
-														<p><a href="#">Василий Раушенберг</a> забронировал этот товар</p>
-														<span>Свяжитесь с покупателем что бы договориться о месте и времени покупки</span>
-														<a href="#">Пожаловаться</a>
-													</div>
-													<ul>
-														<li>
-															<ul class="contacts">
-																<li>
-																	<a href="tel:+73453453476">+7 (345) 345-34-76</a>
-																</li>
-																<li><a href="mailto:vasya@raush.ru">vasya@raush.ru</a></li>
-															</ul>
-														</li>
-														<li>
-															<ul class="actions">
-																<li><a href="#">Отменить бронь</a></li>
-																<li><a href="#" class="btn">Вещь передана покупателю</a></li>
-															</ul>
-														</li>
-													</ul>
-												</div> -->
 											</td>
-											<td>23.05.2017</td>
-											<td>2 300 <span class="rub">a</span></td>
-											<td>Активно</td>
+											<td><span class="value">Дата</span> 23.05.2017</td>
+											<td><span class="value">Цена</span> 2 300 <span class="rub">a</span></td>
+											<td><span class="value">Статус</span> Активно</td>
 										</tr>
 										<tr>
 											<td><a href="#">Лампа настольная Pixar</a></td>
-											<td>23.05.2017</td>
-											<td>2 300 <span class="rub">a</span></td>
-											<td>Бронь</td>
+											<td><span class="value">Дата</span> 23.05.2017</td>
+											<td><span class="value">Цена</span> 2 300 <span class="rub">a</span></td>
+											<td><span class="value">Статус</span> Активно</td>
 										</tr>
 										<tr>
 											<td><a href="#">Macbook Pro Late 2015 Retina display</a></td>
-											<td>23.05.2017</td>
-											<td>2 300 <span class="rub">a</span></td>
-											<td>Оплачено</td>
+											<td><span class="value">Дата</span> 23.05.2017</td>
+											<td><span class="value">Цена</span> 2 300 <span class="rub">a</span></td>
+											<td><span class="value">Статус</span> Активно</td>
 										</tr>
 									</table>
 								</div>
 								<!-- tab 3 -->
-								<div class="pusrchases">
+								<div class="purchases">
 									<table>
 										<tr>
 											<th>Название</th>
@@ -200,9 +192,17 @@
 											<th>Цена</th>
 											<th>Статус</th>
 										</tr>
-										<tr>
+										<tr class="mark open">
 											<td>
 												<a href="#">Магнитола SONY</a>
+											</td>
+											<td><span class="value">Дата</span> 23.05.2017</td>
+											<td><span class="value">Цена</span> 2 300 <span class="rub">a</span></td>
+											<td><span class="value">Статус</span> Активно</td>
+										</tr>
+										<tr class="active booking">
+											<td colspan="4">
+												<div class="bg-top"></div>
 												<div class="item-info">
 													<div class="customer">
 														<p><a href="#">Василий Раушенберг</a> забронировал этот товар</p>
@@ -212,33 +212,31 @@
 													<ul>
 														<li>
 															<ul class="contacts">
-																<li>
+																<li class="tel">
 																	<a href="tel:+73453453476">+7 (345) 345-34-76</a>
 																</li>
 																<li><a href="mailto:vasya@raush.ru">vasya@raush.ru</a></li>
 															</ul>
 														</li>
-														<li>
-															<ul class="actions">
+														<li class="actions">
+															<ul>
 																<li><a href="#">Отменить бронь</a></li>
 																<li><a href="#" class="btn">Вещь передана покупателю</a></li>
 															</ul>
+															
 														</li>
 													</ul>
 												</div>
 											</td>
-											<td>23.05.2017</td>
-											<td>2 300 <span class="rub">a</span></td>
-											<td>Активно</td>
+										</tr>
+										<tr class="mark">
+											<td><a href="#">Лампа настольная Pixar</a></td>
+											<td><span class="value">Дата</span> 23.05.2017</td>
+											<td><span class="value">Цена</span> 2 300 <span class="rub">a</span></td>
+											<td><span class="value">Статус</span> Активно</td>
 										</tr>
 										<tr>
-											<td>Лампа настольная Pixar</td>
-											<td>23.05.2017</td>
-											<td>2 300 <span class="rub">a</span></td>
-											<td>Бронь</td>
-										</tr>
-										<tr>
-											<td>Macbook Pro Late 2015 Retina display</td>
+											<td><a href="#">Macbook Pro Late 2015 Retina display</a></td>
 											<td>23.05.2017</td>
 											<td>2 300 <span class="rub">a</span></td>
 											<td>Оплачено</td>
