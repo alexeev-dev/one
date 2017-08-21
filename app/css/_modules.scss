@@ -1,4 +1,4 @@
-//Временные отступы 
+//Временные отступы
 .doings, .advertisement, .purchases, .bookmarks, .reviews, .founds .desc, .founds .projects, .founds .reports {
 	margin-bottom: 50px;
 }
@@ -10,7 +10,7 @@ h1, h2, h3, h4, h5, h6 {
 	color: #000; font-family: $CormacEL; letter-spacing: 0;
 }
 h1 {
-	font-size: 34px; line-height: 38px; 
+	font-size: 34px; line-height: 38px;
 }
 
 p {
@@ -93,7 +93,7 @@ span.rub {font-family: $ruble !important;}
 	position: relative; height: 3px; width: 100%; margin: 10px 0;
 	background: #c0d1dd;
 	&-fill {
-		position: absolute; left:0; top:0; height: 3px; 
+		position: absolute; left:0; top:0; height: 3px;
 		background: #4489ff;
 	}
 }
@@ -116,7 +116,7 @@ span.rub {font-family: $ruble !important;}
 }
 @for $i1 from 0 through 5 {
 	.rating.rating-#{$i1} ul  {
-		
+
 		@for $i2 from 0 through $i1 {
 			& li:nth-child(#{$i2}) {
 				i {
@@ -133,7 +133,7 @@ ul.profile-table {
 		& > ul {
 			display: flex; justify-content: space-between;
 			li {
-				
+
 			}
 
 			&.table-header {
@@ -188,7 +188,7 @@ ul.profile-table {
 		}
 	}
 	@include respond-to(sm) {
-		flex-direction: column; width: calc(100% + 30px); margin-left: -15px; 
+		flex-direction: column; width: calc(100% + 30px); margin-left: -15px;
 		background: #fff;
 		& > ul {
 			&.navigation {
@@ -212,7 +212,7 @@ ul.profile-table {
 
 // list items
 ul.item-list {
-	display: flex; flex-wrap: wrap; margin: -10px; 
+	display: flex; flex-wrap: wrap; margin: -10px;
 	li {
 		text-align: left;
 		width: calc(25% - 20px); margin: 10px;
@@ -230,7 +230,7 @@ ul.item-list {
 			}
 
 			figcaption {
-				position: absolute; right: 10px; top: 10px; 
+				position: absolute; right: 10px; top: 10px;
 				opacity: 0;
 				transition: all 0.4s ease;
 					a {
@@ -269,7 +269,7 @@ ul.item-list {
 
 	@include respond-to(md) {
 		li {
-			width: calc(50% - 10px); margin: 5px; 
+			width: calc(50% - 10px); margin: 5px;
 		}
 	}
 
@@ -324,15 +324,15 @@ ul.item-list {
 				margin-left: 40px;
 				&.active {
 					a {
-						
-						border-bottom-color: #4489ff; 
+
+						border-bottom-color: #4489ff;
 					}
 				}
 				a {
-					@include font-type($CormacEL, 14px, 19px, -0.5px); color: $main-color-text;	
+					@include font-type($CormacEL, 14px, 19px, -0.5px); color: $main-color-text;
 					display: inline-block;
 					padding-bottom: 17px; border-bottom: 2px solid transparent;
-					
+
 					i {
 						margin-right: 5px;
 					}
@@ -392,17 +392,17 @@ ul.item-list {
 			}
 
 			form {
-				width: 60%; float: right; 
+				width: 60%; float: right;
 				input {
 					color:#000;
-					display: block; width: 100%; padding: 10px 20px; margin: 15px 0;					background: #eef5fa; border: none; border-radius: 100px; 
+					display: block; width: 100%; padding: 10px 20px; margin: 15px 0;					background: #eef5fa; border: none; border-radius: 100px;
 				}
 				&[placeholder] {
-					color:#000; 
+					color:#000;
 				}
 				& > a {
 					@include font-type($HelveticaL, 12px, 1, 0); color: #9da8af;
-					display: block; margin: -11px 0 0 20px; 
+					display: block; margin: -11px 0 0 20px;
 				}
 				ul {
 					display: flex; justify-content: flex-end; margin-top: 20px;
@@ -425,8 +425,8 @@ ul.item-list {
 				display: flex; align-items: center; width: 67%; padding: 10px 20px; margin: 15px 0;
 				border: 1px solid #d7deea; border-radius: 4px;
 				i {
-					color: #507db1; font-size: 25px; 
-					width: 25px; margin-right: 20px; 
+					color: #507db1; font-size: 25px;
+					width: 25px; margin-right: 20px;
 				}
 				&:last-child {
 					margin-bottom: 0;
@@ -455,13 +455,13 @@ ul.item-list {
 					a {
 						border-bottom-color: #4489ff;
 					}
-					
+
 				}
-				
+
 				a {
 					@include font-type($CormacEL, 14px, 19px, -0.5px); color: #4a4a4a;
 					display: block; padding-bottom: 15px;
-					border-bottom: 2px solid transparent;	
+					border-bottom: 2px solid transparent;
 					&:hover {
 						border-bottom-color: #4489ff;
 					}
@@ -473,18 +473,18 @@ ul.item-list {
 
 						}
 					}
-					
+
 
 					span {
 						display: inline-block;
 					}
-				}	
+				}
 			}
 		}
 	}
 }
 
-//search 
+//search
 .search-block {
 	display: flex; justify-content: space-between; padding: 20px 0;
 
@@ -506,7 +506,7 @@ ul.item-list {
 	}
 
 	.price {
-		p { 
+		p {
 			color: $main-color-text;
 
 			span {
@@ -516,10 +516,10 @@ ul.item-list {
 			input {
 				color: #4a4a4a;
 				height: 44px; width: 90px; padding-left: 20px;
-				background: $main-color; border: 1px solid #e2eff6; border-radius: 100px; 
+				background: $main-color; border: 1px solid #e2eff6; border-radius: 100px;
 				&[placeholder] {color:#a3a4a6;}
 			}
-		}	
+		}
 	}
 }
 
@@ -719,6 +719,10 @@ ul.item-list {
 			}
 		}
 
+		.participants-container {
+			margin: 0 -200px;
+		}
+
 		.participants {
 			& > input {
 				display: none;
@@ -752,8 +756,11 @@ ul.item-list {
 			}
 			ul.list {
 				text-align: center;
-				margin: 0 -200px; padding:55px 0;
+				display: none;
+				//margin: 0 -200px;
+				padding:55px 0;
 				background: #f4fcff;
+				&.active { display: block; }
 				li {
 					display: inline-block; vertical-align: top; margin: 0 40px;
 					input {
@@ -832,13 +839,13 @@ ul.item-list {
 			}
 			textarea.description {
 				color: #000000; font-family: $HelveticaL; font-size: 18px; font-weight: 300; line-height: 22px;
-				width: 100%; padding-bottom: 3px; height: 28px; 
+				width: 100%; padding-bottom: 3px; height: 28px;
 				background: transparent; border: none; border-bottom: 1px solid #c0d1dd;
 			}
 			.photos {
 				text-align: center; font-family: $HelveticaL;
 				width: 100%; margin: 50px 0; padding: 30px 0;
-				background: #f7f9ff; border: 1px solid #649dff; border-radius: 4px; 
+				background: #f7f9ff; border: 1px solid #649dff; border-radius: 4px;
 				h4 {
 					font-size: 18px; letter-spacing: -0.5px;
 					margin-bottom: 10px;
@@ -846,14 +853,14 @@ ul.item-list {
 				p {
 					font-family: inherit;
 					a {
-						color: #000; text-decoration: underline;  
+						color: #000; text-decoration: underline;
 						&:hover {
 							text-decoration: none;
 						}
 					}
 				}
 			}
-		}	
+		}
 	}
 
 	.add-item {
@@ -973,7 +980,7 @@ ul.item-list {
 				&:hover {
 					border: solid 1px #4489ff;
 				}
-				
+
 			}
 		}
 	}
@@ -990,14 +997,14 @@ ul.item-list {
 	}
 }
 
-// profile 
+// profile
 .profile {
 	padding: 0 40px 60px 40px;
 	.user-info {
 		display: flex; padding: 40px 0; align-items: center;
 		figure {
 			flex: none; width: 119px; height: 119px; margin-right: 40px;
-			border-radius: 50%; 
+			border-radius: 50%;
 			overflow: hidden;
 			img {
 				width: 100%;
@@ -1016,7 +1023,7 @@ ul.item-list {
 					span {
 						color: #4b5769; font-family: $CormacEL; font-size: 24px;
 						span.rub {
-							
+
 						}
 					}
 				}
@@ -1045,7 +1052,7 @@ ul.item-list {
 					margin-bottom: 0;
 				}
 				& > ul {
-					display: none; 
+					display: none;
 				}
 				& > p {
 					display: none;
@@ -1117,7 +1124,7 @@ ul.item-list {
 					margin-bottom: 10px;
 					&:last-child {
 							margin-bottom: 0; padding-bottom: 3px;
-						} 
+						}
 					a {
 						border-bottom: 3px solid #eff3f5; position: relative; z-index: 10;
 						&:hover {
@@ -1134,7 +1141,7 @@ ul.item-list {
 	}
 
 	.doings {
-		
+
 		&-tabs {
 			display: inline-block; padding-left: 20px; margin-bottom: 30px;
 			background: #f6f8fb; border-radius: 100px;
@@ -1147,9 +1154,9 @@ ul.item-list {
 				&.active {
 					a {
 						color: $link-color;
-						border-color: $link-color; 
+						border-color: $link-color;
 					}
-					
+
 				}
 				a {
 					color: #616060;
@@ -1158,13 +1165,13 @@ ul.item-list {
 					transition: 0.3s ease-out;
 					&:hover {
 						color: $link-color;
-						border-color: $link-color; 
+						border-color: $link-color;
 					}
 				}
 			}
 
 			@include respond-to(xs) {
-				width: 100%; padding: 20px 25px; 
+				width: 100%; padding: 20px 25px;
 				li {
 					display: block; margin: 5px 0;
 					&:first-child {
@@ -1235,8 +1242,8 @@ ul.item-list {
 					}
 				}
 				& > p {
-					color: #89a1b3; text-align: right; 
-					padding-top: 20px;					
+					color: #89a1b3; text-align: right;
+					padding-top: 20px;
 					& > span {
 						color: #000; font-family: $CormacEL; font-size: 22px;
 						margin-left: 10px;
@@ -1259,7 +1266,7 @@ ul.item-list {
 	.purchases, .advertisement {
 		table {
 			font-family: $HelveticaL;
-			width: 100%; 
+			width: 100%;
 			border-spacing: 0 10px;  border-collapse: separate;
 			tr {
 				th {
@@ -1288,7 +1295,7 @@ ul.item-list {
 							border-right: 2px solid #5191ff;
 						}
 					}
-					
+
 				}
 				&.active {
 					td {
@@ -1350,8 +1357,8 @@ ul.item-list {
 												margin-right: 0;
 											}
 
-										} 
-										
+										}
+
 									}
 								}
 							}
@@ -1450,7 +1457,7 @@ ul.item-list {
 								}
 							}
 						}
-						
+
 					}
 					&:first-child {
 						display: none;
@@ -1463,7 +1470,7 @@ ul.item-list {
 						}
 						& > td {
 							& > .item-info {
-								position: relative; display: inline-block; padding-bottom: 55px; 
+								position: relative; display: inline-block; padding-bottom: 55px;
 								.customer {
 									p {
 										a {
@@ -1479,7 +1486,7 @@ ul.item-list {
 									}
 								}
 								& > ul {
-									display: flex; flex-direction: column; 
+									display: flex; flex-direction: column;
 									& > li {
 										ul.contacts {
 											margin-bottom: 15px;
@@ -1505,16 +1512,16 @@ ul.item-list {
 														font-size: 18px; color: #4489ff;
 													}
 												}
-												
-												
+
+
 											}
 										}
 									}
 								}
 							}
 						}
-						
-					}					
+
+					}
 					td {
 						text-align: left;
 						width: 33.3%;
@@ -1526,7 +1533,7 @@ ul.item-list {
 								@include font-type($HelveticaL, 12px, 1, 0.5px); color: #89a1b3; text-transform: uppercase;
 								display: block; margin-bottom: 5px;
 							}
-							
+
 						}
 					}
 				}
@@ -1560,7 +1567,7 @@ ul.item-list {
 					margin-bottom: 0;
 				}
 				figure {
-					position: absolute; left: 0; top: 0; 
+					position: absolute; left: 0; top: 0;
 					border-top-left-radius: 4px;  border-bottom-left-radius: 4px;
 					overflow: hidden;
 					img {
@@ -1631,7 +1638,7 @@ ul.item-list {
 								display: none;
 							}
 							& > p {
-								color: #000; font-size: 20px; font-weight: 600; text-align: left;  
+								color: #000; font-size: 20px; font-weight: 600; text-align: left;
 								margin-bottom: 0; margin-top: 5px;
 								.rub {
 									font-weight: 300; color: #000;
@@ -1643,7 +1650,7 @@ ul.item-list {
 						position: absolute; right: 10px; top: calc(100% - 20px);
 						background: transparent;
 						i {
-							
+
 						}
 					}
 				}
@@ -1788,7 +1795,7 @@ ul.item-list {
 				background: #dae2ea;
 			}
 			.info {
-				width: 30%; position: relative; padding: 10px 0 105px 0; 
+				width: 30%; position: relative; padding: 10px 0 105px 0;
 				.price {
 					text-align: right;
 					margin-bottom: 40px;
@@ -1826,7 +1833,7 @@ ul.item-list {
 						text-align: right; font-size: 12px;
 						margin-top: 16px;
 						span {
-							color: #89a1b3;  
+							color: #89a1b3;
 						}
 						p {
 							color: #000; font-weight: 600;
@@ -1908,7 +1915,7 @@ ul.item-list {
 		.tabs-title-mobile {
 			display: block; padding-left: 5%;
 		}
-	} 
+	}
 	@include  respond-to(sm) {
 		padding: 0 0 60px 0;
 	}
@@ -1993,7 +2000,7 @@ ul.item-list {
 
 // partners
 .partners {
-	padding-top: 40px; 
+	padding-top: 40px;
 	& > ul {
 		display: flex;
 		& > li {
@@ -2047,7 +2054,7 @@ ul.item-list {
 							width: auto;
 						}
 					}
-					 
+
 				}
 			}
 			.line-sep {
@@ -2094,7 +2101,7 @@ ul.item-list {
 		&.info {
 			display: flex; align-items: center;
 			li {
-				width: 49%; padding-left: 20px; 
+				width: 49%; padding-left: 20px;
 				&.line-sep {
 					width:1px; height: 100px; margin: 0 10px; padding: 0;
 					background: #79abff;
@@ -2107,7 +2114,7 @@ ul.item-list {
 						margin-bottom: 15px;
 					}
 					a {
-						@include font-type($HelveticaL, 18px, 22px, 0); color: #fff; 
+						@include font-type($HelveticaL, 18px, 22px, 0); color: #fff;
 					}
 				}
 
@@ -2116,11 +2123,11 @@ ul.item-list {
 			}
 		}
 		&.contacts {
-			@include font-type($HelveticaL, 12px, 22px, 0.5px); 
+			@include font-type($HelveticaL, 12px, 22px, 0.5px);
 			display: flex; position: relative; padding-top: 20px; padding-bottom: 20px; margin-top: 20px;
 			&:after {
 				content: '';
-				position: absolute; top:0; left:50%; margin-left: -5000px; width:10000px; height: 1px; 
+				position: absolute; top:0; left:50%; margin-left: -5000px; width:10000px; height: 1px;
 				background: #79abff;
 			}
 

@@ -68,17 +68,122 @@ let app = (function ($) {
 
         closeButton.click(function closeList() {
           listContent.removeClass('active');
+					if ($('.js-projectList input:checked').length > 0) {
+						$(window).trigger('project-selected');
+					}
           return false;
         });
 
         return Object.freeze({ listContent });
+      },
+
+			/**
+			 * COMPONENT: LOGIN FORM - форма входа в личный кабинет
+			 * @return Возвращает статус пользователя
+			 */
+
+			loginForm() {
+				// Проверка на статус пользователя (вошел или нет)
+				let isLogin = (function showForm() {
+					let [body, wrapper] = [ $('body'), $('.wr-login')];
+					if (body.data('user') === undefined) {
+						// Пользователь не залогинелся - показываем форму
+						wrapper.addClass('active');
+						return false;
+					} else {
+						return true;
+					}
+				}());
+				// Валидация и отправка формы
+				function submitForm(event) {
+					let form = $('.login form'),
+						email = form.find('input[name=email]'),
+						password = form.find('input[name=password]');
+					if (!/^.*\@.*\..*$/.test(email.val())) {
+						alert('Неправильно введён email!');
+						return false;
+					}
+					if (password.val().length < 3) {
+						alert('Пароль должен быть длиннее 3-х символов!');
+						return false;
+					}
+					$('.login form').submit();
+				}
+
+				$('.js-login').click(submitForm);
+
+				return { isLogin }
+			},
+
+			/**
+			 * COMPONENT: PARTICIPANT SELECT - выбор конкретного участника проекта
+			 * @return Возвращает компонент
+			 */
+
+			participantSelect() {
+				let [select, list] = [
+					$('#participants'), $('.participants .list')
+				];
+
+				function activateSelect() {
+					select.prop('disabled', false);
+				}
+
+				$('#participants').change(function toggleList() {
+					list.toggleClass('active');
+					$('.owl-carousel').owlCarousel({
+						loop: false,
+						margin: 10,
+						nav: false,
+						itemElement: 'li',
+						responsive:{
+							0: {
+								items:4
+							},
+							600: {
+								items:4
+							},
+							1000:{
+								items:4
+							}
+						}
+					});
+				});
+
+				return Object.freeze({ activateSelect });
+			},
+
+      /**
+			 * COMPONENT: SELECT 2 - пользовательская стилизация Select
+			 * @return Возвращает компонент
+			 */
+
+      mySelect() {
+        return $('select').select2();
+      },
+
+      /**
+			 * COMPONENT: PHOTOS UPLOADER - загрузка файлов с предпросмотром
+			 * @return Возвращает компонент
+			 */
+
+      photosUploader() {
+        return new Dropzone('.choose-product .photos', {
+          url: 'uploadPhoto'
+        });
       }
+
     },
 
     events: [
+			['project-selected', 'activateParticipantSelect']
     ],
 
     actions: {
+			activateParticipantSelect() {
+				let {participantSelect} = this.components;
+				participantSelect.activateSelect();
+			}
     },
 
     run() {
