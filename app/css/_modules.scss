@@ -867,6 +867,7 @@ ul.item-list {
 
 	.contacts {
 		position: relative; padding: 50px 0;
+		overflow-x: hidden;
 		&:before {
 			content: '';
 			display: block; width: 9999px; height: 1px; position: absolute; left: 50%; top: 0; transform: translateX(-50%);
@@ -924,12 +925,21 @@ ul.item-list {
 			}
 		}
 	}
-	@include respond-to(md) {
-		padding: 0 50px 50px 60px;
+	@include respond-to(lg) {
 		.item-info {
 			.project {
 				div.lists {
-					width: 700px;
+					width: 920px; left: -190px;
+				}
+			}
+		}
+	}
+	@include respond-to(md) {
+		padding: 0 50px 60px 50px;
+		.item-info {
+			.project {
+				div.lists {
+					width: 700px; left: -40px;
 				}
 			}
 		}
@@ -942,11 +952,60 @@ ul.item-list {
 				& > li {
 					width: 100%; margin-bottom: 10px;
 				}
-				&.confirm {
-					flex-direction: column;
+			}
+		}
+		.item-info {
+			.project {
+				div.lists {
+					width: calc(100% + 40px); left: -20px;
+					& > ul {
+						flex-direction: column;
+						& > li {
+							width: 100%; margin-bottom: 30px; 
+							border-bottom: 1px solid #d7deea; border-right: none;
+							h3 {
+								margin-bottom: 25px;
+							}
+							
+							& > ul.list {
+								padding-bottom: 20px; position: relative;
+							}
+						}
+					}
 				}
 			}
 		}
+		ul {
+			&.confirm {
+				flex-direction: column;
+				li {
+					margin-bottom: 30px;
+					&:last-child {
+						margin-bottom: 0;
+					}
+				}
+			}
+		}
+	}
+	@include respond-to(mobile) {
+		padding: 0 30px 60px 30px;
+
+		.item-info {
+			.project {
+				div.lists {
+					& > ul {
+						&.action {
+							text-align: center;
+							display: flex; flex-direction: column-reverse;
+							li {
+								padding: 0;
+							}
+						}
+					}
+				}
+			}
+		}
+		
 	}
 }
 
@@ -1915,8 +1974,8 @@ ul.item-list {
 }
 
 //profile-founds
-.founds {
-	position: relative;
+.profile.founds {
+	position: relative; padding-top: 30px;
 	.donation {
 		position: absolute; right: 25px; top: 22px;
 	}
@@ -1938,19 +1997,20 @@ ul.item-list {
 			}
 		}
 	}
-	ul.profile-tabs {
-		justify-content: flex-start;
-		li {
-			margin-right: 65px;
-			&:last-child {
-				margin-right: 0;
-			}
-			span {
+	.profile-tabs {
+		ul {
+			justify-content: flex-start;
+			li {
+				margin-right: 65px;
+				&:last-child {
+					margin-right: 0;
+				}
+				span {
 
+				}
 			}
 		}
 	}
-
 	.desc {
 		display: flex;
 		&-info {
@@ -1987,7 +2047,73 @@ ul.item-list {
 				}
 			}
 		}
-
+	}
+	@include  respond-to(md) {
+		.desc {
+			flex-direction: column;
+		}
+		.desc-about {
+			padding: 50px 0 0 0; margin-top: 50px;
+			border-top: 1px solid #d9e4ea;
+		}
+		.projects {
+			.articles {
+				& > li {
+					flex-direction: column; padding: 20px 40px 20px 60px; 
+					article {
+						width: 100%;
+					}
+				}
+				.line-sep {
+					height: 1px; width: 100%; margin-left: 0; margin-bottom: 30px;
+				}
+			}
+			.info {
+				width: 100% !important;
+				.progress-wrapp {
+					ul {
+						li {
+							& > span {
+								position: static !important;
+							}
+						}
+					}
+				}
+			}
+		}
+		.articles {
+			& > li {
+				flex-direction: column; padding: 0 50px;
+				background: #fff;
+				article {
+					width: 100%;
+				}
+				figure {
+					padding-bottom: 40px;
+				}
+			}
+		}
+	}
+	@include  respond-to(sm) {
+		.user-info {
+			flex-direction: column; align-items: start; padding-top: 80px;
+			figure {
+				margin-bottom: 20px;
+			}
+		}
+		.donation {
+			top: 50px;
+		}
+	}
+	@include  respond-to(xs) {
+		.donation {
+			right: 10px;
+		}
+		.articles {
+			& > li {
+				padding: 20px 25px !important;
+			}
+		}
 	}
 }
 
