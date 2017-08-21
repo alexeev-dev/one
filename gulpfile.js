@@ -12,8 +12,9 @@ var gulp = require('gulp'),
 	rigger = require('gulp-rigger'),
 	merge = require('merge-stream'),
 	buffer = require('vinyl-buffer');
+	babel = require('gulp-babel');
 
-// browser 
+// browser
 gulp.task('browser-sync', function() {
 	browserSync.init({
 		server: {
@@ -59,6 +60,9 @@ gulp.task('js:libs', function () {
 // main js
 gulp.task('js:main', function () {
 	gulp.src('app/js/*.js')
+	.pipe(babel({
+		presets: ["es2015"]
+	}))
 	.pipe(gulp.dest('dist/assets/js/'))
 	.pipe(browserSync.reload({stream:true}));
 });
