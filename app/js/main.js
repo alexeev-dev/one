@@ -231,14 +231,22 @@ let app = (function ($) {
     },
 
     events: [
-			['project-selected', 'activateParticipantSelect']
+			['project-selected', 'activateParticipantSelect'],
+      ['#confirm', 'click', 'toggleConfirm']
     ],
 
     actions: {
+
 			activateParticipantSelect() {
 				let {participantSelect} = this.components;
 				participantSelect.activateSelect();
-			}
+			},
+
+      toggleConfirm() {
+        let isChecked = $('#confirm').prop('checked');
+        $('.confirm button').prop('disabled', !isChecked);
+      }
+
     },
 
     run() {
