@@ -37,6 +37,34 @@ let app = (function ($) {
     });
   }
 
+  /**
+   * Создаёт новый экземпляр компонента Product
+   * @return контейнер содержащий поля для нового товара
+   */
+
+  function Product() {
+    return $('\
+    <div class="product-group">\
+      <div class="info">\
+        <ul>\
+          <li>\
+            <input type="text" placeholder="Название">\
+            <p>Полное название, модель и пр.</p>\
+          </li>\
+          <li>\
+            <input type="text" placeholder="Цена">\
+          </li>\
+        </ul>\
+      </div>\
+      <textarea class="description" placeholder="Описание"></textarea>\
+      <div class="photos">\
+        <h4>Фотографии</h4>\
+        <p>Перетащите сюда фотографии, <br> или нажмите <a href="#">загрузить</a></p>\
+      </div>\
+    </div>\
+    ');
+  }
+
   // ======================================================================== //
   //                          ЭКЗЕМПЛЯР ПРИЛОЖЕНИЯ                            //
   // ======================================================================== //
@@ -170,6 +198,34 @@ let app = (function ($) {
         return new Dropzone('.choose-product .photos', {
           url: 'uploadPhoto'
         });
+      },
+
+      /**
+       * COMPONENT: PRODUCTS LIST - список товаров с возможностью
+       * добавления новых экземпляров
+       */
+
+      productsList() {
+        let productsList = $('.choose-product');
+
+        /**
+         * Добавляет новый товар
+         */
+
+        function addNew() {
+          let product = Product();
+          product.find('.photos').dropzone({
+            url: 'uploadPhoto'
+          });
+          productsList.find('a.add-item').before(product);
+        }
+
+        productsList.find('a.add-item').click(function addItem(event) {
+          event.preventDefault();
+          addNew();
+        });
+
+        return Object.freeze({ addNew });
       }
 
     },
