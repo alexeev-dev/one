@@ -27,7 +27,7 @@
 	<title>One+1</title>
 </head>
 
-<body>
+<body data-user="user@gmail.com">
 	<!--[if lt IE 10]>
 	<p class="browsehappy">Вы используете <strong>УСТАРЕВШИЙ Internet Explorer</strong> браузер. Пожалуйста, <a href="http://browsehappy.com/">обновите ваш Браузер</a> чтобы увидеть больше возможностей на сайтах!</p>
 	<![endif]-->
@@ -70,7 +70,38 @@
 		</header>
 
 		<!-- Login Form -->
-		<!--//= tpl/login.html-->
+		<section class="wr-login">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+		
+						<!-- Login Form -->
+						<div class="login">
+							<h2>Вход</h2>
+							<ul>
+								<li>
+									<form action="#">
+										<input name="email" type="text" placeholder="E-mail">
+										<input name="password" type="password" placeholder="Пароль">
+										<a href="#">Напомнить пароль</a>
+										<ul>
+											<li><a href="#" class="link">Зарегистрироваться</a></li>
+											<li><a href="#" class="btn js-login">Войти</a></li>
+										</ul>
+									</form>
+								</li>
+								<li class="line-sep"></li>
+								<li>
+									<a href="#" class="login-social"><i class="fa fa-vk"></i>В контакте</a>
+									<a href="#" class="login-social"><i class="fa fa-facebook"></i>Facebook</a>
+								</li>
+							</ul>
+						</div>
+		
+					</div>
+				</div>
+			</div>
+		</section>
 
 		<!-- New Post -->
 		<section class="wr-new_post">
@@ -234,58 +265,60 @@
 											</div>
 										</div>
 										<div class="participants">
-											<input id="participants" type="checkbox">
+											<input id="participants" type="checkbox" disabled>
 											<label for="participants">Выбрать конкретного участника проекта</label>
-											<ul class="list">
-												<li>
-													<input id="participant-1" type="checkbox">
-													<label for="participant-1">
-														<div class="ava">
-															<figure>
-																<img src="assets/img/participant-1.png">
-															</figure>
-															<span></span>
-														</div>
-														<p>Лаура Анна-Мария Гонзалес</p>
-													</label>
-												</li>
-												<li>
-													<input id="participant-2" type="checkbox">
-													<label for="participant-2">
-														<div class="ava">
-															<figure>
-																<img src="assets/img/participant-2.png">
-															</figure>
-															<span></span>
-														</div>
-														<p>Василиса Космодемьянаская</p>
-													</label>
-												</li>
-												<li>
-													<input id="participant-3" type="checkbox">
-													<label for="participant-3">
-														<div class="ava">
-															<figure>
-																<img src="assets/img/participant-3.png">
-															</figure>
-															<span></span>
-														</div>
-														<p>Федор Палмер</p>
-													</label>
-												</li>
-												<li>
-													<input id="participant-4" type="checkbox">
-													<label for="participant-4">
-														<div class="ava">
-															<figure>
-																<img src="assets/img/participant-4.png">
-															</figure>
-															<span></span>
-														</div>
-														<p>Николай Лихтенштейн</p>
-													</label>
-												</li>
-											</ul>
+											<div class="participants-container">
+												<ul class="list owl-carousel">
+													<li>
+														<input name="participant" id="participant-1" type="radio" value="1">
+														<label for="participant-1">
+															<div class="ava">
+																<figure>
+																	<img src="assets/img/participant-1.png">
+																</figure>
+																<span></span>
+															</div>
+															<p>Лаура Анна-Мария Гонзалес</p>
+														</label>
+													</li>
+													<li>
+														<input name="participant" id="participant-2" type="radio" value="2">
+														<label for="participant-2">
+															<div class="ava">
+																<figure>
+																	<img src="assets/img/participant-2.png">
+																</figure>
+																<span></span>
+															</div>
+															<p>Василиса Космодемьянаская</p>
+														</label>
+													</li>
+													<li>
+														<input name="participant" id="participant-3" type="radio" value="3">
+														<label for="participant-3">
+															<div class="ava">
+																<figure>
+																	<img src="assets/img/participant-3.png">
+																</figure>
+																<span></span>
+															</div>
+															<p>Федор Палмер</p>
+														</label>
+													</li>
+													<li>
+														<input name="participant" id="participant-4" type="radio" value="4">
+														<label for="participant-4">
+															<div class="ava">
+																<figure>
+																	<img src="assets/img/participant-4.png">
+																</figure>
+																<span></span>
+															</div>
+															<p>Николай Лихтенштейн</p>
+														</label>
+													</li>
+												</ul>
+											</div>
 										</div>
 										<div class="choose-product">
 											<div class="address">
@@ -323,23 +356,22 @@
 											<textarea class="description" placeholder="Описание"></textarea>
 											<div class="photos">
 												<h4>Фотографии</h4>
-												<p>Перетащите сюда фотографии, <br>
-												или нажмите <a href="#">загрузить</a></p>
+												<p>Перетащите сюда фотографии, <br> или нажмите <a href="#">загрузить</a></p>
 											</div>
 											<a href="#" class="add-item"><img src="assets/img/add-item.png"> добавить еще один товар</a>
-										</div>	
+										</div>
 									</div> <!--/.item-info -->
 
 									<div class="contacts">
 										<h3>Контакты</h3>
-										<p>Вася Раушенберг</p>
+										<input type="text" value="Вася Раушенберг">
 										<ul>
 											<li>
-												<p>+7 (240) 320-32-32</p>
+												<input type="text" value="+7 (240) 320-32-32">
 												<span>Телефон для связи</span>
 											</li>
 											<li>
-												<p>vasya@raush.com</p>
+												<input type="text" value="vasya@raush.com">
 												<span>E-mail для связи</span>
 											</li>
 										</ul>
@@ -465,7 +497,7 @@
 
 	<!-- Popups -->
 	<div class="popup"></div>
-	
+
 	<!-- Scripts -->
 	<script type="text/javascript" src="assets/js/libs.min.js"></script>
 	<script type="text/javascript" src="assets/js/main.js"></script>

@@ -958,7 +958,8 @@ ul.item-list {
 		}
 		.choose-product {
 			padding-top: 55px;
-			.address, .info {
+			.address, 
+			.info {
 				ul {
 					display: flex; margin: 0 -10px;
 					li {
@@ -1033,6 +1034,11 @@ ul.item-list {
 			color: #000000; font-family: $helv; font-size: 18px; font-weight: 300;
 			padding-bottom: 3px; margin-bottom: 40px;
 			border-bottom: 1px solid #c0d1dd;
+		}
+		input {
+			color: #000000; font-family: $HelveticaL; font-size: 18px; line-height: 22px;
+			width: 100%; padding-bottom: 3px;
+			background: transparent; border: none; border-bottom: 1px solid #c0d1dd;
 		}
 		ul {
 			display: flex; margin: 0 -10px;
