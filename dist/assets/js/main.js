@@ -98,6 +98,9 @@ var app = function ($) {
 
         list.click(function toggleList() {
           listContent.toggleClass('active');
+          if ($('.js-projectList input:checked').length > 0) {
+            $(window).trigger('project-selected');
+          }
           return false;
         });
 
@@ -168,10 +171,12 @@ var app = function ($) {
 
         var isFirst = true;
 
-        select.prop('disabled', true);
+        $('.participants').hide();
+        select.prop('checked', false).prop('disabled', 'true');
 
         function activateSelect() {
           select.prop('disabled', false);
+          $('.participants').fadeIn();
         }
 
         $('#participants').change(function toggleList() {

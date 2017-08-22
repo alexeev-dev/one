@@ -730,7 +730,7 @@ ul.item-list {
 	}
 	.item-info {
 		.project {
-			position: relative; z-index: 10; margin: 40px 0;
+			position: relative; z-index: 10; margin: 40px 0 0 0;
 			& > a {
 				color: #000000; font-family: $HelveticaL; font-size: 18px; font-weight: 300;
 				position: relative; z-index: 10;
@@ -872,6 +872,8 @@ ul.item-list {
 		}
 		
 		.participants {
+			margin: 40px 0 5px 0;
+
 			& > input {
 				display: none;
 			}
@@ -907,6 +909,9 @@ ul.item-list {
 				margin: 0 -200px; padding:55px 0;
 				background: #f4fcff;
 				width: 1180px;
+
+				display: none; 
+				&.active {display: block;}
 
 				@media (max-width: 1249px) {width: 1140px;}
 				@include respond-to(lg) {width: 940px;}
@@ -976,7 +981,7 @@ ul.item-list {
 			}
 		}
 		.choose-product {
-			padding-top: 55px;
+
 			.address, 
 			.info {
 				ul {
@@ -1040,6 +1045,8 @@ ul.item-list {
 	.contacts {
 		position: relative; padding: 50px 0;
 		overflow-x: hidden;
+		> input {margin-bottom: 35px;}
+
 		&:before {
 			content: '';
 			display: block; width: 9999px; height: 1px; position: absolute; left: 50%; top: 0; transform: translateX(-50%);
@@ -1100,6 +1107,9 @@ ul.item-list {
 				@extend .btn;
 				padding: 12px 25px 13px;
 			}
+
+			button:disabled,
+			button[disabled] {&:hover {background: #4489ff; color: #ffffff;}}
 		}
 	}
 	@include respond-to(lg) {
@@ -2503,4 +2513,25 @@ ul.item-list {
 			}
 		}
 	}
+}
+
+.select2-container {
+	width: 180px !important;
+	z-index: 4 !important;;
+}
+
+.select2-container--default .select2-selection--single {
+	background: none !important; border: none !important;
+
+	color: #000000; font-family: $HelveticaL; font-size: 18px; font-weight: 300;
+	position: relative; z-index: 10;
+	b {
+		border-color: #4489ff transparent transparent !important;
+		margin-left: 0 !important;
+	}
+}
+
+.select2-container--default .select2-selection--single .select2-selection__rendered {
+	padding-left: 0 !important;
+	color: #000000 !important;
 }
