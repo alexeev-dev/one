@@ -210,8 +210,10 @@ let app = (function ($) {
 			 */
 
       photosUploader() {
+        $('.choose-product .photos a').click(e => e.preventDefault());
         return new Dropzone('.choose-product .photos', {
-          url: 'uploadPhoto'
+          url: 'uploadPhoto',
+          clickable: '.choose-product .photos a'
         });
       },
 
@@ -229,8 +231,10 @@ let app = (function ($) {
 
         function addNew() {
           let product = Product();
+          product.find('.photos a').click(e => e.preventDefault());
           product.find('.photos').dropzone({
-            url: 'uploadPhoto'
+            url: 'uploadPhoto',
+            clickable: product.find('.photos a')[0]
           });
           productsList.find('a.add-item').before(product);
         }
