@@ -270,7 +270,6 @@ var app = function ($) {
       directionsTabs: function directionsTabs() {
         var tabs = $('.doings .tab');
         tabs.not('.tab--active').hide();
-        console.log(tabs);
         $('.doings-tabs a').click(function changeTab(event) {
           var tabId = $(this).attr('href');
           event.preventDefault();
@@ -278,10 +277,27 @@ var app = function ($) {
           $('.doings-tabs li').removeClass('active');
           $(this).parent().addClass('active');
         });
+      },
+
+
+      /**
+       * COMPONENT: PROFILE TABS - табы профиля
+       */
+
+      profileTabs: function profileTabs() {
+        var tabs = $('.profile > .tab');
+        tabs.not('.tab--active').hide();
+        $('.profile-tabs li a').click(function changeTab(event) {
+          var tabId = $(this).attr('href');
+          event.preventDefault();
+          tabs.hide().filter(tabId).show();
+          $('.profile-tabs li').removeClass('active');
+          $(this).parent().addClass('active');
+        });
       }
     },
 
-    events: [['project-selected', 'activateParticipantSelect'], ['#confirm', 'click', 'toggleConfirm']],
+    events: [['project-selected', 'activateParticipantSelect'], ['#confirm', 'click', 'toggleConfirm'], ['.my-menu', 'click', 'showProfileMenu'], ['.responsive-menu', 'click', 'showSiteMenu']],
 
     actions: {
       activateParticipantSelect: function activateParticipantSelect() {
@@ -292,6 +308,12 @@ var app = function ($) {
       toggleConfirm: function toggleConfirm() {
         var isChecked = $('#confirm').prop('checked');
         $('.confirm button').prop('disabled', !isChecked);
+      },
+      showProfileMenu: function showProfileMenu() {
+        $('.profile-tabs ul').toggleClass('active');
+      },
+      showSiteMenu: function showSiteMenu() {
+        $('.main-menu ul').toggleClass('active');
       }
     },
 
