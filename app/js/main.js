@@ -250,12 +250,27 @@ let app = (function ($) {
       directionsTabs() {
         let tabs = $('.doings .tab');
         tabs.not('.tab--active').hide();
-        console.log(tabs);
         $('.doings-tabs a').click(function changeTab(event) {
           let tabId = $(this).attr('href');
           event.preventDefault();
           tabs.hide().filter(tabId).show();
           $('.doings-tabs li').removeClass('active');
+          $(this).parent().addClass('active');
+        });
+      },
+
+      /**
+       * COMPONENT: PROFILE TABS - табы профиля
+       */
+
+      profileTabs() {
+        let tabs = $('.profile > .tab');
+        tabs.not('.tab--active').hide();
+        $('.profile-tabs li a').click(function changeTab(event) {
+          let tabId = $(this).attr('href');
+          event.preventDefault();
+          tabs.hide().filter(tabId).show();
+          $('.profile-tabs li').removeClass('active');
           $(this).parent().addClass('active');
         });
       }
@@ -264,7 +279,9 @@ let app = (function ($) {
 
     events: [
 			['project-selected', 'activateParticipantSelect'],
-      ['#confirm', 'click', 'toggleConfirm']
+      ['#confirm', 'click', 'toggleConfirm'],
+      ['.my-menu', 'click', 'showProfileMenu'],
+      ['.responsive-menu', 'click', 'showSiteMenu'],
     ],
 
     actions: {
@@ -277,6 +294,14 @@ let app = (function ($) {
       toggleConfirm() {
         let isChecked = $('#confirm').prop('checked');
         $('.confirm button').prop('disabled', !isChecked);
+      },
+
+      showProfileMenu() {
+        $('.profile-tabs ul').toggleClass('active');
+      },
+
+      showSiteMenu() {
+        $('.main-menu ul').toggleClass('active');
       }
 
     },
