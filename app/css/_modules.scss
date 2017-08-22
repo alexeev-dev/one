@@ -870,7 +870,7 @@ ul.item-list {
 				}
 			}
 		}
-
+		
 		.participants {
 			& > input {
 				display: none;
@@ -902,56 +902,72 @@ ul.item-list {
 					opacity: 1;
 				}
 			}
-			.list {
+			.participants-container {
 				text-align: center;
 				margin: 0 -200px; padding:55px 0;
 				background: #f4fcff;
 				width: 1180px;
-				
 
-				&-item {
-					display: inline-block; vertical-align: top; margin: 0 40px;
-					input {
-						display: none;
-					}
-					label {
-						display: block; width: 180px;
-						.ava {
-							position: relative;width: 180px; height: 180px;
-							figure {
-								width: 180px; height: 180px; position: relative;
-								border-radius: 50%; border: solid 2px transparent;
-								overflow: hidden;
-								transition: 0.3s ease-out;
-								img {
-									width: calc(100% + 2px); position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%);
-								}
-							}
-							span {
-								display: block; width: 28px; height: 28px; position: absolute; top: 7px; right: 18px;
-								border: 2px solid #4489ff; background-color: #f8f8f8; border-radius: 50%;
-								&:after {
-									content: '';
-									width: 10px; height: 7px; position: absolute; left: 50%; top: calc(50% - 2px); transform: translate(-50%,-50%) rotate(-45deg);
-									border-left: 2px solid #4489ff; border-bottom: 2px solid #4489ff;
-									opacity: 0;
+				@media (max-width: 1249px) {width: 1140px;}
+				@include respond-to(lg) {width: 940px;}
+				@include respond-to(md) {margin: 0 -50px; width: 720px;}
+				@include respond-to(sm) {width: 737px;}
+
+				@for $i from 736 through 401 {
+					@media (max-width: $i + px) {width: #{$i - 30 + px};}
+				}
+
+				@media (max-width: 400px) {margin: 0 -30px; width: 370px;}
+
+				@for $i from 399 through 320 {
+					@media (max-width: $i + px) {width: #{$i - 30 + px};}
+				}
+
+				.list {
+					&-item {
+						display: inline-block; vertical-align: top; margin: 0 40px;
+						input {
+							display: none;
+						}
+						label {
+							display: block; width: 180px;
+							.ava {
+								position: relative;width: 180px; height: 180px;
+								figure {
+									width: 180px; height: 180px; position: relative;
+									border-radius: 50%; border: solid 2px transparent;
+									overflow: hidden;
 									transition: 0.3s ease-out;
+									img {
+										width: calc(100% + 2px); position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%);
+									}
+								}
+								span {
+									display: block; width: 28px; height: 28px; position: absolute; top: 7px; right: 18px;
+									border: 2px solid #4489ff; background-color: #f8f8f8; border-radius: 50%;
+									&:after {
+										content: '';
+										width: 10px; height: 7px; position: absolute; left: 50%; top: calc(50% - 2px); transform: translate(-50%,-50%) rotate(-45deg);
+										border-left: 2px solid #4489ff; border-bottom: 2px solid #4489ff;
+										opacity: 0;
+										transition: 0.3s ease-out;
+									}
 								}
 							}
-						}
-						p {
-							color: #000000; font-family: $HelveticaL; font-size: 15px; font-weight: 300; text-align: center;
-							padding: 0 15px; margin-top: 30px;
-						}
-					}
-					input:checked + label {
-						.ava {
-							figure {
-								border-color: #4489ff;
+							p {
+								color: #000000; font-family: $HelveticaL; font-size: 15px; font-weight: 300; text-align: center;
+								padding: 0 15px; margin-top: 30px;
 							}
-							span {
-								&:after {
-									opacity: 1;
+						}
+						input:checked + label {
+							.ava {
+								figure {
+									border-color: #4489ff;
+								}
+								span {
+									&:after {
+										opacity: 1;
+									}
 								}
 							}
 						}
