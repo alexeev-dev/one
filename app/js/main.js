@@ -155,7 +155,7 @@ let app = (function ($) {
 
         let isFirst = true;
 
-        select.prop('disabled', true);
+        select.prop('checked', false).prop('disabled', 'true');
 
 				function activateSelect() {
 					select.prop('disabled', false);
