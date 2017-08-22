@@ -1345,7 +1345,7 @@ ul.item-list {
 				}
 				a {
 					@include font-type($CormacEL, 18px, 22px, -1px); color: #000;
-					display: block; padding-bottom: 20px; margin-bottom: -3px;
+					display: block; padding: 10px 0; margin-bottom: -3px;
 					&:hover {
 						border-bottom: 3px solid #4489ff;
 					}
@@ -1546,7 +1546,7 @@ ul.item-list {
 							border-left: 2px solid #5191ff;
 							&:before {
 								content: '';
-								position: absolute; left: 35px; top: 30px; width: 8px; height: 8px;
+								position: absolute; left: 25px; top: 25px; width: 8px; height: 8px;
 								border-radius: 50%; background: #5191ff;
 							}
 						}
@@ -1578,6 +1578,7 @@ ul.item-list {
 								& > a {
 									color: #ff455c;
 									float: right;
+									&:hover {cursor: pointer; text-decoration: underline;}
 								}
 							}
 							& > ul {
@@ -1596,9 +1597,6 @@ ul.item-list {
 													color: #000;
 												}
 											}
-											a {
-
-											}
 										}
 									}
 
@@ -1611,6 +1609,7 @@ ul.item-list {
 											}
 											li:first-child > a {
 												color: #ff455c;
+												&:hover {cursor: pointer; text-decoration: underline;}
 											}
 											li:last-child {
 												margin-right: 0;
@@ -1618,6 +1617,12 @@ ul.item-list {
 
 										}
 
+									}
+
+									span {
+										cursor: default;
+										background: #4489ff;
+										color: #ffffff;
 									}
 								}
 							}
@@ -1821,7 +1826,7 @@ ul.item-list {
 		& > ul {
 			& > li {
 				padding-left: 180px; padding-right: 101px; position: relative; margin-bottom: 10px;
-				background: #f6f8fb; border-radius: 4px;
+				background: #f6f8fb; border-radius: 4px; min-height: 136px;
 				&:last-child {
 					margin-bottom: 0;
 				}

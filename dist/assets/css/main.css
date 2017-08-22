@@ -11158,7 +11158,7 @@ ul.item-list {
       letter-spacing: -1px;
       color: #000;
       display: block;
-      padding-bottom: 20px;
+      padding: 10px 0;
       margin-bottom: -3px; }
       .profile-tabs > ul li a:hover {
         border-bottom: 3px solid #4489ff; }
@@ -11383,8 +11383,8 @@ ul.item-list {
         .profile .purchases table tr.mark td:first-child:before, .profile .advertisement table tr.mark td:first-child:before {
           content: '';
           position: absolute;
-          left: 35px;
-          top: 30px;
+          left: 25px;
+          top: 25px;
           width: 8px;
           height: 8px;
           -webkit-border-radius: 50%;
@@ -11412,6 +11412,9 @@ ul.item-list {
       .profile .purchases table tr.active td .item-info .customer > a, .profile .advertisement table tr.active td .item-info .customer > a {
         color: #ff455c;
         float: right; }
+        .profile .purchases table tr.active td .item-info .customer > a:hover, .profile .advertisement table tr.active td .item-info .customer > a:hover {
+          cursor: pointer;
+          text-decoration: underline; }
       .profile .purchases table tr.active td .item-info > ul, .profile .advertisement table tr.active td .item-info > ul {
         margin-top: 25px; }
         .profile .purchases table tr.active td .item-info > ul li, .profile .advertisement table tr.active td .item-info > ul li {
@@ -11443,8 +11446,15 @@ ul.item-list {
                 margin-right: 20px; }
               .profile .purchases table tr.active td .item-info > ul li.actions ul li:first-child > a, .profile .advertisement table tr.active td .item-info > ul li.actions ul li:first-child > a {
                 color: #ff455c; }
+                .profile .purchases table tr.active td .item-info > ul li.actions ul li:first-child > a:hover, .profile .advertisement table tr.active td .item-info > ul li.actions ul li:first-child > a:hover {
+                  cursor: pointer;
+                  text-decoration: underline; }
               .profile .purchases table tr.active td .item-info > ul li.actions ul li:last-child, .profile .advertisement table tr.active td .item-info > ul li.actions ul li:last-child {
                 margin-right: 0; }
+          .profile .purchases table tr.active td .item-info > ul li span, .profile .advertisement table tr.active td .item-info > ul li span {
+            cursor: default;
+            background: #4489ff;
+            color: #ffffff; }
     .profile .purchases table tr.active.booking td, .profile .advertisement table tr.active.booking td {
       border: 2px solid #5191ff;
       border-top: none; }
@@ -11624,7 +11634,8 @@ ul.item-list {
     margin-bottom: 10px;
     background: #f6f8fb;
     -webkit-border-radius: 4px;
-    border-radius: 4px; }
+    border-radius: 4px;
+    min-height: 136px; }
     .profile .bookmarks > ul > li:last-child {
       margin-bottom: 0; }
     .profile .bookmarks > ul > li figure {

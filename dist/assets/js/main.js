@@ -294,10 +294,26 @@ var app = function ($) {
           $('.profile-tabs li').removeClass('active');
           $(this).parent().addClass('active');
         });
+      },
+
+
+      /**
+       * COMPONENT: PURCHASES ACCORDION - аккордион покупок
+       */
+
+      purchasesAccordion: function purchasesAccordion() {
+        var items = $('.purchases .item-header');
+        items.find('a').click(function (e) {
+          return e.preventDefault();
+        });
+        $('.purchases .item-content').hide();
+        items.click(function openItem(event) {
+          $(this).next().toggle();
+        });
       }
     },
 
-    events: [['project-selected', 'activateParticipantSelect'], ['#confirm', 'click', 'toggleConfirm'], ['.my-menu', 'click', 'showProfileMenu'], ['.responsive-menu', 'click', 'showSiteMenu']],
+    events: [['project-selected', 'activateParticipantSelect'], ['#confirm', 'click', 'toggleConfirm'], ['.my-menu', 'click', 'showProfileMenu'], ['.responsive-menu', 'click', 'showSiteMenu'], ['.notice .close, .notice .later', 'click', 'hideNotice']],
 
     actions: {
       activateParticipantSelect: function activateParticipantSelect() {
@@ -314,6 +330,10 @@ var app = function ($) {
       },
       showSiteMenu: function showSiteMenu() {
         $('.main-menu ul').toggleClass('active');
+      },
+      hideNotice: function hideNotice(event) {
+        event.preventDefault();
+        $('.wr-notice').hide();
       }
     },
 
