@@ -135,7 +135,6 @@ let app = (function ($) {
 						loop: false,
 						margin: 10,
 						nav: false,
-						itemElement: 'li',
 						responsive:{
 							0: {
 								items:4
