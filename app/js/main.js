@@ -165,12 +165,15 @@ let app = (function ($) {
 						nav: false,
 						responsive:{
 							0: {
-								items:4
+								items:1
 							},
-							600: {
-								items:4
+							480: {
+								items:2
 							},
-							1000:{
+							768:{
+								items:3
+							},
+              992:{
 								items:4
 							}
 						}
