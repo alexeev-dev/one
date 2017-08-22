@@ -210,18 +210,6 @@ var app = function ($) {
 
 
       /**
-      * COMPONENT: SELECT 2 - пользовательская стилизация Select
-      * @return Возвращает компонент
-      */
-
-      mySelect: function mySelect() {
-        return $('select').select2({
-          minimumResultsForSearch: Infinity
-        });
-      },
-
-
-      /**
       * COMPONENT: PHOTOS UPLOADER - загрузка файлов с предпросмотром
       * @return Возвращает компонент
       */
@@ -230,6 +218,11 @@ var app = function ($) {
         $('.choose-product .photos a').click(function (e) {
           return e.preventDefault();
         });
+
+        if ($('.choose-product .photos').length === 0) {
+          return null;
+        }
+
         return new Dropzone('.choose-product .photos', {
           url: 'uploadPhoto',
           clickable: '.choose-product .photos a'
@@ -267,6 +260,24 @@ var app = function ($) {
         });
 
         return Object.freeze({ addNew: addNew });
+      },
+
+
+      /**
+       * COMPONENT: DIRETCTIONS TABS - табы направлений в добрых делах
+       */
+
+      directionsTabs: function directionsTabs() {
+        var tabs = $('.doings .tab');
+        tabs.not('.tab--active').hide();
+        console.log(tabs);
+        $('.doings-tabs a').click(function changeTab(event) {
+          var tabId = $(this).attr('href');
+          event.preventDefault();
+          tabs.hide().filter(tabId).show();
+          $('.doings-tabs li').removeClass('active');
+          $(this).parent().addClass('active');
+        });
       }
     },
 
