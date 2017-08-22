@@ -9359,25 +9359,26 @@ ul.item-list {
   .new-post .item-info .participants > input:checked + label:after {
     left: 20px;
     opacity: 1; }
-  .new-post .item-info .participants ul.list {
+  .new-post .item-info .participants .list {
     text-align: center;
     margin: 0 -200px;
     padding: 55px 0;
-    background: #f4fcff; }
-    .new-post .item-info .participants ul.list li {
+    background: #f4fcff;
+    width: 1180px; }
+    .new-post .item-info .participants .list-item {
       display: inline-block;
       vertical-align: top;
       margin: 0 40px; }
-      .new-post .item-info .participants ul.list li input {
+      .new-post .item-info .participants .list-item input {
         display: none; }
-      .new-post .item-info .participants ul.list li label {
+      .new-post .item-info .participants .list-item label {
         display: block;
         width: 180px; }
-        .new-post .item-info .participants ul.list li label .ava {
+        .new-post .item-info .participants .list-item label .ava {
           position: relative;
           width: 180px;
           height: 180px; }
-          .new-post .item-info .participants ul.list li label .ava figure {
+          .new-post .item-info .participants .list-item label .ava figure {
             width: 180px;
             height: 180px;
             position: relative;
@@ -9387,7 +9388,7 @@ ul.item-list {
             overflow: hidden;
             -webkit-transition: 0.3s ease-out;
             transition: 0.3s ease-out; }
-            .new-post .item-info .participants ul.list li label .ava figure img {
+            .new-post .item-info .participants .list-item label .ava figure img {
               width: -webkit-calc(100% + 2px);
               width: calc(100% + 2px);
               position: absolute;
@@ -9396,7 +9397,7 @@ ul.item-list {
               -webkit-transform: translate(-50%, -50%);
               -ms-transform: translate(-50%, -50%);
               transform: translate(-50%, -50%); }
-          .new-post .item-info .participants ul.list li label .ava span {
+          .new-post .item-info .participants .list-item label .ava span {
             display: block;
             width: 28px;
             height: 28px;
@@ -9407,7 +9408,7 @@ ul.item-list {
             background-color: #f8f8f8;
             -webkit-border-radius: 50%;
             border-radius: 50%; }
-            .new-post .item-info .participants ul.list li label .ava span:after {
+            .new-post .item-info .participants .list-item label .ava span:after {
               content: '';
               width: 10px;
               height: 7px;
@@ -9423,7 +9424,7 @@ ul.item-list {
               opacity: 0;
               -webkit-transition: 0.3s ease-out;
               transition: 0.3s ease-out; }
-        .new-post .item-info .participants ul.list li label p {
+        .new-post .item-info .participants .list-item label p {
           color: #000000;
           font-family: "HelveticaLight", sans-serif;
           font-size: 15px;
@@ -9431,9 +9432,9 @@ ul.item-list {
           text-align: center;
           padding: 0 15px;
           margin-top: 30px; }
-      .new-post .item-info .participants ul.list li input:checked + label .ava figure {
+      .new-post .item-info .participants .list-item input:checked + label .ava figure {
         border-color: #4489ff; }
-      .new-post .item-info .participants ul.list li input:checked + label .ava span:after {
+      .new-post .item-info .participants .list-item input:checked + label .ava span:after {
         opacity: 1; }
   .new-post .item-info .choose-product {
     padding-top: 55px; }
@@ -11193,55 +11194,6 @@ ul.item-list {
   z-index: 1;
   height: 100%;
   width: 100%; }
-
-/*
- * 	Default theme - Owl Carousel CSS File
- */
-.owl-theme .owl-nav {
-  margin-top: 10px;
-  text-align: center;
-  -webkit-tap-highlight-color: transparent; }
-  .owl-theme .owl-nav [class*='owl-'] {
-    color: #FFF;
-    font-size: 14px;
-    margin: 5px;
-    padding: 4px 7px;
-    background: #D6D6D6;
-    display: inline-block;
-    cursor: pointer;
-    -webkit-border-radius: 3px;
-    border-radius: 3px; }
-    .owl-theme .owl-nav [class*='owl-']:hover {
-      background: #869791;
-      color: #FFF;
-      text-decoration: none; }
-  .owl-theme .owl-nav .disabled {
-    opacity: 0.5;
-    cursor: default; }
-
-.owl-theme .owl-nav.disabled + .owl-dots {
-  margin-top: 10px; }
-
-.owl-theme .owl-dots {
-  text-align: center;
-  -webkit-tap-highlight-color: transparent; }
-  .owl-theme .owl-dots .owl-dot {
-    display: inline-block;
-    zoom: 1;
-    *display: inline; }
-    .owl-theme .owl-dots .owl-dot span {
-      width: 10px;
-      height: 10px;
-      margin: 5px 7px;
-      background: #D6D6D6;
-      display: block;
-      -webkit-backface-visibility: visible;
-      -webkit-transition: opacity 200ms ease;
-      transition: opacity 200ms ease;
-      -webkit-border-radius: 30px;
-      border-radius: 30px; }
-    .owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span {
-      background: #869791; }
 
 .select2-container {
   -webkit-box-sizing: border-box;

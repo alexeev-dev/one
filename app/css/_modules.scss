@@ -902,11 +902,14 @@ ul.item-list {
 					opacity: 1;
 				}
 			}
-			ul.list {
+			.list {
 				text-align: center;
 				margin: 0 -200px; padding:55px 0;
 				background: #f4fcff;
-				li {
+				width: 1180px;
+				
+
+				&-item {
 					display: inline-block; vertical-align: top; margin: 0 40px;
 					input {
 						display: none;
