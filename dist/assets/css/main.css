@@ -8122,7 +8122,7 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
 @font-face {
   font-family: Cormac-ExtraLight;
   src: url("../fonts/Cormac-ExtraLight/Cormac-ExtraLight.eot");
-  src: url("../fonts/Cormac-ExtraLight/Cormac-ExtraLight.eot") format("embedded-opentype"), url("../fonts/Cormac-ExtraLight/Cormac-ExtraLight.woff2") format("woff2"), url("../fonts/Cormac-ExtraLight/Cormac-ExtraLight.woff") format("woff"), url("../fonts/Cormac-ExtraLight/Cormac-ExtraLight.ttf") format("truetype"), url("../fonts/Cormac-ExtraLight/Cormac-ExtraLight.svg#Cormac-ExtraLight") format("svg");
+  src: url("../fonts/Cormac-ExtraLight/Cormac-ExtraLight.eot") format("embedded-opentype"), url("../fonts/Cormac-ExtraLight/Cormac-ExtraLight.woff") format("woff"), url("../fonts/Cormac-ExtraLight/Cormac-ExtraLight.ttf") format("truetype"), url("../fonts/Cormac-ExtraLight/Cormac-ExtraLight.svg#Cormac-ExtraLight") format("svg");
   font-weight: normal;
   font-style: normal; }
 
@@ -8134,7 +8134,7 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
 @font-face {
   font-family: HelveticaLight;
   src: url("../fonts/HelveticaLight/HelveticaLight.eot");
-  src: url("../fonts/HelveticaLight/HelveticaLight.eot") format("embedded-opentype"), url("../fonts/HelveticaLight/HelveticaLight.woff2") format("woff2"), url("../fonts/HelveticaLight/HelveticaLight.woff") format("woff"), url("../fonts/HelveticaLight/HelveticaLight.ttf") format("truetype"), url("../fonts/HelveticaLight/HelveticaLight.svg#HelveticaLight") format("svg");
+  src: url("../fonts/HelveticaLight/HelveticaLight.eot") format("embedded-opentype"), url("../fonts/HelveticaLight/HelveticaLight.woff") format("woff"), url("../fonts/HelveticaLight/HelveticaLight.ttf") format("truetype"), url("../fonts/HelveticaLight/HelveticaLight.svg#HelveticaLight") format("svg");
   font-weight: normal;
   font-style: normal; }
 
@@ -8146,7 +8146,7 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
 @font-face {
   font-family: HelveticaThin;
   src: url("../fonts/HelveticaThin/HelveticaThin.eot");
-  src: url("../fonts/HelveticaThin/HelveticaThin.eot") format("embedded-opentype"), url("../fonts/HelveticaThin/HelveticaThin.woff2") format("woff2"), url("../fonts/HelveticaThin/HelveticaThin.woff") format("woff"), url("../fonts/HelveticaThin/HelveticaThin.ttf") format("truetype"), url("../fonts/HelveticaThin/HelveticaThin.svg#HelveticaThin") format("svg");
+  src: url("../fonts/HelveticaThin/HelveticaThin.eot") format("embedded-opentype"), url("../fonts/HelveticaThin/HelveticaThin.woff") format("woff"), url("../fonts/HelveticaThin/HelveticaThin.ttf") format("truetype"), url("../fonts/HelveticaThin/HelveticaThin.svg#HelveticaThin") format("svg");
   font-weight: normal;
   font-style: normal; }
 
@@ -8158,7 +8158,7 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
 @font-face {
   font-family: HelveticaRegular;
   src: url("../fonts/HelveticaRegular/HelveticaRegular.eot");
-  src: url("../fonts/HelveticaRegular/HelveticaRegular.eot") format("embedded-opentype"), url("../fonts/HelveticaRegular/HelveticaRegular.woff2") format("woff2"), url("../fonts/HelveticaRegular/HelveticaRegular.woff") format("woff"), url("../fonts/HelveticaRegular/HelveticaRegular.ttf") format("truetype"), url("../fonts/HelveticaRegular/HelveticaRegular.svg#HelveticaRegular") format("svg");
+  src: url("../fonts/HelveticaRegular/HelveticaRegular.eot") format("embedded-opentype"), url("../fonts/HelveticaRegular/HelveticaRegular.woff") format("woff"), url("../fonts/HelveticaRegular/HelveticaRegular.ttf") format("truetype"), url("../fonts/HelveticaRegular/HelveticaRegular.svg#HelveticaRegular") format("svg");
   font-weight: normal;
   font-style: normal; }
 
@@ -8170,7 +8170,7 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
 @font-face {
   font-family: HelveticaMedium;
   src: url("../fonts/HelveticaMedium/HelveticaMedium.eot");
-  src: url("../fonts/HelveticaMedium/HelveticaMedium.eot") format("embedded-opentype"), url("../fonts/HelveticaMedium/HelveticaMedium.woff2") format("woff2"), url("../fonts/HelveticaMedium/HelveticaMedium.woff") format("woff"), url("../fonts/HelveticaMedium/HelveticaMedium.ttf") format("truetype"), url("../fonts/HelveticaMedium/HelveticaMedium.svg#HelveticaMedium") format("svg");
+  src: url("../fonts/HelveticaMedium/HelveticaMedium.eot") format("embedded-opentype"), url("../fonts/HelveticaMedium/HelveticaMedium.woff") format("woff"), url("../fonts/HelveticaMedium/HelveticaMedium.ttf") format("truetype"), url("../fonts/HelveticaMedium/HelveticaMedium.svg#HelveticaMedium") format("svg");
   font-weight: normal;
   font-style: normal; }
 
@@ -8182,7 +8182,7 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
 @font-face {
   font-family: HelveticaHeavy;
   src: url("../fonts/HelveticaHeavy/HelveticaHeavy.eot");
-  src: url("../fonts/HelveticaHeavy/HelveticaHeavy.eot") format("embedded-opentype"), url("../fonts/HelveticaHeavy/HelveticaHeavy.woff2") format("woff2"), url("../fonts/HelveticaHeavy/HelveticaHeavy.woff") format("woff"), url("../fonts/HelveticaHeavy/HelveticaHeavy.ttf") format("truetype"), url("../fonts/HelveticaHeavy/HelveticaHeavy.svg#HelveticaHeavy") format("svg");
+  src: url("../fonts/HelveticaHeavy/HelveticaHeavy.eot") format("embedded-opentype"), url("../fonts/HelveticaHeavy/HelveticaHeavy.woff") format("woff"), url("../fonts/HelveticaHeavy/HelveticaHeavy.ttf") format("truetype"), url("../fonts/HelveticaHeavy/HelveticaHeavy.svg#HelveticaHeavy") format("svg");
   font-weight: normal;
   font-style: normal; }
 
@@ -8194,7 +8194,7 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
 @font-face {
   font-family: HelveticaBold;
   src: url("../fonts/HelveticaBold/HelveticaBold.eot");
-  src: url("../fonts/HelveticaBold/HelveticaBold.eot") format("embedded-opentype"), url("../fonts/HelveticaBold/HelveticaBold.woff2") format("woff2"), url("../fonts/HelveticaBold/HelveticaBold.woff") format("woff"), url("../fonts/HelveticaBold/HelveticaBold.ttf") format("truetype"), url("../fonts/HelveticaBold/HelveticaBold.svg#HelveticaBold") format("svg");
+  src: url("../fonts/HelveticaBold/HelveticaBold.eot") format("embedded-opentype"), url("../fonts/HelveticaBold/HelveticaBold.woff") format("woff"), url("../fonts/HelveticaBold/HelveticaBold.ttf") format("truetype"), url("../fonts/HelveticaBold/HelveticaBold.svg#HelveticaBold") format("svg");
   font-weight: normal;
   font-style: normal; }
 
@@ -8206,7 +8206,7 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
 @font-face {
   font-family: HelveticaBlack;
   src: url("../fonts/HelveticaBlack/HelveticaBlack.eot");
-  src: url("../fonts/HelveticaBlack/HelveticaBlack.eot") format("embedded-opentype"), url("../fonts/HelveticaBlack/HelveticaBlack.woff2") format("woff2"), url("../fonts/HelveticaBlack/HelveticaBlack.woff") format("woff"), url("../fonts/HelveticaBlack/HelveticaBlack.ttf") format("truetype"), url("../fonts/HelveticaBlack/HelveticaBlack.svg#HelveticaBlack") format("svg");
+  src: url("../fonts/HelveticaBlack/HelveticaBlack.eot") format("embedded-opentype"), url("../fonts/HelveticaBlack/HelveticaBlack.woff") format("woff"), url("../fonts/HelveticaBlack/HelveticaBlack.ttf") format("truetype"), url("../fonts/HelveticaBlack/HelveticaBlack.svg#HelveticaBlack") format("svg");
   font-weight: normal;
   font-style: normal; }
 
@@ -8218,7 +8218,7 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
 @font-face {
   font-family: rouble;
   src: url("../fonts/rouble/rouble.eot");
-  src: url("../fonts/rouble/rouble.eot") format("embedded-opentype"), url("../fonts/rouble/rouble.woff2") format("woff2"), url("../fonts/rouble/rouble.woff") format("woff"), url("../fonts/rouble/rouble.ttf") format("truetype"), url("../fonts/rouble/rouble.svg#rouble") format("svg");
+  src: url("../fonts/rouble/rouble.eot") format("embedded-opentype"), url("../fonts/rouble/rouble.woff") format("woff"), url("../fonts/rouble/rouble.ttf") format("truetype"), url("../fonts/rouble/rouble.svg#rouble") format("svg");
   font-weight: normal;
   font-style: normal; }
 
@@ -11109,20 +11109,7 @@ ul.item-list {
         width: calc(100% + 30px);
         padding-left: 15px;
         margin-left: -15px;
-        background: #fff; }
-        .profile .user-info figure {
-          width: 72px;
-          height: 72px;
-          margin-right: 20px; }
-        .profile .user-info > section h1 {
-          font-size: 28px;
-          margin-bottom: 0; }
-        .profile .user-info > section > ul {
-          display: none; }
-        .profile .user-info > section > p {
-          display: none; } }
-    @media (max-width: 480px) {
-      .profile .user-info {
+        background: #fff;
         -webkit-box-orient: vertical;
         -webkit-box-direction: normal;
         -webkit-flex-direction: column;
@@ -11133,7 +11120,21 @@ ul.item-list {
         -ms-flex-align: start;
         align-items: start; }
         .profile .user-info figure {
-          margin-bottom: 10px; } }
+          width: 72px;
+          height: 72px;
+          margin-right: 20px;
+          margin-bottom: 10px; }
+        .profile .user-info > section h1 {
+          font-size: 28px;
+          margin-bottom: 0; }
+        .profile .user-info > section > ul {
+          -webkit-box-orient: vertical;
+          -webkit-box-direction: normal;
+          -webkit-flex-direction: column;
+          -ms-flex-direction: column;
+          flex-direction: column; }
+          .profile .user-info > section > ul li {
+            margin: 25px 0 0 0; } }
   .profile .tabs-title-mobile {
     display: none; }
   .profile-tabs .my-menu {
@@ -11235,12 +11236,9 @@ ul.item-list {
       display: inline-block; }
       .profile .doings-tabs li:first-child {
         margin-right: 20px; }
-      .profile .doings-tabs li.active a {
-        color: #4489ff;
-        border-color: #4489ff; }
       .profile .doings-tabs li a {
         color: #616060;
-        display: block;
+        display: inline-block;
         padding: 2px 15px;
         border: 2px solid transparent;
         -webkit-border-radius: 100px;
@@ -11250,10 +11248,13 @@ ul.item-list {
         .profile .doings-tabs li a:hover {
           color: #4489ff;
           border-color: #4489ff; }
+      .profile .doings-tabs li.active a {
+        color: #4489ff;
+        border-color: #4489ff; }
     @media (max-width: 480px) {
       .profile .doings-tabs {
         width: 100%;
-        padding: 20px 25px; }
+        padding: 20px 25px 20px 70px; }
         .profile .doings-tabs li {
           display: block;
           margin: 5px 0; }
@@ -11638,6 +11639,8 @@ ul.item-list {
     min-height: 136px; }
     .profile .bookmarks > ul > li:last-child {
       margin-bottom: 0; }
+    .profile .bookmarks > ul > li.active a i {
+      color: #89a1b3 !important; }
     .profile .bookmarks > ul > li figure {
       position: absolute;
       left: 0;
@@ -11650,6 +11653,12 @@ ul.item-list {
       .profile .bookmarks > ul > li figure img {
         width: 135px;
         height: 135px; }
+      @media (max-width: 480px) {
+        .profile .bookmarks > ul > li figure {
+          position: relative; }
+          .profile .bookmarks > ul > li figure img {
+            width: 100%;
+            height: auto; } }
     .profile .bookmarks > ul > li ul.item-info {
       display: -webkit-box;
       display: -webkit-flex;
@@ -11742,6 +11751,10 @@ ul.item-list {
   @media (max-width: 767px) {
     .profile .bookmarks > ul > li {
       background: #fff; } }
+  @media (max-width: 480px) {
+    .profile .bookmarks > ul > li {
+      padding: 0;
+      margin-bottom: 25px; } }
   .profile .reviews > ul > li {
     position: relative;
     padding: 27px 340px 38px 28px;
