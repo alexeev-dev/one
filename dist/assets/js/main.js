@@ -215,7 +215,9 @@ var app = function ($) {
       */
 
       mySelect: function mySelect() {
-        return $('select').select2();
+        return $('select').select2({
+          minimumResultsForSearch: Infinity
+        });
       },
 
 

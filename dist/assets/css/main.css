@@ -9125,7 +9125,10 @@ ul.item-list {
       font-size: 18px;
       font-weight: 300;
       position: relative;
-      z-index: 10; }
+      z-index: 10;
+      outline: none; }
+      .new-post .item-info .project > a:focus {
+        outline: 0; }
       .new-post .item-info .project > a i {
         border: solid #4489ff;
         border-width: 0 2px 2px 0;
@@ -12319,6 +12322,22 @@ ul.item-list {
 .select2-container--default .select2-selection--single .select2-selection__arrow {
   right: 8px !important;
   top: 0 !important; }
+
+.select2-container--open .select2-dropdown--below {
+  width: 400px !important;
+  border: none !important;
+  padding: 115px 0 0;
+  background: #ffffff;
+  -webkit-box-shadow: 0 2px 14px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 14px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  pointer-events: none;
+  -webkit-transition: 0.3s ease-out;
+  transition: 0.3s ease-out; }
+
+.dz-image img {
+  -webkit-border-radius: 4px;
+  border-radius: 4px; }
 
 .app {
   min-width: 320px;
