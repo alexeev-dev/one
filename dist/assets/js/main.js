@@ -225,8 +225,12 @@ var app = function ($) {
       */
 
       photosUploader: function photosUploader() {
+        $('.choose-product .photos a').click(function (e) {
+          return e.preventDefault();
+        });
         return new Dropzone('.choose-product .photos', {
-          url: 'uploadPhoto'
+          url: 'uploadPhoto',
+          clickable: '.choose-product .photos a'
         });
       },
 
@@ -245,8 +249,12 @@ var app = function ($) {
 
         function addNew() {
           var product = Product();
+          product.find('.photos a').click(function (e) {
+            return e.preventDefault();
+          });
           product.find('.photos').dropzone({
-            url: 'uploadPhoto'
+            url: 'uploadPhoto',
+            clickable: product.find('.photos a')[0]
           });
           productsList.find('a.add-item').before(product);
         }
