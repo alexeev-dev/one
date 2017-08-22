@@ -281,7 +281,7 @@ let app = (function ($) {
 			['project-selected', 'activateParticipantSelect'],
       ['#confirm', 'click', 'toggleConfirm'],
       ['.my-menu', 'click', 'showProfileMenu'],
-      ['.responsive-menu', 'click', 'showSiteMenu'],
+      ['.responsive-menu', 'click', 'showSiteMenu']
     ],
 
     actions: {
