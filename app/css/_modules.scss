@@ -735,8 +735,14 @@ ul.item-list {
 				color: #000000; font-family: $HelveticaL; font-size: 18px; font-weight: 300;
 				position: relative; z-index: 10;
 				i {
-					color: #4489ff;
-					margin-left: 5px;
+					border: solid #4489ff;
+					border-width: 0 2px 2px 0;
+					display: inline-block;
+					padding: 3px;
+					transform: rotate(45deg);
+					margin-left: 6px;
+				    position: relative;
+				    top: -4px;
 				}
 			}
 			& > p {
@@ -804,6 +810,7 @@ ul.item-list {
 
 						h3 {
 							color: #000000; font-family: $helv; font-size: 12px; font-weight: 300; text-transform: uppercase; letter-spacing: 1px;
+							margin-bottom: 35px;
 						}
 
 						ul.list {
@@ -904,14 +911,25 @@ ul.item-list {
 					opacity: 1;
 				}
 			}
+
+			@keyframes slideUp {
+				0%   { transform: translateY(10px); opacity: 0;}
+				100% { transform: translateY(0); opacity: 1; }
+			}
+
 			.participants-container {
 				text-align: center;
 				margin: 0 -200px; padding:55px 0;
 				background: #f4fcff;
 				width: 1180px;
 
-				display: none; 
-				&.active {display: block;}
+				display: none;
+
+				&.active {
+					display: block;
+					animation: slideUp 0.8s;
+					pointer-events: all;
+				}
 
 				@media (max-width: 1249px) {width: 1140px;}
 				@include respond-to(lg) {width: 940px;}
@@ -930,7 +948,8 @@ ul.item-list {
 
 				.list {
 					&-item {
-						display: inline-block; vertical-align: top; margin: 0 40px;
+						display: inline-block; vertical-align: top; margin: 0 40px; cursor: pointer;
+
 						input {
 							display: none;
 						}
@@ -2526,12 +2545,25 @@ ul.item-list {
 	color: #000000; font-family: $HelveticaL; font-size: 18px; font-weight: 300;
 	position: relative; z-index: 10;
 	b {
-		border-color: #4489ff transparent transparent !important;
-		margin-left: 0 !important;
+		border: solid #4489ff !important;
+		border-width: 0 2px 2px 0 !important;
+		display: inline-block !important;
+		padding: 3px !important;
+		transform: rotate(45deg) !important;
+
+		height: auto !important; width: auto !important;
+		position: relative !important;
+		top: 0 !important; left: 0 !important;
+		margin: 0 !important;
 	}
 }
 
 .select2-container--default .select2-selection--single .select2-selection__rendered {
 	padding-left: 0 !important;
 	color: #000000 !important;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__arrow {
+	right: 8px !important;
+    top: 0 !important;
 }
