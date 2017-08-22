@@ -213,6 +213,11 @@ let app = (function ($) {
 
       photosUploader() {
         $('.choose-product .photos a').click(e => e.preventDefault());
+
+        if ($('.choose-product .photos').length === 0) {
+          return null;
+        }
+
         return new Dropzone('.choose-product .photos', {
           url: 'uploadPhoto',
           clickable: '.choose-product .photos a'
@@ -247,6 +252,23 @@ let app = (function ($) {
         });
 
         return Object.freeze({ addNew });
+      },
+
+      /**
+       * COMPONENT: DIRETCTIONS TABS - табы направлений в добрых делах
+       */
+
+      directionsTabs() {
+        let tabs = $('.doings .tab');
+        tabs.not('.tab--active').hide();
+        console.log(tabs);
+        $('.doings-tabs a').click(function changeTab(event) {
+          let tabId = $(this).attr('href');
+          event.preventDefault();
+          tabs.hide().filter(tabId).show();
+          $('.doings-tabs li').removeClass('active');
+          $(this).parent().addClass('active');
+        });
       }
 
     },
