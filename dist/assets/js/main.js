@@ -161,10 +161,14 @@ var app = function ($) {
        */
 
       participantSelect: function participantSelect() {
-        var _ref2 = [$('#participants'), $('.participants .list')],
+        var _ref2 = [$('#participants'), $('.participants-container')],
             select = _ref2[0],
             list = _ref2[1];
 
+
+        var isFirst = true;
+
+        select.prop('disabled', true);
 
         function activateSelect() {
           select.prop('disabled', false);
@@ -172,22 +176,28 @@ var app = function ($) {
 
         $('#participants').change(function toggleList() {
           list.toggleClass('active');
-          $('.owl-carousel').owlCarousel({
-            loop: false,
-            margin: 10,
-            nav: false,
-            responsive: {
-              0: {
-                items: 4
-              },
-              600: {
-                items: 4
-              },
-              1000: {
-                items: 4
+          if (isFirst) {
+            $('.owl-carousel').owlCarousel({
+              loop: false,
+              margin: 10,
+              nav: false,
+              responsive: {
+                0: {
+                  items: 1
+                },
+                480: {
+                  items: 2
+                },
+                768: {
+                  items: 3
+                },
+                992: {
+                  items: 4
+                }
               }
-            }
-          });
+            });
+            isFirst = false;
+          }
         });
 
         return Object.freeze({ activateSelect: activateSelect });
