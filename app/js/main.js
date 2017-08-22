@@ -273,6 +273,19 @@ let app = (function ($) {
           $('.profile-tabs li').removeClass('active');
           $(this).parent().addClass('active');
         });
+      },
+
+      /**
+       * COMPONENT: PURCHASES ACCORDION - аккордион покупок
+       */
+
+      purchasesAccordion() {
+        let items = $('.purchases .item-header');
+        items.find('a').click(e => e.preventDefault());
+        $('.purchases .item-content').hide();
+        items.click(function openItem(event) {
+          $(this).next().toggle();
+        });
       }
 
     },
