@@ -196,17 +196,6 @@ let app = (function ($) {
 			},
 
       /**
-			 * COMPONENT: SELECT 2 - пользовательская стилизация Select
-			 * @return Возвращает компонент
-			 */
-
-      mySelect() {
-        return $('select').select2({
-          minimumResultsForSearch: Infinity
-        });
-      },
-
-      /**
 			 * COMPONENT: PHOTOS UPLOADER - загрузка файлов с предпросмотром
 			 * @return Возвращает компонент
 			 */
