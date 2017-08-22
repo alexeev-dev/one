@@ -150,8 +150,12 @@ let app = (function ($) {
 
 			participantSelect() {
 				let [select, list] = [
-					$('#participants'), $('.participants .list')
+					$('#participants'), $('.participants-container')
 				];
+
+        let isFirst = true;
+
+        select.prop('disabled', true);
 
 				function activateSelect() {
 					select.prop('disabled', false);
@@ -159,25 +163,28 @@ let app = (function ($) {
 
 				$('#participants').change(function toggleList() {
 					list.toggleClass('active');
-					$('.owl-carousel').owlCarousel({
-						loop: false,
-						margin: 10,
-						nav: false,
-						responsive:{
-							0: {
-								items:1
-							},
-							480: {
-								items:2
-							},
-							768:{
-								items:3
-							},
-              992:{
-								items:4
-							}
-						}
-					});
+          if (isFirst) {
+            $('.owl-carousel').owlCarousel({
+              loop: false,
+              margin: 10,
+              nav: false,
+              responsive:{
+                0: {
+                  items:1
+                },
+                480: {
+                  items:2
+                },
+                768:{
+                  items:3
+                },
+                992:{
+                  items:4
+                }
+              }
+            });
+            isFirst = false;
+          }
 				});
 
 				return Object.freeze({ activateSelect });
