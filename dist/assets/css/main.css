@@ -10789,6 +10789,8 @@ ul.item-list {
     position: relative;
     padding: 50px 0;
     overflow-x: hidden; }
+    .new-post .contacts > input {
+      margin-bottom: 35px; }
     .new-post .contacts:before {
       content: '';
       display: block;
@@ -10891,6 +10893,10 @@ ul.item-list {
       content: '\f00c'; }
     .new-post ul.confirm li button {
       padding: 12px 25px 13px; }
+    .new-post ul.confirm li button:disabled:hover,
+    .new-post ul.confirm li button[disabled]:hover {
+      background: #4489ff;
+      color: #ffffff; }
   @media (max-width: 1199px) {
     .new-post .item-info .project div.lists {
       width: 920px;
@@ -12241,6 +12247,26 @@ ul.item-list {
           width: 100%; }
         .footer ul.contacts li:last-child {
           width: 100%; } }
+
+.select2-container {
+  width: 180px !important; }
+
+.select2-container--default .select2-selection--single {
+  background: none !important;
+  border: none !important;
+  color: #000000;
+  font-family: "HelveticaLight", sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+  position: relative;
+  z-index: 10; }
+  .select2-container--default .select2-selection--single b {
+    border-color: #4489ff transparent transparent !important;
+    margin-left: 0 !important; }
+
+.select2-container--default .select2-selection--single .select2-selection__rendered {
+  padding-left: 0 !important;
+  color: #000000 !important; }
 
 .app {
   min-width: 320px;
