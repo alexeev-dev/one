@@ -730,7 +730,7 @@ ul.item-list {
 	}
 	.item-info {
 		.project {
-			position: relative; z-index: 10; margin: 40px 0;
+			position: relative; z-index: 10; margin: 40px 0 0 0;
 			& > a {
 				color: #000000; font-family: $HelveticaL; font-size: 18px; font-weight: 300;
 				position: relative; z-index: 10;
@@ -872,6 +872,8 @@ ul.item-list {
 		}
 		
 		.participants {
+			margin: 40px 0 5px 0;
+
 			& > input {
 				display: none;
 			}
@@ -907,6 +909,9 @@ ul.item-list {
 				margin: 0 -200px; padding:55px 0;
 				background: #f4fcff;
 				width: 1180px;
+
+				display: none; 
+				&.active {display: block;}
 
 				@media (max-width: 1249px) {width: 1140px;}
 				@include respond-to(lg) {width: 940px;}
@@ -976,7 +981,7 @@ ul.item-list {
 			}
 		}
 		.choose-product {
-			padding-top: 55px;
+
 			.address, 
 			.info {
 				ul {
@@ -2512,6 +2517,7 @@ ul.item-list {
 
 .select2-container {
 	width: 180px !important;
+	z-index: 4 !important;;
 }
 
 .select2-container--default .select2-selection--single {
