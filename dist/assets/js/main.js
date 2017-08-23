@@ -294,6 +294,7 @@ var app = function ($) {
           var tabId = $(this).attr('href');
           event.preventDefault();
           tabs.hide().filter(tabId).show();
+          $('.profile-tabs ul').removeClass('active');
           $('.profile-tabs li').removeClass('active');
           $(this).parent().addClass('active');
         });
