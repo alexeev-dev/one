@@ -312,7 +312,7 @@ let app = (function ($) {
 
       selectBox() {
         $('.js-selectToogle, .js-selectLists').removeClass('active');
-        
+
         $('.js-selectToogle').each(function initSelectBox () {
           let selectToggle = $(this),
               selectList = selectToggle.next();
@@ -330,6 +330,26 @@ let app = (function ($) {
             selectList.toggleClass('active');
           });
 
+        });
+      },
+
+      /**
+       * COMPONENT: SEARCH BOX - Поиск с фильтром
+       */
+
+      searchBox() {
+        let [searchArea, searchPrice, selectArea] = [
+          $('.search-block .search-area'),
+          $('.search-block .price'),
+          $('.select-area')
+        ];
+
+        $('.filter .filter-resp').click(function toggleFilter(event) {
+          event.preventDefault();
+          [searchArea, searchPrice, selectArea].forEach((item) => {
+            item.toggleClass('active');
+          });
+          $(this).toggleClass('active');
         });
       }
 
