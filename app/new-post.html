@@ -112,28 +112,28 @@
 																<h5>А</h5>
 																<ul>
 																	<li>
-																		<input id="fonds-1" type="checkbox" name="fonds">
-																		<label for="fonds-1">Алинин Фонд Здоровья <span>i</span></label>
+																		<input id="fond-1" type="checkbox" name="fonds">
+																		<label for="fond-1">Алинин Фонд Здоровья <span>i</span></label>
 																	</li>
 																	<li>
-																		<input id="fonds-2" type="checkbox" name="fonds">
-																		<label for="fonds-2">Арго-фонд поддержки <span>i</span></label>
+																		<input id="fond-2" type="checkbox" name="fonds">
+																		<label for="fond-2">Арго-фонд поддержки <span>i</span></label>
 																	</li>
 																	<li>
-																		<input id="fonds-3" type="checkbox" name="fonds">
-																		<label for="fonds-3">Абсолютисты юные <span>i</span></label>
+																		<input id="fond-3" type="checkbox" name="fonds">
+																		<label for="fond-3">Абсолютисты юные <span>i</span></label>
 																	</li>
 																	<li>
-																		<input id="fonds-4" type="checkbox" name="fonds">
-																		<label for="fonds-4">Алинин Фонд Здоровья <span>i</span></label>
+																		<input id="fond-4" type="checkbox" name="fonds">
+																		<label for="fond-4">Алинин Фонд Здоровья <span>i</span></label>
 																	</li>
 																	<li>
-																		<input id="fonds-5" type="checkbox" name="fonds">
-																		<label for="fonds-5">Августовский жук <span>i</span></label>
+																		<input id="fond-5" type="checkbox" name="fonds">
+																		<label for="fond-5">Августовский жук <span>i</span></label>
 																	</li>
 																	<li>
-																		<input id="fonds-6" type="checkbox" name="fonds">
-																		<label for="fonds-6">Артемон и товарищи <span>i</span></label>
+																		<input id="fond-6" type="checkbox" name="fonds">
+																		<label for="fond-6">Артемон и товарищи <span>i</span></label>
 																	</li>
 																</ul>
 															</li>
@@ -298,15 +298,20 @@
 													</li>
 												</ul>
 											</div>
-											<select class="category">
-												<option>Категория товара</option>
-												<option>Личные вещи</option>
-												<option>Электроника</option>
-												<option>Спорт</option>
-												<option>Дом и дача</option>
-												<option>Детям</option>
-												<option>Бизнесу</option>
-											</select>
+											<div class="select-block">
+												<a href="#" class="js-selectToogle active">Категория товара<i></i></a>
+												<div class="js-selectLists active">
+													<ul>
+														<li><a href="#">Личные вещи</a></li>
+														<li><a href="#">Электроника</a></li>
+														<li><a href="#">Спорт</a></li>
+														<li><a href="#">Дом и дача</a></li>
+														<li><a href="#">Детям</a></li>
+														<li><a href="#">Бизнесу</a></li>
+													</ul>
+												</div>
+											</div>
+											<!--<select class="category">-->
 											<div class="product-group">
 												<div class="info">
 													<ul>
@@ -320,11 +325,31 @@
 													</ul>
 												</div>
 												<textarea class="description" placeholder="Описание"></textarea>
+
 												<div class="photos">
-													<div class="previews"></div>
+													<div class="previews">
+														<span>Фотографии</span>
+														<div class="images">
+															<span class="image">
+																<img src="assets/img/search-item-2.jpg" alt="">
+																<a href="#" class="close-img"><i class="icon icon-close-lit"></i></a>
+																
+															</span>
+															<span href="#" class="image">
+																<img src="assets/img/img2.jpg" alt="">
+																<a href="#" class="close-img"><i class="icon icon-close-lit"></i></a>
+															</span>
+															<span href="#" class="image">
+																<img src="assets/img/search-item-1.jpg" alt="">
+																<a href="#" class="close-img"><i class="icon icon-close-lit"></i></a>
+															</span>
+														</div>
+														
+													</div>
 													<h4>Фотографии</h4>
 													<p>Перетащите сюда фотографии, <br> или нажмите <a href="#">загрузить</a></p>
 												</div>
+
 											</div>
 											<a href="#" class="add-item"><img src="assets/img/add-item.png"> добавить еще один товар</a>
 										</div>

@@ -18,7 +18,7 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
 */
 .icon-bell {
   background-image: url(../img/sprite.png);
-  background-position: -172px -90px;
+  background-position: -159px -102px;
   width: 11px;
   height: 12px;
 }
@@ -78,9 +78,15 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
 }
 .icon-clock {
   background-image: url(../img/sprite.png);
-  background-position: -171px -102px;
+  background-position: -170px -102px;
   width: 11px;
   height: 11px;
+}
+.icon-close-lit {
+  background-image: url(../img/sprite.png);
+  background-position: -167px -114px;
+  width: 9px;
+  height: 9px;
 }
 .icon-close {
   background-image: url(../img/sprite.png);
@@ -108,7 +114,7 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
 }
 .icon-header_search {
   background-image: url(../img/sprite.png);
-  background-position: -159px -102px;
+  background-position: -172px -90px;
   width: 12px;
   height: 11px;
 }
@@ -132,7 +138,7 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
 }
 .icon-marker {
   background-image: url(../img/sprite.png);
-  background-position: -159px -113px;
+  background-position: -159px -114px;
   width: 8px;
   height: 11px;
 }

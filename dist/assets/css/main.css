@@ -7989,7 +7989,7 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
 */
 .icon-bell {
   background-image: url(../img/sprite.png);
-  background-position: -172px -90px;
+  background-position: -159px -102px;
   width: 11px;
   height: 12px; }
 
@@ -8049,9 +8049,15 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
 
 .icon-clock {
   background-image: url(../img/sprite.png);
-  background-position: -171px -102px;
+  background-position: -170px -102px;
   width: 11px;
   height: 11px; }
+
+.icon-close-lit {
+  background-image: url(../img/sprite.png);
+  background-position: -167px -114px;
+  width: 9px;
+  height: 9px; }
 
 .icon-close {
   background-image: url(../img/sprite.png);
@@ -8079,7 +8085,7 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
 
 .icon-header_search {
   background-image: url(../img/sprite.png);
-  background-position: -159px -102px;
+  background-position: -172px -90px;
   width: 12px;
   height: 11px; }
 
@@ -8103,7 +8109,7 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
 
 .icon-marker {
   background-image: url(../img/sprite.png);
-  background-position: -159px -113px;
+  background-position: -159px -114px;
   width: 8px;
   height: 11px; }
 
@@ -8357,17 +8363,18 @@ span.rub {
     background: #4489ff; }
 
 .select-block {
+  position: relative;
   margin-right: 30px; }
   .select-block:last-child {
     margin-right: 0; }
-  .select-block > a {
+  .select-block > .js-selectToogle {
     color: #000000;
     font-family: "HelveticaLight", sans-serif;
     font-size: 14px;
     font-weight: 300;
     position: relative;
     padding-right: 25px; }
-    .select-block > a i {
+    .select-block > .js-selectToogle i {
       display: inline-block;
       padding: 3px;
       margin-left: 15px;
@@ -8379,6 +8386,8 @@ span.rub {
       -webkit-transform: rotate(45deg);
       -ms-transform: rotate(45deg);
       transform: rotate(45deg); }
+    .select-block > .js-selectToogle.active {
+      z-index: 101; }
   .select-block > .js-selectLists {
     height: 0;
     min-height: 0;
@@ -8390,19 +8399,26 @@ span.rub {
     background: #fff;
     -webkit-transition: max-height 0.7s linear;
     transition: max-height 0.7s linear; }
-    .select-block > .js-selectLists > ul > li > a {
-      color: #000;
-      display: block;
-      padding: 10px;
-      background: #fff;
-      -webkit-transition: all 0.4s ease;
-      transition: all 0.4s ease; }
-      .select-block > .js-selectLists > ul > li > a:hover {
-        color: #fff;
-        background: #4489ff; }
+    .select-block > .js-selectLists > ul > li {
+      border-bottom: 1px solid #d6dde4; }
+      .select-block > .js-selectLists > ul > li > a {
+        color: #000;
+        display: block;
+        padding: 10px;
+        background: #fff;
+        -webkit-transition: all 0.4s ease;
+        transition: all 0.4s ease; }
+        .select-block > .js-selectLists > ul > li > a:hover {
+          background: #f5f5f5; }
     .select-block > .js-selectLists.active {
       max-height: 1000px;
-      height: auto; }
+      padding-top: 45px;
+      height: auto;
+      min-width: 190px;
+      left: -10px;
+      top: -11px;
+      -webkit-border-radius: 5px;
+      border-radius: 5px; }
 
 .rating p {
   color: #000;
@@ -10877,7 +10893,58 @@ ul.item-list {
     background: #f7f9ff;
     border: 1px solid #649dff;
     -webkit-border-radius: 4px;
-    border-radius: 4px; }
+    border-radius: 4px;
+    -webkit-transition: background 0.4s ease;
+    transition: background 0.4s ease; }
+    .new-post .item-info .choose-product .photos:hover {
+      background: #fff; }
+    .new-post .item-info .choose-product .photos .previews {
+      padding: 0 20px; }
+      .new-post .item-info .choose-product .photos .previews > span {
+        text-align: left;
+        color: #a8b2b8;
+        display: block;
+        margin-bottom: 25px; }
+      .new-post .item-info .choose-product .photos .previews .images {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: start;
+        -webkit-align-items: flex-start;
+        -ms-flex-align: start;
+        align-items: flex-start;
+        margin-bottom: 40px;
+        -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap; }
+        .new-post .item-info .choose-product .photos .previews .images > .image {
+          display: block;
+          width: 130px;
+          margin: 5px;
+          position: relative;
+          -webkit-border-radius: 5px;
+          border-radius: 5px;
+          overflow: hidden; }
+          .new-post .item-info .choose-product .photos .previews .images > .image:hover > a.close-img {
+            opacity: 1; }
+          .new-post .item-info .choose-product .photos .previews .images > .image > img {
+            width: 100%; }
+          .new-post .item-info .choose-product .photos .previews .images > .image > a.close-img {
+            display: block;
+            position: absolute;
+            right: 5px;
+            top: 5px;
+            background: #fff;
+            width: 21px;
+            height: 21px;
+            -webkit-border-radius: 50%;
+            border-radius: 50%;
+            opacity: 0;
+            -webkit-transition: opacity 0.4s ease;
+            transition: opacity 0.4s ease; }
+            .new-post .item-info .choose-product .photos .previews .images > .image > a.close-img > i {
+              display: inline-block; }
     .new-post .item-info .choose-product .photos h4 {
       font-size: 18px;
       letter-spacing: -0.5px;

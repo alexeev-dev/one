@@ -100,17 +100,20 @@ span.rub {font-family: $ruble !important;}
 
 //Select blocks
 .select-block {
-	margin-right: 30px; 
+	position: relative; margin-right: 30px; 
 	&:last-child {
 		margin-right: 0;
 	}
-	& > a {
+	& > .js-selectToogle {
 		color: #000000; font-family: $HelveticaL; font-size: 14px; font-weight: 300;
 		position: relative; padding-right: 25px;
 		i {
 			display: inline-block; padding: 3px; margin-left: 15px;  position: absolute; top: 2px; right: 0;
 			border: solid #4489ff; border-width: 0 2px 2px 0;
 			transform: rotate(45deg);  
+		}
+		&.active {
+			z-index: 101;
 		}
 	}
 	& > .js-selectLists {
@@ -119,20 +122,21 @@ span.rub {font-family: $ruble !important;}
 		transition: max-height 0.7s linear;
 		& > ul {
 			& > li {
+				border-bottom: 1px solid #d6dde4;
 				& > a {
 					color: #000;
 					display: block; padding: 10px;
 					background: #fff;
 					transition: all 0.4s ease;
 					&:hover {
-						color: #fff;
-						background: $link-color; 
+						background: #f5f5f5; 
 					}
 				}
 			}
 		}
 		&.active {
-			max-height: 1000px; height: auto;
+			max-height: 1000px; padding-top: 45px; height: auto; min-width: 190px; left: -10px; top: -11px;
+			border-radius: 5px;
 		}
 	}
 }
@@ -1095,6 +1099,44 @@ ul.item-list {
 				text-align: center; font-family: $HelveticaL;
 				width: 100%; margin: 50px 0; padding: 30px 0;
 				background: #f7f9ff; border: 1px solid #649dff; border-radius: 4px;
+				transition: background 0.4s ease;
+				&:hover {
+					background: #fff;
+				}
+				.previews {
+					padding: 0 20px;
+					& > span {
+						text-align: left; color: #a8b2b8; 
+						display: block; margin-bottom: 25px;
+					}
+					.images {
+						display: flex; align-items: flex-start; margin-bottom: 40px; flex-wrap: wrap;
+						& > .image {
+							display: block; width: 130px; margin: 5px; position: relative;
+							border-radius: 5px;
+							overflow: hidden;
+							&:hover {
+								& > a.close-img {
+									opacity: 1;
+								}
+							}
+							& > img {
+								width: 100%;
+							}
+							& > a.close-img {
+								display: block; position: absolute; right: 5px; top: 5px;
+								background: #fff; width: 21px; height: 21px;
+								border-radius: 50%;
+								opacity: 0;
+								transition: opacity 0.4s ease;
+								& > i {
+									display: inline-block;
+								}
+							}
+						}
+					}
+					
+				}
 				h4 {
 					font-size: 18px; letter-spacing: -0.5px;
 					margin-bottom: 10px;
