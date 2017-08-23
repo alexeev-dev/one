@@ -22,6 +22,7 @@
     "gulp-sass": "^2.3.2",
     "gulp-uglify": "^2.1.2",
     "gulp-uncss": "^1.0.6",
+    "gulp-util": "^3.0.8",
     "gulp.spritesmith": "^6.4.0",
     "merge-stream": "^1.0.1",
     "vinyl-buffer": "^1.0.0"

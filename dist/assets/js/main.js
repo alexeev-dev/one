@@ -62,6 +62,7 @@ var app = function ($) {
       </div>\
       <textarea class="description" placeholder="Описание"></textarea>\
       <div class="photos">\
+        <div class="previews"></div>\
         <h4>Фотографии</h4>\
         <p>Перетащите сюда фотографии, <br> или нажмите <a href="#">загрузить</a></p>\
       </div>\
@@ -225,7 +226,8 @@ var app = function ($) {
 
         return new Dropzone('.choose-product .photos', {
           url: 'uploadPhoto',
-          clickable: '.choose-product .photos a'
+          clickable: '.choose-product .photos a',
+          previewsContainer: '.choose-product .photos .previews'
         });
       },
 
@@ -249,7 +251,8 @@ var app = function ($) {
           });
           product.find('.photos').dropzone({
             url: 'uploadPhoto',
-            clickable: product.find('.photos a')[0]
+            clickable: product.find('.photos a')[0],
+            previewsContainer: product.find('.photos .previews')[0]
           });
           productsList.find('a.add-item').before(product);
         }
@@ -291,6 +294,7 @@ var app = function ($) {
           var tabId = $(this).attr('href');
           event.preventDefault();
           tabs.hide().filter(tabId).show();
+          $('.profile-tabs ul').removeClass('active');
           $('.profile-tabs li').removeClass('active');
           $(this).parent().addClass('active');
         });
@@ -310,6 +314,21 @@ var app = function ($) {
         items.click(function openItem(event) {
           $(this).next().toggle();
         });
+      },
+
+
+      /**
+       * COMPONENT: PROFILE BOOKMARKS - управление лайками
+       */
+
+      profileBookmarks: function profileBookmarks() {
+        return $('#bookmarks-tab > ul > li').each(function initItem() {
+          var bookmark = $(this);
+          bookmark.find('ul + a').click(function toggleLike(event) {
+            event.preventDefault();
+            bookmark.toggleClass('active');
+          });
+        });
       }
     },
 
@@ -325,10 +344,12 @@ var app = function ($) {
         var isChecked = $('#confirm').prop('checked');
         $('.confirm button').prop('disabled', !isChecked);
       },
-      showProfileMenu: function showProfileMenu() {
+      showProfileMenu: function showProfileMenu(event) {
+        event.preventDefault();
         $('.profile-tabs ul').toggleClass('active');
       },
-      showSiteMenu: function showSiteMenu() {
+      showSiteMenu: function showSiteMenu(event) {
+        event.preventDefault();
         $('.main-menu ul').toggleClass('active');
       },
       hideNotice: function hideNotice(event) {
@@ -349,7 +370,6 @@ $(function () {
 });
 
 /* Old code
-
 //main-menu
 $('.responsive-menu').click(function(){
   $('.main-menu > ul').toggleClass('active');

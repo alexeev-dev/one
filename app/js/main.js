@@ -356,7 +356,6 @@ let app = (function ($) {
 $(() => { app.run(); });
 
 /* Old code
-
 //main-menu
 $('.responsive-menu').click(function(){
   $('.main-menu > ul').toggleClass('active');
