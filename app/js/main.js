@@ -58,13 +58,23 @@ let app = (function ($) {
       </div>\
       <textarea class="description" placeholder="Описание"></textarea>\
       <div class="photos">\
-        <div class="previews"></div>\
+        <div class="previews">\
+          <span>Фотографии</span>\
+          <div class="images"></div>\
+        </div>\
         <h4>Фотографии</h4>\
         <p>Перетащите сюда фотографии, <br> или нажмите <a href="#">загрузить</a></p>\
       </div>\
     </div>\
     ');
   }
+
+  let myPreview = '\
+    <span href="#" class="dz-preview image">\
+      <img data-dz-thumbnail>\
+      <a href="#" class="close-img" data-dz-remove><i class="icon icon-close-lit"></i></a>\
+      <div class="dz-progress"><span class="dz-upload" data-dz-uploadprogress></span></div>\
+    </span>';
 
   // ======================================================================== //
   //                          ЭКЗЕМПЛЯР ПРИЛОЖЕНИЯ                            //
@@ -210,8 +220,12 @@ let app = (function ($) {
 
         return new Dropzone('.choose-product .photos', {
           url: 'uploadPhoto',
+          acceptedFiles: 'image/jpeg, image/png',
           clickable: '.choose-product .photos a',
-          previewsContainer: '.choose-product .photos .previews'
+          previewsContainer: '.choose-product .previews .images',
+          previewTemplate: myPreview
+        }).on('addedfile', (file) => {
+          $('.choose-product .previews').addClass('active');
         });
       },
 
@@ -232,8 +246,12 @@ let app = (function ($) {
           product.find('.photos a').click(e => e.preventDefault());
           product.find('.photos').dropzone({
             url: 'uploadPhoto',
+            acceptedFiles: 'image/jpeg, image/png',
             clickable: product.find('.photos a')[0],
-            previewsContainer: product.find('.photos .previews')[0]
+            previewsContainer: product.find('.photos .images')[0],
+            previewTemplate: myPreview
+          }).on('addedfile', (file) => {
+            $('.choose-product .previews').addClass('active');
           });
           productsList.find('a.add-item').before(product);
         }
