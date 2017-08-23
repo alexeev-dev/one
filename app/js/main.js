@@ -286,6 +286,20 @@ let app = (function ($) {
         items.click(function openItem(event) {
           $(this).next().toggle();
         });
+      },
+
+      /**
+       * COMPONENT: PROFILE BOOKMARKS - управление лайками
+       */
+
+      profileBookmarks() {
+        return $('#bookmarks-tab > ul > li').each(function initItem() {
+          let bookmark = $(this);
+          bookmark.find('ul + a').click(function toggleLike(event) {
+            event.preventDefault();
+            bookmark.toggleClass('active');
+          });
+        });
       }
 
     },
