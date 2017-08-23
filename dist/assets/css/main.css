@@ -11639,8 +11639,6 @@ ul.item-list {
     min-height: 136px; }
     .profile .bookmarks > ul > li:last-child {
       margin-bottom: 0; }
-    .profile .bookmarks > ul > li.active a i {
-      color: #89a1b3 !important; }
     .profile .bookmarks > ul > li figure {
       position: absolute;
       left: 0;
@@ -12348,6 +12346,9 @@ ul.item-list {
 .dz-image img {
   -webkit-border-radius: 4px;
   border-radius: 4px; }
+
+.profile .bookmarks > ul > li.active > a i {
+  opacity: 0.2; }
 
 .app {
   min-width: 320px;
