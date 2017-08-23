@@ -304,6 +304,33 @@ let app = (function ($) {
             bookmark.toggleClass('active');
           });
         });
+      },
+
+      /**
+       * COMPONENT: SELECT BOX - кастомный селект
+       */
+
+      selectBox() {
+        $('.js-selectToogle, .js-selectLists').removeClass('active');
+        
+        $('.js-selectToogle').each(function initSelectBox () {
+          let selectToggle = $(this),
+              selectList = selectToggle.next();
+
+          selectToggle.click(function toggleSelect(event) {
+            event.preventDefault();
+            selectToggle.toggleClass('active');
+            selectList.toggleClass('active');
+          });
+
+          selectList.find('a').click(function selectValue(event) {
+            event.preventDefault();
+            selectToggle.text($(this).text()).append('<i>');
+            selectToggle.toggleClass('active');
+            selectList.toggleClass('active');
+          });
+
+        });
       }
 
     },
