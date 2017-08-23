@@ -1888,8 +1888,6 @@ ul.item-list {
 					margin-bottom: 0;
 				}
 
-				&.active {a {i {color: #89a1b3 !important;}}}
-
 				figure {
 					position: absolute; left: 0; top: 0;
 					border-top-left-radius: 4px;  border-bottom-left-radius: 4px;
@@ -2656,6 +2654,7 @@ ul.item-list {
 
 
 
-
+// ПЕРЕМЕСТИТЬ
+.profile .bookmarks > ul > li.active > a i {opacity: 0.2;}
 
 
