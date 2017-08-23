@@ -58,6 +58,7 @@ let app = (function ($) {
       </div>\
       <textarea class="description" placeholder="Описание"></textarea>\
       <div class="photos">\
+        <div class="previews"></div>\
         <h4>Фотографии</h4>\
         <p>Перетащите сюда фотографии, <br> или нажмите <a href="#">загрузить</a></p>\
       </div>\
@@ -209,7 +210,8 @@ let app = (function ($) {
 
         return new Dropzone('.choose-product .photos', {
           url: 'uploadPhoto',
-          clickable: '.choose-product .photos a'
+          clickable: '.choose-product .photos a',
+          previewsContainer: '.choose-product .photos .previews'
         });
       },
 
@@ -230,7 +232,8 @@ let app = (function ($) {
           product.find('.photos a').click(e => e.preventDefault());
           product.find('.photos').dropzone({
             url: 'uploadPhoto',
-            clickable: product.find('.photos a')[0]
+            clickable: product.find('.photos a')[0],
+            previewsContainer: product.find('.photos .previews')[0]
           });
           productsList.find('a.add-item').before(product);
         }
