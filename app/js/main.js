@@ -310,11 +310,13 @@ let app = (function ($) {
         $('.confirm button').prop('disabled', !isChecked);
       },
 
-      showProfileMenu() {
+      showProfileMenu(event) {
+        event.preventDefault();
         $('.profile-tabs ul').toggleClass('active');
       },
 
-      showSiteMenu() {
+      showSiteMenu(event) {
+        event.preventDefault();
         $('.main-menu ul').toggleClass('active');
       },
 
