@@ -10901,8 +10901,10 @@ ul.item-list {
       .new-post .item-info .choose-product .photos .previews > span {
         text-align: left;
         color: #a8b2b8;
-        display: block;
+        display: none;
         margin-bottom: 25px; }
+      .new-post .item-info .choose-product .photos .previews.active > span {
+        display: block; }
       .new-post .item-info .choose-product .photos .previews .images {
         display: -webkit-box;
         display: -webkit-flex;

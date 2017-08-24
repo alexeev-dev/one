@@ -1107,8 +1107,9 @@ ul.item-list {
 					padding: 0 20px;
 					& > span {
 						text-align: left; color: #a8b2b8; 
-						display: block; margin-bottom: 25px;
+						display: none; margin-bottom: 25px;
 					}
+					&.active { > span {display: block;}}
 					.images {
 						display: flex; align-items: flex-start; margin-bottom: 40px; flex-wrap: wrap;
 						& > .image {
