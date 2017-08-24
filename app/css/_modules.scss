@@ -121,6 +121,8 @@ span.rub {font-family: $ruble !important;}
 		box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2); background: #fff;
 		transition: max-height 0.7s linear;
 		& > ul {
+			min-width: 170px;
+
 			& > li {
 				border-bottom: 1px solid #d6dde4;
 				& > a {
@@ -135,7 +137,7 @@ span.rub {font-family: $ruble !important;}
 			}
 		}
 		&.active {
-			max-height: 1000px; padding-top: 45px; height: auto; min-width: 190px; left: -10px; top: -11px;
+			max-height: 1000px; padding-top: 45px; height: auto; left: -10px; top: -11px;
 			border-radius: 5px;
 		}
 	}
