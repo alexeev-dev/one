@@ -11224,6 +11224,8 @@ ul.item-list {
         width: 100%; }
     .profile .user-info section h1 {
       margin-bottom: 25px; }
+    .profile .user-info section > .profile-nav {
+      display: none; }
     .profile .user-info section ul {
       display: -webkit-box;
       display: -webkit-flex;
@@ -11268,12 +11270,40 @@ ul.item-list {
         .profile .user-info > section h1 {
           font-size: 28px;
           margin-bottom: 0; }
+        .profile .user-info > section > .profile-nav {
+          color: #000;
+          font-family: "Cormac-ExtraLight", sans-serif;
+          display: block;
+          position: relative;
+          margin-top: 15px; }
+          .profile .user-info > section > .profile-nav i {
+            display: inline-block;
+            padding: 3px;
+            margin-left: 15px;
+            position: absolute;
+            top: 2px;
+            right: 0;
+            border: solid #4489ff;
+            border-width: 0 2px 2px 0;
+            -webkit-transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+            transform: rotate(45deg); }
+          .profile .user-info > section > .profile-nav.active i {
+            -webkit-transform: rotate(-135deg);
+            -ms-transform: rotate(-135deg);
+            transform: rotate(-135deg); }
         .profile .user-info > section > ul {
           -webkit-box-orient: vertical;
           -webkit-box-direction: normal;
           -webkit-flex-direction: column;
           -ms-flex-direction: column;
-          flex-direction: column; }
+          flex-direction: column;
+          max-height: 0;
+          overflow: hidden;
+          -webkit-transition: max-height 0.7s linear;
+          transition: max-height 0.7s linear; }
+          .profile .user-info > section > ul.active {
+            max-height: 1000px; }
           .profile .user-info > section > ul li {
             margin: 25px 0 0 0; } }
   .profile .tabs-title-mobile {
