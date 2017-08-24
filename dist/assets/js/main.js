@@ -62,13 +62,23 @@ var app = function ($) {
       </div>\
       <textarea class="description" placeholder="Описание"></textarea>\
       <div class="photos">\
-        <div class="previews"></div>\
+        <div class="previews">\
+          <span>Фотографии</span>\
+          <div class="images"></div>\
+        </div>\
         <h4>Фотографии</h4>\
         <p>Перетащите сюда фотографии, <br> или нажмите <a href="#">загрузить</a></p>\
       </div>\
     </div>\
     ');
   }
+
+  var myPreview = '\
+    <span href="#" class="dz-preview image">\
+      <img data-dz-thumbnail>\
+      <a href="#" class="close-img" data-dz-remove><i class="icon icon-close-lit"></i></a>\
+      <div class="dz-progress"><span class="dz-upload" data-dz-uploadprogress></span></div>\
+    </span>';
 
   // ======================================================================== //
   //                          ЭКЗЕМПЛЯР ПРИЛОЖЕНИЯ                            //
@@ -226,8 +236,12 @@ var app = function ($) {
 
         return new Dropzone('.choose-product .photos', {
           url: 'uploadPhoto',
+          acceptedFiles: 'image/jpeg, image/png',
           clickable: '.choose-product .photos a',
-          previewsContainer: '.choose-product .photos .previews'
+          previewsContainer: '.choose-product .previews .images',
+          previewTemplate: myPreview
+        }).on('addedfile', function (file) {
+          $('.choose-product .previews').addClass('active');
         });
       },
 
@@ -251,8 +265,12 @@ var app = function ($) {
           });
           product.find('.photos').dropzone({
             url: 'uploadPhoto',
+            acceptedFiles: 'image/jpeg, image/png',
             clickable: product.find('.photos a')[0],
-            previewsContainer: product.find('.photos .previews')[0]
+            previewsContainer: product.find('.photos .images')[0],
+            previewTemplate: myPreview
+          }).on('addedfile', function (file) {
+            $('.choose-product .previews').addClass('active');
           });
           productsList.find('a.add-item').before(product);
         }
@@ -328,6 +346,54 @@ var app = function ($) {
             event.preventDefault();
             bookmark.toggleClass('active');
           });
+        });
+      },
+
+
+      /**
+       * COMPONENT: SELECT BOX - кастомный селект
+       */
+
+      selectBox: function selectBox() {
+        $('.js-selectToogle, .js-selectLists').removeClass('active');
+
+        $('.js-selectToogle').each(function initSelectBox() {
+          var selectToggle = $(this),
+              selectList = selectToggle.next();
+
+          selectToggle.click(function toggleSelect(event) {
+            event.preventDefault();
+            selectToggle.toggleClass('active');
+            selectList.toggleClass('active');
+          });
+
+          selectList.find('a').click(function selectValue(event) {
+            event.preventDefault();
+            selectToggle.text($(this).text()).append('<i>');
+            selectToggle.toggleClass('active');
+            selectList.toggleClass('active');
+          });
+        });
+      },
+
+
+      /**
+       * COMPONENT: SEARCH BOX - Поиск с фильтром
+       */
+
+      searchBox: function searchBox() {
+        var _ref3 = [$('.search-block .search-area'), $('.search-block .price'), $('.select-area')],
+            searchArea = _ref3[0],
+            searchPrice = _ref3[1],
+            selectArea = _ref3[2];
+
+
+        $('.filter .filter-resp').click(function toggleFilter(event) {
+          event.preventDefault();
+          [searchArea, searchPrice, selectArea].forEach(function (item) {
+            item.toggleClass('active');
+          });
+          $(this).toggleClass('active');
         });
       }
     },
