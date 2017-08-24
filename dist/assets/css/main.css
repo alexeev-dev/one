@@ -8651,14 +8651,12 @@ ul.item-list {
       margin: 5px; } }
   @media (max-width: 480px) {
     ul.item-list li {
-      display: -webkit-box;
-      display: -webkit-flex;
-      display: -ms-flexbox;
-      display: flex;
+      display: block;
       width: -webkit-calc(100% - 20px);
-      width: calc(100% - 20px); }
+      width: calc(100% - 20px);
+      margin-bottom: 25px; }
       ul.item-list li figure {
-        width: 50%; }
+        width: 100%; }
         ul.item-list li figure figcaption {
           display: none; }
       ul.item-list li .item-body {
@@ -8672,7 +8670,7 @@ ul.item-list {
         -ms-flex-direction: column;
         flex-direction: column;
         position: relative;
-        width: 48%;
+        width: 100%;
         padding-right: 5px; }
         ul.item-list li .item-body .item-text {
           -webkit-box-orient: vertical;

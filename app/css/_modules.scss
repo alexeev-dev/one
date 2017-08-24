@@ -318,15 +318,15 @@ ul.item-list {
 
 	@include respond-to(xs) {
 		li {
-			display: flex; width: calc(100% - 20px);
+			display: block; width: calc(100% - 20px); margin-bottom: 25px;
 			figure {
-				width: 50%;
+				width: 100%;
 				figcaption {
 					display: none;
 				}
 			}
 			.item-body {
-				display: flex; flex-direction: column; position: relative; width: 48%; padding-right: 5px;
+				display: flex; flex-direction: column; position: relative; width: 100%; padding-right: 5px;
 				.item-text {
 					flex-direction: column; height: 100%;
 				}
