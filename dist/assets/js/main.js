@@ -49,6 +49,19 @@ var app = function ($) {
   function Product() {
     return $('\
     <div class="product-group">\
+      <div class="select-block">\
+        <a href="#" class="js-selectToogle">Категория товара<i></i></a>\
+        <div class="js-selectLists">\
+          <ul>\
+            <li><a href="#">Личные вещи</a></li>\
+            <li><a href="#">Электроника</a></li>\
+            <li><a href="#">Спорт</a></li>\
+            <li><a href="#">Дом и дача</a></li>\
+            <li><a href="#">Детям</a></li>\
+            <li><a href="#">Бизнесу</a></li>\
+          </ul>\
+        </div>\
+      </div>\
       <div class="info">\
         <ul>\
           <li>\
@@ -278,6 +291,27 @@ var app = function ($) {
         productsList.find('a.add-item').click(function addItem(event) {
           event.preventDefault();
           addNew();
+
+          /* это нужно отрефакторить */
+          $('.js-selectToogle, .js-selectLists').removeClass('active');
+          $('.js-selectToogle').each(function initSelectBox() {
+            var selectToggle = $(this),
+                selectList = selectToggle.next();
+
+            selectToggle.click(function toggleSelect(event) {
+              event.preventDefault();
+              selectToggle.toggleClass('active');
+              selectList.toggleClass('active');
+            });
+
+            selectList.find('a').click(function selectValue(event) {
+              event.preventDefault();
+              selectToggle.text($(this).text()).append('<i>');
+              selectToggle.toggleClass('active');
+              selectList.toggleClass('active');
+            });
+          });
+          /* это нужно отрефакторить */
         });
 
         return Object.freeze({ addNew: addNew });
