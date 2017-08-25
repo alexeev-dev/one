@@ -9238,7 +9238,7 @@ ul.item-list {
     .new-post .item-info .project div.lists {
       padding: 115px 0 0;
       position: absolute;
-      left: -50px;
+      left: -100px;
       top: -44px;
       width: 980px;
       z-index: 5;
@@ -11275,7 +11275,6 @@ ul.item-list {
           -webkit-flex-direction: column;
           -ms-flex-direction: column;
           flex-direction: column;
-          max-height: 0;
           overflow: hidden;
           -webkit-transition: max-height 0.7s linear;
           transition: max-height 0.7s linear; }
