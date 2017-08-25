@@ -816,7 +816,7 @@ ul.item-list {
 				position: relative; z-index: 1;
 			}
 			div.lists {
-				padding: 115px 0 0;  position: absolute; left: -50px; top: -44px; width: 980px; z-index: 5; transform: translateY(20px);
+				padding: 115px 0 0;  position: absolute; left: -100px; top: -44px; width: 980px; z-index: 5; transform: translateY(20px);
 				background: #ffffff; box-shadow: 0 2px 14px rgba(0, 0, 0, 0.1);
 				opacity: 0; overflow: hidden;
 				pointer-events: none;
@@ -1416,7 +1416,7 @@ ul.item-list {
 					margin-bottom: 0;
 				}
 				& > ul {
-					flex-direction: column; max-height: 0; overflow: hidden;
+					flex-direction: column; overflow: hidden;
 					transition: max-height 0.7s linear;
 					li {margin: 25px 0 0 0;}
 				}
