@@ -12276,7 +12276,7 @@ ul.item-list {
       color: #4a4a4a;
       margin-bottom: 40px; }
     .partners > ul > li:first-child {
-      width: 70%; }
+      width: 66%; }
       .partners > ul > li:first-child ul {
         display: -webkit-box;
         display: -webkit-flex;
@@ -12285,22 +12285,42 @@ ul.item-list {
         -webkit-flex-wrap: wrap;
         -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-        flex-wrap: wrap; }
+        -webkit-box-pack: justify;
+        -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+        -ms-flex-align: center;
+        align-items: center; }
         .partners > ul > li:first-child ul li {
-          width: 14.285714%; }
+          width: 12.285714%;
+          margin: 10px 15px; }
+          .partners > ul > li:first-child ul li img {
+            max-width: 100%; }
     .partners > ul > li:last-child {
-      width: 30%; }
+      width: 34%; }
       .partners > ul > li:last-child ul {
         display: -webkit-box;
         display: -webkit-flex;
         display: -ms-flexbox;
         display: flex;
+        -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        -webkit-box-pack: justify;
+        -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
         -webkit-box-align: center;
         -webkit-align-items: center;
         -ms-flex-align: center;
         align-items: center; }
         .partners > ul > li:last-child ul li {
-          width: 50%; }
+          width: 45%;
+          margin-bottom: 20px; }
+          .partners > ul > li:last-child ul li img {
+            max-width: 100%; }
     .partners > ul > li.line-sep {
       width: 1px;
       margin: 0 30px 0 20px;
@@ -12334,7 +12354,7 @@ ul.item-list {
         display: none; } }
   @media (max-width: 480px) {
     .partners > ul > li:first-child ul li {
-      width: 50%;
+      width: 100%;
       text-align: center; } }
   @media (max-width: 400px) {
     .partners > ul > li:last-child ul {
@@ -12343,6 +12363,8 @@ ul.item-list {
         width: 100%;
         text-align: center;
         margin-bottom: 60px; }
+        .partners > ul > li:last-child ul li img {
+          max-width: 70%; }
         .partners > ul > li:last-child ul li:last-child {
           margin-bottom: 0; } }
 

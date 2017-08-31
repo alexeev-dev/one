@@ -2456,21 +2456,25 @@ ul.item-list {
 				margin-bottom: 40px;
 			}
 			&:first-child {
-				width: 70%;
+				width: 66%;
 
 				ul {
-					display: flex; flex-wrap: wrap; flex-wrap: wrap;
+					display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center;
 					li {
-						width: 14.285714%;
+						width: 12.285714%; margin: 10px 15px;
+
+						img {max-width: 100%;}
 					}
 				}
 			}
 			&:last-child {
-				width: 30%;
+				width: 34%;
 				ul {
-					display: flex; align-items: center;
+					display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center;
 					li {
-						width: 50%;
+						width: 45%; margin-bottom: 20px;
+
+						img {max-width: 100%;}
 					}
 				}
 			}
@@ -2515,7 +2519,7 @@ ul.item-list {
 				&:first-child {
 					ul {
 						li {
-							width: 50%; text-align: center;
+							width: 100%; text-align: center;
 						}
 					}
 				}
@@ -2530,6 +2534,7 @@ ul.item-list {
 						display: block;
 						li {
 							width: 100%; text-align: center; margin-bottom: 60px;
+							img {max-width: 70%;}
 							&:last-child {
 								margin-bottom: 0;
 							}
