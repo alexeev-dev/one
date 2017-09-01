@@ -285,33 +285,13 @@ var app = function ($) {
           }).on('addedfile', function (file) {
             $('.choose-product .previews').addClass('active');
           });
+          $(window).trigger('selectbox-created', product.find('.js-selectToogle'));
           productsList.find('a.add-item').before(product);
         }
 
         productsList.find('a.add-item').click(function addItem(event) {
           event.preventDefault();
           addNew();
-
-          /* это нужно отрефакторить */
-          $('.js-selectToogle, .js-selectLists').removeClass('active');
-          $('.js-selectToogle').each(function initSelectBox() {
-            var selectToggle = $(this),
-                selectList = selectToggle.next();
-
-            selectToggle.click(function toggleSelect(event) {
-              event.preventDefault();
-              selectToggle.toggleClass('active');
-              selectList.toggleClass('active');
-            });
-
-            selectList.find('a').click(function selectValue(event) {
-              event.preventDefault();
-              selectToggle.text($(this).text()).append('<i>');
-              selectToggle.toggleClass('active');
-              selectList.toggleClass('active');
-            });
-          });
-          /* это нужно отрефакторить */
         });
 
         return Object.freeze({ addNew: addNew });
@@ -391,9 +371,8 @@ var app = function ($) {
       selectBox: function selectBox() {
         $('.js-selectToogle, .js-selectLists').removeClass('active');
 
-        $('.js-selectToogle').each(function initSelectBox() {
-          var selectToggle = $(this),
-              selectList = selectToggle.next();
+        function initSelectBox(selectToggle) {
+          var selectList = selectToggle.next();
 
           selectToggle.click(function toggleSelect(event) {
             event.preventDefault();
@@ -407,7 +386,13 @@ var app = function ($) {
             selectToggle.toggleClass('active');
             selectList.toggleClass('active');
           });
+        }
+
+        $('.js-selectToogle').each(function (i, el) {
+          return initSelectBox($(el));
         });
+
+        return { initSelectBox: initSelectBox };
       },
 
 
@@ -432,7 +417,7 @@ var app = function ($) {
       }
     },
 
-    events: [['project-selected', 'activateParticipantSelect'], ['#confirm', 'click', 'toggleConfirm'], ['.my-menu', 'click', 'showProfileMenu'], ['.buy-nav-resp', 'click', 'showThingsMenu'], ['.responsive-menu', 'click', 'showSiteMenu'], ['.notice .close, .notice .later', 'click', 'hideNotice']],
+    events: [['project-selected', 'activateParticipantSelect'], ['#confirm', 'click', 'toggleConfirm'], ['.my-menu', 'click', 'showProfileMenu'], ['.buy-nav-resp', 'click', 'showThingsMenu'], ['.responsive-menu', 'click', 'showSiteMenu'], ['.notice .close, .notice .later', 'click', 'hideNotice'], ['selectbox-created', 'initSelectBox']],
 
     actions: {
       activateParticipantSelect: function activateParticipantSelect() {
@@ -459,6 +444,11 @@ var app = function ($) {
       hideNotice: function hideNotice(event) {
         event.preventDefault();
         $('.wr-notice').hide();
+      },
+      initSelectBox: function initSelectBox(event, box) {
+        var selectBox = this.components.selectBox;
+
+        selectBox.initSelectBox($(box));
       }
     },
 
