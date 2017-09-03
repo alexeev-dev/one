@@ -1,499 +1,185 @@
 <!DOCTYPE html>
 <html>
-
-	//= tpl/head.html
-
+	//= components/base/head.html
 <body>
-	<!--[if lt IE 10]>
-	<p class="browsehappy">Вы используете <strong>УСТАРЕВШИЙ Internet Explorer</strong> браузер. Пожалуйста, <a href="http://browsehappy.com/">обновите ваш Браузер</a> чтобы увидеть больше возможностей на сайтах!</p>
-	<![endif]-->
-
-	<!-- Preloader  -->
-	<div class="preloader"></div>
+	//= components/base/counter.html
 
 	<!-- Application -->
 	<div class="app">
-
-		<!-- Header -->
-		//= tpl/header.html
-
-		<!-- Login Form -->
-		<!--//= tpl/login.html-->
-
-		<!-- Notice -->
-		//= tpl/notice.html
+		//= components/base/menu-top.html
+		<!-- Login Form //= components/popup/login.html-->
+		//= components/popup/notice.html
+		//= components/base/breadcrumbs.html
 
 		<!-- Profile -->
-		<section class="wr-profile">
+		<section class="wr bg_white shadow">
 			<div class="container">
-				<div class="content-block">
-					<div class="row">
-						<div class="col-md-12">
+				<div class="row">
+					<div class="col-md-12">
 
-							<!-- Breadcrumbs -->
-							<div class="breadcrumbs">
-								<ul class="navigation">
-									<li><a href="#">Главная</a></li>
-									<li><a href="#">Личный кабинет</a></li>
-								</ul>
-								<ul class="share">
-									<li>Поделиться:</li>
-									<li><a href="#"><i class="fa fa-vk"></i></a></li>
-									<li><a href="#"><i class="fa fa-facebook"></i></a></li>
-								</ul>
-							</div>
-
-							<div class="profile">
-								<div class="user-info">
-									<figure>
-										<img src="assets/img/user-1.png">
-									</figure>
-									<section>
-										<h1>Василий Раушенберг</h1>
-										<p>Купите или продайте первую вещь на сайте, и следите за статистикой ваших пожертвований</p>
-										<ul>
-											<li><span>18 325 <span class="rub">a</span></span> Вы пожертвовали</li>
-											<li><span>24</span> Людям помогли</li>
-											<li><span>2</span> Фонда поддержали</li>
-										</ul>
-									</section>
-								</div>
-								<div class="profile-tabs">
-									<a href="#" class="my-menu">Моё меню <i class="fa fa-angle-down"></i></a>
-									<ul>
-										<li class="active"><a href="#doings-tab">Добрые дела<span> 3</span></a></li>
-										<li><a href="#ads-tab">Мои объявления<span> 4</span></a></li>
-										<li><a href="#purchases-tab">Покупки<span> 3</span></a></li>
-										<li><a href="#bookmarks-tab">Закладки<span> 6</span></a></li>
-										<li><a href="#testimonials-tab">Отзывы<span> 3</span></a></li>
-										<li><a href="#settings-tab">Настройки</a></li>
-									</ul>
-								</div>
-								<!-- tab 1 -->
-								<div id="doings-tab" class="doings tab tab--active">
-									<ul class="doings-tabs">
-										<li>Направления</li>
-										<li class="active"><a href="#funds-tab">Фонды</a></li>
-										<li><a href="#projects-tab"> Проекты</a></li>
-										<li><a href="#people-tab">Люди</a></li>
-									</ul>
-									<div id="funds-tab" class="tab tab--active">
-										<h3 class="tabs-title-mobile">Добрые дела</h3>
-										<div class="masonry-grid">
-											<div class="empty">
-												<i class="icon icon-empty"></i>
-												<p>Здесь будут отображаться фонды,<br>которым вы помогли</p>
-											</div>
-										</div>
-									</div>
-									<div id="projects-tab" class="tab">
-										<h3 class="tabs-title-mobile">Добрые дела</h3>
-										<div class="masonry-grid">
-											<div class="masonry-item">
-												<div class="item-header">
-													<figure>
-														<img src="assets/img/doings-img.png" alt="">
-													</figure>
-													<section>
-														<h3>Фонд «Дар»</h3>
-														<p>Благотворительный частный фонд, учрежденный в 2005 году по инициативе Никиты Анатольевича Мишина.</p>
-													</section>
-												</div>
-
-												<ul>
-													<li>
-														<p>Магнитола SONY</p>
-														<ul>
-															<li>+ 2 000 <span class="rub">a</span></li>
-															<li><a href="#">Отчет</a></li>
-														</ul>
-													</li>
-													<li>
-														<p>Лампа настольная Pixar</p>
-														<ul>
-															<li>+ 800 <span class="rub">a</span></li>
-															<li><a href="#">Отчет</a></li>
-														</ul>
-													</li>
-													<li>
-														<p>Macbook Pro Late 2015 Retina display</p>
-														<ul>
-															<li>+ 15 000 <span class="rub">a</span></li>
-															<li><a href="#">Отчет</a></li>
-														</ul>
-													</li>
-												</ul>
-												<p>Вы пожертвовали: <span>17 325 <span class="rub">a</span></span></p>
-											</div>
-											<div class="masonry-item">
-												<div class="item-header">
-													<figure>
-														<img src="assets/img/doings-img.png" alt="">
-													</figure>
-													<section>
-														<h3>Фонд «Дар»</h3>
-														<p>Благотворительный частный фонд, учрежденный в 2005 году по инициативе Никиты Анатольевича Мишина.</p>
-													</section>
-												</div>
-												<ul>
-													<li>
-														<p>Магнитола SONY</p>
-														<ul>
-															<li>+ 2 000 <span class="rub">a</span></li>
-															<li><a href="#">Отчет</a></li>
-														</ul>
-													</li>
-												</ul>
-												<p>Вы пожертвовали: <span>2 000 <span class="rub">a</span></span></p>
-											</div>
-											<div class="masonry-item">
-												<div class="item-header">
-													<figure>
-														<img src="assets/img/doings-img1.png" alt="">
-													</figure>
-													<section>
-														<h3>Кораблик - Благотворительный фонд помощи детям</h3>
-														<p>Благотворительный частный фонд, учрежденный в 2005 году по инициативе Никиты Анатольевича Мишина.</p>
-													</section>
-												</div>
-												<ul>
-													<li>
-														<p>Магнитола SONY</p>
-														<ul>
-															<li>+ 300 <span class="rub">a</span></li>
-															<li><a href="#">Отчет</a></li>
-														</ul>
-													</li>
-												</ul>
-												<p>Вы пожертвовали: <span>300 <span class="rub">a</span></span></p>
-											</div>
-										</div>
-									</div>
-									<div id="people-tab" class="tab">
-										<h3 class="tabs-title-mobile">Добрые дела</h3>
-										<div class="masonry-grid">
-											<div class="masonry-item">
-												<div class="item-header">
-													<figure>
-														<img src="assets/img/doings-img1.png" alt="">
-													</figure>
-													<section>
-														<h3>Кораблик - Благотворительный фонд помощи детям</h3>
-														<p>Благотворительный частный фонд, учрежденный в 2005 году по инициативе Никиты Анатольевича Мишина.</p>
-													</section>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-								<!-- tab 2 -->
-								<div id="ads-tab" class="advertisement tab">
-									<h3 class="tabs-title-mobile">Мои объявления</h3>
-									<table>
-										<tr>
-											<th>Название</th>
-											<th>Дата публикации</th>
-											<th>Цена</th>
-											<th>Статус</th>
-										</tr>
-										<tr>
-											<td>
-												<a href="#">Магнитола SONY</a>
-											</td>
-											<td><span class="value">Дата</span> 23.05.2017</td>
-											<td><span class="value">Цена</span> 2 300 <span class="rub">a</span></td>
-											<td><span class="value">Статус</span> Активно</td>
-										</tr>
-										<tr class="mark">
-											<td><a href="#">Лампа настольная Pixar</a></td>
-											<td><span class="value">Дата</span> 23.05.2017</td>
-											<td><span class="value">Цена</span> 2 300 <span class="rub">a</span></td>
-											<td><span class="value">Статус</span> Активно</td>
-										</tr>
-										<tr>
-											<td><a href="#">Macbook Pro Late 2015 Retina display</a></td>
-											<td><span class="value">Дата</span> 23.05.2017</td>
-											<td><span class="value">Цена</span> 2 300 <span class="rub">a</span></td>
-											<td><span class="value">Статус</span> Активно</td>
-										</tr>
-									</table>
-								</div>
-								<!-- tab 3 -->
-								<div id="purchases-tab" class="purchases tab">
-									<h3 class="tabs-title-mobile">Покупки</h3>
-									<table class="accordion">
-										<tr>
-											<th>Название</th>
-											<th>Дата публикации</th>
-											<th>Цена</th>
-											<th>Статус</th>
-										</tr>
-										<tr class="item-header">
-											<td>
-												<a href="#">Магнитола SONY</a>
-											</td>
-											<td><span class="value">Дата</span> 23.05.2017</td>
-											<td><span class="value">Цена</span> 2 300 <span class="rub">a</span></td>
-											<td><span class="value">Статус</span> Активно</td>
-										</tr>
-										<tr class="item-content active">
-											<td colspan="4">
-												<div class="bg-top"></div>
-												<div class="item-info">
-													<div class="customer">
-														<p>Продавец: <a href="#">Мирабелла Глинка</a></p>
-														<span>Свяжитесь с покупателем что бы договориться о месте и времени покупки</span>
-														<a href="#">Пожаловаться</a>
-													</div>
-													<ul>
-														<li>
-															<ul class="contacts">
-																<li class="tel">
-																	<a href="tel:+73453453476">+7 (345) 345-34-76</a>
-																</li>
-																<li><a href="mailto:vasya@raush.ru">vasya@raush.ru</a></li>
-															</ul>
-														</li>
-														<li class="actions">
-															<ul>
-																<li><a href="#">Отменить бронь</a></li>
-															</ul>
-														</li>
-													</ul>
-												</div>
-											</td>
-										</tr>
-										<tr class="item-header mark">
-											<td><a href="#">Лампа настольная Pixar</a></td>
-											<td><span class="value">Дата</span> 23.05.2017</td>
-											<td><span class="value">Цена</span> 2 300 <span class="rub">a</span></td>
-											<td><span class="value">Статус</span> Активно</td>
-										</tr>
-										<tr class="item-content active booking">
-											<td colspan="4">
-												<div class="bg-top"></div>
-												<div class="item-info">
-													<div class="customer">
-														<p>Продавец: <a href="#">Мирабелла Глинка</a></p>
-														<span>Свяжитесь с покупателем что бы договориться о месте и времени покупки</span>
-														<a href="#">Пожаловаться</a>
-													</div>
-													<ul>
-														<li>
-															<ul class="contacts">
-																<li class="tel">
-																	<a href="tel:+73453453476">+7 (345) 345-34-76</a>
-																</li>
-																<li><a href="mailto:vasya@raush.ru">vasya@raush.ru</a></li>
-															</ul>
-														</li>
-														<li class="actions">
-															<ul>
-																<li><a href="#">Отменить бронь</a></li>
-																<li><span class="btn">Вещь передана покупателю</span></li>
-															</ul>
-														</li>
-													</ul>
-												</div>
-											</td>
-										</tr>
-										<tr class="item-header">
-											<td><a href="#">Macbook Pro Late 2015 Retina display</a></td>
-											<td><span class="value">Дата</span> 23.05.2017</td>
-											<td><span class="value">Цена</span> 2 300 <span class="rub">a</span></td>
-											<td><span class="value">Статус</span> Активно</td>
-										</tr>
-										<tr class="item-content active">
-											<td colspan="4">
-												<div class="bg-top"></div>
-												<div class="item-info">
-													<div class="customer">
-														<p>Продавец: <a href="#">Мирабелла Глинка</a></p>
-														<span>Свяжитесь с покупателем что бы договориться о месте и времени покупки</span>
-														<a href="#">Пожаловаться</a>
-													</div>
-													<ul>
-														<li>
-															<ul class="contacts">
-																<li class="tel">
-																	<a href="tel:+73453453476">+7 (345) 345-34-76</a>
-																</li>
-																<li><a href="mailto:vasya@raush.ru">vasya@raush.ru</a></li>
-															</ul>
-														</li>
-														<li class="actions">
-															<ul>
-																<li><a href="#">Отменить бронь</a></li>
-															</ul>
-														</li>
-													</ul>
-												</div>
-											</td>
-										</tr>
-									</table>
-								</div>
-								<!-- tab 4 -->
-								<div id="bookmarks-tab" class="bookmarks tab">
-									<h3 class="tabs-title-mobile">Закладки</h3>
-									<div class="title">Описание вещи</div>
-									<ul>
-										<li>
-											<figure>
-												<img src="assets/img/search-item-1.jpg" alt="">
-											</figure>
-											<ul class="item-info">
-												<li>
-													<h3><a href="#">Power bank</a></h3>
-													<ul>
-														<li><i class="icon icon-clock"></i>3 часа назад</li>
-														<li><i class="icon icon-marker"></i>Москва / м. Кропоткинская</li>
-													</ul>
-												</li>
-												<li>
-													<p>2 300 <span class="rub">a</span></p>
-													<span>В фонд “Дар” (Поддержка детей инвалидов)</span>
-												</li>
-											</ul>
-											<a href="#"><i class="icon icon-heart-big"></i></a>
-										</li>
-										<li>
-											<figure>
-												<img src="assets/img/search-item-2.jpg" alt="">
-											</figure>
-											<ul class="item-info">
-												<li>
-													<h3><a href="#">Тени для бровей MAC</a></h3>
-													<ul>
-														<li><i class="icon icon-clock"></i>3 часа назад</li>
-														<li><i class="icon icon-marker"></i>Москва / м. Кропоткинская</li>
-													</ul>
-												</li>
-												<li>
-													<p>400 <span class="rub">a</span></p>
-													<span>В фонд “Дар” (Поддержка детей инвалидов)</span>
-												</li>
-											</ul>
-											<a href="#"><i class="icon icon-heart-big"></i></a>
-										</li>
-										<li>
-											<figure>
-												<img src="assets/img/search-item-1.jpg" alt="">
-											</figure>
-											<ul class="item-info">
-												<li>
-													<h3><a href="#">Samsung mp3 плеер</a></h3>
-													<ul>
-														<li><i class="icon icon-clock"></i>3 часа назад</li>
-														<li><i class="icon icon-marker"></i>Москва / м. Кропоткинская</li>
-													</ul>
-												</li>
-												<li>
-													<p>1 200 <span class="rub">a</span></p>
-													<span>В фонд “Дар” (Поддержка детей инвалидов)</span>
-												</li>
-											</ul>
-											<a href="#"><i class="icon icon-heart-big"></i></a>
-										</li>
-										<li>
-											<figure>
-												<img src="assets/img/search-item-2.jpg" alt="">
-											</figure>
-											<ul class="item-info">
-												<li>
-													<h3><a href="#">Тени для бровей MAC</a></h3>
-													<ul>
-														<li><i class="icon icon-clock"></i>3 часа назад</li>
-														<li><i class="icon icon-marker"></i>Москва / м. Кропоткинская</li>
-													</ul>
-												</li>
-												<li>
-													<p>800 <span class="rub">a</span></p>
-													<span>В фонд “Дар” (Поддержка детей инвалидов)</span>
-												</li>
-											</ul>
-											<a href="#"><i class="icon icon-heart-big"></i></a>
-										</li>
-									</ul>
-								</div>
-								<!-- tab 5 -->
-								<div id="testimonials-tab" class="reviews tab">
-									<h3 class="tabs-title-mobile">Отзывы</h3>
-									<ul>
-										<li>
-											<figure>
-												<img src="assets/img/review-user.png">
-											</figure>
-											<h3><a href="#">Борис Бельведерский</a></h3>
-											<p>Купил у Василия замечателный миксер. Перемолол все что было в холодильнике. Твердую пищу теперь вообще не ем. Думаю о покупке второго миксера, Жене.</p>
-											<div class="rating rating-5">
-												<p>Оценка <span>5/5</span></p>
-												<ul>
-													<li><i class="fa fa-star"></i></li>
-													<li><i class="fa fa-star"></i></li>
-													<li><i class="fa fa-star"></i></li>
-													<li><i class="fa fa-star"></i></li>
-													<li><i class="fa fa-star"></i></li>
-												</ul>
-											</div>
-										</li>
-										<li>
-											<figure>
-												<img src="assets/img/review-user.png">
-											</figure>
-											<h3><a href="#">Уче Оконво</a></h3>
-											<p>Операция оплаты и получения прошла легко и непринужденно.</p>
-											<div class="rating rating-3">
-												<p>Оценка <span>3/5</span></p>
-												<ul>
-													<li><i class="fa fa-star"></i></li>
-													<li><i class="fa fa-star"></i></li>
-													<li><i class="fa fa-star"></i></li>
-													<li><i class="fa fa-star"></i></li>
-													<li><i class="fa fa-star"></i></li>
-												</ul>
-											</div>
-										</li>
-										<li>
-											<figure>
-												<img src="assets/img/review-user.png">
-											</figure>
-											<h3><a href="#">Маша Порываева</a></h3>
-											<p>Все Ок!</p>
-											<div class="rating rating-4">
-												<p>Оценка <span>4/5</span></p>
-												<ul>
-													<li><i class="fa fa-star"></i></li>
-													<li><i class="fa fa-star"></i></li>
-													<li><i class="fa fa-star"></i></li>
-													<li><i class="fa fa-star"></i></li>
-													<li><i class="fa fa-star"></i></li>
-												</ul>
-											</div>
-										</li>
-									</ul>
-								</div>
-								<!-- tab 6 -->
-								<div id="settings-tab" class="settings tab">
-									<h3 class="tabs-title-mobile">Настройки</h3>
-								</div>
-							</div>
-
+						//= components/ui/profile-user.html
+						
+						<div class="tabs-main js-tab_direct">
+							<a href="#" class="mobile_menu">Моё меню <i class="fa fa-angle-down"></i></a>
+							<ul>
+								<li class="active"><a href="#tab-I">Добрые дела<span> 3</span></a></li>
+								<li><a href="#tab-II">Мои объявления<span> 4</span></a></li>
+								<li><a href="#tab-III">Покупки<span> 3</span></a></li>
+								<li><a href="#tab-IV">Закладки<span> 6</span></a></li>
+								<li><a href="#tab-V">Отзывы<span> 3</span></a></li>
+								<li><a href="#tab-VI">Настройки</a></li>
+							</ul>
 						</div>
+
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="wr mobile_titles">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+
+						<div class="js-tab_direct-wr">
+
+							<!-- TAB I -->
+							<div id="tab-I" class="tab tab--active">
+
+								<ul class="tabs-inner js-tab_user">
+									<li>Направления</li>
+									<li class="active"><a href="#tab-1">Фонды</a></li>
+									<li><a href="#tab-2"> Проекты</a></li>
+									<li><a href="#tab-3">Люди</a></li>
+								</ul>
+
+								<div class="js-tab_user-wr">
+								
+									<!-- tab 1 -->
+									<div id="tab-1" class="tab tab--active">
+
+										<h2>Добрые дела</h2>
+										<div class="empty">
+											<i class="icon icon-empty"></i>
+											<p>Здесь будут отображаться фонды,<br>которым вы помогли</p>
+										</div>
+									</div>
+									
+									<!-- tab 2 -->
+									<div id="tab-2" class="tab">
+
+										<h2>Добрые дела</h2>
+										<div class="grid">
+											<div class="grid-item">
+												//= components/ui/found-gift.html
+											</div>
+											<div class="grid-item">
+												//= components/ui/found-gift.html
+											</div>
+											<div class="grid-item">
+												//= components/ui/found-gift.html
+											</div>
+										</div>
+									</div>
+
+									<!-- tab 3 -->
+									<div id="tab-3" class="tab">
+
+										<h2>Добрые дела</h2>
+										<div class="grid">
+											<div class="grid-item">
+												//= components/ui/found-gift.html
+											</div>
+										</div>
+									</div>
+
+								</div>
+							</div>
+
+							<!-- TAB II -->
+							<div id="tab-II" class="tab">
+
+								<h2>Мои объявления</h2>
+								<table class="ads">
+									<tr>
+										<th>Название</th>
+										<th>Дата публикации</th>
+										<th>Цена</th>
+										<th>Статус</th>
+									</tr>
+									
+									//= components/ui/user-ads.html
+									//= components/ui/user-ads.html
+									//= components/ui/user-ads.html
+								</table>
+								
+							</div>
+
+							<!-- TAB III -->
+							<div id="tab-III" class="tab">
+
+								<h2>Покупки</h2>
+								<table class="buy js-accordion">
+									<tr>
+										<th>Название</th>
+										<th>Дата публикации</th>
+										<th>Цена</th>
+										<th>Статус</th>
+									</tr>
+
+									//= components/ui/user-buy.html
+									//= components/ui/user-buy.html
+									//= components/ui/user-buy.html
+								</table>
+								
+							</div>
+
+							<!-- TAB IV -->
+							<div id="tab-IV" class="tab">
+
+								<h2>Закладки</h2>
+								<p>Описание вещи</p>
+								<ul class="bookmarks">
+									//= components/ui/bookmarks.html
+									//= components/ui/bookmarks.html
+									//= components/ui/bookmarks.html
+								</ul>
+								
+							</div>
+
+							<!-- TAB V -->
+							<div id="tab-V" class="tab">
+								
+								<h2>Отзывы</h2>
+								<ul class="testimonials">
+									
+									//= components/ui/user-testimonial.html
+									//= components/ui/user-testimonial.html
+									//= components/ui/user-testimonial.html
+									//= components/ui/user-testimonial.html
+								</ul>
+
+							</div>
+
+							<!-- TAB VI -->
+							<div id="tab-VI" class="tab">
+
+								<h2>Настройки</h2>
+							</div>
+							
+						</div>
+
 					</div>
 				</div>
 			</div>
 		</section>
 
 		<!-- Footer -->
-		//= tpl/footer.html
+		//= components/base/footer.html
 
 	</div>
-
-	<!-- Popups -->
-	//= tpl/popups.html
-
+	
 	<!-- Scripts -->
-	//= tpl/scripts.html
+	//= components/base/scripts.html
 
 </body>
 </html>

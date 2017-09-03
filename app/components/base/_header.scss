@@ -1,0 +1,167 @@
+// HEADER
+.header {
+	a.logo {margin-top: 20px;}
+}
+
+// MENU
+.menu {
+	// TOP MENU – http://prntscr.com/gg2zry
+	// GENERAL MENU – 
+
+	////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	&-top {& > ul {display: flex;}}
+	&-general {& > ul {display: flex; justify-content: space-around;}}
+
+
+	////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	&-top {
+		@include respond-to(md) {width: calc(100% - 86px);}
+
+		a.burger {
+			position: relative; float: right; width: 28px; height: 28px; margin: 18px 15px;
+			
+			display: none;
+			@include respond-to(md) {display: block;}
+
+			span {
+				display: block; width: 100%; height: 4px; margin: 4px 0;
+				background: $btn-color;
+			}
+		}
+
+		ul {
+			margin-top: 25px;
+
+			@include respond-to(md) {
+				display: block; margin: 0; padding: 0;
+				position: absolute; left: 0; top: 63px; width: 100%; z-index: 9999;
+				background: #fff; box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.08);
+				
+				@include slide_me();
+			}
+			
+			li {
+				margin-left: 40px;
+				@include respond-to(md) {display: block; width: calc(100% - 86px);}
+
+				a {
+					@include font-type($CormacEL, 14px, 19px, -0.5px); color: $main-color-text;
+					display: inline-block; padding-bottom: 17px; border-bottom: 2px solid transparent;
+					@include respond-to(md) {font-size: 18px; display: block; width: 100%; margin-top: 20px;}
+
+					&:hover {border-bottom-color: #4489ff;}
+
+					i {margin-right: 5px;}
+				}
+
+				&.active {a {border-bottom-color: #4489ff;}}
+			}
+		}
+	}
+
+	&-general {
+		position: relative; padding-bottom: 1px;
+
+		&:after {
+			content: '';
+			position: absolute; bottom:0; left:50%; margin-left: -5000px; width: 10000px; height: 1px;
+			background: #d9e4ea;
+			@include respond-to(md) {display: none;}
+		}
+
+		& > a {
+			@include font-type($CormacEL, 22px, 24px, -0.5px); color: #000;
+			display: none; width: 100%; padding: 20px 10px;
+			border-bottom: 1px solid #d9e4ea;
+			@include respond-to(md) {display: block;}
+
+			i {
+				font-size: 20px;
+				color: #4489ff; font-weight: 600;
+				display: block; float: right;
+			}
+		}
+
+		& > ul {
+			padding-top: 25px;
+
+			@include respond-to(md) {
+				flex-direction: column; padding-top: 0;
+				@include slide_me();
+			}
+
+			li {
+				text-align: center;
+				@include respond-to(md) {text-align: left;}
+
+				a {
+					@include font-type($CormacEL, 14px, 19px, -0.5px); color: #4a4a4a;
+					display: block; padding-bottom: 15px;
+					border-bottom: 2px solid transparent;
+
+					@include respond-to(md) {font-size: 18px; padding: 20px 10px; border-bottom: 1px solid #d9e4ea;}
+
+					&:hover {border-bottom-color: #4489ff;}
+
+					span {
+						display: inline-block;
+						&.icon-buy-wrapp {
+							display: block; height: 35px; margin: 0 auto 13px auto;
+							@include respond-to(md) {display: none;}
+						}
+					}
+				}
+
+				&.active {a {border-bottom-color: #4489ff;}}
+			}
+		}
+	}
+
+
+	////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	&-top {
+		a.burger {
+			transform: rotate(0deg);
+  			transition: .5s ease-in-out;
+
+			span {
+				position: absolute; left: 0; opacity: 1;
+
+				transform: rotate(0deg);
+				transition: .25s ease-in-out;
+
+				&:nth-child(1) {top: 0px;}
+				&:nth-child(2), 
+				&:nth-child(3) {top: 9px;}
+				&:nth-child(4) {top: 18px;}
+			}
+
+			&.active {
+
+				span {
+					&:nth-child(1) {top: 9px; width: 0%; left: 50%;}
+					&:nth-child(2) {transform: rotate(45deg);}
+					&:nth-child(3) {transform: rotate(-45deg);}
+					&:nth-child(4) {top: 9px; width: 0%; left: 50%;}
+				}
+			}
+		}
+
+		& > ul {transition: max-height .2s cubic-bezier(.42,.6,.61,.42);}
+	}
+
+	&-general {
+
+		& > a {i {transform: rotate(0deg); transition: .3s ease-in-out;}
+			&.active {i {transform: rotate(-180deg);}}	
+		}
+
+		& > ul {transition: max-height .3s cubic-bezier(.42,.6,.61,.42);}
+	}
+}

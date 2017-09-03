@@ -1,267 +1,47 @@
 <!DOCTYPE html>
 <html>
-
-	//= tpl/head.html
-
+	//= components/base/head.html
 <body>
-	<!--[if lt IE 10]>
-	<p class="browsehappy">Вы используете <strong>УСТАРЕВШИЙ Internet Explorer</strong> браузер. Пожалуйста, <a href="http://browsehappy.com/">обновите ваш Браузер</a> чтобы увидеть больше возможностей на сайтах!</p>
-	<![endif]-->
-
-	<!-- Preloader  -->
-	<div class="preloader"></div>
+	//= components/base/counter.html
 
 	<!-- Application -->
 	<div class="app">
-
-		<!-- Header -->
-		//= tpl/header.html
-		
-		<!-- Login Form -->
-		<!--//= tpl/login.html-->
-
-		<!-- Buy Form -->
-		//= tpl/buy.html
+		//= components/base/menu-top.html
+		//= components/base/menu-general.html
+		//= components/base/filter.html
+		<!-- Login Form //= components/popup/login.html-->
 
 		<!-- Search Result -->
-		<section class="wr-search-result">
+		<section class="wr mb_50">
 			<div class="container">
 				<div class="row">
 					<div class="col-md-12">
 
-						<div class="search-result">
-							<div class="section-header">
-								<h1>Личные вещи</h1>
-								<div class="filter-content">
-									<div class="select-block">
-										<a href="#" class="js-selectToogle active">Недавно добавленные<i></i></a>
-										<div class="js-selectLists active">
-											<ul>
-												<li><a href="#">Недавно добавленные</a></li>
-												<li><a href="#">Недавно добавленные</a></li>
-												<li><a href="#">Недавно добавленные</a></li>
-											</ul>
-										</div>
-									</div>
-								</div>
-								
-							</div>
-							<ul class="item-list">
-								<li>
-									<figure>
-										<img src="assets/img/search-item-1.jpg">
-										<figcaption>
-											<a href="#"><i class="icon icon-heart-big"></i></a>
-										</figcaption>
-									</figure>
-									<div class="item-body">
-										<h4><a href="#">Магнитола Sony</a></h4>
-										<div class="item-text">
-											<p>м. Кропоткинская<span>1 дн. назад</span></p>
-											<span>1 500 <span class="rub">a</span></span>
-										</div>
-										<a href="#" class="like-mobile"><i class="icon icon-heart-empty"></i></a>
-									</div>
-								</li>
-								<li>
-									<figure>
-										<img src="assets/img/search-item-2.jpg">
-										<figcaption>
-											<a href="#"><i class="icon icon-heart-big"></i></a>
-										</figcaption>
-									</figure>
-									<div class="item-body">
-										<h4><a href="#">Магнитола Sony</a></h4>
-										<div class="item-text">
-											<p>м. Кропоткинская<span>1 дн. назад</span></p>
-											<span>1 500 <span class="rub">a</span></span>
-										</div>
-										<a href="#" class="like-mobile"><i class="icon icon-heart-empty"></i></a>
-									</div>
-								</li>
-								<li>
-									<figure>
-										<img src="assets/img/search-item-3.jpg">
-										<figcaption>
-											<a href="#"><i class="icon icon-heart-big"></i></a>
-										</figcaption>
-									</figure>
-									<div class="item-body">
-										<h4><a href="#">Магнитола Sony</a></h4>
-										<div class="item-text">
-											<p>м. Кропоткинская<span>1 дн. назад</span></p>
-											<span>1 500 <span class="rub">a</span></span>
-										</div>
-										<a href="#" class="like-mobile"><i class="icon icon-heart-empty"></i></a>
-									</div>
-								</li>
-								<li>
-									<figure>
-										<img src="assets/img/search-item-4.jpg">
-										<figcaption>
-											<a href="#"><i class="icon icon-heart-big"></i></a>
-										</figcaption>
-									</figure>
-									<div class="item-body">
-										<h4><a href="#">Магнитола Sony</a></h4>
-										<div class="item-text">
-											<p>м. Кропоткинская<span>1 дн. назад</span></p>
-											<span>1 500 <span class="rub">a</span></span>
-										</div>
-										<a href="#" class="like-mobile"><i class="icon icon-heart-empty"></i></a>
-									</div>
-								</li>
-								<li>
-									<figure>
-										<img src="assets/img/search-item-5.jpg">
-										<figcaption>
-											<a href="#"><i class="icon icon-heart-big"></i></a>
-										</figcaption>
-									</figure>
-									<div class="item-body">
-										<h4><a href="#">Магнитола Sony</a></h4>
-										<div class="item-text">
-											<p>м. Кропоткинская<span>1 дн. назад</span></p>
-											<span>1 500 <span class="rub">a</span></span>
-										</div>
-										<a href="#" class="like-mobile"><i class="icon icon-heart-empty"></i></a>
-									</div>
-								</li>
-								<li>
-									<figure>
-										<img src="assets/img/search-item-2.jpg">
-										<figcaption>
-											<a href="#"><i class="icon icon-heart-big"></i></a>
-										</figcaption>
-									</figure>
-									<div class="item-body">
-										<h4><a href="#">Магнитола Sony</a></h4>
-										<div class="item-text">
-											<p>м. Кропоткинская<span>1 дн. назад</span></p>
-											<span>1 500 <span class="rub">a</span></span>
-										</div>
-										<a href="#" class="like-mobile"><i class="icon icon-heart-empty"></i></a>
-									</div>
-								</li>
-								<li>
-									<figure>
-										<img src="assets/img/search-item-6.jpg">
-										<figcaption>
-											<a href="#"><i class="icon icon-heart-big"></i></a>
-										</figcaption>
-									</figure>
-									<div class="item-body">
-										<h4><a href="#">Магнитола Sony</a></h4>
-										<div class="item-text">
-											<p>м. Кропоткинская<span>1 дн. назад</span></p>
-											<span>1 500 <span class="rub">a</span></span>
-										</div>
-										<a href="#" class="like-mobile"><i class="icon icon-heart-empty"></i></a>
-									</div>
-								</li>
-								<li>
-									<figure>
-										<img src="assets/img/search-item-4.jpg">
-										<figcaption>
-											<a href="#"><i class="icon icon-heart-big"></i></a>
-										</figcaption>
-									</figure>
-									<div class="item-body">
-										<h4><a href="#">Магнитола Sony</a></h4>
-										<div class="item-text">
-											<p>м. Кропоткинская<span>1 дн. назад</span></p>
-											<span>1 500 <span class="rub">a</span></span>
-										</div>
-										<a href="#" class="like-mobile"><i class="icon icon-heart-empty"></i></a>
-									</div>
-								</li>
-								<li>
-									<figure>
-										<img src="assets/img/search-item-7.jpg">
-										<figcaption>
-											<a href="#"><i class="icon icon-heart-big"></i></a>
-										</figcaption>
-									</figure>
-									<div class="item-body">
-										<h4><a href="#">Магнитола Sony</a></h4>
-										<div class="item-text">
-											<p>м. Кропоткинская<span>1 дн. назад</span></p>
-											<span>1 500 <span class="rub">a</span></span>
-										</div>
-										<a href="#" class="like-mobile"><i class="icon icon-heart-empty"></i></a>
-									</div>
-								</li>
-								<li>
-									<figure>
-										<img src="assets/img/search-item-5.jpg">
-										<figcaption>
-											<a href="#"><i class="icon icon-heart-big"></i></a>
-										</figcaption>
-									</figure>
-									<div class="item-body">
-										<h4><a href="#">Магнитола Sony</a></h4>
-										<div class="item-text">
-											<p>м. Кропоткинская<span>1 дн. назад</span></p>
-											<span>1 500 <span class="rub">a</span></span>
-										</div>
-										<a href="#" class="like-mobile"><i class="icon icon-heart-empty"></i></a>
-									</div>
-								</li>
-								<li>
-									<figure>
-										<img src="assets/img/search-item-6.jpg">
-										<figcaption>
-											<a href="#"><i class="icon icon-heart-big"></i></a>
-										</figcaption>
-									</figure>
-									<div class="item-body">
-										<h4><a href="#">Магнитола Sony</a></h4>
-										<div class="item-text">
-											<p>м. Кропоткинская<span>1 дн. назад</span></p>
-											<span>1 500 <span class="rub">a</span></span>
-										</div>
-										<a href="#" class="like-mobile"><i class="icon icon-heart-empty"></i></a>
-									</div>
-								</li>
-								<li>
-									<figure>
-										<img src="assets/img/search-item-4.jpg">
-										<figcaption>
-											<a href="#"><i class="icon icon-heart-big"></i></a>
-										</figcaption>
-									</figure>
-									<div class="item-body">
-										<h4><a href="#">Магнитола Sony</a></h4>
-										<div class="item-text">
-											<p>м. Кропоткинская<span>1 дн. назад</span></p>
-											<span>1 500 <span class="rub">a</span></span>
-										</div>
-										<a href="#" class="like-mobile"><i class="icon icon-heart-empty"></i></a>
-									</div>
-								</li>
-							</ul>
-							<a href="#" class="view-more">
-								<span>Показать еще</span>
-								<em><i class="icon icon-view-more"></i></em>
-							</a>
+						<div class="title">
+							<h1>Личные вещи</h1>
+							//= components/ux/select.html
 						</div>
+
+						<ul class="list-items">
+							<li>
+								//= components/ui/goods-preview.html
+							</li>
+						</ul>
+
+						<a href="#" class="show_more">
+							<span>Показать еще</span>
+							<em><i class="icon icon-view-more"></i></em>
+						</a>
 
 					</div>
 				</div>
 			</div>
 		</section>
 
-
-		<!-- Footer -->
-		//= tpl/footer.html
-
+		//= components/base/footer.html
 	</div>
 
-	<!-- Popups -->
-	//= tpl/popups.html
-	
 	<!-- Scripts -->
-	//= tpl/scripts.html
-
+	//= components/base/scripts.html
 </body>
 </html>

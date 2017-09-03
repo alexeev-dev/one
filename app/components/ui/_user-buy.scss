@@ -1,0 +1,142 @@
+// TABLE
+.ads, 
+.buy {
+
+	////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	tr {@include respond-to(md) {display: flex; flex-wrap: wrap;}}
+
+
+	////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	font-family: $HelveticaL;
+	width: 100%; margin-top: 15px;
+	border-spacing: 0 10px;  border-collapse: separate;
+
+	@include respond-to(md) {width: 100%; tbody {width: 100%;}}
+
+	tr {
+		position: relative;
+
+		@include respond-to(md) {
+			width: 100%; margin: 10px 0; padding: 0 10%;
+			border-radius: 5px; background: #f6f8fb;
+		}
+
+		@include respond-to(sm) {background: #ffffff;}
+
+
+		th {
+			color: #7e7e7e; font-size: 12px; font-family: $HelveticaL; letter-spacing: 0.2px; text-align: right;
+			
+			&:first-child {text-align: left; padding-left: 50px;}
+			&:last-child {padding-right: 50px;}
+		}
+
+		td {
+			text-align: right; font-family: $CormacEL;
+			padding: 20px 0;
+
+			@include respond-to(md) {text-align: left; width: 33.3%;}
+			@include respond-to(sm) {background: #ffffff;}
+
+			&:first-child {
+				text-align: left;
+				padding-left: 50px;
+				border-bottom-left-radius: 5px; border-top-left-radius: 5px;
+				@include respond-to(md) {}
+			}
+
+			&:last-child {
+				padding-right: 50px;
+				border-bottom-right-radius: 5px; border-top-right-radius: 5px;
+			}
+
+			& > a {@include font-type($CormacEL, 18px, 22px, 0.3px);}
+		}
+
+		
+		&.goods-header,
+		&.goods-content,
+		&.goods-single {@extend .neo-bg;}
+
+		&.goods-content {
+			@extend .neo-bg; display: none;
+			
+			td {
+				position: relative; padding-top: 10px;
+				
+				.bg-top {
+					position: absolute; left: 0; top: -15px; width: 100%; height: 20px;
+					background: #fff;
+				}
+
+				.goods-info_inline {
+					section {
+						p {font-size: 18px; margin-bottom: 12px;}
+						span {color: #89a1b3; font-size: 14px; letter-spacing: 0.1px;}
+						a {
+							color: #ff455c;
+							float: right;
+							&:hover {cursor: pointer; text-decoration: underline;}
+						}
+					}
+					ul {
+						margin-top: 25px;
+						li {
+							display: block; float: left;
+							ul.contacts {
+								display: flex;
+								li {
+									margin-right: 45px;
+									&:last-child {
+										margin-right: 0;
+									}
+									&.tel {
+										a {
+											color: #000;
+										}
+									}
+								}
+							}
+
+							&.actions {
+								float: right;
+								ul {
+									display: flex; align-items: center;
+									li {
+										margin-right: 20px;
+									}
+									li:first-child > a {
+										color: #ff455c;
+										&:hover {cursor: pointer; text-decoration: underline;}
+									}
+									li:last-child {
+										margin-right: 0;
+									}
+
+								}
+
+							}
+
+							span {
+								cursor: default;
+								background: #4489ff;
+								color: #ffffff;
+
+								&.value {
+									@include respond-to(md) {
+										@include font-type($HelveticaL, 12px, 1, 0.5px); color: #89a1b3; text-transform: uppercase;
+										display: block; margin-bottom: 5px;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

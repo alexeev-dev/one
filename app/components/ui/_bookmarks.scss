@@ -1,0 +1,69 @@
+.bookmarks {
+	margin-top: 25px;
+
+	& > li {
+		position: relative; @extend .neo-bg;
+
+		figure {
+			width: 135px; float: left;
+			@include respond-to(xs) {width: 100%;}
+
+			img {max-width: 100%;}
+		}
+
+		& > ul {
+			margin-left: 150px; padding-right: 75px;
+			@include respond-to(md) {padding: 5px 0;}
+			
+			& > li {
+				@include respond-to(sm) {background: #fff;}
+				@include respond-to(xs) {padding: 0; margin-bottom: 25px;}
+
+				&:last-child {text-align: right;}
+
+				h3 {
+					margin-bottom: 15px;
+					@include respond-to(md) {width: 100%; margin-bottom: 10px;}
+
+					a {color: #000;}
+				}
+
+				ul {
+					li {
+						color: #4b5769;
+						display: inline-block; margin-right: 15px;
+						@include respond-to(md) {display: block;}
+
+
+						i {margin-right: 10px;}
+					}
+				}
+
+				p {
+					@include font-type($CormacEL, 24px, 28px, 0.3px);
+					margin-bottom: 15px;
+
+					@include respond-to(md) {
+						color: #000; font-size: 20px; font-weight: 600; text-align: left;
+						margin-bottom: 0; margin-top: 5px;
+					}
+
+				}
+
+				span {
+					color: #4b5769;
+					@include respond-to(md) {display: none;}
+				}
+			}
+		}
+
+		& > a {
+			display: block; width: 44px; height: 44px; position: absolute; right: 25px; top: 50%; transform: translateY(-50%);
+			background: #ffffff; border-radius: 50%;
+
+			@include respond-to(md) {position: absolute; right: 10px; top: calc(100% - 20px); background: transparent;}
+
+			i {position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%);}
+		}
+	}
+}

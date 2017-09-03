@@ -44,8 +44,8 @@ let app = (function ($) {
 
   function Product() {
     return $('\
-    <div class="product-group">\
-      <div class="select-block">\
+    <div class="wrapper">\
+      <div class="select">\
         <a href="#" class="js-selectToogle">Категория товара<i></i></a>\
         <div class="js-selectLists">\
           <ul>\
@@ -62,16 +62,16 @@ let app = (function ($) {
         <ul>\
           <li>\
             <input type="text" placeholder="Название">\
-            <p>Полное название, модель и пр.</p>\
+            <label>Полное название, модель и пр.</label>\
           </li>\
           <li>\
             <input type="text" placeholder="Цена">\
           </li>\
         </ul>\
+        <textarea placeholder="Описание"></textarea>\
       </div>\
-      <textarea class="description" placeholder="Описание"></textarea>\
       <div class="photos">\
-        <div class="previews">\
+        <div class="preview">\
           <span>Фотографии</span>\
           <div class="images"></div>\
         </div>\
@@ -177,17 +177,17 @@ let app = (function ($) {
 
 			participantSelect() {
 				let [select, list] = [
-					$('#participants'), $('.participants-container')
+					$('#participants'), $('.js-participants')
 				];
 
         let isFirst = true;
 
-        $('.participants').hide();
+        $('.js-hide').hide();
         select.prop('checked', false).prop('disabled', 'true');
 
 				function activateSelect() {
 					select.prop('disabled', false);
-          $('.participants').fadeIn();
+          $('.js-hide').fadeIn();
 				}
 
 				$('#participants').change(function toggleList() {
@@ -225,20 +225,20 @@ let app = (function ($) {
 			 */
 
       photosUploader() {
-        $('.choose-product .photos a').click(e => e.preventDefault());
+        $('.js-dropzone .photos a').click(e => e.preventDefault());
 
-        if ($('.choose-product .photos').length === 0) {
+        if ($('.js-dropzone .photos').length === 0) {
           return null;
         }
 
-        return new Dropzone('.choose-product .photos', {
+        return new Dropzone('.js-dropzone .photos', {
           url: 'uploadPhoto',
           acceptedFiles: 'image/jpeg, image/png',
-          clickable: '.choose-product .photos a',
-          previewsContainer: '.choose-product .previews .images',
+          clickable: '.js-dropzone .photos a',
+          previewsContainer: '.js-dropzone .preview .images',
           previewTemplate: myPreview
         }).on('addedfile', (file) => {
-          $('.choose-product .previews').addClass('active');
+          $('.js-dropzone .preview').addClass('active');
         });
       },
 
@@ -248,7 +248,7 @@ let app = (function ($) {
        */
 
       productsList() {
-        let productsList = $('.choose-product');
+        let productsList = $('.js-dropzone');
 
         /**
          * Добавляет новый товар
@@ -264,13 +264,13 @@ let app = (function ($) {
             previewsContainer: product.find('.photos .images')[0],
             previewTemplate: myPreview
           }).on('addedfile', (file) => {
-            $('.choose-product .previews').addClass('active');
+            $('.js-dropzone .preview').addClass('active');
           });
           $(window).trigger('selectbox-created', product.find('.js-selectToogle'));
-          productsList.find('a.add-item').before(product);
+          productsList.find('a.add_item').before(product);
         }
 
-        productsList.find('a.add-item').click(function addItem(event) {
+        productsList.find('a.add_item').click(function addItem(event) {
           event.preventDefault();
           addNew();
         });
@@ -279,17 +279,17 @@ let app = (function ($) {
       },
 
       /**
-       * COMPONENT: DIRETCTIONS TABS - табы направлений в добрых делах
+       * COMPONENT: TABS - табы направлений
        */
 
       directionsTabs() {
-        let tabs = $('.doings .tab');
+        let tabs = $('.js-tab_direct-wr > .tab');
         tabs.not('.tab--active').hide();
-        $('.doings-tabs a').click(function changeTab(event) {
+        $('.js-tab_direct li a').click(function changeTab(event) {
           let tabId = $(this).attr('href');
           event.preventDefault();
           tabs.hide().filter(tabId).show();
-          $('.doings-tabs li').removeClass('active');
+          $('.js-tab_direct li').removeClass('active');
           $(this).parent().addClass('active');
         });
       },
@@ -299,14 +299,14 @@ let app = (function ($) {
        */
 
       profileTabs() {
-        let tabs = $('.profile > .tab');
+        let tabs = $('.js-tab_user-wr > .tab');
         tabs.not('.tab--active').hide();
-        $('.profile-tabs li a').click(function changeTab(event) {
+        $('.js-tab_user li a').click(function changeTab(event) {
           let tabId = $(this).attr('href');
           event.preventDefault();
           tabs.hide().filter(tabId).show();
-          $('.profile-tabs ul').removeClass('active');
-          $('.profile-tabs li').removeClass('active');
+          $('.js-tab_user ul').removeClass('active');
+          $('.js-tab_user li').removeClass('active');
           $(this).parent().addClass('active');
         });
       },
@@ -316,9 +316,9 @@ let app = (function ($) {
        */
 
       purchasesAccordion() {
-        let items = $('.purchases .item-header');
+        let items = $('.js-accordion .goods-header');
         items.find('a').click(e => e.preventDefault());
-        $('.purchases .item-content').hide();
+        $('js-accordion .goods-content').hide();
         items.click(function openItem(event) {
           $(this).next().toggle();
         });
@@ -373,12 +373,12 @@ let app = (function ($) {
 
       searchBox() {
         let [searchArea, searchPrice, selectArea] = [
-          $('.search-block .search-area'),
-          $('.search-block .price'),
-          $('.select-area')
+          $('.filter-main .search'),
+          $('.filter-main .price'),
+          $('.filter-selects')
         ];
 
-        $('.filter .filter-resp').click(function toggleFilter(event) {
+        $('.js-open_filter').click(function toggleFilter(event) {
           event.preventDefault();
           [searchArea, searchPrice, selectArea].forEach((item) => {
             item.toggleClass('active');
@@ -393,9 +393,9 @@ let app = (function ($) {
 			['project-selected', 'activateParticipantSelect'],
       ['#confirm', 'click', 'toggleConfirm'],
       ['.my-menu', 'click', 'showProfileMenu'],
-      ['.buy-nav-resp', 'click', 'showThingsMenu'],
-      ['.responsive-menu', 'click', 'showSiteMenu'],
-      ['.notice .close, .notice .later', 'click', 'hideNotice'],
+      ['.js-open_menu-general', 'click', 'showThingsMenu'],
+      ['.js-open_menu-top', 'click', 'showSiteMenu'],
+      ['.js-close_notice, .js-later', 'click', 'hideNotice'],
       ['selectbox-created', 'initSelectBox']
     ],
 
@@ -408,7 +408,7 @@ let app = (function ($) {
 
       toggleConfirm() {
         let isChecked = $('#confirm').prop('checked');
-        $('.confirm button').prop('disabled', !isChecked);
+        $('.js-confirm').prop('disabled', !isChecked);
       },
 
       showProfileMenu(event) {
@@ -418,12 +418,14 @@ let app = (function ($) {
 
       showThingsMenu(event) {
         event.preventDefault();
-        $('.buy-nav ul').toggleClass('active');
+        $('.js-open_menu-general').toggleClass('active');
+        $('.menu-general ul').toggleClass('active');
       },
 
       showSiteMenu(event) {
         event.preventDefault();
-        $('.main-menu ul').toggleClass('active');
+        $('.js-open_menu-top').toggleClass('active');
+        $('.menu-top ul').toggleClass('active');
       },
 
       hideNotice(event) {

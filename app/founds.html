@@ -1,273 +1,32 @@
 <!DOCTYPE html>
 <html>
-
-	//= tpl/head.html
-
+	//= components/base/head.html
 <body>
-	<!--[if lt IE 10]>
-	<p class="browsehappy">Вы используете <strong>УСТАРЕВШИЙ Internet Explorer</strong> браузер. Пожалуйста, <a href="http://browsehappy.com/">обновите ваш Браузер</a> чтобы увидеть больше возможностей на сайтах!</p>
-	<![endif]-->
-
-	<!-- Preloader  -->
-	<div class="preloader"></div>
+	//= components/base/counter.html
 
 	<!-- Application -->
 	<div class="app">
+		//= components/base/menu-top.html
+		<!-- Login Form //= components/popup/login.html-->
+		<!-- Notice Form //= components/popup/notice.html-->
+		//= components/base/breadcrumbs.html
 
-		<!-- Header -->
-		//= tpl/header.html
-
-		<!-- Login Form -->
-		<!--//= tpl/login.html-->
-
-		<!-- Profile -->
-		<section class="wr-profile">
+		<section class="wr bg_white shadow">
 			<div class="container">
 				<div class="content-block">
 					<div class="row">
 						<div class="col-md-12">
 
-							<!-- Breadcrumbs -->
-							<div class="breadcrumbs">
-								<ul class="navigation">
-									<li><a href="#">Главная</a></li>
-									<li><a href="#">Фонды</a></li>
-									<li><a href="#">Животные</a></li>
-									<li><a href="#">Ника</a></li>
+							//= components/ui/profile-found.html
+
+							<div class="tabs-main js-tab_direct">
+								<a href="#" class="my-menu">Меню фонда <i class="fa fa-angle-down"></i></a>
+								<ul>
+									<li class="active"><a href="#tab-I">Описание</a></li>
+									<li><a href="#tab-II">Проекты<span> 4</span></a></li>
+									<li><a href="#tab-III">Отчеты<span> 3</span></a></li>
+									<li><a href="#tab-IV">Вещи в пользу фонда<span> 6</span></a></li>
 								</ul>
-								<ul class="share">
-									<li>Поделиться:</li>
-									<li><a href="#"><i class="fa fa-vk"></i></a></li>
-									<li><a href="#"><i class="fa fa-facebook"></i></a></li>
-								</ul>
-							</div>
-
-							<div class="profile founds">
-								<a href="#" class="donation"><p>Пожертвовать вещь фонду</p><i class="icon icon-plus-add"></i></a>
-								<div class="user-info">
-									<figure>
-										<img src="assets/img/logo-nika.png">
-									</figure>
-									<section>
-										<h1>Фонд помощи животным "Ника"</h1>
-										<ul>
-											<li><span>18 325</span> Животным найдены хозяева</li>
-											<li><span>24 000</span> Животным оказана ветеринарная помощь</li>
-										</ul>
-									</section>
-								</div>
-								<div class="profile-tabs">
-									<a href="#" class="my-menu">Меню фонда <i class="fa fa-angle-down"></i></a>
-									<ul>
-										<li class="active"><a href="#desc-tab">Описание</a></li>
-										<li><a href="#projects-tab">Проекты<span> 4</span></a></li>
-										<li><a href="#reports-tab">Отчеты<span> 3</span></a></li>
-										<li><a href="#bookmarks-tab">Вещи в пользу фонда<span> 6</span></a></li>
-									</ul>
-								</div>
-								<!-- tab 1 -->
-								<div id="desc-tab" class="desc tab tab--active">
-									<div class="desc-info">
-										<div class="title">Контакты</div>
-										<hgroup>
-											<h4>Благотворительный фонд содействия образованию "ДАР"</h4>
-											<h6>Некоммерческая организация</h6>
-										</hgroup>
-										<address>
-											119421, г. Москва, Ленинский пр., д.111, к. 1, оф. 502 <br>
-											e–mail: fonddar@fonddar.ru
-										</address>
-										<a href="#" class="btn">www.fonddar.ru</a>
-									</div>
-
-									<div class="desc-about">
-										<p>Образование является неотъемлемой и значимой частью нашей жизни. С появлением на свет и до последних дней человек все время учится. Самый интенсивный период получения новых знаний, умений и навыков приходится на дошкольные и школьные годы. И очень важно именно в тот момент, когда человек наиболее восприимчив к обучению, когда он находится в естественном его природе поиске новых информационных потоков и себя, помочь, направить его, дать необходимые инструменты для наиболее эффективного роста и развития.</p>
-
-										<p>В 2004 году мы решили приложить свои усилия в этой важной для любого общества сфере и, используя имеющийся финансовый и кадровый ресурс, внести свой вклад в осуществление качественного перехода от имеющихся внутри школьного образовательного сектора задач к их решению.</p>
-
-										<p>Основной своей целью мы видим создание школы нового поколения, площадки с мощным потенциалом обучения не только стандартному набору предметов, но и с возможностью углубленного изучения различных научных и творческих областей, практического знакомства с множеством профессий; с выстраиванием целостной картины мира, с вариантами живого моделирования собственного будущего.</p>
-									</div>
-								</div>
-
-								<!-- tab 2 -->
-								<div id="projects-tab" class="projects tab">
-									<ul class="articles">
-										<li>
-											<article>
-												<h3>Строительство нового корпуса для содержания бездомных животных</h3>
-												<p>Описание назначения сбора средств. Благотворительный частный фонд, учрежденный в 2005 году по инициативе Никиты Анатольевича Мишина.Здания центра, расположенные в трех муниципальных районах юга Москвы, фактически являются тремя школами, объединенными в единое образовательное пространство, ориентированными на общие ценности и работающими по единой образовательной программе. А одно здание — центр проблемных погружений — находится в ближнем Подмосковье, вблизи города Видное.</p>
-												<a href="#">Подробнее</a>
-											</article>
-
-											<div class="line-sep"></div>
-
-											<div class="info">
-												<div class="price">
-													<span>Целевая сумма:</span>
-													<p>300 000 <span class="rub">a</span></p>
-												</div>
-
-												<div class="progress-wrapp">
-												    <div class="progress-bar">
-												    	<span class="progress-bar-fill" style="width: 65%"></span>
-												    </div>
-
-													<ul class="resources">
-														<li>
-															<p>173 320 <span class="rub">a</span></p>
-															<span>Уже собрано</span>
-														</li>
-														<li>
-															<p>126 680 <span class="rub">a</span></p>
-															<span>Осталось</span>
-														</li>
-													</ul>
-
-												    <div class="term">
-												    	<span>Срок сбора средств:</span>
-												    	<p>23.12.2017</p>
-												    </div>
-												</div>
-												<a href="#">Вещи в пользу проекта</a>
-											</div>
-										</li>
-
-										<li>
-											<article>
-												<h3>Строительство нового корпуса для содержания бездомных животных</h3>
-												<p>Описание назначения сбора средств. Благотворительный частный фонд, учрежденный в 2005 году по инициативе Никиты Анатольевича Мишина.Здания центра, расположенные в трех муниципальных районах юга Москвы, фактически являются тремя школами, объединенными в единое образовательное пространство, ориентированными на общие ценности и работающими по единой образовательной программе. А одно здание — центр проблемных погружений — находится в ближнем Подмосковье, вблизи города Видное.</p>
-												<a href="#">Подробнее</a>
-											</article>
-
-											<div class="line-sep"></div>
-
-											<div class="info">
-												<div class="price">
-													<span>Целевая сумма:</span>
-													<p>300 000 <span class="rub">a</span></p>
-												</div>
-
-												<div class="progress-wrapp">
-												    <div class="term">
-												    	<span>Срок сбора средств:</span>
-												    	<p>23.12.2017</p>
-												    </div>
-												</div>
-												<a href="#">Вещи в пользу проекта</a>
-											</div>
-										</li>
-
-									</ul>
-								</div>
-								<!-- tab 3 -->
-								<div id="reports-tab" class="reports tab">
-									<ul class="articles">
-										<li>
-											<article>
-												<h3>Строительство нового корпуса для содержания бездомных животных</h3>
-												<p>Описание назначения сбора средств. Благотворительный частный фонд, учрежденный в 2005 году по инициативе Никиты Анатольевича Мишина.Здания центра, расположенные в трех муниципальных районах юга</p>
-												<a href="#">Подробнее</a>
-											</article>
-											<figure>
-												<img src="assets/img/article-img.jpg" alt="">
-											</figure>
-										</li>
-
-										<li>
-											<article>
-												<h3>Строительство нового корпуса для содержания бездомных животных</h3>
-												<p>Описание назначения сбора средств. Благотворительный частный фонд, учрежденный в 2005 году по инициативе Никиты Анатольевича Мишина.Здания центра, расположенные в трех муниципальных районах юга</p>
-												<a href="#">Подробнее</a>
-											</article>
-											<figure>
-												<img src="assets/img/article-img.jpg" alt="">
-											</figure>
-										</li>
-									</ul>
-								</div>
-								<!-- tab 4 -->
-								<div id="bookmarks-tab" class="bookmarks tab">
-									<ul>
-										<li>
-											<figure>
-												<img src="assets/img/search-item-1.jpg" alt="">
-											</figure>
-											<ul class="item-info">
-												<li>
-													<h3><a href="#">Power bank</a></h3>
-													<ul>
-														<li><i class="icon icon-clock"></i>3 часа назад</li>
-														<li><i class="icon icon-marker"></i>Москва / м. Кропоткинская</li>
-													</ul>
-												</li>
-												<li>
-													<p>2 300 <span class="rub">a</span></p>
-													<span>В фонд “Дар” (Поддержка детей инвалидов)</span>
-												</li>
-											</ul>
-											<a href="#"><i class="icon icon-heart-big"></i></a>
-										</li>
-										<li>
-											<figure>
-												<img src="assets/img/search-item-2.jpg" alt="">
-											</figure>
-											<ul class="item-info">
-												<li>
-													<h3><a href="#">Тени для бровей MAC</a></h3>
-													<ul>
-														<li><i class="icon icon-clock"></i>3 часа назад</li>
-														<li><i class="icon icon-marker"></i>Москва / м. Кропоткинская</li>
-													</ul>
-												</li>
-												<li>
-													<p>400 <span class="rub">a</span></p>
-													<span>В фонд “Дар” (Поддержка детей инвалидов)</span>
-												</li>
-											</ul>
-											<a href="#"><i class="icon icon-heart-big"></i></a>
-										</li>
-										<li>
-											<figure>
-												<img src="assets/img/search-item-1.jpg" alt="">
-											</figure>
-											<ul class="item-info">
-												<li>
-													<h3><a href="#">Samsung mp3 плеер</a></h3>
-													<ul>
-														<li><i class="icon icon-clock"></i>3 часа назад</li>
-														<li><i class="icon icon-marker"></i>Москва / м. Кропоткинская</li>
-													</ul>
-												</li>
-												<li>
-													<p>1 200 <span class="rub">a</span></p>
-													<span>В фонд “Дар” (Поддержка детей инвалидов)</span>
-												</li>
-											</ul>
-											<a href="#"><i class="icon icon-heart-big"></i></a>
-										</li>
-										<li>
-											<figure>
-												<img src="assets/img/search-item-2.jpg" alt="">
-											</figure>
-											<ul class="item-info">
-												<li>
-													<h3><a href="#">Тени для бровей MAC</a></h3>
-													<ul>
-														<li><i class="icon icon-clock"></i>3 часа назад</li>
-														<li><i class="icon icon-marker"></i>Москва / м. Кропоткинская</li>
-													</ul>
-												</li>
-												<li>
-													<p>800 <span class="rub">a</span></p>
-													<span>В фонд “Дар” (Поддержка детей инвалидов)</span>
-												</li>
-											</ul>
-											<a href="#"><i class="icon icon-heart-big"></i></a>
-										</li>
-									</ul>
-								</div>
-								<!-- tab 6 -->
-								<div id="settings-tab" class="settings tab"></div>
 							</div>
 
 						</div>
@@ -275,17 +34,56 @@
 				</div>
 			</div>
 		</section>
+		<section class="wr">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+
+						<div class="js-tab_direct-wr">
+
+							<!-- TAB I -->
+							<div id="tab-I" class="tab tab--active">
+
+								//= components/ui/found-desc.html
+							</div>
+
+							<!-- TAB II -->
+							<div id="tab-II" class="tab">
+								<ul class="projects">
+
+									//= components/ui/found-project.html
+								</ul>
+							</div>
+
+							<!-- TAB III -->
+							<div id="tab-III" class="tab">
+								<ul class="reports">
+
+									//= components/ui/found-report.html
+								</ul>
+							</div>
+
+							<!-- TAB IV -->
+							<div id="tab-IV" class="tab">
+								<ul class="bookmarks">
+									
+									//= components/ui/bookmarks.html
+								</ul>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</section>
 
 		<!-- Footer -->
-		//= tpl/footer.html
+		//= components/base/footer.html
 
 	</div>
-
-	<!-- Popups -->
-	//= tpl/popups.html
-
+	
 	<!-- Scripts -->
-	//= tpl/scripts.html
+	//= components/base/scripts.html
 
 </body>
 </html>

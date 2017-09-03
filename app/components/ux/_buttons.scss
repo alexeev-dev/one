@@ -1,0 +1,53 @@
+// BASE BUTTON – http://prntscr.com/gg2bdo
+/*****************************************/
+/* 
+	<a href="#" class="btn">www.fonddar.ru</a> 
+*/
+
+.btn {
+	color: #ffffff; @include font-type($HelveticaL, 14px, 1, 0.5px);
+	padding: 10px 20px; margin: 0; vertical-align: baseline;
+	border: none; background: #4489ff; border: solid 1px #4489ff; border-radius: 100px;
+
+	&:hover {
+		color: #4489ff;
+		background: #fff;
+	}
+}
+
+// DONATION BUTTON – http://prntscr.com/gg1z7v
+/*********************************************/
+/* 
+	<a href="#" class="donation"><p>Пожертвовать вещь фонду</p><i class="icon icon-plus-add"></i></a> 
+*/
+
+.donation {
+	color: #000;
+	display: flex; align-items: center;
+
+	p {@include font-type($CormacEL, 16px, 1, 0);}
+	i {margin-left: 15px;}
+}
+
+// SHOW MORE BUTTON – http://prntscr.com/gg2b1b
+/**********************************************/
+/* 
+	<a href="#" class="show_more">
+		<span>Показать еще</span>
+		<em><i class="icon icon-view-more"></i></em>
+	</a> 
+*/
+
+.show_more {
+	text-align: center; color: rgba(0, 0, 0, 0.7); 
+	display: block; margin-top: 30px;
+	
+	span {}
+	em {
+		text-align: left;
+		display: block; width: 33px; height: 33px; position: relative; padding: 11px 0 0 11px; margin: 0 auto;
+		border: 1px solid #4489ff; border-radius: 50%;
+		
+		i {vertical-align: top;}
+	}
+}

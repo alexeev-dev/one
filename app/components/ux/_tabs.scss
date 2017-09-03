@@ -1,0 +1,91 @@
+// TABS – http://prntscr.com/ggiqj8
+.tabs {
+
+	////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	&-main {
+		ul {
+			display: flex; justify-content: space-between;
+			@include respond-to(md) {flex-direction: column;}
+		}
+	}
+
+
+	////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	&-main {
+		@include respond-to(sm) {
+			width: calc(100% + 30px); padding: 0 15px 20px 15px; margin-left: -15px;
+			background: #fff;
+		}
+
+		a.mobile_menu {
+			@include font-type($CormacEL, 18px, 22px, -1px); color: #000;
+			position: relative; width: 100%; padding-bottom: 20px;
+			border-bottom: 3px solid #eff3f5;
+			
+			// hide-show
+			display: none; @include respond-to(md) {display: block;}
+
+			i {color: #4489ff; position: absolute; right: 0; top: 7px;}
+			&.active {i {transform: rotate(180deg);}}
+		}
+
+		ul {
+			@include respond-to(md) {border-bottom: none; @include slide_me();}
+
+			li {
+				@include respond-to(md) {margin-bottom: 10px; &:last-child {margin-bottom: 0; padding-bottom: 3px;}}
+
+				a {
+					@include font-type($CormacEL, 18px, 22px, -1px); color: #000;
+					display: block; padding: 10px 0; margin-bottom: -3px;
+
+					@include respond-to(md) {border-bottom: 3px solid #eff3f5; position: relative; z-index: 10;}
+
+					&:hover {
+						border-bottom: 3px solid #4489ff;
+						@include respond-to(md) {border-bottom-color: $btn-color;}
+					}
+
+					span {color: #7690a4; margin-left: 5px;}
+				}
+				&.active {a {border-bottom: 3px solid #4489ff;}}
+			}
+		}
+	}
+
+	&-inner {
+		display: inline-block; padding-left: 20px; margin: 25px 0 35px 0;
+		background: #ECEFF4; border-radius: 100px;
+
+		@include respond-to(xs) {width: 100%; padding: 20px 25px 20px 70px;}
+
+		li {
+			color: #616060;
+			display: inline-block;
+
+			@include respond-to(xs) {display: block; margin: 5px 0;}
+
+			&:first-child {margin-right: 20px; @include respond-to(xs) {font-weight: 600; margin-bottom: 15px; padding-left: 20px;}}
+			
+			a {
+				color: #616060;
+				display: inline-block; padding: 3px 18px 6px;
+				border: 1px solid transparent; border-radius: 100px;
+				
+				&:hover {color: $link-color; border-color: $link-color;}
+			}
+			&.active {a {color: $link-color; border-color: $link-color; background: #fff; cursor: default;}}
+		}
+	}
+
+
+	////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	&-main {ul {transition: max-height 0.7s linear;}}
+	&-inner {li a {transition: 0.3s ease-out;}}
+}

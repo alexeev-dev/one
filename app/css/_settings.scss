@@ -1,7 +1,7 @@
 @import 'bower_components/bootstrap/dist/css/bootstrap.min';
 @import 'bower_components/font-awesome/scss/font-awesome';
 
-// Используй это миксин для всего конфига!
+// font
 @mixin font-type($font-family, $font-size, $line-height, $letter-spacing) {
 	font-family: $font-family;
 	font-size: $font-size;
@@ -48,23 +48,38 @@
 	}
 }
 
+//Cormac-ExtraLight
+@include font-face('Cormac-ExtraLight', Cormac-ExtraLight);
 
-/* Определяем шрифты */
-$main-font: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+//Helvetica
+@include font-face('HelveticaLight', HelveticaLight);
+@include font-face('HelveticaThin', HelveticaThin);
+@include font-face('HelveticaRegular', HelveticaRegular);
+@include font-face('HelveticaMedium', HelveticaMedium);
+@include font-face('HelveticaHeavy', HelveticaHeavy);
+@include font-face('HelveticaBold', HelveticaBold);
+@include font-face('HelveticaBlack', HelveticaBlack);
 
+//ruble
+@include font-face('rouble', rouble);
+
+
+// sliding
+@mixin slide_me() {
+	overflow: hidden; max-height: 0;
+	&.active {max-height: 1000px;}
+}
+
+// settings
 body {
-	height: auto !important;
 	&.onload {overflow:hidden;}
 
-	/* устанавливаем оптимальный вертикальный ритм */
-	@include font-type($main-font, 14px, 20px, 0px);
-
 	* {
-		-webkit-font-smoothing: antialiased !important;
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
 	}
 }
 
-/* В дополнение от Bootstrap, <p> (параграфы) получают нижний отступ в половину калькулируемой высоты строки (изначально 10px) */
 h1,h2,h3,h4,h5,h6,p, ul {
 	margin: 0;
 }
@@ -109,4 +124,19 @@ fieldset {
     border: 0;
     margin: 0;
     padding: 0;
+}
+
+dl {
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+.icon {
+	display: inline-block;
+}
+
+.container {
+	@media all and (min-width: 1250px) {
+		width: 1210px;
+	}
 }

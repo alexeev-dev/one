@@ -1,0 +1,177 @@
+// NEW POST
+.new_post {
+
+	////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+	////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	overflow: hidden; padding: 0 200px; padding-bottom: 60px;
+	background: #ffffff; box-shadow: 0 1px 12px 0 rgba(0, 0, 0, 0.05);
+
+	@include respond-to(md) {padding: 0 50px 60px 50px;}
+	@include respond-to(sm) {box-shadow: 0 2px 14px rgba(0, 0, 0, 0.1);}
+	@include respond-to(mobile) {padding: 0 30px 60px 30px;}
+
+	
+	h1 {
+		text-align: center;
+		padding: 115px 0 60px 0; position: relative;
+
+		&:after {
+			content: '';
+			display: block; width: 9999px; height: 1px; position: absolute; left: 50%; bottom: 0; transform: translateX(-50%);
+			background: #eef5fa;
+		}
+	}
+	
+	&-project {
+		position: relative; z-index: 10; margin: 40px 0 0 0;
+
+		& > a {
+			color: #000000; font-family: $HelveticaL; font-size: 18px; font-weight: 300;
+			position: relative; z-index: 10; outline: none;
+			&:focus {outline: 0;}
+			i {
+				border: solid #4489ff;
+				border-width: 0 2px 2px 0;
+				display: inline-block;
+				padding: 3px;
+				transform: rotate(45deg);
+				margin-left: 6px;
+			    position: relative;
+			    top: -4px;
+			}
+		}
+
+		& > span {
+			color: #9da8af; font-family: $HelveticaL; font-size: 12px;
+			display: block;
+			position: relative; z-index: 1;
+		}
+	}
+	
+	&-participants {
+		margin: 40px 0 5px 0;
+		
+		@extend .styled_checkbox-1;
+		& > input {display: none;}
+
+		&-wrapper {
+			text-align: center;
+			margin: 0 -200px; padding:55px 0;
+			background: #f4fcff;
+			width: 1180px;
+
+			@media (max-width: 1249px) {width: 1140px;}
+			@include respond-to(lg) {width: 940px;}
+			@include respond-to(md) {margin: 0 -50px; width: 720px;}
+			@include respond-to(sm) {width: 737px;}
+
+			@for $i from 736 through 320 {
+				@media (max-width: $i + px) {width: #{$i - 30 + px};}
+			}
+		}
+	}
+
+	&-product {
+
+		@extend .input_style-1;
+		textarea {width: 100%; padding-bottom: 3px; height: 28px;}
+
+		.address, .info {
+
+			ul {
+				display: flex; margin: 0 -10px;
+				@include respond-to(sm) {flex-direction: column;}
+
+				li {
+					width: calc(50% - 20px); margin: 30px 10px;
+					@include respond-to(sm) {display: block; width: 100%;}
+				}
+			}
+		}
+	}
+
+	a.add_item {
+		color: #000; text-align: left;
+		display: block; width: 100%; padding: 40px 0;
+		border-top: 2px solid #f5f9fc;
+
+		img {margin-right: 5px;}
+	}
+
+	&-contacts {
+		position: relative; padding: 50px 0;
+		overflow-x: hidden;
+
+		&:before {
+			content: '';
+			display: block; width: 9999px; height: 1px; position: absolute; left: 50%; top: 0; transform: translateX(-50%);
+			background: #eef5fa;
+		}
+
+		@extend .input_style-1;
+		& > input {margin-bottom: 35px;}
+
+		h3 {
+			color: #000000; @include font-type($CormacEL, 24px, 38px, -1px);
+			margin-bottom: 35px;
+		}
+
+		ul {
+			display: flex; margin: 0 -10px;
+			@include respond-to(sm) {flex-direction: column;}
+
+			li {
+				width: calc(50% - 20px); margin: 0 10px;
+				@include respond-to(sm) {width: 100%; margin-bottom: 10px;}
+			}
+		}
+	}
+	
+	&-confirm {
+		display: flex; justify-content: space-between; align-items: center; margin-bottom: 40px;
+		@include respond-to(sm) {flex-direction: column;}
+
+		li {
+			@include respond-to(sm) {margin-bottom: 30px; &:last-child {margin-bottom: 0;}}
+
+			@extend .styled_checkbox-2;
+
+			button {
+				@extend .btn; padding: 12px 25px 13px;
+
+				&:disabled,
+				&[disabled] {&:hover {background: #4489ff; color: #ffffff;}}
+			}
+		}
+	}
+
+
+	////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	&-participants {
+		&-wrapper {
+			display: none;
+
+			&.active {
+				display: block;
+				animation: slideUp 0.8s;
+				pointer-events: all;
+			}
+		}
+	}
+
+	&-product {
+		.photos {
+			transition: background 0.4s ease; background: #f7f9ff;
+			&:hover {background: #fff;}
+		}
+	}
+}

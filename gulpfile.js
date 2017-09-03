@@ -101,7 +101,7 @@ gulp.task('html:build', function () {
 });
 
 gulp.task('watch', ['html:build', 'js:libs', 'js:main', 'sprite', 'browser-sync','sass', /*'css:min'*/], function () {
-	gulp.watch('app/css/*.scss', ['sass'/*, 'css:min'*/]);
+	gulp.watch('app/**/*.scss', ['sass'/*, 'css:min'*/]);
 	gulp.watch('app/**/*.html', ['html:build']);
 	gulp.watch('app/img/icons/*.png', ['sprite', 'sass']);
 	gulp.watch('app/js/*.js', ['js:main']);

@@ -1,0 +1,70 @@
+// FOOTER
+.footer {
+	padding-top: 20px; margin-top: 60px;
+	
+	&-info {
+
+		li {
+			width: 49%; padding-left: 20px;
+			@include respond-to(sm) {padding: 10px 0; width: 100%;}
+
+			&:first-child {
+				text-align: right;
+				padding: 10px 20px 10px 0;
+				@include respond-to(sm) {text-align: center; padding-right: 0;}
+				
+				p {@include font-type($CormacEL, 24px, 29px, -0.7px); color: #fff; margin-bottom: 15px;}
+				a {@include font-type($HelveticaL, 18px, 22px, 0); color: #fff;}
+			}
+
+			&.sep {
+				width:1px; height: 100px; margin: 0 10px; padding: 0;
+				background: #79abff;
+				@include respond-to(sm) {display: none;}
+			}
+
+			&.logo {
+				@include respond-to(sm) {text-align: center; padding-left: 0;}
+			}
+		}
+	}
+
+	&-contacts {
+		@include font-type($HelveticaL, 12px, 22px, 0.5px);
+		position: relative; padding-top: 20px; padding-bottom: 20px; margin-top: 20px;
+		@include respond-to(sm) {font-size: 20px; letter-spacing: 0.2px;}
+		
+		&:after {
+			content: '';
+			position: absolute; top:0; left:50%; margin-left: -5000px; width:10000px; height: 1px;
+			background: #79abff;
+		}
+
+		li {
+			@include respond-to(sm) {margin: 15px 0;}
+
+			&:first-child {
+				width: 20%;
+				@include respond-to(sm) {
+					width: 50%;
+					ul li:first-child {margin-bottom: 35px;}
+				}
+			}
+			&:last-child {
+				text-align: right; width: 20%;
+				@include respond-to(sm) {width: 100%;}
+			}
+			&:nth-child(2) {
+				width: 30%;
+				@include respond-to(sm) {width: 50%;}
+			}
+			&:nth-child(3) {
+				width: 30%;
+				@include respond-to(sm) {width: 100%;}
+				ul li small {color: #fff;}
+			}
+			
+			ul li a {color: #fff;}
+		}
+	}
+}

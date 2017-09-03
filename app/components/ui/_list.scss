@@ -1,0 +1,411 @@
+// LISTS
+.list {
+	
+	////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	&-items {display: flex; flex-wrap: wrap;}
+
+
+
+	////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	
+	// ALL ITEMS – http://prntscr.com/gg28ww
+	&-items {
+		margin: -10px;
+
+		li {
+			position: relative;
+			width: calc(25% - 20px); margin: 10px; overflow: hidden;
+			background: #fff; border-radius: 5px; box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.1);
+
+			@include respond-to(md) {width: calc(50% - 10px); margin: 5px;}
+			@include respond-to(xs) {display: block; width: calc(100% - 20px); margin-bottom: 25px;}
+			
+
+			// ITEM – http://prntscr.com/gg2pz0
+			a {
+				display: block;
+
+				figure {
+					position: relative;
+					@include respond-to(xs) {width: 100%;}
+
+					img {width: 100%;}
+
+					figcaption {
+						position: absolute; right: 10px; top: 10px;
+						@include respond-to(xs) {display: none;}
+					}
+				}
+
+				article {
+					padding: 20px;
+					@include respond-to(xs) {display: flex; flex-direction: column; position: relative; width: 100%; padding-right: 5px;}
+
+					h2 {@include font-type($CormacEL, 18px, 1, -0.5px); color: $main-color-text; color: #000; margin-bottom: 10px;}
+
+					div {
+						display: flex; justify-content: space-between;
+						@include respond-to(xs) {flex-direction: column; height: 100%;}
+
+						p {
+							@include font-type($HelveticaL, 12px, 16px, 0.5px); color: #8d8d8d;
+							span {
+								@include font-type($HelveticaL, 12px, 16px, 0.5px);
+								display: block;
+							}
+						}
+
+						& > span {@include font-type($CormacEL, 18px, 1, -0.5px);}
+					}
+				}
+
+				&:hover {article {h2 {color: #4489ff;}}}
+			}
+			
+			.like {
+				display: none; width: 45px; height: 45px; padding: 15px; 
+				position: absolute; right: 10px; top: 10px;
+				background: #fff; border-radius: 50%;
+
+				@include respond-to(xs) {top: auto; bottom: 10px;}
+				
+				i {
+					&.icon-heart-big {display: block;}
+					&.icon-heart-empty {display: none;}
+
+					@include respond-to(xs) {
+						&.icon-heart-big {display: none;}
+						&.icon-heart-empty {display: block;}
+					}
+				}
+			}
+
+			&:hover .like {display: block;}
+		}
+	}
+	
+	// BIG DROPDOWN MENU LIST
+	&-dropdown {
+		padding: 115px 0 0;
+		position: absolute; left: -100px; top: -44px; width: 980px; z-index: 5; overflow: hidden;
+		background: #ffffff; box-shadow: 0 2px 14px rgba(0, 0, 0, 0.1);
+
+		@include respond-to(lg) {width: 920px; left: -190px;}
+		@include respond-to(md) {width: 700px; left: -40px;}
+		@include respond-to(sm) {width: calc(100% + 40px); left: -20px;}
+	
+
+		& > ul {
+			display: flex; padding: 0 15px 0 50px;
+			@include respond-to(sm) {flex-direction: column;}
+
+			& > li {
+				width: 33.33333%; padding: 0 5px 0 13px;
+				border-right: 1px solid #c0d1dd;
+
+				@include respond-to(sm) {width: 100%;}
+
+				&:first-child {padding-left: 0;}
+				&:last-child {padding-right: 0; border: none;}
+
+				h3 {
+					color: #000000; font-family: $helv; font-size: 12px; font-weight: 300; text-transform: uppercase; letter-spacing: 1px;
+					margin-bottom: 35px;
+					@include respond-to(sm) {margin-bottom: 25px;}
+				}
+
+				& > ul {
+					max-height: 350px; overflow-y: auto; padding-right: 8px; padding-bottom: 50px;
+					@include respond-to(sm) {padding-bottom: 20px; position: relative;}
+					
+					@extend .nice_scroll;
+
+					& > li {
+						@include respond-to(sm) {
+							width: 100%; margin-bottom: 30px; 
+							border-bottom: 1px solid #d7deea; border-right: none;
+						}
+
+						@extend .styled_checkbox-3;
+
+						h5 {
+							color: #c0d1dd; font-family: $helv; font-size: 24px; font-weight: 300;
+							padding-left: 39px;
+						}
+					}
+				}
+			}
+
+			&.action {
+				text-align: right;
+				display: block; padding: 15px 45px 34px; position: relative;
+
+				@include respond-to(mobile) {text-align: center;display: flex; flex-direction: column-reverse;}
+
+				&:before {
+					content: '';
+					width: 100%; height: 78px; position: absolute; left: 0; top: 0; transform: translateY(-100%);
+					background-image: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #ffffff 100%);
+					pointer-events: none;
+				}
+
+				li {
+					width: auto; display: inline-block;
+					border: none;
+
+					@include respond-to(mobile) {padding: 0;}
+					
+					a {
+						color: #4489ff; font-family: $helv; font-size: 14px;
+						padding: 11px 23px 12px;
+						border: solid 1px #ffffff; border-radius: 100px;
+						transition: 0.2s ease-out;
+						
+						&:hover {border: solid 1px #4489ff;}
+						
+						&.btn {
+							color: #ffffff;
+							padding: 11px 23px 12px;
+							background: #4489ff; border: solid 1px #4489ff; border-radius: 100px;
+							transition: 0.2s ease-out;
+							&:hover {
+								color: #4489ff;
+								background: #ffffff;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	// CAROUSEL LIST WITH KIDS
+	&-kids {
+		display: inline-block; vertical-align: top; margin: 0 40px; cursor: pointer;
+
+		label {
+			display: block; width: 180px;
+			
+			.ava {
+				width: 180px; height: 180px;
+				position: relative;
+				
+				figure {
+					width: 180px; height: 180px; position: relative;
+					border-radius: 50%; border: solid 2px transparent;
+					overflow: hidden;
+					
+					img {width: calc(100% + 2px); position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%);}
+				}
+
+				span {
+					display: block; width: 28px; height: 28px; position: absolute; top: 7px; right: 18px;
+					border: 2px solid #4489ff; background-color: #f8f8f8; border-radius: 50%;
+					
+					&:after {
+						content: '';
+						width: 10px; height: 7px; position: absolute; left: 50%; top: calc(50% - 2px); transform: translate(-50%,-50%) rotate(-45deg);
+						border-left: 2px solid #4489ff; border-bottom: 2px solid #4489ff;
+						opacity: 0;
+					}
+				}
+			}
+
+			p {
+				color: #000000; font-family: $HelveticaL; font-size: 15px; font-weight: 300; text-align: center;
+				padding: 0 15px; margin-top: 30px;
+			}
+		}
+		
+		input {display: none;}
+		input:checked + label {
+			.ava {
+				figure {border-color: #4489ff;}
+				span {&:after {opacity: 1;}
+				}
+			}
+		}
+	}
+
+	
+	// BIG DROPDOWN MENU LIST
+	&-dropdown {
+		padding: 115px 0 0;
+		position: absolute; left: -100px; top: -44px; width: 980px; z-index: 5; overflow: hidden;
+		background: #ffffff; box-shadow: 0 2px 14px rgba(0, 0, 0, 0.1);
+
+		@include respond-to(lg) {width: 920px; left: -190px;}
+		@include respond-to(md) {width: 700px; left: -40px;}
+		@include respond-to(sm) {width: calc(100% + 40px); left: -20px;}
+	
+
+		& > ul {
+			display: flex; padding: 0 15px 0 50px;
+			@include respond-to(sm) {flex-direction: column;}
+
+			& > li {
+				width: 33.33333%; padding: 0 5px 0 13px;
+				border-right: 1px solid #c0d1dd;
+
+				@include respond-to(sm) {width: 100%;}
+
+				&:first-child {padding-left: 0;}
+				&:last-child {padding-right: 0; border: none;}
+
+				h3 {
+					color: #000000; font-family: $helv; font-size: 12px; font-weight: 300; text-transform: uppercase; letter-spacing: 1px;
+					margin-bottom: 35px;
+					@include respond-to(sm) {margin-bottom: 25px;}
+				}
+
+				& > ul {
+					max-height: 350px; overflow-y: auto; padding-right: 8px; padding-bottom: 50px;
+					@include respond-to(sm) {padding-bottom: 20px; position: relative;}
+					
+					@extend .nice_scroll;
+
+					& > li {
+						@include respond-to(sm) {
+							width: 100%; margin-bottom: 30px; 
+							border-bottom: 1px solid #d7deea; border-right: none;
+						}
+
+						@extend .styled_checkbox-3;
+
+						h5 {
+							color: #c0d1dd; font-family: $helv; font-size: 24px; font-weight: 300;
+							padding-left: 39px;
+						}
+					}
+				}
+			}
+
+			&.action {
+				text-align: right;
+				display: block; padding: 15px 45px 34px; position: relative;
+
+				@include respond-to(mobile) {text-align: center;display: flex; flex-direction: column-reverse;}
+
+				&:before {
+					content: '';
+					width: 100%; height: 78px; position: absolute; left: 0; top: 0; transform: translateY(-100%);
+					background-image: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #ffffff 100%);
+					pointer-events: none;
+				}
+
+				li {
+					width: auto; display: inline-block;
+					border: none;
+
+					@include respond-to(mobile) {padding: 0;}
+					
+					a {
+						color: #4489ff; font-family: $helv; font-size: 14px;
+						padding: 11px 23px 12px;
+						border: solid 1px #ffffff; border-radius: 100px;
+						transition: 0.2s ease-out;
+						
+						&:hover {border: solid 1px #4489ff;}
+						
+						&.btn {
+							color: #ffffff;
+							padding: 11px 23px 12px;
+							background: #4489ff; border: solid 1px #4489ff; border-radius: 100px;
+							transition: 0.2s ease-out;
+							&:hover {
+								color: #4489ff;
+								background: #ffffff;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	// CAROUSEL LIST WITH KIDS
+	&-kids {
+		display: inline-block; vertical-align: top; margin: 0 40px; cursor: pointer;
+
+		label {
+			display: block; width: 180px;
+			
+			.ava {
+				width: 180px; height: 180px;
+				position: relative;
+				
+				figure {
+					width: 180px; height: 180px; position: relative;
+					border-radius: 50%; border: solid 2px transparent;
+					overflow: hidden;
+					
+					img {width: calc(100% + 2px); position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%);}
+				}
+
+				span {
+					display: block; width: 28px; height: 28px; position: absolute; top: 7px; right: 18px;
+					border: 2px solid #4489ff; background-color: #f8f8f8; border-radius: 50%;
+					
+					&:after {
+						content: '';
+						width: 10px; height: 7px; position: absolute; left: 50%; top: calc(50% - 2px); transform: translate(-50%,-50%) rotate(-45deg);
+						border-left: 2px solid #4489ff; border-bottom: 2px solid #4489ff;
+						opacity: 0;
+					}
+				}
+			}
+
+			p {
+				color: #000000; font-family: $HelveticaL; font-size: 15px; font-weight: 300; text-align: center;
+				padding: 0 15px; margin-top: 30px;
+			}
+		}
+		
+		input {display: none;}
+		input:checked + label {
+			.ava {
+				figure {border-color: #4489ff;}
+				span {&:after {opacity: 1;}
+				}
+			}
+		}
+	}
+
+
+
+	////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	&-items {
+
+		li {
+			a {transition: all 0.4s ease;}
+			
+			figure {figcaption {opacity: 0; transition: all 0.4s ease;}}
+			&:hover {figcaption {opacity: 1;}}
+		}
+	}
+
+	&-dropdown {
+		transform: translateY(20px);
+		opacity: 0; pointer-events: none;
+
+		&.active {
+			transform: translateY(0);
+			opacity: 1; pointer-events: all;
+		}
+	}
+
+	&-kids {
+		label {
+			.ava {
+				figure {transition: 0.3s ease-out;}
+				span {&:after {transition: 0.3s ease-out;}}
+			}
+		}
+	}
+}
