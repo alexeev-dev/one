@@ -392,7 +392,7 @@ let app = (function ($) {
     events: [
 			['project-selected', 'activateParticipantSelect'],
       ['#confirm', 'click', 'toggleConfirm'],
-      ['.my-menu', 'click', 'showProfileMenu'],
+      ['.js-toggle-menu', 'click', 'showProfileMenu'],
       ['.js-open_menu-general', 'click', 'showThingsMenu'],
       ['.js-open_menu-top', 'click', 'showSiteMenu'],
       ['.js-close_notice, .js-later', 'click', 'hideNotice'],
@@ -413,7 +413,8 @@ let app = (function ($) {
 
       showProfileMenu(event) {
         event.preventDefault();
-        $('.profile-tabs ul').toggleClass('active');
+        $('.tabs-main ul').toggleClass('active');
+        $('.js-toggle-menu i').toggleClass('active');
       },
 
       showThingsMenu(event) {

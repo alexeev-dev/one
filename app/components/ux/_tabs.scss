@@ -21,16 +21,19 @@
 			background: #fff;
 		}
 
-		a.mobile_menu {
+		a.js-toggle-menu {
 			@include font-type($CormacEL, 18px, 22px, -1px); color: #000;
-			position: relative; width: 100%; padding-bottom: 20px;
+			position: relative; width: 100%; padding-bottom: 20px; margin-bottom: 25px;
 			border-bottom: 3px solid #eff3f5;
 			
 			// hide-show
 			display: none; @include respond-to(md) {display: block;}
 
-			i {color: #4489ff; position: absolute; right: 0; top: 7px;}
-			&.active {i {transform: rotate(180deg);}}
+			i {
+				color: #4489ff; position: absolute; right: 0; top: 7px;
+				&.active {transform: rotate(180deg);}
+			}
+			
 		}
 
 		ul {
