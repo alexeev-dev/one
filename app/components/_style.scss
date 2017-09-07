@@ -321,7 +321,7 @@ span.rub {font-family: $ruble !important;}
 /********* Application ***********/
 /*********************************/
 .header {
-	position: fixed; height: 63px; left:0; top:0; right:0; z-index: 10001; 
+	position: fixed; height: 63px; margin-left:0; margin-top:0; width: 100%; z-index: 10001; 
 	background: #fff; box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.08);
 
 	.col-md-12 {display: flex; flex-flow: row nowrap; justify-content: space-between;}
@@ -342,7 +342,7 @@ span.rub {font-family: $ruble !important;}
 }
 
 .land {
-	overflow: hidden;
+	// overflow: hidden;
 
 	.header {
 		transform: translateY(-100%);
