@@ -51,9 +51,11 @@ gulp.task('sass', function () {
 gulp.task('js:libs', function () {
 	gulp.src([
 		'bower_components/jquery/dist/jquery.min.js',
+		'node_modules/jquery-mousewheel/jquery.mousewheel.js',
 		'node_modules/owl.carousel/dist/owl.carousel.min.js',
 		'node_modules/select2/dist/js/select2.min.js',
-		'node_modules/dropzone/dist/dropzone.js'
+		'node_modules/dropzone/dist/dropzone.js',
+		'bower_components/smooth-scrollbar/dist/smooth-scrollbar.js'
 		])
 	.pipe(concat('libs.min.js'))
 	.pipe(uglify())
