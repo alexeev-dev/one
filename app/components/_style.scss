@@ -320,30 +320,45 @@ span.rub {font-family: $ruble !important;}
 /*********************************/
 /********* Application ***********/
 /*********************************/
+.header {
+	position: fixed; height: 63px; left:0; top:0; right:0; z-index: 10001; 
+	background: #fff; box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.08);
+
+	.col-md-12 {display: flex; flex-flow: row nowrap; justify-content: space-between;}
+}
+
+.footer {
+	background: #3f86ff; overflow: hidden;
+
+	&-info {
+		display: flex; align-items: center;
+		@include respond-to(sm) {flex-direction: column-reverse;}
+	}
+
+	&-contacts {
+		display: flex;
+		@include respond-to(sm) {flex-wrap: wrap;}
+	}
+}
+
+.land {
+	overflow: hidden;
+
+	.header {
+		transform: translateY(-100%);
+		transition: transform 0.3s ease-out;
+		&.active {
+			transform: translateY(0%);
+		}
+	}
+
+	.footer {position: fixed; width: 100%; left: 0; bottom: 0;}
+}
+
+
 .app {
 	min-width: 320px; overflow-x: hidden; padding-top: 65px;
 	background: #F8FAFD;
-
-	&.landing {
-		padding: 0 0 268px 0;
-
-		.header {
-			transform: translateY(-100%);
-			transition: transform 0.3s ease-out;
-			&.active {
-				transform: translateY(0%);
-			}
-		}
-
-		.footer {position: fixed; width: 100%; left: 0; bottom: 0;}
-	}
-
-	.header {
-		position: fixed; height: 63px; left:0; top:0; right:0; z-index: 10001; 
-		background: #fff; box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.08);
-
-		.col-md-12 {display: flex; flex-flow: row nowrap; justify-content: space-between;}
-	}
 
 	.wr {
 		position: relative;
@@ -377,20 +392,6 @@ span.rub {font-family: $ruble !important;}
 
 		&-notice {
 			background: #ffffff;
-		}
-	}
-
-	.footer {
-		background: #3f86ff;
-
-		&-info {
-			display: flex; align-items: center;
-			@include respond-to(sm) {flex-direction: column-reverse;}
-		}
-
-		&-contacts {
-			display: flex;
-			@include respond-to(sm) {flex-wrap: wrap;}
 		}
 	}
 }
