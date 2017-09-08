@@ -1,0 +1,89 @@
+.carousel {
+	////////////////////////////////////////////////
+	////////////////////////////////////////////////
+	////////////////////////////////////////////////
+	.navigation {
+		display: flex; justify-content: center;
+	}
+
+	&.found {
+		.carousel-wrapp {
+		display: flex;
+		@include respond-to(md) {flex-direction: column;}
+
+			.found {
+				&-info {}
+
+				&-list {
+					display: flex; flex-wrap: wrap; justify-content: flex-end;
+					@include respond-to(md) {justify-content: center;}
+				}
+			}
+		}
+	}
+
+	////////////////////////////////////////////////
+	////////////////////////////////////////////////
+	////////////////////////////////////////////////
+
+	&.found {
+		position: relative;
+
+		.carousel-wrapp {
+			background: url(../img/ones.png) no-repeat left bottom;
+
+			.found {
+				&-info {
+					width: 45%; padding-top: 20px;
+					@include respond-to(md) {
+						text-align: center;
+						width: 100%; margin-bottom: 60px;
+					}
+
+					h2 {
+						margin-bottom: 50px; text-align: left;
+						@include respond-to(md) {
+							text-align: center;
+							& > br {
+								display: none;
+							}
+						}
+					}
+				}
+
+				&-list {
+					li {
+						text-align: center;
+						width: 170px; margin: 20px 30px;
+						@include respond-to(lg) {margin: 20px;}
+
+						figure {
+							display: inline-block;
+							border-radius: 50%;
+
+							img {
+								width: 140px; height: 140px; overflow: hidden;
+							}
+							figcaption {
+								margin-top: 25px;
+								@include font-type($CormacEL, 14px, 1, 0.5px); font-weight: 200;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	
+
+	.navigation {
+		margin-top: 60px;
+		li {
+			width: 19px; height: 8px; margin: 0 5px;
+			background: #cdeaf6; border-radius: 10px; cursor: pointer;
+			&.active, &:hover {
+				background: #4489ff;
+			}
+		}
+	}	
+}

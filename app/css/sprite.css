@@ -16,83 +16,101 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
 // HTML
 <i class="icon icon-home"></i>
 */
+.icon-arrow-grey {
+  background-image: url(../img/sprite.png);
+  background-position: -161px -60px;
+  width: 9px;
+  height: 16px;
+}
+.icon-arrow-r {
+  background-image: url(../img/sprite.png);
+  background-position: -163px -28px;
+  width: 6px;
+  height: 8px;
+}
 .icon-bell {
   background-image: url(../img/sprite.png);
-  background-position: -159px -102px;
+  background-position: -56px -160px;
   width: 11px;
   height: 12px;
 }
 .icon-buy-bicycle {
   background-image: url(../img/sprite.png);
-  background-position: 0px -77px;
+  background-position: -122px 0px;
   width: 48px;
   height: 28px;
 }
 .icon-buy-bone {
   background-image: url(../img/sprite.png);
-  background-position: -118px -67px;
+  background-position: 0px -114px;
   width: 35px;
   height: 35px;
 }
 .icon-buy-comb {
   background-image: url(../img/sprite.png);
-  background-position: -118px -32px;
+  background-position: -35px -114px;
   width: 35px;
   height: 35px;
 }
 .icon-buy-easel {
   background-image: url(../img/sprite.png);
-  background-position: -159px 0px;
+  background-position: -170px 0px;
   width: 26px;
   height: 38px;
 }
 .icon-buy-home {
   background-image: url(../img/sprite.png);
-  background-position: 0px -105px;
+  background-position: -70px -114px;
   width: 36px;
   height: 31px;
 }
 .icon-buy-pram {
   background-image: url(../img/sprite.png);
-  background-position: -79px 0px;
+  background-position: -79px -36px;
   width: 39px;
   height: 38px;
 }
 .icon-buy-search {
   background-image: url(../img/sprite.png);
-  background-position: -159px -60px;
+  background-position: -122px -92px;
   width: 16px;
   height: 16px;
 }
 .icon-buy-stand {
   background-image: url(../img/sprite.png);
-  background-position: -36px -105px;
+  background-position: -106px -114px;
   width: 32px;
   height: 31px;
 }
 .icon-buy-tv {
   background-image: url(../img/sprite.png);
-  background-position: -118px 0px;
+  background-position: -122px -28px;
   width: 41px;
   height: 32px;
 }
 .icon-clock {
   background-image: url(../img/sprite.png);
-  background-position: -170px -102px;
+  background-position: -80px -149px;
   width: 11px;
   height: 11px;
 }
 .icon-close-lit {
   background-image: url(../img/sprite.png);
-  background-position: -167px -114px;
+  background-position: -161px -76px;
   width: 9px;
   height: 9px;
 }
 .icon-close {
   background-image: url(../img/sprite.png);
-  background-position: -68px -105px;
+  background-position: -138px -114px;
   width: 28px;
   height: 28px;
+}
+.icon-down {
+  background-image: url(../img/sprite.png);
+  background-position: -170px -138px;
+  width: 18px;
+  height: 11px;
 }
 .icon-empty {
   background-image: url(../img/sprite.png);
@@ -100,57 +118,111 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
   width: 79px;
   height: 77px;
 }
+.icon-f {
+  background-image: url(../img/sprite.png);
+  background-position: -170px -76px;
+  width: 21px;
+  height: 40px;
+}
 .icon-filter {
   background-image: url(../img/sprite.png);
-  background-position: -48px -77px;
+  background-position: -85px -77px;
   width: 32px;
   height: 27px;
 }
-.icon-header_plus {
+.icon-header_plus-white {
   background-image: url(../img/sprite.png);
-  background-position: -175px -60px;
+  background-position: -101px -149px;
   width: 10px;
   height: 10px;
 }
+.icon-header_plus {
+  background-image: url(../img/sprite.png);
+  background-position: -91px -149px;
+  width: 10px;
+  height: 10px;
+}
+.icon-header_search-white {
+  background-image: url(../img/sprite.png);
+  background-position: -68px -149px;
+  width: 12px;
+  height: 11px;
+}
 .icon-header_search {
   background-image: url(../img/sprite.png);
-  background-position: -172px -90px;
+  background-position: -56px -149px;
   width: 12px;
   height: 11px;
 }
 .icon-heart-big {
   background-image: url(../img/sprite.png);
-  background-position: -159px -76px;
+  background-position: -138px -92px;
   width: 16px;
   height: 14px;
 }
 .icon-heart-empty {
   background-image: url(../img/sprite.png);
-  background-position: -159px -38px;
+  background-position: -170px -116px;
   width: 26px;
   height: 22px;
 }
 .icon-heart {
   background-image: url(../img/sprite.png);
-  background-position: -159px -90px;
+  background-position: -154px -92px;
   width: 13px;
   height: 12px;
 }
 .icon-marker {
   background-image: url(../img/sprite.png);
-  background-position: -159px -114px;
+  background-position: -188px -138px;
   width: 8px;
   height: 11px;
 }
+.icon-ok {
+  background-image: url(../img/sprite.png);
+  background-position: -170px -38px;
+  width: 26px;
+  height: 38px;
+}
 .icon-plus-add {
   background-image: url(../img/sprite.png);
-  background-position: -79px -38px;
+  background-position: 0px -77px;
   width: 37px;
   height: 37px;
 }
+.icon-quotes-left {
+  background-image: url(../img/sprite.png);
+  background-position: -28px -149px;
+  width: 28px;
+  height: 28px;
+}
+.icon-quotes-right {
+  background-image: url(../img/sprite.png);
+  background-position: 0px -149px;
+  width: 28px;
+  height: 28px;
+}
+.icon-twitt {
+  background-image: url(../img/sprite.png);
+  background-position: -122px -60px;
+  width: 39px;
+  height: 32px;
+}
+.icon-video {
+  background-image: url(../img/sprite.png);
+  background-position: -79px 0px;
+  width: 43px;
+  height: 36px;
+}
 .icon-view-more {
   background-image: url(../img/sprite.png);
-  background-position: -175px -76px;
+  background-position: -111px -149px;
   width: 10px;
   height: 10px;
+}
+.icon-vk {
+  background-image: url(../img/sprite.png);
+  background-position: -37px -77px;
+  width: 48px;
+  height: 28px;
 }

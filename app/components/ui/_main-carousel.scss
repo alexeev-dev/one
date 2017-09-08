@@ -1,0 +1,83 @@
+.main-carousel {
+	////////////////////////////////////////////////
+	////////////////////////////////////////////////
+	////////////////////////////////////////////////
+	.carousel-wrapp {
+		display: flex;
+		@include respond-to(sm) {flex-direction: column;}
+
+		&.reviews {
+			figure {
+				display: flex;
+				@include respond-to(sm) {flex-direction: column; justify-content: center; align-items: center;}
+			}
+		}
+	}
+
+	////////////////////////////////////////////////
+	////////////////////////////////////////////////
+	////////////////////////////////////////////////
+
+	.carousel-wrapp {
+		figure {
+			width: 35%; text-align: center;
+			@include respond-to(sm) {width: 100%;}
+
+			img {
+				width: 180px; height: 180px; overflow: hidden;
+				border-radius: 50%;
+			}
+		}
+		section {
+			width: 60%;
+			@include respond-to(sm) {width: 100%;}
+
+			h2 {
+				text-align: left;
+				margin-bottom: 40px;
+				@include respond-to(sm) {text-align: center;}
+
+			}
+
+			p {
+				font-size: 18px; line-height: 28px;
+				@include respond-to(sm) {text-align: center;}
+			}
+		}
+
+		&.reviews {
+			figure {
+				text-align: left;
+				@include respond-to(sm) {text-align: center; width: 100%; margin-bottom: 60px;}
+				img {
+					width: 55px; height: 55px; margin-top: 20px; margin-right: 20px;
+					@include respond-to(sm) {margin: 0;}
+				}
+				figcaption {
+					@include font-type($CormacEL, 34px, 43px, 0);
+					@include respond-to(sm) {
+						br {display: none;}
+					}
+
+					span {
+						@include font-type($HelveticaR, 12px, 18px, 0.5px);
+						display: block; margin-top: 20px;
+					}
+				}
+			}
+
+			section {
+				p {
+					padding: 0 50px; position: relative;
+					&:before, &:after {
+						content: '';
+						display: block; width: 28px; height: 28px; position: absolute;
+						background-image: url(../img/sprite.png);
+					}
+					&:before {left: 0; top: 0; background-position: -28px -149px; }
+					&:after {right: 0; bottom: 0; background-position: 0px -149px; }
+				}
+			}
+		}
+	}
+}
