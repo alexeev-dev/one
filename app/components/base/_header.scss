@@ -1,5 +1,6 @@
 // HEADER
 .header {
+	top: 0;
 	a.logo {margin-top: 20px;}
 }
 
@@ -13,6 +14,7 @@
 	////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	&-top {& > ul {display: flex;}}
 	&-general {& > ul {display: flex; justify-content: space-around;}}
+	&-general {& > a {align-items: center; justify-content: space-between;}}
 
 
 	////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -77,7 +79,7 @@
 			@include font-type($CormacEL, 22px, 24px, -0.5px); color: #000;
 			display: none; width: 100%; padding: 20px 10px;
 			border-bottom: 1px solid #d9e4ea;
-			@include respond-to(md) {display: block;}
+			@include respond-to(md) {display: flex;}
 
 			i {
 				font-size: 20px;

@@ -9865,6 +9865,11 @@ span.rub {
   background: #fff;
   -webkit-box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.08);
   box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.08); }
+  .header-land {
+    position: absolute;
+    background: transparent;
+    -webkit-box-shadow: none;
+    box-shadow: none; }
   .header .col-md-12 {
     display: -webkit-box;
     display: -webkit-flex;
@@ -9924,7 +9929,7 @@ span.rub {
     transform: translateY(0%); }
 
 .land .footer {
-  position: fixed;
+  /*position: fixed;*/
   width: 100%;
   left: 0;
   bottom: 0; }
@@ -9934,7 +9939,6 @@ span.rub {
   overflow-x: hidden;
   padding-top: 65px;
   background: #F8FAFD; }
-<<<<<<< HEAD
   .app.land {
     padding-top: 0; }
     .app.land .wr .col-md-12 > section {
@@ -9978,39 +9982,7 @@ span.rub {
           flex-direction: column; } }
   .app.landing {
     padding: 0 0 268px 0; }
-    .app.landing .header {
-      -webkit-transform: translateY(-100%);
-      -ms-transform: translateY(-100%);
-      transform: translateY(-100%);
-      -webkit-transition: -webkit-transform 0.3s ease-out;
-      transition: -webkit-transform 0.3s ease-out;
-      transition: transform 0.3s ease-out;
-      transition: transform 0.3s ease-out, -webkit-transform 0.3s ease-out; }
-      .app.landing .header.active {
-        -webkit-transform: translateY(0%);
-        -ms-transform: translateY(0%);
-        transform: translateY(0%); }
-    .app.landing .footer {
-      position: fixed;
-      width: 100%;
-      left: 0;
-      bottom: 0; }
-  .app .header {
-    position: fixed;
-    height: 63px;
-    left: 0;
-    top: 0;
-    right: 0;
-    z-index: 10001;
-    background: #fff;
-    -webkit-box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.08);
-    box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.08); }
-    .app .header-land {
-      position: absolute;
-      background: transparent;
-      -webkit-box-shadow: none;
-      box-shadow: none; }
-    .app .header .col-md-12 {
+    .app.landing .col-md-12 {
       display: -webkit-box;
       display: -webkit-flex;
       display: -ms-flexbox;
@@ -10024,8 +9996,6 @@ span.rub {
       -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
       justify-content: space-between; }
-=======
->>>>>>> dbcf284326aeb5456c8152e48f5f6b8def957ee7
   .app .wr {
     position: relative; }
     .app .wr.pb_30 {
@@ -10135,8 +10105,10 @@ span.rub {
 /*********************************/
 /*********** Modules *************/
 /*********************************/
-.header a.logo {
-  margin-top: 20px; }
+.header {
+  top: 0; }
+  .header a.logo {
+    margin-top: 20px; }
 
 .menu-top > ul {
   display: -webkit-box;
@@ -10152,6 +10124,16 @@ span.rub {
   -webkit-justify-content: space-around;
   -ms-flex-pack: distribute;
   justify-content: space-around; }
+
+.menu-general > a {
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between; }
 
 @media (max-width: 991px) {
   .menu-top {
@@ -10250,7 +10232,10 @@ span.rub {
     border-bottom: 1px solid #d9e4ea; }
     @media (max-width: 991px) {
       .menu-general > a {
-        display: block; } }
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex; } }
     .menu-general > a i {
       font-size: 20px;
       color: #4489ff;

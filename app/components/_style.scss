@@ -324,7 +324,47 @@ span.rub {font-family: $ruble !important;}
 	position: fixed; height: 63px; margin-left:0; margin-top:0; width: 100%; z-index: 10001; 
 	background: #fff; box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.08);
 
-<<<<<<< HEAD
+	&-land {
+		position: absolute;
+		background: transparent; box-shadow: none; 
+	}
+
+	.col-md-12 {display: flex; flex-flow: row nowrap; justify-content: space-between;}
+}
+
+.footer {
+	background: #3f86ff; overflow: hidden;
+
+	&-info {
+		display: flex; align-items: center;
+		@include respond-to(sm) {flex-direction: column-reverse;}
+	}
+
+	&-contacts {
+		display: flex;
+		@include respond-to(sm) {flex-wrap: wrap;}
+	}
+}
+
+.land {
+	// overflow: hidden;
+
+	.header {
+		transform: translateY(-100%);
+		transition: transform 0.3s ease-out;
+		&.active {
+			transform: translateY(0%);
+		}
+	}
+
+	.footer {/*position: fixed;*/ width: 100%; left: 0; bottom: 0;}
+}
+
+
+.app {
+	min-width: 320px; overflow-x: hidden; padding-top: 65px;
+	background: #F8FAFD;
+
 	&.land {
 		padding-top: 0;
 
@@ -356,57 +396,13 @@ span.rub {font-family: $ruble !important;}
 			margin-top: 80px;
 			@include respond-to(sm) {flex-direction: column;}
 		}
-
 	}
 
 	&.landing {
 		padding: 0 0 268px 0;
-=======
-	.col-md-12 {display: flex; flex-flow: row nowrap; justify-content: space-between;}
-}
->>>>>>> dbcf284326aeb5456c8152e48f5f6b8def957ee7
-
-.footer {
-	background: #3f86ff; overflow: hidden;
-
-	&-info {
-		display: flex; align-items: center;
-		@include respond-to(sm) {flex-direction: column-reverse;}
-	}
-
-	&-contacts {
-		display: flex;
-		@include respond-to(sm) {flex-wrap: wrap;}
-	}
-}
-
-<<<<<<< HEAD
-		&-land {
-			position: absolute;
-			background: transparent; box-shadow: none; 
-		}
 
 		.col-md-12 {display: flex; flex-flow: row nowrap; justify-content: space-between;}
-=======
-.land {
-	// overflow: hidden;
-
-	.header {
-		transform: translateY(-100%);
-		transition: transform 0.3s ease-out;
-		&.active {
-			transform: translateY(0%);
-		}
->>>>>>> dbcf284326aeb5456c8152e48f5f6b8def957ee7
 	}
-
-	.footer {position: fixed; width: 100%; left: 0; bottom: 0;}
-}
-
-
-.app {
-	min-width: 320px; overflow-x: hidden; padding-top: 65px;
-	background: #F8FAFD;
 
 	.wr {
 		position: relative;
