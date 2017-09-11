@@ -2,7 +2,10 @@
 	////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	////////////////////////////////////////////////////////////////////////////////////////////////////////////
-	header {display: flex;}
+	header {
+		display: flex;
+		@include respond-to(xs) {flex-direction: column;}
+	}
 	ul li {display: flex; justify-content: space-between; align-items: center;}
 
 
@@ -21,6 +24,9 @@
 		}
 
 		section {
+			width: calc(100% - 120px);
+			@include respond-to(xs) {width: 100%; margin-top: 20px;}
+
 			h3 {font-size: 22px; letter-spacing: -0.2px; color: #000; margin-bottom: 20px;}
 			p {@include font-type($HelveticaR, 14px, 19px, 0.4px); color: #4B5769;}
 		}

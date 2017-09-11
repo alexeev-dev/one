@@ -13466,6 +13466,13 @@ span.rub {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex; }
+  @media (max-width: 480px) {
+    .gift header {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column; } }
 
 .gift ul li {
   display: -webkit-box;
@@ -13492,17 +13499,24 @@ span.rub {
     border: 1px solid #d9e4ea;
     -webkit-border-radius: 50%;
     border-radius: 50%; }
-  .gift header section h3 {
-    font-size: 22px;
-    letter-spacing: -0.2px;
-    color: #000;
-    margin-bottom: 20px; }
-  .gift header section p {
-    font-family: "HelveticaRegular", sans-serif;
-    font-size: 14px;
-    line-height: 19px;
-    letter-spacing: 0.4px;
-    color: #4B5769; }
+  .gift header section {
+    width: -webkit-calc(100% - 120px);
+    width: calc(100% - 120px); }
+    @media (max-width: 480px) {
+      .gift header section {
+        width: 100%;
+        margin-top: 20px; } }
+    .gift header section h3 {
+      font-size: 22px;
+      letter-spacing: -0.2px;
+      color: #000;
+      margin-bottom: 20px; }
+    .gift header section p {
+      font-family: "HelveticaRegular", sans-serif;
+      font-size: 14px;
+      line-height: 19px;
+      letter-spacing: 0.4px;
+      color: #4B5769; }
 
 .gift ul li {
   padding: 10px 0;
