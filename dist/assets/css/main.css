@@ -8105,21 +8105,33 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
 // HTML
 <i class="icon icon-home"></i>
 */
+.icon-adult {
+  background-image: url(../img/sprite.png);
+  background-position: -33px -153px;
+  width: 33px;
+  height: 33px; }
+
+.icon-animal {
+  background-image: url(../img/sprite.png);
+  background-position: -122px -60px;
+  width: 37px;
+  height: 35px; }
+
 .icon-arrow-grey {
   background-image: url(../img/sprite.png);
-  background-position: -161px -60px;
+  background-position: -221px -138px;
   width: 9px;
   height: 16px; }
 
 .icon-arrow-r {
   background-image: url(../img/sprite.png);
-  background-position: -163px -28px;
+  background-position: -205px -179px;
   width: 6px;
   height: 8px; }
 
 .icon-bell {
   background-image: url(../img/sprite.png);
-  background-position: -56px -160px;
+  background-position: -159px -60px;
   width: 11px;
   height: 12px; }
 
@@ -8131,25 +8143,25 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
 
 .icon-buy-bone {
   background-image: url(../img/sprite.png);
-  background-position: 0px -114px;
+  background-position: -170px -35px;
   width: 35px;
   height: 35px; }
 
 .icon-buy-comb {
   background-image: url(../img/sprite.png);
-  background-position: -35px -114px;
+  background-position: -170px 0px;
   width: 35px;
   height: 35px; }
 
 .icon-buy-easel {
   background-image: url(../img/sprite.png);
-  background-position: -170px 0px;
+  background-position: -205px 0px;
   width: 26px;
   height: 38px; }
 
 .icon-buy-home {
   background-image: url(../img/sprite.png);
-  background-position: -70px -114px;
+  background-position: -109px -114px;
   width: 36px;
   height: 31px; }
 
@@ -8161,13 +8173,13 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
 
 .icon-buy-search {
   background-image: url(../img/sprite.png);
-  background-position: -122px -92px;
+  background-position: -205px -138px;
   width: 16px;
   height: 16px; }
 
 .icon-buy-stand {
   background-image: url(../img/sprite.png);
-  background-position: -106px -114px;
+  background-position: -66px -153px;
   width: 32px;
   height: 31px; }
 
@@ -8177,27 +8189,39 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
   width: 41px;
   height: 32px; }
 
+.icon-child {
+  background-image: url(../img/sprite.png);
+  background-position: -33px -114px;
+  width: 37px;
+  height: 34px; }
+
 .icon-clock {
   background-image: url(../img/sprite.png);
-  background-position: -80px -149px;
+  background-position: -159px -72px;
   width: 11px;
   height: 11px; }
 
 .icon-close-lit {
   background-image: url(../img/sprite.png);
-  background-position: -161px -76px;
+  background-position: -134px -95px;
   width: 9px;
   height: 9px; }
 
 .icon-close {
   background-image: url(../img/sprite.png);
-  background-position: -138px -114px;
+  background-position: 0px -187px;
   width: 28px;
   height: 28px; }
 
+.icon-disabled {
+  background-image: url(../img/sprite.png);
+  background-position: -170px -103px;
+  width: 31px;
+  height: 37px; }
+
 .icon-down {
   background-image: url(../img/sprite.png);
-  background-position: -170px -138px;
+  background-position: -205px -168px;
   width: 18px;
   height: 11px; }
 
@@ -8209,69 +8233,81 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
 
 .icon-f {
   background-image: url(../img/sprite.png);
-  background-position: -170px -76px;
+  background-position: -205px -76px;
   width: 21px;
   height: 40px; }
 
 .icon-filter {
   background-image: url(../img/sprite.png);
-  background-position: -85px -77px;
+  background-position: -98px -153px;
   width: 32px;
   height: 27px; }
 
 .icon-header_plus-white {
   background-image: url(../img/sprite.png);
-  background-position: -101px -149px;
+  background-position: -195px -140px;
   width: 10px;
   height: 10px; }
 
 .icon-header_plus {
   background-image: url(../img/sprite.png);
-  background-position: -91px -149px;
+  background-position: -221px -154px;
   width: 10px;
   height: 10px; }
 
 .icon-header_search-white {
   background-image: url(../img/sprite.png);
-  background-position: -68px -149px;
+  background-position: -122px -95px;
   width: 12px;
   height: 11px; }
 
 .icon-header_search {
   background-image: url(../img/sprite.png);
-  background-position: -56px -149px;
+  background-position: -183px -140px;
   width: 12px;
   height: 11px; }
 
 .icon-heart-big {
   background-image: url(../img/sprite.png);
-  background-position: -138px -92px;
+  background-position: -205px -154px;
   width: 16px;
   height: 14px; }
 
 .icon-heart-empty {
   background-image: url(../img/sprite.png);
-  background-position: -170px -116px;
+  background-position: -205px -116px;
   width: 26px;
   height: 22px; }
 
 .icon-heart {
   background-image: url(../img/sprite.png);
-  background-position: -154px -92px;
+  background-position: -170px -140px;
   width: 13px;
   height: 12px; }
 
+.icon-help {
+  background-image: url(../img/sprite.png);
+  background-position: -170px -70px;
+  width: 35px;
+  height: 33px; }
+
 .icon-marker {
   background-image: url(../img/sprite.png);
-  background-position: -188px -138px;
+  background-position: -223px -168px;
   width: 8px;
   height: 11px; }
 
 .icon-ok {
   background-image: url(../img/sprite.png);
-  background-position: -170px -38px;
+  background-position: -205px -38px;
   width: 26px;
   height: 38px; }
+
+.icon-orphan {
+  background-image: url(../img/sprite.png);
+  background-position: 0px -114px;
+  width: 33px;
+  height: 39px; }
 
 .icon-plus-add {
   background-image: url(../img/sprite.png);
@@ -8281,19 +8317,31 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
 
 .icon-quotes-left {
   background-image: url(../img/sprite.png);
-  background-position: -28px -149px;
+  background-position: -56px -187px;
   width: 28px;
   height: 28px; }
 
 .icon-quotes-right {
   background-image: url(../img/sprite.png);
-  background-position: 0px -149px;
+  background-position: -28px -187px;
   width: 28px;
   height: 28px; }
 
+.icon-religion {
+  background-image: url(../img/sprite.png);
+  background-position: -37px -77px;
+  width: 37px;
+  height: 37px; }
+
+.icon-tape {
+  background-image: url(../img/sprite.png);
+  background-position: 0px -153px;
+  width: 33px;
+  height: 34px; }
+
 .icon-twitt {
   background-image: url(../img/sprite.png);
-  background-position: -122px -60px;
+  background-position: -70px -114px;
   width: 39px;
   height: 32px; }
 
@@ -8305,13 +8353,13 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
 
 .icon-view-more {
   background-image: url(../img/sprite.png);
-  background-position: -111px -149px;
+  background-position: -159px -83px;
   width: 10px;
   height: 10px; }
 
 .icon-vk {
   background-image: url(../img/sprite.png);
-  background-position: -37px -77px;
+  background-position: -74px -77px;
   width: 48px;
   height: 28px; }
 
@@ -10375,7 +10423,11 @@ span.rub {
     -webkit-box-direction: normal;
     -webkit-flex-flow: row nowrap;
     -ms-flex-flow: row nowrap;
-    flex-flow: row nowrap; }
+    flex-flow: row nowrap;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center; }
   .filter-main .search {
     -webkit-box-flex: 2;
     -webkit-flex: 2 2 5em;
@@ -10408,6 +10460,16 @@ span.rub {
   @media (max-width: 991px) {
     .filter {
       padding-right: 70px; } }
+  .filter.f-found .filter-main {
+    padding-top: 0; }
+    @media (max-width: 991px) {
+      .filter.f-found .filter-main {
+        padding-top: 20px; } }
+    .filter.f-found .filter-main .search {
+      margin-right: 20px; }
+    @media (max-width: 991px) {
+      .filter.f-found .filter-main .filter-selects {
+        padding: 20px 5px 0 5px; } }
   .filter a.burger {
     display: none; }
     @media (max-width: 991px) {
@@ -14532,6 +14594,133 @@ span.rub {
 .about .social li {
   margin: 0 25px; }
 
+.found-main-filter a {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center; }
+
+.found-main-filter a {
+  font-family: "Cormac-ExtraLight", sans-serif;
+  font-size: 22px;
+  line-height: 26px;
+  letter-spacing: -0.5px;
+  color: #4a4a4a;
+  padding: 15px 0;
+  border-bottom: 2px solid transparent; }
+  .found-main-filter a i {
+    color: #4489ff; }
+  .found-main-filter a i {
+    -webkit-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: .3s ease-in-out;
+    transition: .3s ease-in-out; }
+  .found-main-filter a.active i {
+    -webkit-transform: rotate(-180deg);
+    -ms-transform: rotate(-180deg);
+    transform: rotate(-180deg); }
+
+.found-main-filter > ul {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  padding-top: 0;
+  overflow: hidden;
+  max-height: 0; }
+  .found-main-filter > ul.active {
+    max-height: 1000px; }
+  .found-main-filter > ul li a {
+    font-family: "Cormac-ExtraLight", sans-serif;
+    font-size: 14px;
+    line-height: 19px;
+    letter-spacing: -0.5px;
+    color: #4a4a4a;
+    display: block;
+    padding-bottom: 15px;
+    border-bottom: 2px solid transparent; }
+
+.found-list {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap; }
+  .found-list li {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-justify-content: space-around;
+    -ms-flex-pack: distribute;
+    justify-content: space-around; }
+    .found-list li figure {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+      -ms-flex-align: center;
+      align-items: center;
+      -webkit-box-pack: center;
+      -webkit-justify-content: center;
+      -ms-flex-pack: center;
+      justify-content: center; }
+    .found-list li section {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column; }
+  .found-list li {
+    text-align: center;
+    width: 23.5%;
+    height: 200px;
+    margin: 10px 0;
+    background: #fff;
+    -webkit-box-shadow: 0 1px 12px 0 rgba(0, 0, 0, 0.05);
+    box-shadow: 0 1px 12px 0 rgba(0, 0, 0, 0.05);
+    -webkit-border-radius: 5px;
+    border-radius: 5px; }
+    @media (max-width: 991px) {
+      .found-list li {
+        width: 48.5%; } }
+    @media (max-width: 480px) {
+      .found-list li {
+        width: 100%; } }
+    .found-list li figure {
+      height: 100px; }
+    .found-list li section span {
+      font-family: "HelveticaRegular", sans-serif; }
+      .found-list li section span.region {
+        color: #9d9d9d; }
+
 .popup-login > ul {
   display: -webkit-box;
   display: -webkit-flex;
@@ -14593,7 +14782,7 @@ span.rub {
       .popup-login > ul > li:last-child {
         margin-top: 20px; } }
     .popup-login > ul > li.sep {
-      width: 1px;
+      width: 2px;
       margin: 0 50px;
       background: #eff1f2; }
     .popup-login > ul > li form {

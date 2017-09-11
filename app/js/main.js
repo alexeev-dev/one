@@ -394,6 +394,7 @@ let app = (function ($) {
       ['#confirm', 'click', 'toggleConfirm'],
       ['.js-toggle-menu', 'click', 'showProfileMenu'],
       ['.js-open_menu-general', 'click', 'showThingsMenu'],
+      ['.js-open_found-filter', 'click', 'showFoundFilter'],
       ['.js-open_menu-top', 'click', 'showSiteMenu'],
       ['.js-close_notice, .js-later', 'click', 'hideNotice'],
       ['selectbox-created', 'initSelectBox']
@@ -421,6 +422,12 @@ let app = (function ($) {
         event.preventDefault();
         $('.js-open_menu-general').toggleClass('active');
         $('.menu-general ul').toggleClass('active');
+      },
+
+      showFoundFilter(event) {
+        event.preventDefault();
+        $('.js-open_found-filter').toggleClass('active');
+        $('.found-main-filter ul').toggleClass('active');
       },
 
       showSiteMenu(event) {

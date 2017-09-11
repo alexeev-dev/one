@@ -5,7 +5,7 @@
 	////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	&-main {
-		form {display: flex; flex-flow: row nowrap;}
+		form {display: flex; flex-flow: row nowrap; align-items: center;}
 		.search {flex: 2 2 5em;}
 		.price {flex: 1 1 1em;}
 
@@ -23,6 +23,21 @@
 	////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	position: relative;
 	@include respond-to(md) {padding-right: 70px;}
+
+	//For found-search/////////////////////
+	&.f-found {
+		.filter-main {
+			padding-top: 0;
+			@include respond-to(md) {padding-top: 20px;}
+
+			.search {margin-right: 20px;}
+			.filter-selects {@include respond-to(md) {padding: 20px 5px 0 5px;}}
+		}
+		a.burger {
+
+		}
+	}
+	////////////////////////////////////////
 
 	a.burger {
 		display: none;

@@ -46,7 +46,7 @@
 				&:last-child {@include respond-to(sm) {margin-top: 20px;}}
 				
 				&.sep {
-					width: 1px; margin: 0 50px;
+					width: 2px; margin: 0 50px;
 					background: #eff1f2;
 				}
 
