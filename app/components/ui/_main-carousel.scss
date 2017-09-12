@@ -69,13 +69,12 @@
 			section {
 				p {
 					padding: 0 50px; position: relative;
-					&:before, &:after {
+					i {
 						content: '';
 						display: block; width: 28px; height: 28px; position: absolute;
-						background-image: url(../img/sprite.png);
+						&.icon-quotes-left {left: 0; top: 0;}
+						&.icon-quotes-right {right: 0; bottom: 0;}
 					}
-					&:before {left: 0; top: 0; background-position: -28px -149px; }
-					&:after {right: 0; bottom: 0; background-position: 0px -149px; }
 				}
 			}
 		}

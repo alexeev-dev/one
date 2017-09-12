@@ -14,7 +14,7 @@
 			.found {
 				&-info {}
 
-				&-list {
+				&-list-land {
 					display: flex; flex-wrap: wrap; justify-content: flex-end;
 					@include respond-to(md) {justify-content: center;}
 				}
@@ -51,7 +51,7 @@
 					}
 				}
 
-				&-list {
+				&-list-land {
 					li {
 						text-align: center;
 						width: 170px; margin: 20px 30px;

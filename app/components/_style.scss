@@ -283,7 +283,7 @@ span.rub {font-family: $ruble !important;}
 }
 
 // TITLE – http://prntscr.com/gg35u0
-.title {
+.main-title {
 	display: flex; justify-content: space-between;
 	@include respond-to(xs) {flex-direction: column;}
 	
@@ -295,9 +295,9 @@ span.rub {font-family: $ruble !important;}
 	h1 {@include font-type($CormacEL, 24px, 29px, -0.5px); color: #4a4a4a;}
 
 	.select {
-		text-align: left;
+		text-align: right;
 		min-width: 200px; position: relative;
-		@include respond-to(xs) {margin: 40px 0 10px 0;}
+		@include respond-to(xs) {text-align: left; margin: 40px 0 10px 0;}
 	}
 }
 
