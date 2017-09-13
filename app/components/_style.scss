@@ -52,7 +52,7 @@ span.rub {font-family: $ruble !important;}
 		color: #000000; font-family: $helv; font-size: 14px; font-weight: 300;
 		padding-left: 31px; position: relative;
 		cursor: pointer;
-		
+
 		&:after {
 			content: '';
 			color: #4489ff; font: normal normal normal 14px/1 FontAwesome;
@@ -60,7 +60,7 @@ span.rub {font-family: $ruble !important;}
 			background-color: #ffffff; border-radius: 4px; border: 1px solid #979797;
 		}
 	}
-	
+
 	& > input {display: none;}
 	& > input:checked + label {&:after {content: '\f00c';}}
 }
@@ -129,7 +129,7 @@ span.rub {font-family: $ruble !important;}
 
 	input {
 		color:#000;
-		display: block; width: 100%; padding: 10px 20px; margin: 15px 0;					
+		display: block; width: 100%; padding: 10px 20px; margin: 15px 0;
 		background: #eef5fa; border: none; border-radius: 100px;
 
 		&[placeholder] {
@@ -162,7 +162,7 @@ span.rub {font-family: $ruble !important;}
 		}
 	}
 
-	
+
 	////////////////////////////////////////////////
 	////////////////////////////////////////////////
 	////////////////////////////////////////////////
@@ -183,7 +183,7 @@ span.rub {font-family: $ruble !important;}
 
 	.preview {
 		padding: 0 20px;
-		
+
 		& > span {
 			text-align: left; color: #a8b2b8; margin-bottom: 25px;
 			display: none;
@@ -286,7 +286,7 @@ span.rub {font-family: $ruble !important;}
 .main-title {
 	display: flex; justify-content: space-between;
 	@include respond-to(xs) {flex-direction: column;}
-	
+
 	////////////////////////////////////////////////
 	////////////////////////////////////////////////
 	////////////////////////////////////////////////
@@ -312,7 +312,7 @@ span.rub {font-family: $ruble !important;}
 .empty {
 	color: #89a1b3; text-align: center; font-size: 18px; line-height: 27px;
 	padding: 70px 0;
-	
+
 	i {margin-bottom: 20px;}
 }
 
@@ -321,12 +321,12 @@ span.rub {font-family: $ruble !important;}
 /********* Application ***********/
 /*********************************/
 .header {
-	position: fixed; height: 63px; margin-left:0; margin-top:0; width: 100%; z-index: 10001; 
+	position: fixed; height: 63px; margin-left:0; margin-top:0; width: 100%; z-index: 10001;
 	background: #fff; box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.08);
 
 	&-land {
 		position: absolute;
-		background: transparent; box-shadow: none; 
+		background: transparent; box-shadow: none;
 	}
 
 	.col-md-12 {display: flex; flex-flow: row nowrap; justify-content: space-between;}
@@ -374,10 +374,10 @@ span.rub {font-family: $ruble !important;}
 					padding: 80px 0;
 				}
 			}
-		} 
+		}
 
 		h2 {
-			font-size: 34px; text-align: center; 
+			font-size: 34px; text-align: center;
 			margin-bottom: 80px;
 		}
 
@@ -390,7 +390,7 @@ span.rub {font-family: $ruble !important;}
 				margin-right: 15px;
 			}
 		}
-		
+
 		.btn-wrapp {
 			display: flex; justify-content: center;
 			margin-top: 80px;
@@ -406,6 +406,7 @@ span.rub {font-family: $ruble !important;}
 
 	.wr {
 		position: relative;
+		background: #f8fafd;
 
 		&.pb_30 {padding-bottom: 30px;}
 		&.mb_50 {margin-bottom: 50px;}
