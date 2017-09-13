@@ -95,6 +95,14 @@
 				}
 			}
 		}
+		
+		.select {
+			& > a {
+				font-size: 18px; line-height: 22px;
+				i {top: 5px;}
+			}
+		}
+
 	}
 
 	a.add_item {

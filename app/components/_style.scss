@@ -6,7 +6,7 @@ h1, h2, h3, h4, h5, h6 {color: #000; font-family: $CormacEL; letter-spacing: 0;}
 h1 {font-size: 34px; line-height: 38px;}
 h4 {line-height: 24px;}
 p {font-family: $HelveticaL;}
-a {color: $link-color;}
+a {color: $link-color; outline: none;}
 span.rub {font-family: $ruble !important;}
 
 /*********************************/
@@ -137,6 +137,7 @@ span.rub {font-family: $ruble !important;}
 		}
 	}
 }
+
 
 // STYLED SCROLL – http://prntscr.com/gg2cd5
 .nice_scroll {
@@ -410,6 +411,7 @@ span.rub {font-family: $ruble !important;}
 
 		&.pb_30 {padding-bottom: 30px;}
 		&.mb_50 {margin-bottom: 50px;}
+		&.mb_30 {margin-bottom: 30px;}
 		&.bg_white {background: #ffffff;}
 		&.bg_blue {background: $btn-color;}
 		&.border {border-bottom: 1px solid #d9e4ea;}
@@ -417,7 +419,7 @@ span.rub {font-family: $ruble !important;}
 
 		&.mobile_titles {
 			.tab > h2, .tab > p {
-				display: none; @include respond-to(mobile) {display: block;}
+				display: none; @include respond-to(md) {display: block; margin: 15px 0 5px 0; padding-left: 10px;}
 			}
 		}
 

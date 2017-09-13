@@ -82,9 +82,11 @@
 				@include slide_me(); opacity: 0;
 				&.active {opacity: 1;}
 			}
+			@include respond-to(sm) {position: static; margin-top: 20px; width: calc(100% + 70px);}
 
 			p {
 				color: $main-color-text; float: right;
+				@include respond-to(sm) {float: left;}
 
 				span {color: #9e9e9e; margin: 0 5px;}
 				input {

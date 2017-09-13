@@ -16,7 +16,7 @@
 				padding: 10px 20px 10px 0;
 				@include respond-to(sm) {text-align: center; padding-right: 0;}
 				
-				p {@include font-type($CormacEL, 24px, 29px, -0.7px); color: #fff; margin-bottom: 15px;}
+				p {@include font-type($CormacEL, 24px, 29px, -0.7px); color: #fff; margin-bottom: 10px;}
 				a {@include font-type($HelveticaL, 18px, 22px, 0); color: #fff;}
 			}
 
@@ -77,7 +77,7 @@
 					text-align: right; width: 60%; 
 					ul li:first-child {margin-bottom: 25px;}
 				}
-				@include respond-to(xs) {width: 100%;}
+				@include respond-to(xs) {width: 100%; text-align: left;}
 			}
 			&:nth-child(3) {
 				width: 30%;
