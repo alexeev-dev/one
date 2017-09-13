@@ -9459,7 +9459,8 @@ p {
   font-family: "HelveticaLight", sans-serif; }
 
 a {
-  color: #4489ff; }
+  color: #4489ff;
+  outline: none; }
 
 span.rub {
   font-family: "rouble" !important; }
@@ -10061,9 +10062,11 @@ span.rub {
       border-bottom: 3px solid #eff3f5; }
     .app .wr.mobile_titles .tab > h2, .app .wr.mobile_titles .tab > p {
       display: none; }
-      @media (max-width: 400px) {
+      @media (max-width: 991px) {
         .app .wr.mobile_titles .tab > h2, .app .wr.mobile_titles .tab > p {
-          display: block; } }
+          display: block;
+          margin: 15px 0 5px 0;
+          padding-left: 10px; } }
     .app .wr-new_post {
       padding-bottom: 100px;
       background: #e6f2f6; }
@@ -10539,9 +10542,18 @@ span.rub {
             max-height: 1000px; }
           .filter-main .price.active {
             opacity: 1; } }
+      @media (max-width: 767px) {
+        .filter-main .price {
+          position: static;
+          margin-top: 20px;
+          width: -webkit-calc(100% + 70px);
+          width: calc(100% + 70px); } }
       .filter-main .price p {
         color: #000;
         float: right; }
+        @media (max-width: 767px) {
+          .filter-main .price p {
+            float: left; } }
         .filter-main .price p span {
           color: #9e9e9e;
           margin: 0 5px; }
@@ -10645,6 +10657,8 @@ span.rub {
       margin-top: 10px; } }
   .breadcrumbs ul.share li {
     margin-left: 17px; }
+    .breadcrumbs ul.share li:first-child {
+      margin-left: 0; }
     .breadcrumbs ul.share li a i {
       font-size: 20px; }
 
@@ -10871,7 +10885,8 @@ span.rub {
             margin-bottom: 25px; } }
       @media (max-width: 480px) {
         .footer-contacts > li:nth-child(2) {
-          width: 100%; } }
+          width: 100%;
+          text-align: left; } }
     .footer-contacts > li:nth-child(3) {
       width: 30%; }
       @media (max-width: 767px) {
@@ -13617,7 +13632,8 @@ span.rub {
   @media (max-width: 991px) {
     .ads,
     .buy {
-      width: 100%; }
+      width: 100%;
+      margin-top: 0; }
       .ads tbody,
       .buy tbody {
         width: 100%; } }
@@ -13628,7 +13644,7 @@ span.rub {
       .ads tr,
       .buy tr {
         width: 100%;
-        margin: 10px 0;
+        margin: 10px 0 !important;
         padding: 0 10%;
         -webkit-border-radius: 5px;
         border-radius: 5px;
@@ -13637,6 +13653,156 @@ span.rub {
       .ads tr,
       .buy tr {
         background: #ffffff; } }
+    @media (max-width: 991px) {
+      .ads tr:first-child,
+      .buy tr:first-child {
+        display: none; } }
+    @media (max-width: 991px) {
+      .ads tr.open.mark,
+      .buy tr.open.mark {
+        padding: 0; } }
+    .ads tr.open.mark td,
+    .buy tr.open.mark td {
+      border: 2px solid #4489ff;
+      border-right: none;
+      border-left: none; }
+      @media (max-width: 991px) {
+        .ads tr.open.mark td,
+        .buy tr.open.mark td {
+          padding: 20px;
+          border-top: none;
+          -webkit-border-radius: 4px;
+          border-radius: 4px; } }
+      .ads tr.open.mark td:first-child,
+      .buy tr.open.mark td:first-child {
+        position: relative;
+        border-left: 2px solid #4489ff; }
+        @media (max-width: 991px) {
+          .ads tr.open.mark td:first-child,
+          .buy tr.open.mark td:first-child {
+            border-top: 2px solid #4489ff;
+            border-right: 2px solid #4489ff;
+            border-bottom: none;
+            -webkit-border-bottom-right-radius: 0;
+            border-bottom-right-radius: 0;
+            -webkit-border-bottom-left-radius: 0;
+            border-bottom-left-radius: 0; } }
+        .ads tr.open.mark td:first-child:before,
+        .buy tr.open.mark td:first-child:before {
+          content: '';
+          width: 10px;
+          height: 10px;
+          position: absolute;
+          left: 18px;
+          top: 28px;
+          background: #4489ff;
+          -webkit-border-radius: 50%;
+          border-radius: 50%; }
+          @media (max-width: 991px) {
+            .ads tr.open.mark td:first-child:before,
+            .buy tr.open.mark td:first-child:before {
+              left: 6px; } }
+      .ads tr.open.mark td:last-child,
+      .buy tr.open.mark td:last-child {
+        border-right: 2px solid #4489ff; }
+        @media (max-width: 991px) {
+          .ads tr.open.mark td:last-child,
+          .buy tr.open.mark td:last-child {
+            -webkit-border-top-right-radius: 0;
+            border-top-right-radius: 0;
+            -webkit-border-bottom-left-radius: 0;
+            border-bottom-left-radius: 0; } }
+      @media (max-width: 991px) {
+        .ads tr.open.mark td.price,
+        .buy tr.open.mark td.price {
+          border-left: 2px solid #4489ff;
+          -webkit-border-top-left-radius: 0;
+          border-top-left-radius: 0;
+          -webkit-border-bottom-right-radius: 0;
+          border-bottom-right-radius: 0; } }
+    .ads tr.open.mark .action,
+    .buy tr.open.mark .action {
+      text-align: right !important; }
+      @media (max-width: 991px) {
+        .ads tr.open.mark .action,
+        .buy tr.open.mark .action {
+          position: static !important;
+          text-align: left !important; } }
+      .ads tr.open.mark .action .bottom,
+      .buy tr.open.mark .action .bottom {
+        float: right; }
+        @media (max-width: 991px) {
+          .ads tr.open.mark .action .bottom,
+          .buy tr.open.mark .action .bottom {
+            float: left; } }
+        .ads tr.open.mark .action .bottom a,
+        .buy tr.open.mark .action .bottom a {
+          display: inline-block; }
+          .ads tr.open.mark .action .bottom a.btn,
+          .buy tr.open.mark .action .bottom a.btn {
+            margin-left: 20px; }
+    @media (max-width: 991px) {
+      .ads tr.open td,
+      .buy tr.open td {
+        width: 50%; } }
+    .ads tr.open td:first-child,
+    .buy tr.open td:first-child {
+      width: 70%; }
+      @media (max-width: 991px) {
+        .ads tr.open td:first-child,
+        .buy tr.open td:first-child {
+          width: 100%; } }
+      .ads tr.open td:first-child > div,
+      .buy tr.open td:first-child > div {
+        width: 100%;
+        position: relative; }
+        .ads tr.open td:first-child > div .customer,
+        .buy tr.open td:first-child > div .customer {
+          font-size: 18px;
+          margin: 20px 0; }
+          .ads tr.open td:first-child > div .customer span,
+          .buy tr.open td:first-child > div .customer span {
+            color: #89a1b3;
+            font-size: 14px;
+            font-family: "HelveticaLight", sans-serif; }
+        .ads tr.open td:first-child > div .contacts a,
+        .buy tr.open td:first-child > div .contacts a {
+          font-family: "HelveticaLight", sans-serif; }
+          .ads tr.open td:first-child > div .contacts a.phone,
+          .buy tr.open td:first-child > div .contacts a.phone {
+            color: #000;
+            margin-right: 20px; }
+        .ads tr.open td:first-child > div .action,
+        .buy tr.open td:first-child > div .action {
+          text-align: center;
+          position: absolute;
+          right: -30%;
+          bottom: 0; }
+          @media (max-width: 991px) {
+            .ads tr.open td:first-child > div .action,
+            .buy tr.open td:first-child > div .action {
+              right: 0; } }
+          @media (max-width: 767px) {
+            .ads tr.open td:first-child > div .action,
+            .buy tr.open td:first-child > div .action {
+              text-align: left;
+              position: static;
+              margin-bottom: 15px; } }
+          .ads tr.open td:first-child > div .action a,
+          .buy tr.open td:first-child > div .action a {
+            color: #ff455c;
+            display: block;
+            margin-top: 20px; }
+            .ads tr.open td:first-child > div .action a.btn,
+            .buy tr.open td:first-child > div .action a.btn {
+              color: #fff; }
+              .ads tr.open td:first-child > div .action a.btn:hover,
+              .buy tr.open td:first-child > div .action a.btn:hover {
+                color: #4489ff; }
+            @media (max-width: 767px) {
+              .ads tr.open td:first-child > div .action a,
+              .buy tr.open td:first-child > div .action a {
+                margin-top: 10px; } }
     .ads tr th,
     .buy tr th {
       color: #7e7e7e;
@@ -13660,11 +13826,16 @@ span.rub {
         .ads tr td,
         .buy tr td {
           text-align: left;
-          width: 33.3%; } }
+          width: 33.3%;
+          padding: 10px 0; } }
       @media (max-width: 767px) {
         .ads tr td,
         .buy tr td {
           background: #ffffff; } }
+      @media (max-width: 400px) {
+        .ads tr td,
+        .buy tr td {
+          width: 100%; } }
       .ads tr td:first-child,
       .buy tr td:first-child {
         text-align: left;
@@ -13673,6 +13844,11 @@ span.rub {
         border-bottom-left-radius: 5px;
         -webkit-border-top-left-radius: 5px;
         border-top-left-radius: 5px; }
+        @media (max-width: 991px) {
+          .ads tr td:first-child,
+          .buy tr td:first-child {
+            width: 100%;
+            padding: 0; } }
       .ads tr td:last-child,
       .buy tr td:last-child {
         padding-right: 50px;
@@ -13680,12 +13856,26 @@ span.rub {
         border-bottom-right-radius: 5px;
         -webkit-border-top-right-radius: 5px;
         border-top-right-radius: 5px; }
+        @media (max-width: 991px) {
+          .ads tr td:last-child,
+          .buy tr td:last-child {
+            padding-right: 0; } }
+      .ads tr td span.value,
+      .buy tr td span.value {
+        color: #89a1b3;
+        text-transform: uppercase;
+        display: none; }
+        @media (max-width: 991px) {
+          .ads tr td span.value,
+          .buy tr td span.value {
+            display: block; } }
       .ads tr td > a,
       .buy tr td > a {
         font-family: "Cormac-ExtraLight", sans-serif;
         font-size: 18px;
         line-height: 22px;
-        letter-spacing: 0.3px; }
+        letter-spacing: 0.3px;
+        color: #000; }
     .ads tr.goods-content,
     .buy tr.goods-content {
       display: none; }
@@ -13863,8 +14053,9 @@ span.rub {
     padding: 0 101px 0 180px; }
     @media (max-width: 991px) {
       .bookmarks > li {
-        padding-left: 160px; } }
-    @media (max-width: 480px) {
+        padding-left: 160px;
+        padding-right: 0; } }
+    @media (max-width: 400px) {
       .bookmarks > li {
         padding: 0; } }
     .bookmarks > li figure {
@@ -13876,24 +14067,25 @@ span.rub {
       border-bottom-left-radius: 4px;
       -webkit-border-top-left-radius: 4px;
       border-top-left-radius: 4px; }
-      @media (max-width: 480px) {
+      @media (max-width: 400px) {
         .bookmarks > li figure {
           width: 100%;
-          position: static; } }
+          position: static;
+          text-align: center; } }
       .bookmarks > li figure img {
-        max-width: 100%; }
+        width: 100%; }
     .bookmarks > li > ul {
       padding: 30px 0; }
       @media (max-width: 991px) {
         .bookmarks > li > ul {
           padding: 5px 0; } }
-      @media (max-width: 480px) {
+      @media (max-width: 400px) {
         .bookmarks > li > ul {
           padding: 20px; } }
       @media (max-width: 767px) {
         .bookmarks > li > ul > li {
           background: #fff; } }
-      @media (max-width: 480px) {
+      @media (max-width: 400px) {
         .bookmarks > li > ul > li {
           padding: 0;
           margin-bottom: 25px; } }
@@ -13926,7 +14118,6 @@ span.rub {
           .bookmarks > li > ul > li p {
             color: #000;
             font-size: 20px;
-            font-weight: 600;
             text-align: left;
             margin-bottom: 0;
             margin-top: 5px; } }
@@ -13934,7 +14125,9 @@ span.rub {
         color: #4b5769; }
         @media (max-width: 991px) {
           .bookmarks > li > ul > li span {
-            display: none; } }
+            display: none; }
+            .bookmarks > li > ul > li span.rub {
+              display: inline-block; } }
     .bookmarks > li > a {
       display: block;
       width: 44px;
@@ -13952,13 +14145,9 @@ span.rub {
         .bookmarks > li > a {
           position: absolute;
           right: 10px;
-          top: -webkit-calc(100% - 20px);
-          top: calc(100% - 20px);
-          background: transparent; } }
-      @media (max-width: 480px) {
-        .bookmarks > li > a {
           top: -webkit-calc(100% - 30px);
-          top: calc(100% - 30px); } }
+          top: calc(100% - 30px);
+          background: transparent; } }
       .bookmarks > li > a i {
         position: absolute;
         left: 50%;
@@ -13982,16 +14171,13 @@ span.rub {
     position: relative;
     padding: 27px 340px 38px 28px;
     margin-bottom: 10px;
-    background: #f6f8fb;
+    background: #fff;
     -webkit-border-radius: 4px;
     border-radius: 4px; }
     @media (max-width: 991px) {
       .testimonials > li {
         padding-right: 15px;
         padding-bottom: 20px; } }
-    @media (max-width: 767px) {
-      .testimonials > li {
-        background: #fff; } }
     @media (max-width: 400px) {
       .testimonials > li {
         padding-right: 15px;
