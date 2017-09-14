@@ -19,7 +19,7 @@
 	////////////////////////////////////////////////
 
 	.carousel-wrapp {
-		figure {
+		figure { 
 			width: 35%; text-align: center;
 			@include respond-to(sm) {width: 100%;}
 
@@ -40,11 +40,10 @@
 			}
 
 			p {
-				font-size: 18px; line-height: 28px;
+				font-size: 18px; line-height: 28px; letter-spacing: 0.1px;
 				@include respond-to(sm) {text-align: center;}
 			}
 		}
-
 		&.reviews {
 			figure {
 				text-align: left;
@@ -68,7 +67,7 @@
 
 			section {
 				p {
-					padding: 0 50px; position: relative;
+					padding: 0 50px; position: relative; letter-spacing: 0.1px;
 					i {
 						content: '';
 						display: block; width: 28px; height: 28px; position: absolute;
@@ -79,4 +78,51 @@
 			}
 		}
 	}
+
+
+	////////////////////////////////////////////////
+	////////////////////////////////////////////////
+	////////////////////////////////////////////////
+	.carousel-wrapp {
+		figure {opacity: 0;}
+		section {
+			transform: translateX(150px);
+			opacity: 0;
+			transition: 0.5s ease-out;
+		}
+
+		&.active {
+			figure {
+				opacity: 1;
+			}
+			section {
+				opacity: 1;
+				transform: translateX(0);
+			}
+		}
+		&.left {
+			section {
+				transform: translateX(-150px);
+				@include respond-to(sm) {
+					transform: translateX(-75px);
+				}
+				@include respond-to(xs) {
+					transform: translateX(-30px);
+				}
+			}
+		}
+		&.right {
+			section {
+				transform: translateX(150px);
+				@include respond-to(sm) {
+					transform: translateX(75px);
+				}
+				@include respond-to(xs) {
+					transform: translateX(30px);
+				}
+			}
+		}
+	}
 }
+
+

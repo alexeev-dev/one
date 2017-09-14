@@ -1,7 +1,8 @@
 // FOOTER
 .footer {
-	padding-top: 20px;
-
+	padding-top: 20px; z-index: 1;
+	
+	&-rasporka {height: 225px;}
 	&-info {}
 	&-contacts {display: flex;}
 	
@@ -56,10 +57,12 @@
 						li {
 							& > a {
 								display: inline-block; position: relative;
-								&:after {
+								&:before {
 									content: '\203A';
 									font-size: 34px; color: #fff;
 									position: absolute; right: -20px;
+
+									// @include respond-to(sm) {display: none;}
 								}
 							}
 						}
@@ -95,5 +98,43 @@
 		}
 	}
 
-	// .land & {position: fixed;}
+	.land & {position: fixed;}
+
+	//////////////
+	&-contacts {
+		& > li {
+			ul {
+				li {
+					& > a {
+						position: relative; display: inline-block;
+						&:after {
+							content: '';
+							position: absolute;
+							border-bottom: 1px solid #ffffff;
+							top: 100%;
+							transition: all 0.4s;
+						}
+						&:after {right: 100%; left: 0;}
+						&:hover:after {right: 0;}
+					}
+				}
+			}
+		}
+	}
+
+	&-info li:first-child a {
+		position: relative; display: inline-block;
+		&:after {
+			content: '';
+			position: absolute;
+			border-bottom: 1px solid #ffffff;
+			top: 100%;
+			transition: all 0.4s;
+		}
+		&:after {right: 100%; left: 0;}
+		&:hover:after {right: 0;}
+
+		i {transition: all 0.4s; transform: translateX(0);}
+		&:hover i {transform: translateX(5px);}
+	}
 }
