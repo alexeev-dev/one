@@ -4,7 +4,7 @@
 	////////////////////////////////////////////////
 	////////////////////////////////////////////////
 	.social {
-		display: flex; justify-content: center; align-items: center; 
+		display: flex; justify-content: center; align-items: center;
 	}
 
 	////////////////////////////////////////////////
@@ -16,7 +16,7 @@
 	&-tell {
 		text-align: center; margin: 60px 0;
 		p {
-			color: #000; font-size: 16px;
+			color: #000; font-size: 16px; letter-spacing: 0.5px;
 			margin-bottom: 10px;
 		}
 		h4 {
@@ -25,9 +25,16 @@
 	}
 
 	.social {
+		width: 300px; margin: 0 auto; 
 		li {
-			margin: 0 25px;
+			a {display: block; padding: 0 25px;}
 		}
 		
+	}
+
+	////////////
+	.social {
+		transition: all .4s; &:hover li {opacity: 0.4; transform: scale(0.9);}
+		li{transition: all .4s; &:hover {opacity: 1; transform: scale(1);}}
 	}
 }

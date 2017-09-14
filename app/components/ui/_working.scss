@@ -10,6 +10,8 @@
 			@include respond-to(md) {justify-content: center;}
 			@include respond-to(xs) {flex-direction: column;}
 
+			h4 {letter-spacing: 0.1px;}
+
 			&.placement {
 				justify-content: flex-end;
 				@include respond-to(md) {justify-content: center;}
@@ -22,7 +24,7 @@
 			}
 
 			& > section {
-				a {display: flex; align-items: center;}
+				a {display: flex; align-items: center; letter-spacing: 0.2px;}
 			}
 		}
 	}
@@ -46,7 +48,7 @@
 			& > section {
 
 				a {
-					margin-top: 15px;
+					margin-top: 15px; i {position: relative; top: 1px;}
 
 					i {margin-left: 10px;}
 				}
@@ -86,5 +88,22 @@
 			}
 		}
 
+	}
+
+	////////////////////
+	&-wrapp {
+		& > div {
+			& > section {
+				a {
+					i {transition: margin .2s, transform .2s ease;}
+
+					&:hover {
+						color: #4489ff;
+						i {transform: translateX(5px);}
+						i.icon-video {background: url('../img/video.png') 0 0 no-repeat; margin-left: 0;  transform: translateX(0);}
+					}
+				}
+			}
+		}
 	}
 }

@@ -322,7 +322,7 @@ span.rub {font-family: $ruble !important;}
 /********* Application ***********/
 /*********************************/
 .header {
-	position: fixed; height: 63px; margin-left:0; margin-top:0; width: 100%; z-index: 10001;
+	position: fixed; height: 63px; margin-left:0; margin-top:0; width: 100%; z-index: 899;
 	background: #fff; box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.08);
 
 	&-land {
@@ -358,9 +358,19 @@ span.rub {font-family: $ruble !important;}
 		}
 	}
 
+	&-content {z-index: 2;}
+
 	.footer {/*position: fixed;*/ width: 100%; left: 0; bottom: 0;}
 }
 
+body.on-load {overflow: hidden;}
+.preloader {
+	display: block; width: 100%; height: 100%;
+	position: fixed; top: 0; left: 0; z-index: 99999;
+	background: #3f86ff url('../img/preloader.gif') center center no-repeat;
+}
+
+.lity-close {top: 25px; right: 25px;}
 
 .app {
 	min-width: 320px; overflow-x: hidden; padding-top: 65px;
@@ -383,12 +393,17 @@ span.rub {font-family: $ruble !important;}
 		}
 
 		a.btn {
-			@include font-type($CormacEL, 20px, 20px, 0.5px);
-			padding-bottom: 15px; margin: 0 10px;
+			@include font-type($CormacEL, 20px, 20px, 0.5px); letter-spacing: -0.5px;
+			padding: 15px 30px; margin: 0 10px;
 			@include respond-to(sm) {margin: 10px auto; width: 60%;}
 			@include respond-to(xs) {width: 90%;}
 			i {
 				margin-right: 15px;
+			}
+
+			&:hover {
+				i.icon-header_plus-white {background: url('../img/header_plus.png') 0 0 no-repeat;}
+				i.icon-header_search-white {background: url('../img/header_search.png') 0 0 no-repeat;}
 			}
 		}
 
