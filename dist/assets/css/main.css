@@ -15171,6 +15171,16 @@ a.down {
     -webkit-transform: translateY(-3px);
     -ms-transform: translateY(-3px);
     transform: translateY(-3px); }
+  .carousel .navigation li:active {
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0); }
+  .carousel .navigation li.active {
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0); }
+    .carousel .navigation li.active:hover {
+      cursor: default; }
 
 .main-carousel .carousel-wrapp {
   display: -webkit-box;

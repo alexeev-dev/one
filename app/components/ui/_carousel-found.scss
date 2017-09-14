@@ -54,7 +54,7 @@
 				&-list-land {
 					width: 64%;
 					@include respond-to(mb) {}
-					
+
 					.item {
 						text-align: center;
 						width: 170px; margin: 20px 30px;
@@ -112,7 +112,9 @@
 		li {
 			transition: all .2s ease; transform: translateY(0);
 			&:hover {background: #4489ff; transform: translateY(-3px);}
+			&:active {transform: translateY(0);}
+
+			&.active {transform: translateY(0); &:hover {cursor: default;}}
 		}
 	}
-
 }
