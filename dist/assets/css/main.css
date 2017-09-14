@@ -15104,29 +15104,32 @@ a.down {
             text-align: center; }
             .carousel.found .carousel-wrapp .found-info h2 > br {
               display: none; } }
-    .carousel.found .carousel-wrapp .found-list-land div {
-      text-align: center;
-      width: 170px;
-      margin: 20px 30px; }
-      @media (max-width: 1199px) {
-        .carousel.found .carousel-wrapp .found-list-land div {
-          margin: 20px; } }
-      .carousel.found .carousel-wrapp .found-list-land div figure {
-        display: inline-block;
-        -webkit-border-radius: 50%;
-        border-radius: 50%; }
-        .carousel.found .carousel-wrapp .found-list-land div figure img {
+    .carousel.found .carousel-wrapp .found-list-land {
+      width: 64%; }
+      .carousel.found .carousel-wrapp .found-list-land .item {
+        text-align: center;
+        width: 170px;
+        margin: 20px 30px; }
+        @media (max-width: 1199px) {
+          .carousel.found .carousel-wrapp .found-list-land .item {
+            margin: 20px; } }
+        .carousel.found .carousel-wrapp .found-list-land .item figure {
+          display: inline-block;
           width: 140px;
-          height: 140px;
-          overflow: hidden; }
-        .carousel.found .carousel-wrapp .found-list-land div figure figcaption {
-          margin-top: 25px;
-          letter-spacing: 0.2px;
-          font-family: "Cormac-ExtraLight", sans-serif;
-          font-size: 14px;
-          line-height: 1;
-          letter-spacing: 0.5px;
-          font-weight: 200; }
+          -webkit-border-radius: 50%;
+          border-radius: 50%; }
+          .carousel.found .carousel-wrapp .found-list-land .item figure img {
+            width: 140px;
+            height: 140px;
+            overflow: hidden; }
+          .carousel.found .carousel-wrapp .found-list-land .item figure figcaption {
+            margin-top: 25px;
+            letter-spacing: 0.2px;
+            font-family: "Cormac-ExtraLight", sans-serif;
+            font-size: 14px;
+            line-height: 1;
+            letter-spacing: 0.5px;
+            font-weight: 200; }
 
 .carousel .navigation {
   margin-top: 60px; }
