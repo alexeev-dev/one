@@ -197,6 +197,9 @@ let app = (function ($) {
               loop: false,
               margin: 10,
               nav: false,
+              dotClass: 'owl-dot',
+              dotsClass: 'navigation',
+              dots: true,
               responsive:{
                 0: {
                   items:1
@@ -208,7 +211,7 @@ let app = (function ($) {
                   items:3
                 },
                 992:{
-                  items:4
+                  items:3
                 }
               }
             });

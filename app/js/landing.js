@@ -7,7 +7,14 @@
       intervalId,
       numbersPos = 0,
       isFading = true,
-      page = Scrollbar.initAll()[0];
+      page = Scrollbar.initAll({
+        speed: 0.42,
+        damping: 0.1,
+        renderByPixels: true,
+        alwaysShowTracks: false,
+        overscrollEffect: 'glow',
+        overscrollEffectColor: '#ffffff'
+      })[0];
 
   /**
    * Обновляет высоту слайдов в соответсвтии с базовой высотой
