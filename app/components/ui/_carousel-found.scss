@@ -52,13 +52,16 @@
 				}
 
 				&-list-land {
-					div {
+					width: 64%;
+					@include respond-to(mb) {}
+					
+					.item {
 						text-align: center;
 						width: 170px; margin: 20px 30px;
 						@include respond-to(lg) {margin: 20px;}
 
 						figure {
-							display: inline-block;
+							display: inline-block; width: 140px;
 							border-radius: 50%;
 
 							img {
