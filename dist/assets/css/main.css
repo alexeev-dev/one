@@ -15105,7 +15105,8 @@ a.down {
             .carousel.found .carousel-wrapp .found-info h2 > br {
               display: none; } }
     .carousel.found .carousel-wrapp .found-list-land {
-      width: 64%; }
+      width: 64%;
+      position: relative; }
       .carousel.found .carousel-wrapp .found-list-land .item {
         text-align: center;
         width: 170px;

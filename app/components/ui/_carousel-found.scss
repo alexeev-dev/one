@@ -52,8 +52,7 @@
 				}
 
 				&-list-land {
-					width: 64%;
-					@include respond-to(mb) {}
+					width: 64%; position: relative;
 
 					.item {
 						text-align: center;
