@@ -21,25 +21,25 @@
 			@include respond-to(xs) {font-size: 14px; line-height: 18px; margin-top: 5px;}
 		}
 	}
+}
 
-	a.down {
-		display: block; position: absolute; left: 50%; margin-left: -9px; bottom: 35px; width: 18px; height: 11px;
-		@include respond-to(xs) {bottom: 15px;}
+a.down {
+	display: block; position: absolute; left: 50%; margin-left: -9px; bottom: 35px; width: 18px; height: 11px; z-index: 8;
+	@include respond-to(xs) {bottom: 15px;}
+}
+
+////////////////////////////////////////////////
+////////////////////////////////////////////////
+////////////////////////////////////////////////
+a.down {
+	@keyframes toggleSlide {
+		0%   {transform: translateY(-3px);}
+		25% {transform: translateY(0);}
+		50% {transform: translateY(3px);}
+		100% {transform: translateY(-3px);}
 	}
 
-	////////////////////////////////////////////////
-	////////////////////////////////////////////////
-	////////////////////////////////////////////////
-	a.down {
-		@keyframes toggleSlide {
-			0%   {transform: translateY(-3px);}
-			25% {transform: translateY(0);}
-			50% {transform: translateY(3px);}
-			100% {transform: translateY(-3px);}
-		}
+	animation: toggleSlide .4s ease-out infinite;
 
-		animation: toggleSlide .4s ease-out infinite;
-
-		&:hover {transform: translateY(3px) scale(1.1); animation-play-state: paused;}
-	}
+	&:hover {transform: translateY(3px) scale(1.1); animation-play-state: paused;}
 }

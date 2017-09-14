@@ -11359,20 +11359,23 @@ body.on-load {
           font-size: 14px;
           line-height: 18px;
           margin-top: 5px; } }
-  .intro a.down {
-    display: block;
-    position: absolute;
-    left: 50%;
-    margin-left: -9px;
-    bottom: 35px;
-    width: 18px;
-    height: 11px; }
-    @media (max-width: 480px) {
-      .intro a.down {
-        bottom: 15px; } }
-  .intro a.down {
-    -webkit-animation: toggleSlide .4s ease-out infinite;
-    animation: toggleSlide .4s ease-out infinite; }
+
+a.down {
+  display: block;
+  position: absolute;
+  left: 50%;
+  margin-left: -9px;
+  bottom: 35px;
+  width: 18px;
+  height: 11px;
+  z-index: 8; }
+  @media (max-width: 480px) {
+    a.down {
+      bottom: 15px; } }
+
+a.down {
+  -webkit-animation: toggleSlide .4s ease-out infinite;
+  animation: toggleSlide .4s ease-out infinite; }
 
 @-webkit-keyframes toggleSlide {
   0% {
@@ -11401,20 +11404,28 @@ body.on-load {
   100% {
     -webkit-transform: translateY(-3px);
     transform: translateY(-3px); } }
-    .intro a.down:hover {
-      -webkit-transform: translateY(3px) scale(1.1);
-      -ms-transform: translateY(3px) scale(1.1);
-      transform: translateY(3px) scale(1.1);
-      -webkit-animation-play-state: paused;
-      animation-play-state: paused; }
+  a.down:hover {
+    -webkit-transform: translateY(3px) scale(1.1);
+    -ms-transform: translateY(3px) scale(1.1);
+    transform: translateY(3px) scale(1.1);
+    -webkit-animation-play-state: paused;
+    animation-play-state: paused; }
 
 .slide {
   position: absolute;
   left: 0;
-  top: 0;
-  width: 100%; }
-  .slide:not(:first-child) {
-    top: 100vh; }
+  bottom: 0;
+  width: 100%;
+  opacity: 1;
+  z-index: 1; }
+  .slide.top {
+    z-index: 2; }
+  .slide.animated {
+    -webkit-transition: all ease-out 0.5s;
+    transition: all ease-out 0.5s; }
+  .slide.invisible {
+    opacity: 0;
+    visibility: hidden; }
 
 .scroll-parallax {
   position: absolute;
@@ -11423,10 +11434,18 @@ body.on-load {
   width: 100%;
   height: 100vh;
   overflow: hidden; }
+  .scroll-parallax-inner {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    bottom: 0;
+    overflow: hidden; }
 
 .land-content {
   position: relative;
-  height: 100vh; }
+  height: 100vh;
+  z-index: 3; }
 
 /*****************************************/
 /* 
