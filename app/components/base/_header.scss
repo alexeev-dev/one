@@ -70,7 +70,7 @@
 
 		&:after {
 			content: '';
-			position: absolute; bottom:0; left:50%; margin-left: -5000px; width: 10000px; height: 1px;
+			position: absolute; bottom:0; left:50%; height: 1px; width: 100%; transform: translateX(-50%);
 			background: #d9e4ea;
 			@include respond-to(md) {display: none;}
 		}

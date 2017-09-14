@@ -10221,9 +10221,6 @@ span.rub {
     -ms-transform: translateY(0%);
     transform: translateY(0%); }
 
-.land-content {
-  z-index: 2; }
-
 .land .footer {
   /*position: fixed;*/
   width: 100%;
@@ -10539,9 +10536,11 @@ body.on-load {
     position: absolute;
     bottom: 0;
     left: 50%;
-    margin-left: -5000px;
-    width: 10000px;
     height: 1px;
+    width: 100%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
     background: #d9e4ea; }
     @media (max-width: 991px) {
       .menu-general:after {
@@ -11145,7 +11144,7 @@ body.on-load {
 
 .footer {
   padding-top: 20px;
-  z-index: 1; }
+  z-index: 3; }
   .footer-rasporka {
     height: 225px; }
   .footer-contacts {
