@@ -17,8 +17,11 @@
 	////////////////////////////////////////////////
 	////////////////////////////////////////////////
 	////////////////////////////////////////////////
+	.carousel-body {position: relative; min-height: 200px;}
 
 	.carousel-wrapp {
+		position: absolute; top: 0; left: 0; width: 100%;
+
 		figure { 
 			width: 35%; text-align: center;
 			@include respond-to(sm) {width: 100%;}
@@ -44,7 +47,12 @@
 				@include respond-to(sm) {text-align: center;}
 			}
 		}
-		&.reviews {
+	}
+
+	&.reviews {
+		.carousel-body {min-height: 160px;}
+
+		.carousel-wrapp {
 			figure {
 				text-align: left;
 				@include respond-to(sm) {text-align: center; width: 100%; margin-bottom: 60px;}
@@ -84,7 +92,7 @@
 	////////////////////////////////////////////////
 	////////////////////////////////////////////////
 	.carousel-wrapp {
-		figure {opacity: 0;}
+		figure {opacity: 0; transition: all .8s;}
 		section {
 			transform: translateX(150px);
 			opacity: 0;
