@@ -1,6 +1,7 @@
 (function (app) {
   let parallaxItems = $('.scroll-parallax-inner'),
       parallaxArea = $('.parallax-area'),
+      footerArea = $('.footer-rasporka'),
       slides = $('.slide'),
       iteration = 0,
       intervalId,
@@ -29,6 +30,15 @@
 
   function updateParallaxArea(baseHeight) {
     parallaxArea.height(baseHeight * parallaxItems.length);
+  }
+
+  /**
+   * Обновляет пространство для футера в соответствии
+   * с размером футера
+   */
+
+  function updateFooterArea(height) {
+    footerArea.height(height);
   }
 
   /**
@@ -106,13 +116,36 @@
     return progress / base < 0.05 || (base - progress) / base < 0.12;
   }
 
+  /**
+   * Вычисляет класс слайда в каруселе
+   * @param index - номер слайда
+   * @param current - текущий слайд карусели
+   */
+
+  function carouselItemClass(index, current) {
+    let className = index < current ? 'left' : 'right';
+    return index === current ? 'active' : className;
+  }
+
+  /**
+   * Вычисляет класс нав-точки карусели
+   * @param index - порядковый номер точки
+   * @param current - текущий слайд карусели
+   */
+
+  function carouselPointClass(index, current) {
+    return index === current ? 'active' : '';
+  }
+
   // ===================================================================
 
   // Обновляем размеры слайдов и место под них, при изменении размера окна
   $(window).resize((event) => {
-   let baseHeight = $(app).height();
+   let baseHeight = $(app).height(),
+     footerHeight = $('.footer').outerHeight();
    updateSlidesHeight(baseHeight);
    updateParallaxArea(baseHeight);
+   updateFooterArea(footerHeight - 2);
   });
 
   // Инициализируем начальными размерами окна
@@ -131,7 +164,9 @@
       }
     });
     // Обновляем положение кнопки-стрелочки
-    $('.slide .down').css('z-index', scroll > 50 ? 'auto' : '100');
+    $('.down').css('z-index', scroll > mainContentOffset ? '-1' : '8');
+    // Обновляем положение футера
+    $('.footer').css('z-index', scroll > mainContentOffset ? '1' : '-1');
     // Обновляем меню
     $('.header-land').attr('class', className);
     isFading = false;
@@ -146,10 +181,10 @@
   });
 
   // При клике по кнопке листаем на слайд ниже
-  $('.slide .down').click(function goToNext(event) {
+  $('.down').click(function goToNext(event) {
     let nextPos = $(app).height();
     event.preventDefault();
-    page.scrollTo(0, nextPos, 1000);
+    page.scrollTo(0, page.scrollTop + nextPos, 1000);
   });
 
   // Инициализация fade-слайдов
@@ -166,8 +201,9 @@
     });
   });
 
+  // Инициализация фэйдинга
   slides.trigger('update', [iteration, 0, 2]);
-
+  // Запуск фэйдинга
   intervalId = setInterval(function tick() {
     if (isFading) {
       slides.trigger('update', [iteration, 1, 2]);
@@ -179,11 +215,59 @@
       }, 550);
     }
   }, 3000);
-
+  // Повторно запускаем фэйдинг, если скроллинг остановлен
   setInterval(function enableFading() {
-    if (isCloseToScreen(page.scrollTop, $(app).height())) {
+    if (
+      isCloseToScreen(page.scrollTop, $(app).height()) &&
+      page.scrollTop < $(app).height() * parallaxItems.length
+    ) {
       isFading = true;
     }
   }, 500);
+
+  // Инициализация простых каруселек
+  $('.carousel').each(function initCarousel(index, carousel) {
+    if (index !== 0) {
+      let $carousel = $(carousel),
+        items = $carousel.find('.carousel-wrapp'),
+        nav = $carousel.find('.navigation'),
+        baseClass = 'carousel-wrapp ',
+        points;
+      // Создаём точки для каждого слайда
+      items.each((index) => {
+        nav.append(
+          $(`<li class="${index === 0 ? 'active' : ''}">`).click((event) => {
+            $carousel.trigger('update', index);
+          })
+        );
+      });
+      // Запрашиваем получившиеся точки
+      points = nav.find('li');
+      // Обновляем карусель под новое состояние
+      $carousel.on('update', function updateCarousel(event, current) {
+        $carousel.data('current', current);
+        items.each((index, item) => {
+          $(item).attr('class',
+            baseClass + carouselItemClass(index, current)
+          );
+        });
+        points.each((index, item) => {
+          $(item).attr('class', carouselPointClass(index, current));
+        });
+      });
+      // Устанавливаем состояние в первый слайд
+      $carousel.trigger('update', 0);
+    }
+  });
+
+  // Инициализируем приложение после загрузки
+  $(app).load((event) => {
+    $('.preloader').fadeOut();
+    $('body').removeClass('on-load');
+    $('footer').css('z-index', '-1');
+  });
+
+  // Инициализация owlCarousel
+  $('.found-list-land').owlCarousel({ items: 3 });
 
 })(window);
