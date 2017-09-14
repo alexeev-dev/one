@@ -43,6 +43,26 @@
   }
 
   /**
+   * Обновляет пространство для слайдов каруселей
+   */
+
+  function updateCarouselsArea() {
+    $('.carousel').each((index, carousel) => {
+      if (index !== 0) {
+        let $carousel = $(carousel),
+            body = $carousel.find('.carousel-body'),
+            items = $carousel.find('.carousel-wrapp'),
+            maxHeight = 0;
+        items.each((index, item) => {
+          let height = $(item).outerHeight();
+          maxHeight = Math.max(maxHeight, height);
+        });
+        body.height(maxHeight);
+      }
+    });
+  }
+
+  /**
    * Вычисляет высоту слайдов при заданном скролле
    * @param base - вертикальное удаление слайда от начала прокрутки
    * @param scroll - величина вертикальной прокрутки
@@ -148,6 +168,7 @@
     updateSlidesHeight(baseHeight);
     updateParallaxArea(baseHeight);
     updateFooterArea(footerHeight - 2);
+    updateCarouselsArea();
   });
 
   // Инициализируем начальными размерами окна
@@ -281,6 +302,24 @@
         points.each((index, item) => {
           $(item).attr('class', carouselPointClass(index, current));
         });
+      });
+      $carousel.swipe({
+        swipe(event, direction) {
+          let current = $carousel.data('current');
+          if (direction === 'right') {
+            if (current === 0) {
+              $carousel.trigger('update', items.length - 1);
+            } else {
+              $carousel.trigger('update', current - 1);
+            }
+          } else if (direction === 'left') {
+            if (current === items.length - 1) {
+              $carousel.trigger('update', 0);
+            } else {
+              $carousel.trigger('update', current + 1);
+            }
+          }
+        }
       });
       // Устанавливаем состояние в первый слайд
       $carousel.trigger('update', 0);
