@@ -215,7 +215,7 @@
   page.addListener(function tryToStartNumbers(state) {
     let currentStep = 1;
 
-    if (state.offset.y > numbersPos - 200) {
+    if (state.offset.y > numbersPos - 800) {
       page.removeListener(tryToStartNumbers);
       let counter = setInterval(function updateNumbers() {
         $('#numbers .number').trigger('update');
@@ -341,6 +341,7 @@
     $('body').removeClass('on-load');
     $('footer').css('z-index', '-1');
     numbersPos = $('#numbers').position().top;
+    updateCarouselsArea();
   });
 
   // Инициализация owlCarousel
