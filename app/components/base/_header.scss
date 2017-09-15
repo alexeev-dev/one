@@ -39,11 +39,11 @@
 			margin-top: 25px;
 
 			@include respond-to(md) {
-				display: block; margin: 0; padding: 0;
-				position: absolute; left: 0; top: 63px; width: 100%; z-index: 9999;
+				display: block; margin: 0; padding: 0; display: none;
+				position: absolute; left: 0; top: 54px; width: 100%; z-index: 9999;
 				background: #fff; box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.08);
-				
-				@include slide_me();
+
+				&.active {display: block;}
 			}
 			
 			li {
@@ -51,8 +51,8 @@
 				@include respond-to(md) {display: block; width: calc(100% - 86px);}
 
 				a {
-					@include font-type($CormacEL, 14px, 19px, -0.5px); color: $main-color-text; letter-spacing: 0.5px;
-					display: inline-block; padding-bottom: 17px; border-bottom: 2px solid transparent;
+					@include font-type($CormacEL, 14px, 20px, -0.5px); color: $main-color-text; letter-spacing: 0.5px;
+					display: inline-block; padding-bottom: 15px; border-bottom: 2px solid transparent;
 					@include respond-to(md) {font-size: 18px; display: block; width: 100%; margin-top: 20px;}
 					
 					 &:hover {cursor: pointer;}
@@ -174,7 +174,7 @@
 // MENU-LANDING
 .header {
 	&-land {
-		padding: 20px;
+		padding: 25px;
 
 		@include respond-to(sm) {padding: 0;}
 		
@@ -244,11 +244,12 @@
 
 		//scroll landing menu
 		&.styled {
-			height: 58px;
+			
 			background: #fff; box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.08);
 
 			.logo {
-				display: inline-block; margin-top: 0;
+				display: inline-block; margin-top: -5px;
+				@include respond-to(sm) {margin-top: 0;}
 				&-white {display: none;}
 			}
 

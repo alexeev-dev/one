@@ -8,20 +8,20 @@
 
 	.owl-dots {
 		display: flex; justify-content: start;
+		@include respond-to(md) {justify-content: center;}
 	}
 
 	&.found {
-		.carousel-wrapp {
-		display: flex;
-		@include respond-to(md) {flex-direction: column;}
+	// display: flex; justify-content: space-around;
+	// @include respond-to(md) {flex-direction: column;}
 
-			.found {
-				&-info {}
+		.found {
+			&-info {
+			}
 
-				&-list-land {
-					// display: flex; flex-wrap: wrap; justify-content: flex-end;
-					// @include respond-to(md) {justify-content: center;}
-				}
+			&-list-land {
+				// display: flex; flex-wrap: wrap; justify-content: flex-end;
+				// @include respond-to(md) {justify-content: center;}
 			}
 		}
 	}
@@ -31,64 +31,62 @@
 	////////////////////////////////////////////////
 
 	&.found {
-		position: relative;
+		position: relative; margin: 80px 0;
+		background: url(../img/ones.png) no-repeat left bottom;
+	}
 
-		.carousel-wrapp {
-			background: url(../img/ones.png) no-repeat left bottom;
+	.found {
+		&-info {
+			padding-top: 20px;
 
-			.found {
-				&-info {
-					width: 40%; padding-top: 20px;
-					@include respond-to(md) {
-						text-align: center;
-						width: 100%; margin-bottom: 60px;
-					}
+			@include respond-to(md) {
+				text-align: center;
+				width: 100%; margin-bottom: 60px;
+			}
 
-					h2 {
-						margin-bottom: 50px; text-align: left;
-						@include respond-to(md) {
-							text-align: center;
-							& > br {
-								display: none;
-							}
-						}
+			h2 {
+				margin-bottom: 50px; text-align: left;
+				@include respond-to(md) {
+					text-align: center;
+					& > br {
+						display: none;
 					}
 				}
+			}
+		}
 
-				&-list-land {
-					width: 60%; position: relative;
+		&-list-land {
+			position: relative;
 
-					&:before, &:after {
-						content: '';
-						width: 50px; height:100%;
-						position: absolute; top: 0; z-index: 8;
+			// &:before, &:after {
+			// 	content: '';
+			// 	width: 50px; height:100%;
+			// 	position: absolute; top: 0; z-index: 8;
 
-					} 
-					&:before {
-						left: 0;
-						background: linear-gradient(to right, rgba(248,250,253,1) 0%,rgba(255,255,255,0) 100%); 
-					} 
-					&:after {
-						right: 0;
-						background: linear-gradient(to right, rgba(255,255,255,0) 0%,rgba(248,250,253,1) 100%); 
+			// } 
+			// &:before {
+			// 	left: 0;
+			// 	background: linear-gradient(to right, rgba(248,250,253,1) 0%,rgba(255,255,255,0) 100%); 
+			// } 
+			// &:after {
+			// 	right: 0;
+			// 	background: linear-gradient(to right, rgba(255,255,255,0) 0%,rgba(248,250,253,1) 100%); 
+			// }
+
+			.item {
+				text-align: center;
+				@include respond-to(lg) {padding: 20px;}
+
+				figure {
+					width: 140px; margin: 0 auto 40px auto;
+					border-radius: 50%;
+
+					img {
+						width: 140px; height: 140px; overflow: hidden;
 					}
-
-					.item {
-						text-align: center;
-						@include respond-to(lg) {margin: 20px;}
-
-						figure {
-							display: inline-block; width: 140px; margin-bottom: 40px;
-							border-radius: 50%;
-
-							img {
-								width: 140px; height: 140px; overflow: hidden;
-							}
-							figcaption {
-								margin-top: 25px; letter-spacing: 0.2px;
-								@include font-type($CormacEL, 14px, 1, 0.5px); font-weight: 200;
-							}
-						}
+					figcaption {
+						margin-top: 25px; letter-spacing: 0.2px;
+						@include font-type($CormacEL, 14px, 1, 0.5px); font-weight: 200;
 					}
 				}
 			}
@@ -96,7 +94,8 @@
 	}
 
 	.owl-dots {
-		margin-top: 40px; padding-left: 85px;
+		margin-top: 40px; padding-left: 60px;
+		@include respond-to(md) {padding-left: 0;}
 		.owl-dot {
 			width: 19px; height: 8px; margin: 0 5px;
 			background: #cdeaf6; border-radius: 10px; cursor: pointer;

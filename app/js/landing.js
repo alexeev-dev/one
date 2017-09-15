@@ -12,7 +12,6 @@
         damping: 0.1,
         renderByPixels: true,
         alwaysShowTracks: false,
-        overscrollEffect: 'glow',
         overscrollEffectColor: '#ffffff'
       })[0];
 
@@ -326,12 +325,15 @@
               $carousel.trigger('update', current + 1);
             }
           }
-        }
+        },
+        allowPageScroll: 'vertical'
       });
       // Устанавливаем состояние в первый слайд
       $carousel.trigger('update', 0);
     }
   });
+
+  // $('.footer').insertAfter('.scroll-content');
 
   // Инициализируем приложение после загрузки
   $(app).load((event) => {
@@ -342,6 +344,25 @@
   });
 
   // Инициализация owlCarousel
-  $('.found-list-land').owlCarousel({ items: 3 });
+  $('.found-list-land').owlCarousel({ 
+    loop: true,
+    //autoplay: true,
+    //autoplayTimeout: 3000,
+    //autoplaySpeed: 1000,
+    responsive: {
+      0: {
+        items: 1
+      },
+      480: {
+        items: 2
+      },
+      769: {
+        items: 3
+      },
+      1200: {
+        items: 4
+      }
+    }
+  });
 
 })(window);

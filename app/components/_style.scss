@@ -317,6 +317,8 @@ span.rub {font-family: $ruble !important;}
 	i {margin-bottom: 20px;}
 }
 
+.scroll-parallax {background: #4086ff;}
+
 
 /*********************************/
 /********* Application ***********/
@@ -328,6 +330,7 @@ span.rub {font-family: $ruble !important;}
 	&-land {
 		position: absolute;
 		background: transparent; box-shadow: none;
+		@include respond-to(md) {height: 80px !important; padding-top: 25px !important;}
 	}
 
 	.col-md-12 {display: flex; flex-flow: row nowrap; justify-content: space-between;}
@@ -358,7 +361,7 @@ span.rub {font-family: $ruble !important;}
 		}
 	}
 
-	.footer {/*position: fixed;*/ width: 100%; left: 0; bottom: 0;}
+	.footer {position: fixed; width: 100%; left: 0; bottom: 0;}
 }
 
 body.on-load {overflow: hidden;}

@@ -5,12 +5,12 @@
 	.carousel-wrapp {
 		display: flex;
 		@include respond-to(sm) {flex-direction: column;}
+	}
 
-		&.reviews {
-			figure {
-				display: flex;
-				@include respond-to(sm) {flex-direction: column; justify-content: center; align-items: center;}
-			}
+	&.reviews {
+		figure {
+			display: flex;
+			@include respond-to(md) {flex-direction: column; justify-content: center; align-items: center;}
 		}
 	}
 
@@ -32,7 +32,7 @@
 			}
 		}
 		section {
-			width: 60%;
+			width: 55%;
 			@include respond-to(sm) {width: 100%;}
 
 			h2 {
@@ -57,7 +57,7 @@
 				text-align: left;
 				@include respond-to(sm) {text-align: center; width: 100%; margin-bottom: 60px;}
 				img {
-					width: 55px; height: 55px; margin-top: 20px; margin-right: 20px;
+					width: 68px; height: 68px; margin-right: 20px;
 					@include respond-to(sm) {margin: 0;}
 				}
 				figcaption {
@@ -94,7 +94,7 @@
 	.carousel-wrapp {
 		figure {opacity: 0; transition: all .8s;}
 		section {
-			transform: translateX(150px);
+			//transform: translateX(150px);
 			opacity: 0;
 			transition: 0.5s ease-out;
 		}
@@ -105,29 +105,31 @@
 			}
 			section {
 				opacity: 1;
-				transform: translateX(0);
+				// transform: translateX(0);  width: 100%;
 			}
 		}
 		&.left {
 			section {
-				transform: translateX(-150px);
-				@include respond-to(sm) {
-					transform: translateX(-75px);
-				}
-				@include respond-to(xs) {
-					transform: translateX(-30px);
-				}
+				// opacity: 0;
+				// transform: translateX(-150px); width: 70%;
+				// @include respond-to(sm) {
+				// 	transform: translateX(-75px);
+				// }
+				// @include respond-to(xs) {
+				// 	transform: translateX(-30px);
+				// }
 			}
 		}
 		&.right {
 			section {
-				transform: translateX(150px);
-				@include respond-to(sm) {
-					transform: translateX(75px);
-				}
-				@include respond-to(xs) {
-					transform: translateX(30px);
-				}
+				// opacity: 0;
+				// transform: translateX(150px); width: 70%;
+				// @include respond-to(sm) {
+				// 	transform: translateX(75px);
+				// }
+				// @include respond-to(xs) {
+				// 	transform: translateX(30px);
+				// }
 			}
 		}
 	}

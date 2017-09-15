@@ -95,12 +95,12 @@
 		& > div {
 			& > section {
 				a {
-					i {transition: margin .2s, transform .2s ease;}
+					i {transition: margin .2s, opacity .2s, transform .2s ease;}
 
 					&:hover {
 						color: #4489ff;
 						i {transform: translateX(5px);}
-						i.icon-video {background: url('../img/video.png') 0 0 no-repeat; margin-left: 0;  transform: translateX(0);}
+						i.icon-video {transform: translateX(0); opacity: 0.6;}
 					}
 				}
 			}
