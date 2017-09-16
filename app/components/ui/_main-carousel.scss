@@ -24,7 +24,7 @@
 
 		figure { 
 			width: 35%; text-align: center;
-			@include respond-to(sm) {width: 100%;}
+			@include respond-to(sm) {width: 100%; margin-bottom: 30px;}
 
 			img {
 				width: 180px; height: 180px; overflow: hidden;
@@ -44,7 +44,7 @@
 
 			p {
 				font-size: 18px; line-height: 28px; letter-spacing: 0.1px;
-				@include respond-to(sm) {text-align: center;}
+				@include respond-to(sm) {text-align: center; margin: 0 20px;}
 			}
 		}
 	}
@@ -58,7 +58,7 @@
 				@include respond-to(sm) {text-align: center; width: 100%; margin-bottom: 60px;}
 				img {
 					width: 68px; height: 68px; margin-right: 20px;
-					@include respond-to(sm) {margin: 0;}
+					@include respond-to(sm) {margin: 0 0 15px 0;}
 				}
 				figcaption {
 					@include font-type($CormacEL, 34px, 43px, 0);

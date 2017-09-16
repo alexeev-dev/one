@@ -43,6 +43,7 @@
 				text-align: center;
 				width: 100%; margin-bottom: 60px;
 			}
+			@include respond-to(sm) {text-align: left;}
 
 			h2 {
 				margin-bottom: 50px; text-align: left;
@@ -52,6 +53,7 @@
 						display: none;
 					}
 				}
+				@include respond-to(sm) {text-align: left;}
 			}
 		}
 

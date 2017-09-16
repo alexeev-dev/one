@@ -52,7 +52,7 @@
 
 				a {
 					@include font-type($CormacEL, 14px, 20px, -0.5px); color: $main-color-text; letter-spacing: 0.5px;
-					display: inline-block; padding-bottom: 15px; border-bottom: 2px solid transparent;
+					display: inline-block; padding-bottom: 10px; border-bottom: 2px solid transparent;
 					@include respond-to(md) {font-size: 18px; display: block; width: 100%; margin-top: 20px;}
 					
 					 &:hover {cursor: pointer;}
@@ -271,7 +271,7 @@
 							}
 						}
 						a {
-							color: #000; letter-spacing: 0.1px; &:hover {cursor: pointer;}
+							color: #000; letter-spacing: 0.1px; padding-bottom: 15px; &:hover {cursor: pointer;}
 
 							i {
 								&.icon-header_search, &.icon-header_plus {display: inline-block;}
