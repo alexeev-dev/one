@@ -1,3 +1,9 @@
+.btn-wrapp {
+	display: flex; justify-content: center;
+	margin-top: 80px;
+	@include respond-to(sm) {flex-direction: column;}
+}
+
 // BASE BUTTON – http://prntscr.com/gg2bdo
 /*****************************************/
 /* 
@@ -13,7 +19,23 @@
 		color: #4489ff;
 		background: #fff;
 	}
+
+	.land & {
+		@include font-type($CormacEL, 20px, 20px, 0.5px); letter-spacing: -0.5px;
+		padding: 16px 30px 14px 30px; margin: 0 10px;
+		@include respond-to(sm) {margin: 10px auto; width: 60%;}
+		@include respond-to(xs) {width: 90%;}
+		i {
+			margin-right: 15px; position: relative; top: -1px;
+		}
+
+		&:hover {
+			i.icon-header_plus-white {background: url('../img/header_plus.png') 0 0 no-repeat;}
+			i.icon-header_search-white {background: url('../img/header_search.png') 0 0 no-repeat;}
+		}
+	}
 }
+
 
 // DONATION BUTTON – http://prntscr.com/gg1z7v
 /*********************************************/

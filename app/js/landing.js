@@ -283,9 +283,9 @@
   $('.carousel').each(function initCarousel(index, carousel) {
     if (index !== 0) {
       let $carousel = $(carousel),
-        items = $carousel.find('.carousel-wrapp'),
+        items = $carousel.find('.carousel-item'),
         nav = $carousel.find('.navigation'),
-        baseClass = 'carousel-wrapp ',
+        baseClass = 'carousel-item ',
         points;
       // Создаём точки для каждого слайда
       items.each((index) => {
@@ -336,7 +336,7 @@
   // $('.footer').insertAfter('.scroll-content');
 
   // Инициализируем приложение после загрузки
-  $(app).load((event) => {
+  $(app).load((event) => { 
     $('.preloader').fadeOut();
     $('body').removeClass('on-load');
     $('footer').css('z-index', '-1');
@@ -345,7 +345,7 @@
   });
 
   // Инициализация owlCarousel
-  $('.found-list-land').owlCarousel({ 
+  $('.owl-carousel').owlCarousel({ 
     loop: true,
     //autoplay: true,
     //autoplayTimeout: 3000,

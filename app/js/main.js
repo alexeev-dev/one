@@ -455,8 +455,13 @@ let app = (function ($) {
       initComponents(this.components);
       bindEvents(this, this.events, this.actions);
     }
-  });
+  });// Инициализируем приложение после загрузки
 
 })(jQuery);
 
 $(() => { app.run(); });
+$(window).load(function() {
+  $('.preloader').fadeOut();
+  $('body').removeClass('on-load');
+});
+
