@@ -3,12 +3,14 @@
 (function (app) {
   var parallaxItems = $('.scroll-parallax-inner'),
       parallaxArea = $('.parallax-area'),
-      footerArea = $('.footer-rasporka'),
-      slides = $('.slide'),
+
+  // footerArea = $('.footer-rasporka'),
+  slides = $('.slide'),
       iteration = 0,
       intervalId = void 0,
-      numbersPos = 0,
-      isFading = true,
+
+  // numbersPos = 0,
+  isFading = true,
       page = Scrollbar.initAll({
     speed: 0.42,
     damping: 0.1,
@@ -45,9 +47,9 @@
    * с размером футера
    */
 
-  function updateFooterArea(height) {
-    footerArea.height(height);
-  }
+  // function updateFooterArea(height) {
+  //   footerArea.height(height);
+  // }
 
   /**
    * Обновляет пространство для слайдов каруселей
@@ -170,10 +172,10 @@
   $(window).resize(function (event) {
     var baseHeight = $(app).height(),
         footerHeight = $('.footer').outerHeight();
-    numbersPos = $('#numbers').position().top;
+    // numbersPos = $('#numbers').position().top;
     updateSlidesHeight(baseHeight);
     updateParallaxArea(baseHeight);
-    updateFooterArea(footerHeight - 2);
+    // updateFooterArea(footerHeight - 2);
     updateCarouselsArea();
   });
 
@@ -202,29 +204,29 @@
   });
 
   // Инициализируем счетчик цифр
-  $('#numbers .number').each(function (index, number) {
-    var $number = $(number),
-        max = parseInt($number.text()),
-        step = max / 20.0,
-        current = 0;
-    $number.text('0').on('update', function updateNumber() {
-      $number.text(Math.round(current += step));
-    });
-  });
+  // $('#numbers .number').each((index, number) => {
+  //   let $number = $(number),
+  //       max = parseInt($number.text()),
+  //       step = max / 20.0,
+  //       current = 0;
+  //   $number.text('0').on('update', function updateNumber() {
+  //     $number.text(Math.round(current += step));
+  //   });
+  // });
   // Запускаем счетчик цифр сразу как до него доскролили
-  page.addListener(function tryToStartNumbers(state) {
-    var currentStep = 1;
+  // page.addListener(function tryToStartNumbers(state) {
+  //   let currentStep = 1;
 
-    if (state.offset.y > numbersPos - 800) {
-      page.removeListener(tryToStartNumbers);
-      var counter = setInterval(function updateNumbers() {
-        $('#numbers .number').trigger('update');
-        if (++currentStep > 20) {
-          clearInterval(counter);
-        }
-      }, 50);
-    }
-  });
+  //   if (state.offset.y > numbersPos - 800) {
+  //     page.removeListener(tryToStartNumbers);
+  //     let counter = setInterval(function updateNumbers() {
+  //       $('#numbers .number').trigger('update');
+  //       if (++currentStep > 20) {
+  //         clearInterval(counter);
+  //       }
+  //     }, 50);
+  //   }
+  // });
 
   // Начальное состояние скролл-слайдов
   parallaxItems.each(function initSlide(index, slide) {
@@ -332,7 +334,7 @@
     $('.preloader').fadeOut();
     $('body').removeClass('on-load');
     $('footer').css('z-index', '-1');
-    numbersPos = $('#numbers').position().top;
+    // numbersPos = $('#numbers').position().top;
     updateCarouselsArea();
   });
 
