@@ -1,7 +1,18 @@
 //INTRO LANDING - http://prntscr.com/gi7mni
 .intro {
 	height: auto; width: 100%; max-width: 1920px; padding: 22% 0 15% 0; margin: 0 auto; position: relative;
-	background: url(../img/girl-head.png) no-repeat right center #4489ff; background-size: contain;
+	background-size: contain;
+	&.one-bg {background: url(../img/girl-head.png) no-repeat right center #4489ff;}
+	&.two-bg {background: url(../img/mixer-head.png) no-repeat center center #4489ff;}
+
+	h1 {
+		@include font-type($CormacEL, 44px, 56px, 0.5px); color: #fff; margin-left: 15%;
+		@include respond-to(sm) {font-size: 30px; line-height: 42px; margin-left: 40px;} 
+		span {
+			display: block; margin-top: 70px;
+			@include respond-to(sm) {margin-top: 40px;} 
+		}
+	}
 
 	figure {
 		text-align: center;
@@ -23,7 +34,7 @@
 	}
 
 	a.down {
-		display: block; position: absolute; left: 50%; margin-left: -9px; bottom: 35px; width: 18px; height: 11px;
+		display: block; position: absolute; left: 50%; margin-left: -15px; bottom: 35px; width: 18px; height: 11px;
 		@include respond-to(xs) {bottom: 15px;}
 	}
 }

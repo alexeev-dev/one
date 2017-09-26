@@ -195,13 +195,17 @@
 					&.active {background: #4489ff;}
 
 					li {
+						margin-left: 20px;
 						a {
-							color: #fff; font-size: 18px;
+							color: #fff; font-size: 18px; line-height: 1;
+							padding: 5px 15px 11px 15px;
+							border: 2px solid transparent; border-radius: 50px;
+							transition: .5s ease-in-out; 
 							&:hover {border-color: #fff;}
 						}
 
 						&.active {
-							a {border-color: #fff;}
+							a {color: $link-color; background: #fff;}
 						}
 					}
 				}
@@ -214,20 +218,12 @@
 			margin-top: 0;
 			& > ul {
 				margin-top: 0;
-
-				li {
-					a {
-						i {
-							&.icon-header_search, &.icon-header_plus {display: none;}
-						}
-					}
-				}
 			}
 		}
 
 		//scroll landing menu
 		&.styled {
-			height: 58px;
+			height: 75px;
 			background: #fff; box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.08);
 
 			.logo {
@@ -246,17 +242,13 @@
 					&.active {background: #fff;}
 					
 					li {
-						&.active, &:hover {
-							a {border-bottom-color: #4489ff;}
+						&.active {
+							a {color: #fff; background: $link-color;}
 						}
-						a {
-							color: #000;
-
-							i {
-								&.icon-header_search, &.icon-header_plus {display: inline-block;}
-								&.icon-header_search-white, &.icon-header_plus-white {display: none;}
-							}
+						&:hover {
+							a {border-color: #4489ff;}
 						}
+						a {color: $link-color;}
 					}
 				}
 			}
