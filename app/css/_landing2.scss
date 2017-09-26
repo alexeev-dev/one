@@ -151,6 +151,7 @@
 //ABOUT LANDING STYLE 2 -- http://prntscr.com/gpjay0
 .about {
 	&.style2 {
+		text-align: center;
 		.btn-wrapp {
 			margin-bottom: 60px;
 			a {
@@ -166,8 +167,9 @@
 		}
 
 		.social {
+			display: flex; justify-content: center;
 			li {
-				display: table;
+				display: table; margin: 0 15px;
 				@include respond-to(xs) {margin: 0 10px;}
 
 				a {

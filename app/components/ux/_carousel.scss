@@ -115,7 +115,7 @@
 					@include respond-to(sm) {br {display: none;}}
 
 					span {
-						@include font-type($HelveticaR, 12px, 18px, 0.5px);
+						@include font-type($CormacEL, 16px, 24px, 0.5px); color: #4b5769;
 						display: block; margin-top: 20px;
 					}
 				}
@@ -123,7 +123,7 @@
 
 			section {
 				p {
-					font-size: 18px; line-height: 28px; letter-spacing: 0.1px;
+					font-size: 16px; line-height: 28px; letter-spacing: 0.1px; color: #4b5769;
 					@include respond-to(sm) {text-align: center; margin: 0 20px;}
 				}
 			}

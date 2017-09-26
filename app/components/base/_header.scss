@@ -200,7 +200,6 @@
 					li {
 						margin-left: 20px;
 						a {
-<<<<<<< HEAD
 							color: #fff; font-size: 18px; line-height: 1;
 							padding: 5px 15px 11px 15px;
 							border: 2px solid transparent; border-radius: 50px;
@@ -210,7 +209,6 @@
 
 						&.active {
 							a {color: $link-color; background: #fff;}
-=======
 							color: #ffffff; font-size: 18px; &:hover {cursor: pointer;}
 						}
 
@@ -219,7 +217,6 @@
 								border-color: #ffffff;
 								&:hover {cursor: default; border-color: #ffffff;}
 							}
->>>>>>> ca696e15bc894b8f759dc19b13fce6969039c0e8
 						}
 					}
 				}
@@ -232,8 +229,6 @@
 			margin-top: 0;
 			& > ul {
 				margin-top: 0;
-<<<<<<< HEAD
-=======
 
 				li {
 					a {
@@ -254,17 +249,12 @@
 						}
 					}
 				}
->>>>>>> ca696e15bc894b8f759dc19b13fce6969039c0e8
 			}
 		}
 
 		//scroll landing menu
 		&.styled {
-<<<<<<< HEAD
 			height: 75px;
-=======
-			
->>>>>>> ca696e15bc894b8f759dc19b13fce6969039c0e8
 			background: #fff; box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.08);
 
 			.logo {
@@ -285,12 +275,11 @@
 					
 					li {
 						&.active {
-<<<<<<< HEAD
 							a {color: #fff; background: $link-color;}
 						}
 						&:hover {
 							a {border-color: #4489ff;}
-=======
+
 							a {
 								border-bottom-color: #4489ff;
 								&:hover {cursor: default;}
@@ -313,7 +302,6 @@
 							}
 							&:after {left: 50%; right: 50%;}
 							&:hover:after {left: 0; right: 0;}
->>>>>>> ca696e15bc894b8f759dc19b13fce6969039c0e8
 						}
 						a {color: $link-color;}
 					}

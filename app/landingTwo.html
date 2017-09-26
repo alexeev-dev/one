@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	//= components/base/head.html
-<body>
+<body class="on-load">
 	//= components/base/counter.html
 
 	<!-- Application -->
@@ -15,9 +15,7 @@
 				<h1>Превратите<br> 
 				вещи в помощь <br>
 				другим людям <br>
-				<span>Легко</span>
-
-				</h1>
+				<span>Легко</span></h1>
 				
 				<a href="#" class="down" style="z-index:1">
 					<i class="icon icon-down"></i>
@@ -34,17 +32,60 @@
 				<div class="container">
 					<div class="row">
 						<div class="col-md-12">
-							//= components/ui/working.html
+
+							<section class="working">
+								<h2>Как это работает</h2>
+								<div class="working-wrapp">
+									<div class="dotted-line"></div>
+
+									<div class="placement">
+										<section>
+											<h4>Вы размещаете<br>
+											вещи на сайте</h4>
+											<a href="#">Разместь объявление <i class="icon icon-arrow-r"></i></a>
+										</section>
+										<figure>
+											<img src="assets/img/boy.png" alt="">
+										</figure>
+
+									</div>
+
+									<div class="purchase">
+										<figure>
+											<img src="assets/img/girl.png" alt="">
+										</figure>
+
+										<section>
+											<h4>Люди, которым нужны <br>
+											эти вещи, их покупают</h4>
+											<a href="#">Я как раз ищу кое-что <i class="icon icon-arrow-r"></i></a>
+										</section>
+									</div>
+
+									<div class="payment">
+										<section>
+											<h4>А оплата идёт на <br>
+											благотворительность</h4>
+											<a href="https://www.youtube.com/watch?v=Rk6_hdRtJOE" data-lity>Посмотреть видео <i class="icon icon-video"></i></a>
+										</section>
+
+										<figure>
+											<img src="assets/img/people.png" alt="">
+										</figure>
+									</div>
+								</div><!--/working-wrapp-->
+							</section>
+
 						</div>
 					</div>
 				</div>
 			</section>
 
-			<section class="wr">
+			<section class="wr ptb_80">
 				<div class="container">
 					<div class="row">
 						<div class="col-md-12">
-							//= components/ui/carousel-found.html
+							//= components/ux/carousel-found.html
 						</div>
 					</div>
 				</div>
@@ -59,8 +100,6 @@
 								<h2>Что можно купить, или продать? </h2>
 
 								//= components/base/menu-general-style2.html
-
-								
 
 							</section>
 
@@ -167,9 +206,6 @@
 									</div>
 									
 								</div>
-								
-								
-
 						</div>
 					</div>
 				</div>
@@ -179,28 +215,7 @@
 				<div class="container">
 					<div class="row">
 						<div class="col-md-12">
-
-							<section class="carousel main-carousel">
-								<div class="carousel-wrapp">
-									<figure>
-										<img src="assets/img/participant-1.png" alt="">
-									</figure>
-
-									<section>
-										<h2>22 000 ₽ Семье Касаткиных</h2>
-										<p>Фонд «Благодарность» оказал благотворительную помощь в виде продуктов питания (макаронные изделия, крупы, яйца, фрукты, конфеты, печенье и др.) на общую сумму: 22 000 рублей, детям из неполной многодетной семьи Косаткиных, проживающей по адресу: Воронежская область, Таловский район, посёлок Солонцовка, улица Набережная, дом 2.</p>
-									</section>
-								</div>
-
-
-								<ul class="navigation">
-									<li class="active"></li>
-									<li></li>
-									<li></li>
-									<li></li>
-								</ul>
-							</section>
-
+							//= components/ux/carousel-testimonials_2.html
 						</div>
 					</div>
 				</div>
@@ -210,28 +225,7 @@
 				<div class="container">
 					<div class="row">
 						<div class="col-md-12">
-
-							<section class="carousel main-carousel">
-								<div class="carousel-wrapp reviews">
-									<figure>
-										<img src="assets/img/participant-2.png" alt="">
-										<figcaption>Любовь <br> Маяковская <span>Администратор фонда “Дар”</span>	</figcaption>
-									</figure>
-
-									<section>
-										<p><i class="icon icon-quotes-left"></i><i class="icon icon-quotes-right"></i>Спасибо всем, кто помогает нашим детям! Деньги на их лечение собраны, и все необходимое оплачено или куплено. Без Вашей поддержки мы не смогли бы оплатить поиск и активацию донора костного мозга, лечение за рубежом, покупку дорогих лекарств и операций. Спасибо!</p>
-									</section>
-								</div>
-
-
-								<ul class="navigation">
-									<li class="active"></li>
-									<li></li>
-									<li></li>
-									<li></li>
-								</ul>
-							</section>
-
+							//= components/ux/carousel-testimonials_1.html
 						</div>
 					</div>
 				</div>
@@ -295,7 +289,6 @@
 				</div>
 			</section>
 
-
 			<section class="wr bg_white">
 				<section class="about style2">
 
@@ -319,11 +312,47 @@
 				</section>
 
 			</section>
+
+			<section id="numbers" class="wr bg_blue">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-12">
+							<ul class="advance">
+								<li>
+									<h5><span class="number">4</span> млн</h5>
+									<p>Рублей собрано сервисом <br>
+									на благотворительность</p>
+								</li>
+
+								<li>
+									<h5><span class="number">800</span></h5>
+									<p>Человек получили <br>
+									помощь</p>
+								</li>
+
+								<li>
+									<h5><span class="number">30</span></h5>
+									<p>Программ различных <br>
+									фондов реализовано</p>
+								</li>
+
+								<li>
+									<h5><span class="number">22</span> тыс</h5>
+									<p>Вещей продано <br>
+									через сервис</p>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<div class="footer-rasporka" style="background: #3f86ff;"></div>
 			//= components/base/partners-style-2.html
 			//= components/base/footer-style-2.html
+			
 		</div>
 		<!-- LANDING CONTENT -->
-
 	</div>
 
 	<!-- Scripts -->
