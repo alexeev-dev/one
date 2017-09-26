@@ -39,11 +39,11 @@
 			margin-top: 25px;
 
 			@include respond-to(md) {
-				display: block; margin: 0; padding: 0;
-				position: absolute; left: 0; top: 63px; width: 100%; z-index: 9999;
+				display: block; margin: 0; padding: 0; display: none;
+				position: absolute; left: 0; top: 54px; width: 100%; z-index: 9999;
 				background: #fff; box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.08);
-				
-				@include slide_me();
+
+				&.active {display: block;}
 			}
 			
 			li {
@@ -51,16 +51,16 @@
 				@include respond-to(md) {display: block; width: calc(100% - 86px);}
 
 				a {
-					@include font-type($CormacEL, 14px, 19px, -0.5px); color: $main-color-text;
-					display: inline-block; padding-bottom: 17px; border-bottom: 2px solid transparent;
+					@include font-type($CormacEL, 14px, 20px, -0.5px); color: $main-color-text; letter-spacing: 0.5px;
+					display: inline-block; padding-bottom: 10px; border-bottom: 2px solid transparent;
 					@include respond-to(md) {font-size: 18px; display: block; width: 100%; margin-top: 20px;}
-
-					&:hover {border-bottom-color: #4489ff;}
-
+					
+					 &:hover {cursor: pointer;}
+					 
 					i {margin-right: 5px;}
 				}
 
-				&.active {a {border-bottom-color: #4489ff;}}
+				&.active {a {border-bottom: 2px solid #4489ff; &:hover {cursor: pointer;}}}
 			}
 		}
 	}
@@ -70,15 +70,18 @@
 
 		&:after {
 			content: '';
-			position: absolute; bottom:0; left:50%; margin-left: -5000px; width: 10000px; height: 1px;
+			position: absolute; bottom:0; left:50%; height: 1px; width: 100%; transform: translateX(-50%);
 			background: #d9e4ea;
 			@include respond-to(md) {display: none;}
 		}
 
 		& > a {
-			@include font-type($CormacEL, 22px, 24px, -0.5px); color: #000;
+			@include font-type($CormacEL, 22px, 24px, -0.5px); color: #000; letter-spacing: 0.5px;
 			display: none; width: 100%; padding: 20px 10px;
 			border-bottom: 1px solid #d9e4ea;
+
+			&:hover {cursor: pointer;}
+
 			@include respond-to(md) {display: flex;}
 
 			i {
@@ -103,14 +106,14 @@
 				a {
 					@include font-type($CormacEL, 14px, 19px, -0.5px); color: #4a4a4a;
 					display: block; padding-bottom: 15px;
-					border-bottom: 2px solid transparent;
+					border-bottom: 2px solid transparent; transition: all .2s;
+
+					&:hover {border-bottom: 2px solid #4489ff; cursor: pointer;}
 
 					@include respond-to(md) {font-size: 18px; padding: 20px 10px; border-bottom: 1px solid #d9e4ea;}
 
-					&:hover {border-bottom-color: #4489ff;}
-
 					span {
-						display: inline-block;
+						display: inline-block; letter-spacing: 0.4px;
 						&.icon-buy-wrapp {
 							display: block; height: 35px; margin: 0 auto 13px auto;
 							@include respond-to(md) {display: none;}
@@ -118,7 +121,7 @@
 					}
 				}
 
-				&.active {a {border-bottom-color: #4489ff;}}
+				&.active {a {border-bottom-color: #4489ff; &:hover {cursor: default;}}}
 			}
 		}
 	}
@@ -171,7 +174,7 @@
 // MENU-LANDING
 .header {
 	&-land {
-		padding: 20px;
+		padding: 25px;
 
 		@include respond-to(sm) {padding: 0;}
 		
@@ -188,7 +191,7 @@
 			////////////////////////////////////////////////////////////////////////////////////////////////////////////
 			&-top {
 				a.burger {
-					span {background: #fff;}
+					span {background: #ffffff;}
 				}
 
 				ul {
@@ -197,6 +200,7 @@
 					li {
 						margin-left: 20px;
 						a {
+<<<<<<< HEAD
 							color: #fff; font-size: 18px; line-height: 1;
 							padding: 5px 15px 11px 15px;
 							border: 2px solid transparent; border-radius: 50px;
@@ -206,6 +210,16 @@
 
 						&.active {
 							a {color: $link-color; background: #fff;}
+=======
+							color: #ffffff; font-size: 18px; &:hover {cursor: pointer;}
+						}
+
+						&.active {
+							a {
+								border-color: #ffffff;
+								&:hover {cursor: default; border-color: #ffffff;}
+							}
+>>>>>>> ca696e15bc894b8f759dc19b13fce6969039c0e8
 						}
 					}
 				}
@@ -218,16 +232,44 @@
 			margin-top: 0;
 			& > ul {
 				margin-top: 0;
+<<<<<<< HEAD
+=======
+
+				li {
+					a {
+						position: relative; display: inline-block; &:hover {cursor: pointer;}
+
+						&:after {
+							content: '';
+							position: absolute;
+							border-bottom: 2px solid #ffffff;
+							top: 100%;
+							transition: all 0.4s;
+						}
+						&:after {left: 50%; right: 50%;}
+						&:hover:after {left: 0; right: 0;}
+
+						i {
+							&.icon-header_search, &.icon-header_plus {display: none;}
+						}
+					}
+				}
+>>>>>>> ca696e15bc894b8f759dc19b13fce6969039c0e8
 			}
 		}
 
 		//scroll landing menu
 		&.styled {
+<<<<<<< HEAD
 			height: 75px;
+=======
+			
+>>>>>>> ca696e15bc894b8f759dc19b13fce6969039c0e8
 			background: #fff; box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.08);
 
 			.logo {
-				display: inline-block; margin-top: 0;
+				display: inline-block; margin-top: -5px;
+				@include respond-to(sm) {margin-top: 0;}
 				&-white {display: none;}
 			}
 
@@ -243,10 +285,35 @@
 					
 					li {
 						&.active {
+<<<<<<< HEAD
 							a {color: #fff; background: $link-color;}
 						}
 						&:hover {
 							a {border-color: #4489ff;}
+=======
+							a {
+								border-bottom-color: #4489ff;
+								&:hover {cursor: default;}
+							}
+						}
+						a {
+							color: #000; letter-spacing: 0.1px; padding-bottom: 15px; &:hover {cursor: pointer;}
+
+							i {
+								&.icon-header_search, &.icon-header_plus {display: inline-block;}
+								&.icon-header_search-white, &.icon-header_plus-white {display: none;}
+							}
+
+							&:after {
+								content: '';
+								position: absolute;
+								border-bottom: 2px solid #4489ff;
+								top: 100%;
+								transition: all 0.4s;
+							}
+							&:after {left: 50%; right: 50%;}
+							&:hover:after {left: 0; right: 0;}
+>>>>>>> ca696e15bc894b8f759dc19b13fce6969039c0e8
 						}
 						a {color: $link-color;}
 					}

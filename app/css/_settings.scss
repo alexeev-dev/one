@@ -72,7 +72,7 @@
 
 // settings
 body {
-	&.onload {overflow:hidden;}
+	&.on-load {overflow:hidden;}
 
 	* {
 		-webkit-font-smoothing: antialiased;
@@ -91,6 +91,7 @@ a {
 	&:focus,
 	&:active {
 		text-decoration: none;
+		cursor: pointer;
 	}
 }
 

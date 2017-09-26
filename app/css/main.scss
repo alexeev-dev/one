@@ -6,6 +6,7 @@
 @import 'landing';
 
 @import '../components/style';
+@import '../components/landing';
 @import '../components/animation';
 
 @import '../components/base/header';
@@ -15,29 +16,18 @@
 @import '../components/base/footer';
 @import '../components/base/intro';
 @import '../components/base/slide';
+@import '../components/base/share';
+@import '../components/base/new_post';
 
 @import '../components/ux/buttons';
 @import '../components/ux/select';
 @import '../components/ux/tabs';
 @import '../components/ux/parallax';
+@import '../components/ux/carousel';
 
 @import '../components/ui/list';
-@import '../components/ui/new_post';
-@import '../components/ui/profile';
-@import '../components/ui/fonud-gift';
-@import '../components/ui/user-buy';
-@import '../components/ui/found-desc';
-@import '../components/ui/bookmarks';
-@import '../components/ui/user-testimonial';
-@import '../components/ui/found-project';
-@import '../components/ui/found-report';
-@import '../components/ui/working';
-@import '../components/ui/carousel-found';
-@import '../components/ui/main-carousel';
-@import '../components/ui/advance';
-@import '../components/ui/about';
-@import '../components/ui/found-main-filter';
-@import '../components/ui/found-list';
+@import '../components/ui/user';
+@import '../components/ui/found';
 
 @import '../components/popup/popup';
 

@@ -197,6 +197,9 @@ let app = (function ($) {
               loop: false,
               margin: 10,
               nav: false,
+              dotClass: 'owl-dot',
+              dotsClass: 'navigation',
+              dots: true,
               responsive:{
                 0: {
                   items:1
@@ -208,7 +211,7 @@ let app = (function ($) {
                   items:3
                 },
                 992:{
-                  items:4
+                  items:3
                 }
               }
             });
@@ -452,8 +455,13 @@ let app = (function ($) {
       initComponents(this.components);
       bindEvents(this, this.events, this.actions);
     }
-  });
+  });// Инициализируем приложение после загрузки
 
 })(jQuery);
 
 $(() => { app.run(); });
+$(window).load(function() {
+  $('.preloader').fadeOut();
+  $('body').removeClass('on-load');
+});
+

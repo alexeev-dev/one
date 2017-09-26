@@ -30,7 +30,7 @@
 	////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	////////////////////////////////////////////////////////////////////////////////////////////////////////////
-	padding-top: 40px;
+	padding-top: 40px; border-top: 1px solid #f3f6f8;
 
 	h4 {
 		text-align: center; font-size: 14px; text-transform: uppercase; color: #4a4a4a;
@@ -47,7 +47,7 @@
 				ul {
 					
 					li {
-						width: 12.285714%; margin: 10px 15px;
+						width: 14%; padding: 10px 15px;
 						@include respond-to(md) {text-align: center; width: 25%;}
 						@include respond-to(xs) {width: 100%; text-align: center;}
 
@@ -56,6 +56,7 @@
 				}
 			}
 			&:last-child {
+				width: 33%;
 				@include respond-to(md) {width: 100%; margin-top: 40px;}
 
 				ul {
@@ -69,7 +70,7 @@
 						}
 
 						img {
-							max-width: 100%;
+							max-width: 150px;
 							@include respond-to(mobile) {max-width: 70%;}
 						}
 					}
@@ -82,4 +83,11 @@
 			}
 		}
 	}
+
+	////////
+	& > ul {
+		li a img {transition: all .4s; filter: grayscale(100); opacity: 0.4;}
+		li a:hover img {filter: grayscale(0%); opacity: 1;}
+	}
+
 }
