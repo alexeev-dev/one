@@ -11,7 +11,7 @@
 
 		h1, h2 {
 			@include font-type($CormacEL, 44px !important, 54px, -0.4px); color: #fff; text-align: left !important;
-			@include respond-to(xs) {font-size: 22px !important; line-height: 34px;}
+			@include respond-to(sm) {font-size: 32px !important; line-height: 38px;}
 		}
 		h1 {
 			margin-bottom: 40px;
@@ -38,22 +38,22 @@
 			@include respond-to(xs) {font-size: 14px; line-height: 18px; margin-top: 5px;}
 		}
 	}
+}
 
-	a.down {
-		display: block; position: absolute; left: 50%; margin-left: -15px; bottom: 35px; width: 18px; height: 11px; z-index: 8;
-		@include respond-to(xs) {bottom: 15px;}
-		////////////////////////////////////////////////
-		////////////////////////////////////////////////
-		////////////////////////////////////////////////
+a.down {
+	display: block; position: absolute; left: 50%; margin-left: -15px; bottom: 35px; width: 18px; height: 11px; z-index: 8;
+	@include respond-to(xs) {bottom: 15px;}
+	////////////////////////////////////////////////
+	////////////////////////////////////////////////
+	////////////////////////////////////////////////
 
-		@keyframes toggleSlide {
-			0%   {transform: translateY(-3px);}
-			25% {transform: translateY(0);}
-			50% {transform: translateY(3px);}
-			100% {transform: translateY(-3px);}
-		}
-		animation: toggleSlide .4s ease-out infinite;
-		&:hover {transform: translateY(3px) scale(1.1); animation-play-state: paused;}
+	@keyframes toggleSlide {
+		0%   {transform: translateY(-3px);}
+		25% {transform: translateY(0);}
+		50% {transform: translateY(3px);}
+		100% {transform: translateY(-3px);}
 	}
+	animation: toggleSlide .4s ease-out infinite;
+	&:hover {transform: translateY(3px) scale(1.1); animation-play-state: paused;}
 }
 		
