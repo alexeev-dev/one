@@ -10682,7 +10682,6 @@ span.rub {
     text-align: center;
     margin-bottom: 65px; }
   .app.land .footer {
-    position: fixed;
     width: 100%;
     left: 0;
     bottom: 0; }
@@ -14165,7 +14164,8 @@ span.rub {
         text-align: left; } }
   .found-info a {
     font-family: "Cormac-ExtraLight", sans-serif;
-    font-size: 16px; }
+    font-size: 16px;
+    letter-spacing: 0.1px; }
     .found-info a i {
       -webkit-transition: -webkit-transform .2s ease;
       transition: -webkit-transform .2s ease;
@@ -14302,7 +14302,7 @@ span.rub {
       font-family: "Cormac-ExtraLight", sans-serif;
       font-size: 14px;
       line-height: 1;
-      letter-spacing: 0.5px;
+      letter-spacing: 0.4px;
       font-weight: 200; }
 
 .carousel-testimonials_1 .carousel-wrap, .carousel-testimonials_2 .carousel-wrap {
@@ -14333,12 +14333,15 @@ span.rub {
       margin-top: 20px; }
   .carousel-testimonials_1 .carousel-item section, .carousel-testimonials_2 .carousel-item section {
     width: 55%; }
+    @media (max-width: 767px) {
+      .carousel-testimonials_1 .carousel-item section, .carousel-testimonials_2 .carousel-item section {
+        width: 100%; } }
     .carousel-testimonials_1 .carousel-item section p, .carousel-testimonials_2 .carousel-item section p {
       font-size: 16px;
       line-height: 28px;
       letter-spacing: 1px;
       color: #4b5769;
-      font-family: "HelveticaNeueThin"; }
+      font-family: "HelveticaLight", sans-serif; }
       @media (max-width: 767px) {
         .carousel-testimonials_1 .carousel-item section p, .carousel-testimonials_2 .carousel-item section p {
           text-align: center;
@@ -14346,6 +14349,24 @@ span.rub {
 
 .carousel-testimonials_1 .carousel-wrap {
   min-height: 160px; }
+  @media (max-width: 991px) {
+    .carousel-testimonials_1 .carousel-wrap {
+      height: 250px; } }
+  @media (max-width: 767px) {
+    .carousel-testimonials_1 .carousel-wrap {
+      height: 380px; } }
+  @media (max-width: 620px) {
+    .carousel-testimonials_1 .carousel-wrap {
+      height: 420px; } }
+  @media (max-width: 540px) {
+    .carousel-testimonials_1 .carousel-wrap {
+      height: 450px; } }
+  @media (max-width: 480px) {
+    .carousel-testimonials_1 .carousel-wrap {
+      height: 500px; } }
+  @media (max-width: 430px) {
+    .carousel-testimonials_1 .carousel-wrap {
+      height: 545px; } }
 
 .carousel-testimonials_1 .carousel-item figure {
   text-align: left; }
@@ -14380,6 +14401,30 @@ span.rub {
 
 .carousel-testimonials_2 .carousel-wrap {
   min-height: 200px; }
+  @media (max-width: 1199px) {
+    .carousel-testimonials_2 .carousel-wrap {
+      height: 250px; } }
+  @media (max-width: 991px) {
+    .carousel-testimonials_2 .carousel-wrap {
+      height: 360px; } }
+  @media (max-width: 767px) {
+    .carousel-testimonials_2 .carousel-wrap {
+      height: 450px; } }
+  @media (max-width: 530px) {
+    .carousel-testimonials_2 .carousel-wrap {
+      height: 500px; } }
+  @media (max-width: 480px) {
+    .carousel-testimonials_2 .carousel-wrap {
+      height: 550px; } }
+  @media (max-width: 430px) {
+    .carousel-testimonials_2 .carousel-wrap {
+      height: 600px; } }
+  @media (max-width: 390px) {
+    .carousel-testimonials_2 .carousel-wrap {
+      height: 650px; } }
+  @media (max-width: 330px) {
+    .carousel-testimonials_2 .carousel-wrap {
+      height: 690px; } }
 
 .carousel-testimonials_2 .carousel-item figure {
   text-align: center;

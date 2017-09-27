@@ -18,7 +18,7 @@
 		}
 
 		a {
-			font-family: $CormacEL; font-size: 16px;
+			font-family: $CormacEL; font-size: 16px; letter-spacing: 0.1px;
 			i {transition: transform .2s ease;}
 			&:hover {color: #4489ff;
 				i {position: relative; transform: translateX(5px);}
@@ -99,7 +99,7 @@
 				}
 				figcaption {
 					margin-top: 25px; letter-spacing: 0.2px;
-					@include font-type($CormacEL, 14px, 1, 0.5px); font-weight: 200;
+					@include font-type($CormacEL, 14px, 1, 0.4px); font-weight: 200;
 				}
 			}
 		}
@@ -126,8 +126,9 @@
 
 			section {
 				width: 55%;
+				@include respond-to(sm) {width: 100%;}
 				p {
-					font-size: 16px; line-height: 28px; letter-spacing: 1px; color: #4b5769; font-family: $HelveticaNeue;
+					font-size: 16px; line-height: 28px; letter-spacing: 1px; color: #4b5769; font-family: $HelveticaL;;
 					@include respond-to(sm) {text-align: center; margin: 0 20px;}
 				}
 			}
@@ -135,7 +136,15 @@
 	}
 
 	&-testimonials_1 {
-		.carousel-wrap {min-height: 160px;}
+		.carousel-wrap {
+			min-height: 160px;
+			@include respond-to(md) {height: 250px;}
+			@include respond-to(sm) {height: 380px;}
+			@media (max-width: 620px) {height: 420px;}
+			@media (max-width: 540px) {height: 450px;}
+			@include respond-to(xs) {height: 500px;}
+			@media (max-width: 430px) {height: 545px;}
+		}
 		.carousel-item {
 			figure {
 				text-align: left;
@@ -163,7 +172,17 @@
 	}
 
 	&-testimonials_2 {
-		.carousel-wrap {min-height: 200px;}
+		.carousel-wrap {
+			min-height: 200px;
+			@include respond-to(lg) {height: 250px;}
+			@include respond-to(md) {height: 360px;}
+			@include respond-to(sm) {height: 450px;} 
+			@media (max-width: 530px) {height: 500px;}
+			@include respond-to(xs) {height: 550px;}
+			@media (max-width: 430px) {height: 600px;}
+			@media (max-width: 390px) {height: 650px;}
+			@media (max-width: 330px) {height: 690px;}
+		}
 		.carousel-item {
 			figure { 
 				text-align: center; width: 35%;
