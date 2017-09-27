@@ -9695,6 +9695,9 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
 .lity-hide {
   display: none; }
 
+.land h1, .land h2, .land h3, .land h4, .land h5, .land h6 {
+  letter-spacing: -0.2px; }
+
 .menu-general.style2:after {
   display: none; }
 
@@ -9750,8 +9753,7 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
     text-align: center;
     width: 32%;
     padding: 20px 30px;
-    background: #fff;
-    cursor: pointer; }
+    background: #fff; }
     @media (max-width: 991px) {
       .ads-item {
         width: 100%;
@@ -9760,12 +9762,13 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
       -webkit-box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.08);
       box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.08); }
     .ads-item section img, .ads-item section h4, .ads-item section p {
-      margin-bottom: 20px; }
+      margin-bottom: 20px;
+      letter-spacing: 0; }
     .ads-item section p {
       font-family: "Cormac-ExtraLight", sans-serif;
       font-size: 16px;
       line-height: 24px;
-      letter-spacing: 0.5px;
+      letter-spacing: 0.4px;
       color: #4b5769; }
 
 .doings-wr {
@@ -9828,12 +9831,13 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
     .doings-item section h4 {
       font-size: 22px;
       line-height: 34px;
+      letter-spacing: 0.1px;
       margin-bottom: 25px; }
     .doings-item section p {
       font-family: "HelveticaLight", sans-serif;
       font-size: 16px;
       line-height: 24px;
-      letter-spacing: 0.5px;
+      letter-spacing: 0.6px;
       color: #4b5769;
       margin-bottom: 25px; }
     .doings-item section span {
@@ -9887,6 +9891,8 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
         border-style: solid;
         border-width: 15px 15px 0 15px;
         border-color: #fff transparent transparent transparent; }
+      .thanks-item section p {
+        letter-spacing: 0.7px; }
     .thanks-item figure {
       text-align: center;
       margin-top: 40px; }
@@ -9899,13 +9905,14 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
         font-family: "Cormac-ExtraLight", sans-serif;
         font-size: 22px;
         line-height: 32px;
-        letter-spacing: 0.5px;
+        letter-spacing: 0.2px;
         color: #000;
         margin-top: 10px; }
         .thanks-item figure figcaption span {
           color: #4b5769;
           font-size: 16px;
           line-height: 24px;
+          letter-spacing: 0.4px;
           display: block; }
 
 .about.style2 {
@@ -9916,7 +9923,7 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
       font-family: "Cormac-ExtraLight", sans-serif;
       font-size: 22px;
       line-height: 26px;
-      letter-spacing: 0.5px;
+      letter-spacing: 0.2px;
       color: #fff;
       text-align: center;
       display: block;
@@ -9946,7 +9953,9 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
       .about.style2 .btn-wrapp a.light {
         background: #5292ff; }
       .about.style2 .btn-wrapp a i {
-        margin-right: 10px; }
+        margin-right: 10px;
+        position: relative;
+        top: -2px; }
   .about.style2 .social {
     display: -webkit-box;
     display: -webkit-flex;
@@ -9958,7 +9967,7 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
     justify-content: center; }
     .about.style2 .social li {
       display: table;
-      margin: 0 15px; }
+      padding: 0 15px; }
       @media (max-width: 480px) {
         .about.style2 .social li {
           margin: 0 10px; } }
@@ -9981,7 +9990,7 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
       font-family: "Cormac-ExtraLight", sans-serif;
       font-size: 22px;
       line-height: 26px;
-      letter-spacing: 0.5px; }
+      letter-spacing: 0.2px; }
 
 .partners-style2 {
   padding: 70px 0;
@@ -10014,7 +10023,8 @@ footer.footer.style2 {
   footer.footer.style2 .footer-info p {
     color: #000; }
   footer.footer.style2 .footer-info a {
-    color: #4b5769; }
+    color: #4b5769;
+    letter-spacing: 0.2px; }
     footer.footer.style2 .footer-info a i {
       color: #4489ff;
       font-weight: 600;
@@ -11050,7 +11060,7 @@ span.rub {
       line-height: 20px;
       letter-spacing: -0.5px;
       color: #000;
-      letter-spacing: 0.5px;
+      letter-spacing: 0.4px;
       display: inline-block;
       padding-bottom: 10px;
       border-bottom: 2px solid transparent; }
@@ -11151,7 +11161,7 @@ span.rub {
             border-bottom: 1px solid #d9e4ea; } }
         .menu-general > ul li a span {
           display: inline-block;
-          letter-spacing: 0.4px; }
+          letter-spacing: 0.6px; }
           .menu-general > ul li a span.icon-buy-wrapp {
             display: block;
             height: 35px;
@@ -11234,9 +11244,9 @@ span.rub {
     .header-land .menu-top ul li a {
       color: #fff;
       font-size: 18px;
-      line-height: 34px;
       padding: 0 15px;
       height: 43px;
+      line-height: 40px;
       border: 2px solid transparent;
       -webkit-border-radius: 50px;
       border-radius: 50px;
@@ -11255,7 +11265,6 @@ span.rub {
     .header-land .menu-top ul li.active a {
       border-color: #ffffff; }
       .header-land .menu-top ul li.active a:hover {
-        cursor: default;
         border-color: #ffffff; }
   .header-land .logo {
     display: none; }
@@ -11304,12 +11313,14 @@ span.rub {
       .header-land.styled .menu-top ul li.active a {
         color: #fff;
         background: #4489ff; }
+      .header-land.styled .menu-top ul li.active:hover {
+        cursor: pointer !important; }
+        .header-land.styled .menu-top ul li.active:hover a {
+          border-color: #ffffff; }
       .header-land.styled .menu-top ul li:hover a {
         border-color: #4489ff; }
       .header-land.styled .menu-top ul li:hover a {
         border-bottom-color: #4489ff; }
-        .header-land.styled .menu-top ul li:hover a:hover {
-          cursor: default; }
       .header-land.styled .menu-top ul li a {
         color: #4489ff;
         letter-spacing: 0.1px;
@@ -11898,7 +11909,7 @@ span.rub {
       font-family: "Cormac-ExtraLight", sans-serif;
       font-size: 44px !important;
       line-height: 56px;
-      letter-spacing: 0.5px;
+      letter-spacing: -0.4px;
       color: #fff;
       text-align: left !important; }
       @media (max-width: 480px) {
@@ -11926,7 +11937,7 @@ span.rub {
       font-family: "Cormac-ExtraLight", sans-serif;
       font-size: 34px;
       line-height: 40px;
-      letter-spacing: 1px;
+      letter-spacing: 0.4px;
       color: #fff;
       margin-top: 20px; }
       @media (max-width: 767px) {
