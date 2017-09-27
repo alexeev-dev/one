@@ -51,7 +51,7 @@
 				@include respond-to(md) {display: block; width: calc(100% - 86px);}
 
 				a {
-					@include font-type($CormacEL, 14px, 20px, -0.5px); color: $main-color-text; letter-spacing: 0.5px;
+					@include font-type($CormacEL, 14px, 20px, -0.5px); color: $main-color-text; letter-spacing: 0.4px;
 					display: inline-block; padding-bottom: 10px; border-bottom: 2px solid transparent;
 					@include respond-to(md) {font-size: 18px; display: block; width: 100%; margin-top: 20px;}
 					
@@ -113,7 +113,7 @@
 					@include respond-to(md) {font-size: 18px; padding: 20px 10px; border-bottom: 1px solid #d9e4ea;}
 
 					span {
-						display: inline-block; letter-spacing: 0.4px;
+						display: inline-block; letter-spacing: 0.6px;
 						&.icon-buy-wrapp {
 							display: block; height: 35px; margin: 0 auto 13px auto;
 							@include respond-to(md) {display: none;}
@@ -191,8 +191,8 @@
 					li {
 						margin-left: 20px;
 						a {
-							color: #fff; font-size: 18px; line-height: 34px;
-							padding: 0 15px; height: 43px;
+							color: #fff; font-size: 18px;
+							padding: 0 15px; height: 43px; line-height: 40px;
 							border: 2px solid transparent; border-radius: 50px;
 							transition: .5s ease-in-out; 
 							&:hover {border-color: #fff;}
@@ -206,7 +206,7 @@
 						&.active {
 							a {
 								border-color: #ffffff;
-								&:hover {cursor: default; border-color: #ffffff;}
+								&:hover {border-color: #ffffff;}
 							}
 						}
 					}
@@ -269,13 +269,14 @@
 					li {
 						&.active {
 							a {color: #fff; background: $link-color;}
+							&:hover {cursor: pointer !important; a {border-color: #ffffff;}}
+
 						}
 						&:hover {
 							a {border-color: #4489ff;}
 
 							a {
 								border-bottom-color: #4489ff;
-								&:hover {cursor: default;}
 							}
 						}
 						a {

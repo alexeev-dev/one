@@ -10,7 +10,7 @@
 		@include respond-to(xs) {width: 310px;}
 
 		h1, h2 {
-			@include font-type($CormacEL, 44px !important, 56px, 0.5px); color: #fff; text-align: left !important;
+			@include font-type($CormacEL, 44px !important, 56px, -0.4px); color: #fff; text-align: left !important;
 			@include respond-to(xs) {font-size: 34px !important; line-height: 46px;}
 		}
 		h1 {margin-bottom: 40px;}
@@ -27,7 +27,7 @@
 		}
 
 		figcaption {
-			@include font-type($CormacEL, 34px, 40px, 1px); color: #fff;
+			@include font-type($CormacEL, 34px, 40px, 0.4px); color: #fff;
 			margin-top: 20px;
 
 			@include respond-to(sm) {font-size: 22px; line-height: 26px; margin-top: 15px;}

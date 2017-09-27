@@ -1,3 +1,7 @@
+.land {
+	h1, h2, h3, h4, h5, h6 {letter-spacing: -0.2px;}
+}
+
 //MENU-GENERAL STYLE2 -- http://prntscr.com/gpl13a
 .menu-general {
 	&.style2 {
@@ -40,7 +44,7 @@
 		&-item {
 			text-align: center;
 			width: 32%; padding: 20px 30px;
-			background: #fff; cursor: pointer;
+			background: #fff; 
 			@include respond-to(md) {width: 100%; margin: 10px 0;}
 
 			&:hover {
@@ -48,8 +52,8 @@
 			}
 
 			section {
-				img, h4, p {margin-bottom: 20px;}
-				p {@include font-type($CormacEL, 16px, 24px, 0.5px); color: #4b5769;}
+				img, h4, p {margin-bottom: 20px; letter-spacing: 0;}
+				p {@include font-type($CormacEL, 16px, 24px, 0.4px); color: #4b5769;}
 			}
 		}
 }
@@ -91,11 +95,11 @@
 			@include respond-to(md) {padding: 15px 20px;}
 
 			h4 {
-				font-size: 22px; line-height: 34px;
+				font-size: 22px; line-height: 34px; letter-spacing: 0.1px;
 				margin-bottom: 25px;
 			}
 			p {
-				@include font-type($HelveticaL, 16px, 24px, 0.5px); color: #4b5769;
+				@include font-type($HelveticaL, 16px, 24px, 0.6px); color: #4b5769;
 				margin-bottom: 25px;
 			}
 			span {@include font-type($HelveticaL, 10px, 18px, 0.5px); text-transform: uppercase; color: #4b5769;}
@@ -127,6 +131,8 @@
 				width: 0; height: 0; position: absolute; bottom: -15px; left: 50%; margin-left: -15px;
 				border-style: solid; border-width: 15px 15px 0 15px; border-color: #fff transparent transparent transparent;
 			}
+
+			p {letter-spacing: 0.7px;}
 		}
 
 		figure {
@@ -139,11 +145,11 @@
 			}
 
 			figcaption {
-				@include font-type($CormacEL, 22px, 32px, 0.5px); color: #000;
+				@include font-type($CormacEL, 22px, 32px, 0.2px); color: #000;
 				margin-top: 10px;
 
 				span {
-					color: #4b5769; font-size: 16px; line-height: 24px;
+					color: #4b5769; font-size: 16px; line-height: 24px; letter-spacing: 0.4px;
 					display: block;
 				}
 			}
@@ -159,7 +165,7 @@
 		.btn-wrapp {
 			margin-bottom: 60px;
 			a {
-				@include font-type($CormacEL, 22px, 26px, 0.5px); color: #fff; text-align: center;
+				@include font-type($CormacEL, 22px, 26px, 0.2px); color: #fff; text-align: center;
 				display: block; width: 50%; padding: 30px 0; 
 				background: $btn-color;
 				@include respond-to(sm) {width: 100%;}
@@ -179,14 +185,14 @@
 
 				&.light {background: #5292ff;}
 
-				i {margin-right: 10px;}
+				i {margin-right: 10px; position: relative; top: -2px;}
 			}
 		}
 
 		.social {
 			display: flex; justify-content: center;
 			li {
-				display: table; margin: 0 15px;
+				display: table; padding: 0 15px;
 				@include respond-to(xs) {margin: 0 10px;}
 
 				a {
@@ -200,7 +206,7 @@
 		}
 		.about-tell {
 			padding: 60px 0; margin: 0;
-			p {@include font-type($CormacEL, 22px, 26px, 0.5px);}
+			p {@include font-type($CormacEL, 22px, 26px, 0.2px);}
 		}
 	}
 }
@@ -240,7 +246,7 @@ footer.footer {
 			img {filter: grayscale(100%);}
 			p {color: #000;}
 			a {
-				color: #4b5769;
+				color: #4b5769; letter-spacing: 0.2px;
 				i {color: $link-color; font-weight: 600; margin-left: 15px;}
 			}
 		}
