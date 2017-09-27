@@ -117,9 +117,10 @@
 					@include respond-to(sm) {br {display: none;}}
 
 					span {
-						width: 180px; color: #4b5769 !important;
 						@include font-type($CormacEL, 16px, 24px, 0.5px); color: #4b5769;
+						width: 180px; color: #4b5769 !important;
 						display: block; margin-top: 20px;
+						@include respond-to(sm) {width: 100%;}
 					}
 				}
 			}
@@ -144,6 +145,9 @@
 			@media (max-width: 540px) {height: 450px;}
 			@include respond-to(xs) {height: 500px;}
 			@media (max-width: 430px) {height: 545px;}
+			@media (max-width: 400px) {height: 595px;}
+			@media (max-width: 365px) {height: 695px;}
+			@media (max-width: 333px) {height: 790px;}
 		}
 		.carousel-item {
 			figure {
@@ -256,75 +260,77 @@
 	}
 }
 
+//////////////////////////////
+//////////////////////////////
+//////////////////////////////
+.carousel {
+	&-testimonials_1,
+	&-testimonials_2 {
+		.carousel-item {
+			figure {opacity: 0; transition: all .8s;}
+			section {
+				//transform: translateX(150px);
+				opacity: 0;
+				transition: 0.5s ease-out;
+			}
 
-//////////////////////////////
-//////////////////////////////
-//////////////////////////////
-&-testimonials_1,
-&-testimonials_2 {
-	.carousel-item {
-		figure {opacity: 0; transition: all .8s;}
-		section {
-			//transform: translateX(150px);
-			opacity: 0;
-			transition: 0.5s ease-out;
+			&.active {
+				figure {
+					opacity: 1;
+				}
+				section {
+					opacity: 1;
+					// transform: translateX(0);  width: 100%;
+				}
+			}
+			&.left {
+				section {
+					// opacity: 0;
+					// transform: translateX(-150px); width: 70%;
+					// @include respond-to(sm) {
+					// 	transform: translateX(-75px);
+					// }
+					// @include respond-to(xs) {
+					// 	transform: translateX(-30px);
+					// }
+				}
+			}
+			&.right {
+				section {
+					// opacity: 0;
+					// transform: translateX(150px); width: 70%;
+					// @include respond-to(sm) {
+					// 	transform: translateX(75px);
+					// }
+					// @include respond-to(xs) {
+					// 	transform: translateX(30px);
+					// }
+				}
+			}
 		}
+	}
 
-		&.active {
-			figure {
-				opacity: 1;
-			}
-			section {
-				opacity: 1;
-				// transform: translateX(0);  width: 100%;
+	&-kids {
+		label {
+			.ava {
+				figure {transition: 0.3s ease-out;}
+				span {&:after {transition: 0.3s ease-out;}}
 			}
 		}
-		&.left {
-			section {
-				// opacity: 0;
-				// transform: translateX(-150px); width: 70%;
-				// @include respond-to(sm) {
-				// 	transform: translateX(-75px);
-				// }
-				// @include respond-to(xs) {
-				// 	transform: translateX(-30px);
-				// }
-			}
-		}
-		&.right {
-			section {
-				// opacity: 0;
-				// transform: translateX(150px); width: 70%;
-				// @include respond-to(sm) {
-				// 	transform: translateX(75px);
-				// }
-				// @include respond-to(xs) {
-				// 	transform: translateX(30px);
-				// }
-			}
+	}
+
+	.navigation, .owl-dots {
+
+		li, .owl-dot {
+			transition: all .2s ease; transform: translateY(0);
+
+			&:hover {background: #4489ff; transform: translateY(-3px);}
+			&:active {transform: translateY(0);}
+			&.active {transform: translateY(0); &:hover {cursor: default;}}
 		}
 	}
 }
 
-&-kids {
-	label {
-		.ava {
-			figure {transition: 0.3s ease-out;}
-			span {&:after {transition: 0.3s ease-out;}}
-		}
-	}
-}
-
-.navigation, .owl-dots {
-
-	li, .owl-dot {
-		transition: all .2s ease; transform: translateY(0);
-
-		&:hover {background: #4489ff; transform: translateY(-3px);}
-		&:active {transform: translateY(0);}
-		&.active {transform: translateY(0); &:hover {cursor: default;}}
-	}
-}
 
 
 

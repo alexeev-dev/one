@@ -55,6 +55,8 @@
 				img, h4, p {margin-bottom: 20px; letter-spacing: 0;}
 				p {@include font-type($CormacEL, 16px, 24px, 0.4px); color: #4b5769;}
 			}
+
+			a {letter-spacing: 0.2px;}
 		}
 }
 
@@ -95,7 +97,7 @@
 			@include respond-to(md) {padding: 15px 20px;}
 
 			h4 {
-				font-size: 22px; line-height: 34px; letter-spacing: 0.1px;
+				font-size: 22px; line-height: 32px; letter-spacing: 0.1px;
 				margin-bottom: 25px;
 			}
 			p {
@@ -192,13 +194,14 @@
 		.social {
 			display: flex; justify-content: center;
 			li {
-				display: table; padding: 0 15px;
-				@include respond-to(xs) {margin: 0 10px;}
+				display: table; padding: 0 15px; box-sizing: content-box; width: 60px;
+				@include respond-to(xs) {margin: 0 10px; padding: 0;}
 
 				a {
 					text-align: center; vertical-align: middle;
 					width: 60px; height: 60px; display: table-cell;
 					background: $btn-color; border-radius: 50%;
+					&:hover {opacity: 0.5;}
 
 					i {color: #fff; font-size: 24px;}
 				}
@@ -223,7 +226,7 @@
 		////////////////////////////////////////////////////////////////////////////////////////////////////////////
 		////////////////////////////////////////////////////////////////////////////////////////////////////////////
 		////////////////////////////////////////////////////////////////////////////////////////////////////////////
-		display: flex; align-items: center;  justify-content: space-between;
+		display: flex; align-items: center;  justify-content: space-between; flex-wrap: wrap;
 		////////////////////////////////////////////////////////////////////////////////////////////////////////////
 		////////////////////////////////////////////////////////////////////////////////////////////////////////////
 		////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -247,8 +250,10 @@ footer.footer {
 			p {color: #000;}
 			a {
 				color: #4b5769; letter-spacing: 0.2px;
+				&:after {border-color: $link-color;}
 				i {color: $link-color; font-weight: 600; margin-left: 15px;}
 			}
+
 		}
 
 		.footer-contacts {
@@ -289,15 +294,28 @@ footer.footer {
 								margin-left: 30px;
 								@include respond-to(xs) {&:first-child {margin-left: 0;}}
 								a {
+									&:after {display: none;}
 									i {
 										color: $link-color; font-size: 24px;
+										transition: all 0.4s;
 									}
+									&:hover {i {color: #4b5769;}}
 								}
 							}
 						}
 						li {
 							a {
 								color: #4b5769;
+								position: relative; padding-bottom: 5px;
+								&:after {
+										content: '';
+										position: absolute;
+										border-bottom: 1px solid $link-color;
+										top: 100%;
+										transition: all 0.4s;
+									}
+									&:after {right: 100%; left: 0;}
+									&:hover:after {right: 0;}
 							}
 						}
 

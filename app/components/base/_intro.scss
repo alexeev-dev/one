@@ -7,13 +7,17 @@
 	
 	hgroup {
 		width: 365px; margin-left: 10%;
-		@include respond-to(xs) {width: 310px;}
+		@include respond-to(xs) {width: 270px;}
 
 		h1, h2 {
-			@include font-type($CormacEL, 44px !important, 56px, -0.4px); color: #fff; text-align: left !important;
-			@include respond-to(xs) {font-size: 34px !important; line-height: 46px;}
+			@include font-type($CormacEL, 44px !important, 54px, -0.4px); color: #fff; text-align: left !important;
+			@include respond-to(xs) {font-size: 22px !important; line-height: 34px;}
 		}
-		h1 {margin-bottom: 40px;}
+		h1 {
+			margin-bottom: 40px;
+			@include respond-to(xs) {margin-bottom: 30px;}
+		}
+
 	}
 
 	figure {
@@ -27,7 +31,7 @@
 		}
 
 		figcaption {
-			@include font-type($CormacEL, 34px, 40px, 0.4px); color: #fff;
+			@include font-type($CormacEL, 34px, 40px, 0.2px); color: #fff;
 			margin-top: 20px;
 
 			@include respond-to(sm) {font-size: 22px; line-height: 26px; margin-top: 15px;}

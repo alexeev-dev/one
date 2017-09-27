@@ -9770,6 +9770,8 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
       line-height: 24px;
       letter-spacing: 0.4px;
       color: #4b5769; }
+    .ads-item a {
+      letter-spacing: 0.2px; }
 
 .doings-wr {
   display: -webkit-box;
@@ -9830,7 +9832,7 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
         padding: 15px 20px; } }
     .doings-item section h4 {
       font-size: 22px;
-      line-height: 34px;
+      line-height: 32px;
       letter-spacing: 0.1px;
       margin-bottom: 25px; }
     .doings-item section p {
@@ -9967,10 +9969,14 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
     justify-content: center; }
     .about.style2 .social li {
       display: table;
-      padding: 0 15px; }
+      padding: 0 15px;
+      -webkit-box-sizing: content-box;
+      box-sizing: content-box;
+      width: 60px; }
       @media (max-width: 480px) {
         .about.style2 .social li {
-          margin: 0 10px; } }
+          margin: 0 10px;
+          padding: 0; } }
       .about.style2 .social li a {
         text-align: center;
         vertical-align: middle;
@@ -9980,6 +9986,8 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
         background: #4489ff;
         -webkit-border-radius: 50%;
         border-radius: 50%; }
+        .about.style2 .social li a:hover {
+          opacity: 0.5; }
         .about.style2 .social li a i {
           color: #fff;
           font-size: 24px; }
@@ -10008,7 +10016,10 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
     -webkit-box-pack: justify;
     -webkit-justify-content: space-between;
     -ms-flex-pack: justify;
-    justify-content: space-between; }
+    justify-content: space-between;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap; }
     .partners-style2 ul li img {
       -webkit-filter: grayscale(100%);
       filter: grayscale(100%); }
@@ -10025,6 +10036,8 @@ footer.footer.style2 {
   footer.footer.style2 .footer-info a {
     color: #4b5769;
     letter-spacing: 0.2px; }
+    footer.footer.style2 .footer-info a:after {
+      border-color: #4489ff; }
     footer.footer.style2 .footer-info a i {
       color: #4489ff;
       font-weight: 600;
@@ -10095,11 +10108,31 @@ footer.footer.style2 {
         @media (max-width: 480px) {
           footer.footer.style2 .footer-contacts > ul > li ul.soc li:first-child {
             margin-left: 0; } }
+        footer.footer.style2 .footer-contacts > ul > li ul.soc li a:after {
+          display: none; }
         footer.footer.style2 .footer-contacts > ul > li ul.soc li a i {
           color: #4489ff;
-          font-size: 24px; }
+          font-size: 24px;
+          -webkit-transition: all 0.4s;
+          transition: all 0.4s; }
+        footer.footer.style2 .footer-contacts > ul > li ul.soc li a:hover i {
+          color: #4b5769; }
     footer.footer.style2 .footer-contacts > ul > li ul li a {
-      color: #4b5769; }
+      color: #4b5769;
+      position: relative;
+      padding-bottom: 5px; }
+      footer.footer.style2 .footer-contacts > ul > li ul li a:after {
+        content: '';
+        position: absolute;
+        border-bottom: 1px solid #4489ff;
+        top: 100%;
+        -webkit-transition: all 0.4s;
+        transition: all 0.4s; }
+      footer.footer.style2 .footer-contacts > ul > li ul li a:after {
+        right: 100%;
+        left: 0; }
+      footer.footer.style2 .footer-contacts > ul > li ul li a:hover:after {
+        right: 0; }
 
 /*********************************/
 /********** Typography ***********/
@@ -11245,13 +11278,12 @@ span.rub {
       color: #fff;
       font-size: 18px;
       padding: 0 15px;
-      height: 43px;
+      height: 48px;
       line-height: 40px;
       border: 2px solid transparent;
       -webkit-border-radius: 50px;
       border-radius: 50px;
-      -webkit-transition: .5s ease-in-out;
-      transition: .5s ease-in-out; }
+      /*transition: .5s ease-in-out;*/ }
       .header-land .menu-top ul li a:hover {
         border-color: #fff; }
     .header-land .menu-top ul li.active {
@@ -11904,20 +11936,23 @@ span.rub {
     margin-left: 10%; }
     @media (max-width: 480px) {
       .intro hgroup {
-        width: 310px; } }
+        width: 270px; } }
     .intro hgroup h1, .intro hgroup h2 {
       font-family: "Cormac-ExtraLight", sans-serif;
       font-size: 44px !important;
-      line-height: 56px;
+      line-height: 54px;
       letter-spacing: -0.4px;
       color: #fff;
       text-align: left !important; }
       @media (max-width: 480px) {
         .intro hgroup h1, .intro hgroup h2 {
-          font-size: 34px !important;
-          line-height: 46px; } }
+          font-size: 22px !important;
+          line-height: 34px; } }
     .intro hgroup h1 {
       margin-bottom: 40px; }
+      @media (max-width: 480px) {
+        .intro hgroup h1 {
+          margin-bottom: 30px; } }
   .intro figure {
     text-align: center;
     width: 280px;
@@ -11937,7 +11972,7 @@ span.rub {
       font-family: "Cormac-ExtraLight", sans-serif;
       font-size: 34px;
       line-height: 40px;
-      letter-spacing: 0.4px;
+      letter-spacing: 0.2px;
       color: #fff;
       margin-top: 20px; }
       @media (max-width: 767px) {
@@ -14333,15 +14368,18 @@ span.rub {
       .carousel-testimonials_1 .carousel-item figure figcaption br, .carousel-testimonials_2 .carousel-item figure figcaption br {
         display: none; } }
     .carousel-testimonials_1 .carousel-item figure figcaption span, .carousel-testimonials_2 .carousel-item figure figcaption span {
-      width: 180px;
-      color: #4b5769 !important;
       font-family: "Cormac-ExtraLight", sans-serif;
       font-size: 16px;
       line-height: 24px;
       letter-spacing: 0.5px;
       color: #4b5769;
+      width: 180px;
+      color: #4b5769 !important;
       display: block;
       margin-top: 20px; }
+      @media (max-width: 767px) {
+        .carousel-testimonials_1 .carousel-item figure figcaption span, .carousel-testimonials_2 .carousel-item figure figcaption span {
+          width: 100%; } }
   .carousel-testimonials_1 .carousel-item section, .carousel-testimonials_2 .carousel-item section {
     width: 55%; }
     @media (max-width: 767px) {
@@ -14378,6 +14416,15 @@ span.rub {
   @media (max-width: 430px) {
     .carousel-testimonials_1 .carousel-wrap {
       height: 545px; } }
+  @media (max-width: 400px) {
+    .carousel-testimonials_1 .carousel-wrap {
+      height: 595px; } }
+  @media (max-width: 365px) {
+    .carousel-testimonials_1 .carousel-wrap {
+      height: 695px; } }
+  @media (max-width: 333px) {
+    .carousel-testimonials_1 .carousel-wrap {
+      height: 790px; } }
 
 .carousel-testimonials_1 .carousel-item figure {
   text-align: left; }
@@ -14532,54 +14579,50 @@ span.rub {
   .carousel-kids input:checked + label .ava span:after {
     opacity: 1; }
 
--testimonials_1 .carousel-item figure,
--testimonials_2 .carousel-item figure {
+.carousel-testimonials_1 .carousel-item figure, .carousel-testimonials_2 .carousel-item figure {
   opacity: 0;
   -webkit-transition: all .8s;
   transition: all .8s; }
 
--testimonials_1 .carousel-item section,
--testimonials_2 .carousel-item section {
+.carousel-testimonials_1 .carousel-item section, .carousel-testimonials_2 .carousel-item section {
   opacity: 0;
   -webkit-transition: 0.5s ease-out;
   transition: 0.5s ease-out; }
 
--testimonials_1 .carousel-item.active figure,
--testimonials_2 .carousel-item.active figure {
+.carousel-testimonials_1 .carousel-item.active figure, .carousel-testimonials_2 .carousel-item.active figure {
   opacity: 1; }
 
--testimonials_1 .carousel-item.active section,
--testimonials_2 .carousel-item.active section {
+.carousel-testimonials_1 .carousel-item.active section, .carousel-testimonials_2 .carousel-item.active section {
   opacity: 1; }
 
--kids label .ava figure {
+.carousel-kids label .ava figure {
   -webkit-transition: 0.3s ease-out;
   transition: 0.3s ease-out; }
 
--kids label .ava span:after {
+.carousel-kids label .ava span:after {
   -webkit-transition: 0.3s ease-out;
   transition: 0.3s ease-out; }
 
-.navigation li, .navigation .owl-dot, .owl-dots li, .owl-dots .owl-dot {
+.carousel .navigation li, .carousel .navigation .owl-dot, .carousel .owl-dots li, .carousel .owl-dots .owl-dot {
   -webkit-transition: all .2s ease;
   transition: all .2s ease;
   -webkit-transform: translateY(0);
   -ms-transform: translateY(0);
   transform: translateY(0); }
-  .navigation li:hover, .navigation .owl-dot:hover, .owl-dots li:hover, .owl-dots .owl-dot:hover {
+  .carousel .navigation li:hover, .carousel .navigation .owl-dot:hover, .carousel .owl-dots li:hover, .carousel .owl-dots .owl-dot:hover {
     background: #4489ff;
     -webkit-transform: translateY(-3px);
     -ms-transform: translateY(-3px);
     transform: translateY(-3px); }
-  .navigation li:active, .navigation .owl-dot:active, .owl-dots li:active, .owl-dots .owl-dot:active {
+  .carousel .navigation li:active, .carousel .navigation .owl-dot:active, .carousel .owl-dots li:active, .carousel .owl-dots .owl-dot:active {
     -webkit-transform: translateY(0);
     -ms-transform: translateY(0);
     transform: translateY(0); }
-  .navigation li.active, .navigation .owl-dot.active, .owl-dots li.active, .owl-dots .owl-dot.active {
+  .carousel .navigation li.active, .carousel .navigation .owl-dot.active, .carousel .owl-dots li.active, .carousel .owl-dots .owl-dot.active {
     -webkit-transform: translateY(0);
     -ms-transform: translateY(0);
     transform: translateY(0); }
-    .navigation li.active:hover, .navigation .owl-dot.active:hover, .owl-dots li.active:hover, .owl-dots .owl-dot.active:hover {
+    .carousel .navigation li.active:hover, .carousel .navigation .owl-dot.active:hover, .carousel .owl-dots li.active:hover, .carousel .owl-dots .owl-dot.active:hover {
       cursor: default; }
 
 .list-goods.type_1 {
