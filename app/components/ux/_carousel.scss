@@ -1,17 +1,15 @@
 .found {
 	&-info {
-		padding-top: 20px; position: relative; 
-		background: url(../img/ones.png) no-repeat left bottom;
+		padding-top: 20px; position: relative; float: right; 
 
 		@include respond-to(md) {
 			text-align: center;
-			width: 100%; margin-bottom: 60px;
 		}
 
 		@include respond-to(sm) {text-align: left;}
 
 		h2 {
-			margin-bottom: 50px; text-align: left !important;
+			margin-bottom: 30px !important; line-height: 42px; text-align: left !important;
 			@include respond-to(md) {
 				text-align: center;
 				& > br {display: none;}
@@ -20,6 +18,7 @@
 		}
 
 		a {
+			font-family: $CormacEL; font-size: 16px;
 			i {transition: transform .2s ease;}
 			&:hover {color: #4489ff;
 				i {position: relative; transform: translateX(5px);}
@@ -43,9 +42,11 @@
 	&-testimonials_1,
 	&-testimonials_2 {
 		.carousel-item {
-			display: flex;
+			display: flex; justify-content: space-around;
 			@include respond-to(sm) {flex-direction: column;}
 		}
+
+		.navigation {margin-top: 50px !important;}
 	}
 
 	&-testimonials_1 {
@@ -67,7 +68,7 @@
 	// nav + owl styles
 	.navigation,
 	.owl-dots {
-		margin-top: 40px;
+		margin-top: 20px;
 
 		li, 
 		.owl-dot {
@@ -84,6 +85,7 @@
 	
 	// modules
 	&-found {
+		@include respond-to(md) {width: 100%; padding-top: 40px; clear: both;}
 		.carousel-item {
 			text-align: center;
 			@include respond-to(lg) {padding: 20px;}
@@ -115,6 +117,7 @@
 					@include respond-to(sm) {br {display: none;}}
 
 					span {
+						width: 180px; color: #4b5769 !important;
 						@include font-type($CormacEL, 16px, 24px, 0.5px); color: #4b5769;
 						display: block; margin-top: 20px;
 					}
@@ -122,8 +125,9 @@
 			}
 
 			section {
+				width: 55%;
 				p {
-					font-size: 16px; line-height: 28px; letter-spacing: 0.1px; color: #4b5769;
+					font-size: 16px; line-height: 28px; letter-spacing: 1px; color: #4b5769; font-family: $HelveticaNeue;
 					@include respond-to(sm) {text-align: center; margin: 0 20px;}
 				}
 			}

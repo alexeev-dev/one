@@ -181,27 +181,18 @@
 		.menu {
 			// TOP MENU – http://prntscr.com/gi6fso
 			// GENERAL MENU – 
-			////////////////////////////////////////////////////////////////////////////////////////////////////////////
-			////////////////////////////////////////////////////////////////////////////////////////////////////////////
-			////////////////////////////////////////////////////////////////////////////////////////////////////////////
-			
-
-			////////////////////////////////////////////////////////////////////////////////////////////////////////////
-			////////////////////////////////////////////////////////////////////////////////////////////////////////////
-			////////////////////////////////////////////////////////////////////////////////////////////////////////////
 			&-top {
 				a.burger {
 					span {background: #ffffff;}
 				}
 
 				ul {
-					&.active {background: #4489ff;}
 
 					li {
 						margin-left: 20px;
 						a {
-							color: #fff; font-size: 18px; line-height: 1;
-							padding: 5px 15px 11px 15px;
+							color: #fff; font-size: 18px; line-height: 34px;
+							padding: 0 15px; height: 43px;
 							border: 2px solid transparent; border-radius: 50px;
 							transition: .5s ease-in-out; 
 							&:hover {border-color: #fff;}
@@ -228,13 +219,14 @@
 		.menu-top {
 			margin-top: 0;
 			& > ul {
-				margin-top: 0;
+				margin-top: 0; 
+				@include respond-to(md) {background: #4489ff;}
 
 				li {
 					a {
 						position: relative; display: inline-block; &:hover {cursor: pointer;}
 
-						&:after {
+						/*&:after {
 							content: '';
 							position: absolute;
 							border-bottom: 2px solid #ffffff;
@@ -242,7 +234,7 @@
 							transition: all 0.4s;
 						}
 						&:after {left: 50%; right: 50%;}
-						&:hover:after {left: 0; right: 0;}
+						&:hover:after {left: 0; right: 0;}*/
 
 						i {
 							&.icon-header_search, &.icon-header_plus {display: none;}
@@ -254,11 +246,11 @@
 
 		//scroll landing menu
 		&.styled {
-			height: 75px;
+			height: 70px;
 			background: #fff; box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.08);
 
 			.logo {
-				display: inline-block; margin-top: -5px;
+				display: inline-block; margin-top: 0;
 				@include respond-to(sm) {margin-top: 0;}
 				&-white {display: none;}
 			}
@@ -271,6 +263,7 @@
 				}
 
 				ul {
+					margin-top: -10px;
 					&.active {background: #fff;}
 					
 					li {
@@ -286,14 +279,14 @@
 							}
 						}
 						a {
-							color: #000; letter-spacing: 0.1px; padding-bottom: 15px; &:hover {cursor: pointer;}
+							color: $link-color; letter-spacing: 0.1px; cursor: pointer !important;
 
 							i {
 								&.icon-header_search, &.icon-header_plus {display: inline-block;}
 								&.icon-header_search-white, &.icon-header_plus-white {display: none;}
 							}
 
-							&:after {
+							/*&:after {
 								content: '';
 								position: absolute;
 								border-bottom: 2px solid #4489ff;
@@ -301,9 +294,8 @@
 								transition: all 0.4s;
 							}
 							&:after {left: 50%; right: 50%;}
-							&:hover:after {left: 0; right: 0;}
+							&:hover:after {left: 0; right: 0;}*/
 						}
-						a {color: $link-color;}
 					}
 				}
 			}

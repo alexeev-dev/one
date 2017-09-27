@@ -63,6 +63,9 @@
 //ruble
 @include font-face('rouble', rouble);
 
+//Helvetica 
+@include font-face('HelveticaNeueThin', HelveticaNeueThin);
+
 
 // sliding
 @mixin slide_me() {

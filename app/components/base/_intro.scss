@@ -4,20 +4,15 @@
 	background-size: contain;
 	&.one-bg {background: url(../img/girl-head.png) no-repeat right center #4489ff;}
 	&.two-bg {background: url(../img/mixer-head.png) no-repeat center center #4489ff;}
-
-	h1 {
-		@include font-type($CormacEL, 44px, 56px, 0.5px); color: #fff; margin-left: 15%;
-		@include respond-to(sm) {font-size: 30px; line-height: 42px; margin-left: 40px;} 
-		span {
-			display: block; margin-top: 70px;
-			@include respond-to(sm) {margin-top: 40px;} 
-		}
-	background: url(../img/girl.jpg) no-repeat right center #4489ff; background-size: contain;
 	
 	hgroup {
-		width: 280px; margin-left: 10%;
+		width: 365px; margin-left: 10%;
+		@include respond-to(xs) {width: 310px;}
 
-		h1, h2 {color: #ffffff; text-align: left !important;}
+		h1, h2 {
+			@include font-type($CormacEL, 44px !important, 56px, 0.5px); color: #fff; text-align: left !important;
+			@include respond-to(xs) {font-size: 34px !important; line-height: 46px;}
+		}
 		h1 {margin-bottom: 40px;}
 	}
 
@@ -39,15 +34,9 @@
 			@include respond-to(xs) {font-size: 14px; line-height: 18px; margin-top: 5px;}
 		}
 	}
-}
-
-a.down {
-	display: block; position: absolute; left: 50%; margin-left: -9px; bottom: 35px; width: 18px; height: 11px; z-index: 8;
-	@include respond-to(xs) {bottom: 15px;}
-}
 
 	a.down {
-		display: block; position: absolute; left: 50%; margin-left: -15px; bottom: 35px; width: 18px; height: 11px;
+		display: block; position: absolute; left: 50%; margin-left: -15px; bottom: 35px; width: 18px; height: 11px; z-index: 8;
 		@include respond-to(xs) {bottom: 15px;}
 		////////////////////////////////////////////////
 		////////////////////////////////////////////////
@@ -62,4 +51,5 @@ a.down {
 		animation: toggleSlide .4s ease-out infinite;
 		&:hover {transform: translateY(3px) scale(1.1); animation-play-state: paused;}
 	}
-}	
+}
+		

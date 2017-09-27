@@ -22,7 +22,7 @@
 
 		h2 {
 			font-size: 34px; text-align: center;
-			margin-bottom: 80px;
+			margin-bottom: 65px;
 		}
 
 		.footer {position: fixed; width: 100%; left: 0; bottom: 0;}
@@ -36,25 +36,35 @@
 	
 	&-wrapp {
 		& > div {
-			display: flex; align-items: center;
+			display: flex;
 			@include respond-to(md) {justify-content: center;}
 			@include respond-to(xs) {flex-direction: column;}
 
-			h4 {letter-spacing: 0.1px;}
+			h4 {letter-spacing: 0.1px; font-size: 22px; line-height: 32px;}
 
 			&.placement {
 				justify-content: flex-end;
 				@include respond-to(md) {justify-content: center;}
 				@include respond-to(xs) {flex-direction: column-reverse;}
+				a {@include respond-to(xs) {display: inline-block; text-align: center;}}
 			}
 
 			&.payment {
 				justify-content: center;
+				@include respond-to(sm) {margin-left: 0;}
 				@include respond-to(xs) {flex-direction: column-reverse;}
 			}
 
 			& > section {
-				a {display: flex; align-items: center; letter-spacing: 0.2px;}
+				margin-top: 10px;
+				a {
+					display: flex; align-items: center; letter-spacing: 0.2px;
+
+				}
+			}
+
+			& > figure {
+				margin-top: 12px;
 			}
 		}
 	}
@@ -63,22 +73,24 @@
 		position: relative;
 
 		& > div {
-			width: 40%;
+			width: 42%;
 			@include respond-to(md) {width: 100%; margin: 50px 0;}
 			@include respond-to(xs) {text-align: center;}
 
 			& > section {
-
 				a {
-					margin-top: 15px; i {position: relative; top: 1px;}
-
-					i {margin-left: 10px;}
+					margin-top: 10px; font-size: 16px; font-family: $CormacEL;
+					i {position: relative; top: 1px; margin-left: 10px;}
 				}
+			}
+
+			& > figure {
+				margin: 12px 10px;
 			}
 		}
 
 		.dotted-line {
-			position: absolute; left: 50%; top: 55px; margin-left: -120px; display: block; width: 239px; height: 170px;
+			position: absolute; left: 50%; top: 30px; margin-left: -100px; display: block; width: 239px; height: 170px;
 			background: url(../img/dotted-line.png) no-repeat;
 			@include respond-to(md) {
 				display: none;
@@ -93,14 +105,19 @@
 		.purchase {
 			float: right;
 			@include respond-to(md) {float: none; clear: both;}
+			a {@include respond-to(xs) {display: inline-block; text-align: center;}}
 		}
 
 		.payment {
-			clear: both; margin: 0 auto;
-			padding-top: 95px;
+			align-items: center;
+
+			clear: both; margin-left: 20%;
+			padding-top: 25px;
 			@include respond-to(md) {
-				padding-top: 0;
+				padding-top: 0; margin-left: 0;
 			}
+
+			a {float:right;}
 		}
 
 		.placement, .payment {

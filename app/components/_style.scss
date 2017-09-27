@@ -378,5 +378,7 @@ span.rub {font-family: $ruble !important;}
 		&.bg_blue {background: $btn-color;}
 		&.border {border-bottom: 1px solid #d9e4ea;}
 		&.shadow {border-bottom: 3px solid #eff3f5;}
+		&.bg-left {background: url(../img/left-bg.png) no-repeat left 0 #edf2f8;}
+		&.bg-right {background: url(../img/right-bg.png) no-repeat right bottom #edf2f8;}
 	}
 }
