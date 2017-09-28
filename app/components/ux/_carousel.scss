@@ -1,6 +1,6 @@
 .found {
 	&-info {
-		padding-top: 20px; position: relative; float: right; 
+		padding-top: 16px; padding-right: 51px; position: relative; float: right; 
 
 		@include respond-to(md) {
 			text-align: center;
@@ -9,7 +9,7 @@
 		@include respond-to(sm) {text-align: left;}
 
 		h2 {
-			margin-bottom: 30px !important; line-height: 42px; text-align: left !important;
+			margin-bottom: 33px !important; line-height: 42px; text-align: left !important; letter-spacing: 0;
 			@include respond-to(md) {
 				text-align: center;
 				& > br {display: none;}
@@ -18,8 +18,11 @@
 		}
 
 		a {
-			font-family: $CormacEL; font-size: 16px; letter-spacing: 0.1px;
-			i {transition: transform .2s ease;}
+			font-family: $CormacEL; font-size: 16px;
+			i {
+				position: relative; left: 7px; top: -1px;
+				transition: transform .2s ease;
+			}
 			&:hover {color: #4489ff;
 				i {position: relative; transform: translateX(5px);}
 			}
@@ -85,23 +88,28 @@
 	
 	// modules
 	&-found {
-		@include respond-to(md) {width: 100%; padding-top: 40px; clear: both;}
+		width: 630px; position: relative; left: -19px;
+		@include respond-to(md) {width: 100%; padding-top: 40px; clear: both; left: 0;}
 		.carousel-item {
 			text-align: center;
 			@include respond-to(lg) {padding: 20px;}
 
 			figure {
-				width: 140px; margin: 0 auto 40px auto;
+				width: 140px; margin: 0 auto 48px auto;
 				border-radius: 50%;
 
 				img {
 					width: 140px; height: 140px; overflow: hidden;
 				}
 				figcaption {
-					margin-top: 25px; letter-spacing: 0.2px;
-					@include font-type($CormacEL, 14px, 1, 0.4px); font-weight: 200;
+					margin-top: 16px; letter-spacing: 0.2px;
+					@include font-type($CormacEL, 16px, 1, 0.4px); font-weight: 200;
 				}
 			}
+		}
+
+		.owl-dots {
+			padding-left: 50px;
 		}
 	}
 
@@ -150,28 +158,41 @@
 			@media (max-width: 333px) {height: 790px;}
 		}
 		.carousel-item {
+			justify-content: flex-start; padding-left: 8.5%;
 			figure {
 				text-align: left;
 				@include respond-to(sm) {text-align: center; width: 100%; margin-bottom: 60px;}
 				
 				img {
-					width: 68px; height: 68px; margin-right: 20px;
+					width: 80px; height: 80px; margin-right: 20px; margin-top: 5px;
 					@include respond-to(sm) {margin: 0 0 15px 0;}
+				}
+
+				figcaption {
+					span {
+						letter-spacing: 0;
+						margin-top: 13px;
+					}
 				}
 			}
 
 			section {
+				padding-left: 5.2%; width: 58.8%;
 				p {
-					padding: 0 50px; position: relative;
+					line-height: 24px; letter-spacing: 0.8px;
+					padding: 11px 50px 0; position: relative;
 					
 					i {
 						content: '';
 						display: block; width: 28px; height: 28px; position: absolute;
-						&.icon-quotes-left {left: 0; top: 0;}
-						&.icon-quotes-right {right: 0; bottom: 0;}
+						&.icon-quotes-left {left: -2px; top: -1px;}
+						&.icon-quotes-right {right: 1px; bottom: -16px;}
 					}
 				}
 			}
+		}
+		.navigation {
+			margin-top: 48px !important;
 		}
 	}
 
@@ -188,8 +209,9 @@
 			@media (max-width: 330px) {height: 690px;}
 		}
 		.carousel-item {
+			justify-content: flex-start; padding-left: 86px;
 			figure { 
-				text-align: center; width: 35%;
+				text-align: center; width: 19%;
 				@include respond-to(sm) {width: 100%; margin-bottom: 30px;}
 
 				img {
@@ -198,16 +220,23 @@
 				}
 			}
 			section {
-				width: 55%;
-				@include respond-to(sm) {width: 100%;}
+				width: 69.7%; padding-left: 9.7%;
+				@include respond-to(sm) {width: 100%; padding-left: 0;}
 
 				h2 {
-					text-align: left;
-					margin-bottom: 40px;
+					text-align: left; letter-spacing: 0;
+					margin-bottom: 34px;
 					@include respond-to(sm) {text-align: center;}
 
 				}
+
+				p {
+					line-height: 24px; letter-spacing: 0.7px;
+				}
 			}
+		}
+		.navigation {
+			margin-top: 25px !important;
 		}
 	}
 

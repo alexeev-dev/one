@@ -9,16 +9,16 @@
 	&-info {
 
 		li {
-			width: 49%; padding-left: 20px;
+			width: 49%; padding-left: 45px; padding-top: 20px;
 			@include respond-to(sm) {padding: 10px 0; width: 100%;}
 
 			&:first-child {
 				text-align: right;
-				padding: 10px 20px 10px 0;
+				padding: 28px 0px 10px 0;
 				@include respond-to(sm) {text-align: center; padding-right: 0;}
 				
-				p {@include font-type($CormacEL, 24px, 29px, -0.7px); color: #fff; margin-bottom: 10px;}
-				a {@include font-type($HelveticaL, 18px, 22px, 0); color: #fff;}
+				p {@include font-type($CormacEL, 23px, 29px, -0.7px); color: #fff; margin-bottom: 5px;}
+				a {@include font-type($CormacEL, 16px, 22px, 0); color: #fff;}
 			}
 
 			&.sep {
@@ -35,7 +35,7 @@
 
 	&-contacts {
 		@include font-type($HelveticaL, 12px, 22px, 0.5px);
-		position: relative; padding-top: 20px; padding-bottom: 20px; margin-top: 20px;
+		position: relative; padding-top: 20px; padding-bottom: 20px; margin-top: 26px;
 		@include respond-to(sm) {font-size: 20px; letter-spacing: 0.2px;}
 		
 		&:after {

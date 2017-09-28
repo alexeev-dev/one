@@ -7928,15 +7928,15 @@ button.close {
 
 @font-face {
   font-family: Cormac-ExtraLight;
-  src: url("../fonts/Cormac-ExtraLight/Cormac-ExtraLight.eot");
-  src: url("../fonts/Cormac-ExtraLight/Cormac-ExtraLight.eot") format("embedded-opentype"), url("../fonts/Cormac-ExtraLight/Cormac-ExtraLight.woff") format("woff"), url("../fonts/Cormac-ExtraLight/Cormac-ExtraLight.ttf") format("truetype"), url("../fonts/Cormac-ExtraLight/Cormac-ExtraLight.svg#Cormac-ExtraLight") format("svg");
+  src: url("../fonts/cormac-extralight/cormac-extralight.eot");
+  src: url("../fonts/cormac-extralight/cormac-extralight.eot") format("embedded-opentype"), url("../fonts/cormac-extralight/cormac-extralight.woff") format("woff"), url("../fonts/cormac-extralight/cormac-extralight.ttf") format("truetype"), url("../fonts/cormac-extralight/cormac-extralight.svg#cormac-extralight") format("svg");
   font-weight: normal;
   font-style: normal; }
 
 @media screen and (-webkit-min-device-pixel-ratio: 0) {
   @font-face {
     font-family: Cormac-ExtraLight;
-    src: url("../fonts/Cormac-ExtraLight/Cormac-ExtraLight.svg#Cormac-ExtraLight") format("svg"); } }
+    src: url("../fonts/cormac-extralight/cormac-extralight.svg#cormac-extralight") format("svg"); } }
 
 @font-face {
   font-family: HelveticaLight;
@@ -9708,16 +9708,21 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
   display: flex;
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
-  flex-wrap: wrap; }
+  flex-wrap: wrap;
+  padding-top: 0; }
   .menu-general.style2 > ul > li {
     width: 16.6%;
-    margin-bottom: 25px; }
+    margin-bottom: 34px; }
     @media (max-width: 991px) {
       .menu-general.style2 > ul > li {
         width: 100%;
         margin-bottom: 0; } }
     .menu-general.style2 > ul > li a .icon-buy-wrapp {
-      height: 50px !important; }
+      height: 55px !important; }
+    .menu-general.style2 > ul > li a span {
+      font-size: 16px; }
+      .menu-general.style2 > ul > li a span.icon-buy-wrapp {
+        margin: 0 auto 16px; }
 
 .ads {
   display: -webkit-box;
@@ -9752,7 +9757,7 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
   .ads-item {
     text-align: center;
     width: 32%;
-    padding: 20px 30px;
+    padding: 23px 30px 41px;
     background: #fff; }
     @media (max-width: 991px) {
       .ads-item {
@@ -9765,13 +9770,20 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
       margin-bottom: 20px;
       letter-spacing: 0; }
     .ads-item section p {
-      font-family: "Cormac-ExtraLight", sans-serif;
+      font-family: "cormac-extralight", sans-serif;
       font-size: 16px;
       line-height: 24px;
-      letter-spacing: 0.4px;
-      color: #4b5769; }
+      letter-spacing: 0;
+      color: #4b5769;
+      margin-bottom: 43px; }
+    .ads-item section h4 {
+      font-size: 22px;
+      line-height: 32px;
+      margin-bottom: 12px; }
     .ads-item a {
-      letter-spacing: 0.2px; }
+      font-family: "cormac-extralight", sans-serif;
+      font-size: 16px;
+      letter-spacing: 0; }
 
 .doings-wr {
   display: -webkit-box;
@@ -9826,27 +9838,27 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
     .doings-item figure img {
       width: 100%; }
   .doings-item section {
-    padding: 40px 20px; }
+    padding: 36px 20px 40px 27px; }
     @media (max-width: 991px) {
       .doings-item section {
         padding: 15px 20px; } }
     .doings-item section h4 {
       font-size: 22px;
       line-height: 32px;
-      letter-spacing: 0.1px;
+      letter-spacing: 0;
       margin-bottom: 25px; }
     .doings-item section p {
       font-family: "HelveticaLight", sans-serif;
       font-size: 16px;
       line-height: 24px;
-      letter-spacing: 0.6px;
+      letter-spacing: 0.7px;
       color: #4b5769;
-      margin-bottom: 25px; }
+      margin-bottom: 14px; }
     .doings-item section span {
       font-family: "HelveticaLight", sans-serif;
       font-size: 10px;
       line-height: 18px;
-      letter-spacing: 0.5px;
+      letter-spacing: 1.1px;
       text-transform: uppercase;
       color: #4b5769; }
 
@@ -9879,8 +9891,8 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
       letter-spacing: 0.5px;
       color: #4b5769;
       position: relative;
-      min-height: 260px;
-      padding: 30px;
+      min-height: 240px;
+      padding: 30px 40px 17px;
       background: #fff; }
       .thanks-item section:after {
         content: '';
@@ -9894,7 +9906,7 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
         border-width: 15px 15px 0 15px;
         border-color: #fff transparent transparent transparent; }
       .thanks-item section p {
-        letter-spacing: 0.7px; }
+        letter-spacing: 0.6px; }
     .thanks-item figure {
       text-align: center;
       margin-top: 40px; }
@@ -9904,33 +9916,35 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
         -webkit-border-radius: 50%;
         border-radius: 50%; }
       .thanks-item figure figcaption {
-        font-family: "Cormac-ExtraLight", sans-serif;
+        font-family: "cormac-extralight", sans-serif;
         font-size: 22px;
         line-height: 32px;
-        letter-spacing: 0.2px;
+        letter-spacing: 0px;
         color: #000;
-        margin-top: 10px; }
+        margin-top: 20px; }
         .thanks-item figure figcaption span {
           color: #4b5769;
           font-size: 16px;
           line-height: 24px;
-          letter-spacing: 0.4px;
-          display: block; }
+          letter-spacing: 0px;
+          display: block;
+          margin-top: 7px; }
 
 .about.style2 {
-  text-align: center; }
+  text-align: center;
+  padding-bottom: 100px; }
   .about.style2 .btn-wrapp {
-    margin-bottom: 60px; }
+    margin-bottom: 105px; }
     .about.style2 .btn-wrapp a {
-      font-family: "Cormac-ExtraLight", sans-serif;
+      font-family: "cormac-extralight", sans-serif;
       font-size: 22px;
       line-height: 26px;
-      letter-spacing: 0.2px;
+      letter-spacing: 0px;
       color: #fff;
       text-align: center;
       display: block;
       width: 50%;
-      padding: 30px 0;
+      padding: 38px 0 41px;
       background: #4489ff; }
       @media (max-width: 767px) {
         .about.style2 .btn-wrapp a {
@@ -9969,7 +9983,7 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
     justify-content: center; }
     .about.style2 .social li {
       display: table;
-      padding: 0 15px;
+      padding: 0 10px;
       -webkit-box-sizing: content-box;
       box-sizing: content-box;
       width: 60px; }
@@ -9992,16 +10006,16 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
           color: #fff;
           font-size: 24px; }
   .about.style2 .about-tell {
-    padding: 60px 0;
+    padding: 30px 0 0;
     margin: 0; }
     .about.style2 .about-tell p {
-      font-family: "Cormac-ExtraLight", sans-serif;
+      font-family: "cormac-extralight", sans-serif;
       font-size: 22px;
       line-height: 26px;
-      letter-spacing: 0.2px; }
+      letter-spacing: 0px; }
 
 .partners-style2 {
-  padding: 70px 0;
+  padding: 66px 0 53px;
   background: #f4f7fb;
   border-bottom: 1px solid #e7edf2; }
   .partners-style2 ul {
@@ -10035,13 +10049,13 @@ footer.footer.style2 {
     color: #000; }
   footer.footer.style2 .footer-info a {
     color: #4b5769;
-    letter-spacing: 0.2px; }
+    letter-spacing: 0px; }
     footer.footer.style2 .footer-info a:after {
       border-color: #4489ff; }
     footer.footer.style2 .footer-info a i {
       color: #4489ff;
       font-weight: 600;
-      margin-left: 15px; }
+      margin-left: 11px; }
   @media (max-width: 991px) {
     footer.footer.style2 .footer-contacts {
       -webkit-box-orient: vertical;
@@ -10055,7 +10069,7 @@ footer.footer.style2 {
   footer.footer.style2 .footer-contacts:after {
     background: #e7edf2; }
   footer.footer.style2 .footer-contacts a {
-    font-family: "Cormac-ExtraLight", sans-serif; }
+    font-family: "cormac-extralight", sans-serif; }
   footer.footer.style2 .footer-contacts > ul {
     display: -webkit-box;
     display: -webkit-flex;
@@ -10139,7 +10153,7 @@ footer.footer.style2 {
 /*********************************/
 h1, h2, h3, h4, h5, h6 {
   color: #000;
-  font-family: "Cormac-ExtraLight", sans-serif;
+  font-family: "cormac-extralight", sans-serif;
   letter-spacing: 0; }
 
 h1 {
@@ -10552,7 +10566,7 @@ span.rub {
       -ms-flex-direction: column;
       flex-direction: column; } }
   .main-title h1 {
-    font-family: "Cormac-ExtraLight", sans-serif;
+    font-family: "cormac-extralight", sans-serif;
     font-size: 24px;
     line-height: 29px;
     letter-spacing: -0.5px;
@@ -10717,177 +10731,212 @@ span.rub {
       transform: translateY(0%); }
   .app.land .wr .col-md-12 > section {
     padding: 80px 0; }
+    .app.land .wr .col-md-12 > section.working {
+      padding: 80px 0 86px; }
+    .app.land .wr .col-md-12 > section.help {
+      padding: 72px 0 40px; }
+      .app.land .wr .col-md-12 > section.help h2 {
+        letter-spacing: 0; }
+    .app.land .wr .col-md-12 > section.ads {
+      padding: 61px 0 69px; }
+    .app.land .wr .col-md-12 > section.doings {
+      padding: 67px 0 86px; }
+      .app.land .wr .col-md-12 > section.doings h2 {
+        letter-spacing: 0;
+        margin-bottom: 54px; }
+    .app.land .wr .col-md-12 > section.carousel-testimonials_1 {
+      padding: 98px 0 86px; }
+    .app.land .wr .col-md-12 > section.carousel-testimonials_2 {
+      padding: 84px 0 53px; }
+    .app.land .wr .col-md-12 > section.thanks {
+      padding: 80px 0 89px; }
   @media (max-width: 767px) {
     .app.land .wr.mobile_hide {
       display: none; } }
   .app.land h2 {
     font-size: 34px;
     text-align: center;
-    margin-bottom: 65px; }
+    margin-bottom: 63px; }
   .app.land .footer {
     width: 100%;
     left: 0;
     bottom: 0; }
 
-.working {
-  padding: 80px 0; }
-  .working-wrapp > div {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex; }
+.working-wrapp > div {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex; }
+  @media (max-width: 991px) {
+    .working-wrapp > div {
+      -webkit-box-pack: center;
+      -webkit-justify-content: center;
+      -ms-flex-pack: center;
+      justify-content: center; } }
+  @media (max-width: 480px) {
+    .working-wrapp > div {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column; } }
+  .working-wrapp > div h4 {
+    letter-spacing: 0px;
+    font-size: 22px;
+    line-height: 32px; }
+  .working-wrapp > div.placement {
+    -webkit-box-pack: end;
+    -webkit-justify-content: flex-end;
+    -ms-flex-pack: end;
+    justify-content: flex-end; }
     @media (max-width: 991px) {
-      .working-wrapp > div {
+      .working-wrapp > div.placement {
         -webkit-box-pack: center;
         -webkit-justify-content: center;
         -ms-flex-pack: center;
         justify-content: center; } }
     @media (max-width: 480px) {
-      .working-wrapp > div {
+      .working-wrapp > div.placement {
         -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-        -webkit-flex-direction: column;
-        -ms-flex-direction: column;
-        flex-direction: column; } }
-    .working-wrapp > div h4 {
-      letter-spacing: 0.1px;
-      font-size: 22px;
-      line-height: 32px; }
-    .working-wrapp > div.placement {
-      -webkit-box-pack: end;
-      -webkit-justify-content: flex-end;
-      -ms-flex-pack: end;
-      justify-content: flex-end; }
-      @media (max-width: 991px) {
-        .working-wrapp > div.placement {
-          -webkit-box-pack: center;
-          -webkit-justify-content: center;
-          -ms-flex-pack: center;
-          justify-content: center; } }
-      @media (max-width: 480px) {
-        .working-wrapp > div.placement {
-          -webkit-box-orient: vertical;
-          -webkit-box-direction: reverse;
-          -webkit-flex-direction: column-reverse;
-          -ms-flex-direction: column-reverse;
-          flex-direction: column-reverse; } }
-      @media (max-width: 480px) {
-        .working-wrapp > div.placement a {
-          display: inline-block;
-          text-align: center; } }
-    .working-wrapp > div.payment {
-      -webkit-box-pack: center;
-      -webkit-justify-content: center;
-      -ms-flex-pack: center;
-      justify-content: center; }
-      @media (max-width: 767px) {
-        .working-wrapp > div.payment {
-          margin-left: 0; } }
-      @media (max-width: 480px) {
-        .working-wrapp > div.payment {
-          -webkit-box-orient: vertical;
-          -webkit-box-direction: reverse;
-          -webkit-flex-direction: column-reverse;
-          -ms-flex-direction: column-reverse;
-          flex-direction: column-reverse; } }
-    .working-wrapp > div > section {
-      margin-top: 10px; }
-      .working-wrapp > div > section a {
-        display: -webkit-box;
-        display: -webkit-flex;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-align: center;
-        -webkit-align-items: center;
-        -ms-flex-align: center;
-        align-items: center;
-        letter-spacing: 0.2px; }
-    .working-wrapp > div > figure {
-      margin-top: 12px; }
-  .working-wrapp {
-    position: relative; }
-    .working-wrapp > div {
-      width: 42%; }
-      @media (max-width: 991px) {
-        .working-wrapp > div {
-          width: 100%;
-          margin: 50px 0; } }
-      @media (max-width: 480px) {
-        .working-wrapp > div {
-          text-align: center; } }
-      .working-wrapp > div > section a {
-        margin-top: 10px;
-        font-size: 16px;
-        font-family: "Cormac-ExtraLight", sans-serif; }
-        .working-wrapp > div > section a i {
-          position: relative;
-          top: 1px;
-          margin-left: 10px; }
-      .working-wrapp > div > figure {
-        margin: 12px 10px; }
-    .working-wrapp .dotted-line {
-      position: absolute;
-      left: 50%;
-      top: 30px;
-      margin-left: -100px;
-      display: block;
-      width: 239px;
-      height: 170px;
-      background: url(../img/dotted-line.png) no-repeat; }
-      @media (max-width: 991px) {
-        .working-wrapp .dotted-line {
-          display: none; } }
-    .working-wrapp .placement {
-      float: left; }
-      @media (max-width: 991px) {
-        .working-wrapp .placement {
-          float: none;
-          clear: both; } }
-    .working-wrapp .purchase {
-      float: right; }
-      @media (max-width: 991px) {
-        .working-wrapp .purchase {
-          float: none;
-          clear: both; } }
-      @media (max-width: 480px) {
-        .working-wrapp .purchase a {
-          display: inline-block;
-          text-align: center; } }
-    .working-wrapp .payment {
+        -webkit-box-direction: reverse;
+        -webkit-flex-direction: column-reverse;
+        -ms-flex-direction: column-reverse;
+        flex-direction: column-reverse; } }
+    @media (max-width: 480px) {
+      .working-wrapp > div.placement a {
+        display: inline-block;
+        text-align: center; } }
+  .working-wrapp > div.payment {
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center; }
+    @media (max-width: 767px) {
+      .working-wrapp > div.payment {
+        margin-left: 0; } }
+    @media (max-width: 480px) {
+      .working-wrapp > div.payment {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: reverse;
+        -webkit-flex-direction: column-reverse;
+        -ms-flex-direction: column-reverse;
+        flex-direction: column-reverse; } }
+  .working-wrapp > div > section {
+    margin-top: 10px;
+    padding-top: 4px; }
+    .working-wrapp > div > section a {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
       -webkit-box-align: center;
       -webkit-align-items: center;
       -ms-flex-align: center;
       align-items: center;
-      clear: both;
-      margin-left: 20%;
-      padding-top: 25px; }
-      @media (max-width: 991px) {
-        .working-wrapp .payment {
-          padding-top: 0;
-          margin-left: 0; } }
-      .working-wrapp .payment a {
-        float: right; }
-    .working-wrapp .placement h4, .working-wrapp .payment h4 {
-      text-align: right; }
-      @media (max-width: 480px) {
-        .working-wrapp .placement h4, .working-wrapp .payment h4 {
-          text-align: center; } }
-  .working-wrapp > div > section a i {
-    -webkit-transition: margin .2s, opacity .2s, -webkit-transform .2s ease;
-    transition: margin .2s, opacity .2s, -webkit-transform .2s ease;
-    transition: margin .2s, opacity .2s, transform .2s ease;
-    transition: margin .2s, opacity .2s, transform .2s ease, -webkit-transform .2s ease; }
-  .working-wrapp > div > section a:hover {
-    color: #4489ff; }
-    .working-wrapp > div > section a:hover i {
-      -webkit-transform: translateX(5px);
-      -ms-transform: translateX(5px);
-      transform: translateX(5px); }
-    .working-wrapp > div > section a:hover i.icon-video {
-      -webkit-transform: translateX(0);
-      -ms-transform: translateX(0);
-      transform: translateX(0);
-      opacity: 0.6; }
+      letter-spacing: 0.2px; }
+  .working-wrapp > div > figure {
+    margin-top: 12px; }
+
+.working-wrapp {
+  position: relative; }
+  .working-wrapp > div {
+    width: 41.68%; }
+    @media (max-width: 991px) {
+      .working-wrapp > div {
+        width: 100%;
+        margin: 50px 0; } }
+    @media (max-width: 480px) {
+      .working-wrapp > div {
+        text-align: center; } }
+    .working-wrapp > div > section a {
+      margin-top: 12px;
+      font-size: 16px;
+      font-family: "cormac-extralight", sans-serif;
+      letter-spacing: 0; }
+      .working-wrapp > div > section a i {
+        position: relative;
+        top: 3px;
+        right: 1px;
+        margin-left: 10px; }
+    .working-wrapp > div > figure {
+      margin: 12px 10px; }
+  .working-wrapp .dotted-line {
+    position: absolute;
+    left: 49.2%;
+    top: 24px;
+    margin-left: -100px;
+    display: block;
+    width: 239px;
+    height: 170px;
+    background: url(../img/dotted-line.png) no-repeat; }
+    @media (max-width: 991px) {
+      .working-wrapp .dotted-line {
+        display: none; } }
+  .working-wrapp .placement {
+    float: left; }
+    @media (max-width: 991px) {
+      .working-wrapp .placement {
+        float: none;
+        clear: both; } }
+  .working-wrapp .purchase {
+    float: right;
+    width: 43.67%; }
+    @media (max-width: 991px) {
+      .working-wrapp .purchase {
+        float: none;
+        clear: both; } }
+    @media (max-width: 480px) {
+      .working-wrapp .purchase a {
+        display: inline-block;
+        text-align: center; } }
+    .working-wrapp .purchase figure {
+      margin-right: 7px; }
+  .working-wrapp .payment {
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    clear: both;
+    margin-left: 20.1%;
+    padding-top: 30px; }
+    @media (max-width: 991px) {
+      .working-wrapp .payment {
+        padding-top: 0;
+        margin-left: 0; } }
+    .working-wrapp .payment a {
+      float: right;
+      margin-top: 17px;
+      position: relative;
+      left: 3px; }
+      .working-wrapp .payment a i {
+        margin-left: 17px; }
+    .working-wrapp .payment section {
+      padding-top: 18px; }
+    .working-wrapp .payment figure {
+      margin-left: 15px; }
+  .working-wrapp .placement h4, .working-wrapp .payment h4 {
+    text-align: right; }
+    @media (max-width: 480px) {
+      .working-wrapp .placement h4, .working-wrapp .payment h4 {
+        text-align: center; } }
+
+.working-wrapp > div > section a i {
+  -webkit-transition: margin .2s, opacity .2s, -webkit-transform .2s ease;
+  transition: margin .2s, opacity .2s, -webkit-transform .2s ease;
+  transition: margin .2s, opacity .2s, transform .2s ease;
+  transition: margin .2s, opacity .2s, transform .2s ease, -webkit-transform .2s ease; }
+
+.working-wrapp > div > section a:hover {
+  color: #4489ff; }
+  .working-wrapp > div > section a:hover i {
+    -webkit-transform: translateX(5px);
+    -ms-transform: translateX(5px);
+    transform: translateX(5px); }
+  .working-wrapp > div > section a:hover i.icon-video {
+    -webkit-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 0.6; }
 
 .advance {
   display: -webkit-box;
@@ -11088,7 +11137,7 @@ span.rub {
         width: -webkit-calc(100% - 86px);
         width: calc(100% - 86px); } }
     .menu-top ul li a {
-      font-family: "Cormac-ExtraLight", sans-serif;
+      font-family: "cormac-extralight", sans-serif;
       font-size: 14px;
       line-height: 20px;
       letter-spacing: -0.5px;
@@ -11130,7 +11179,7 @@ span.rub {
       .menu-general:after {
         display: none; } }
   .menu-general > a {
-    font-family: "Cormac-ExtraLight", sans-serif;
+    font-family: "cormac-extralight", sans-serif;
     font-size: 22px;
     line-height: 24px;
     letter-spacing: -0.5px;
@@ -11174,7 +11223,7 @@ span.rub {
         .menu-general > ul li {
           text-align: left; } }
       .menu-general > ul li a {
-        font-family: "Cormac-ExtraLight", sans-serif;
+        font-family: "cormac-extralight", sans-serif;
         font-size: 14px;
         line-height: 19px;
         letter-spacing: -0.5px;
@@ -11758,28 +11807,29 @@ span.rub {
     display: flex; }
   .footer-info li {
     width: 49%;
-    padding-left: 20px; }
+    padding-left: 45px;
+    padding-top: 20px; }
     @media (max-width: 767px) {
       .footer-info li {
         padding: 10px 0;
         width: 100%; } }
     .footer-info li:first-child {
       text-align: right;
-      padding: 10px 20px 10px 0; }
+      padding: 28px 0px 10px 0; }
       @media (max-width: 767px) {
         .footer-info li:first-child {
           text-align: center;
           padding-right: 0; } }
       .footer-info li:first-child p {
-        font-family: "Cormac-ExtraLight", sans-serif;
-        font-size: 24px;
+        font-family: "cormac-extralight", sans-serif;
+        font-size: 23px;
         line-height: 29px;
         letter-spacing: -0.7px;
         color: #fff;
-        margin-bottom: 10px; }
+        margin-bottom: 5px; }
       .footer-info li:first-child a {
-        font-family: "HelveticaLight", sans-serif;
-        font-size: 18px;
+        font-family: "cormac-extralight", sans-serif;
+        font-size: 16px;
         line-height: 22px;
         letter-spacing: 0;
         color: #fff; }
@@ -11804,7 +11854,7 @@ span.rub {
     position: relative;
     padding-top: 20px;
     padding-bottom: 20px;
-    margin-top: 20px; }
+    margin-top: 26px; }
     @media (max-width: 767px) {
       .footer-contacts {
         font-size: 20px;
@@ -11938,7 +11988,7 @@ span.rub {
       .intro hgroup {
         width: 270px; } }
     .intro hgroup h1, .intro hgroup h2 {
-      font-family: "Cormac-ExtraLight", sans-serif;
+      font-family: "cormac-extralight", sans-serif;
       font-size: 44px !important;
       line-height: 54px;
       letter-spacing: -0.4px;
@@ -11969,7 +12019,7 @@ span.rub {
       .intro figure img {
         width: 20%; } }
     .intro figure figcaption {
-      font-family: "Cormac-ExtraLight", sans-serif;
+      font-family: "cormac-extralight", sans-serif;
       font-size: 34px;
       line-height: 40px;
       letter-spacing: 0.2px;
@@ -13664,7 +13714,7 @@ a.down {
       margin-bottom: 35px; }
     .new_post-contacts h3 {
       color: #000000;
-      font-family: "Cormac-ExtraLight", sans-serif;
+      font-family: "cormac-extralight", sans-serif;
       font-size: 24px;
       line-height: 38px;
       letter-spacing: -1px;
@@ -13787,7 +13837,7 @@ a.down {
     color: #4489ff;
     background: #fff; }
   .land .btn, .land .new_post-confirm li button, .new_post-confirm li .land button {
-    font-family: "Cormac-ExtraLight", sans-serif;
+    font-family: "cormac-extralight", sans-serif;
     font-size: 20px;
     line-height: 20px;
     letter-spacing: 0.5px;
@@ -13825,7 +13875,7 @@ a.down {
   -ms-flex-align: center;
   align-items: center; }
   .donation p {
-    font-family: "Cormac-ExtraLight", sans-serif;
+    font-family: "cormac-extralight", sans-serif;
     font-size: 16px;
     line-height: 1;
     letter-spacing: 0; }
@@ -13946,7 +13996,7 @@ a.down {
     background: #fff; } }
 
 .tabs-main a.js-toggle-menu {
-  font-family: "Cormac-ExtraLight", sans-serif;
+  font-family: "cormac-extralight", sans-serif;
   font-size: 18px;
   line-height: 22px;
   letter-spacing: -1px;
@@ -13986,7 +14036,7 @@ a.down {
       padding-bottom: 3px; } }
 
 .tabs-main ul li a {
-  font-family: "Cormac-ExtraLight", sans-serif;
+  font-family: "cormac-extralight", sans-serif;
   font-size: 18px;
   line-height: 22px;
   letter-spacing: -1px;
@@ -14188,7 +14238,8 @@ a.down {
   width: 100%; }
 
 .found-info {
-  padding-top: 20px;
+  padding-top: 16px;
+  padding-right: 51px;
   position: relative;
   float: right; }
   @media (max-width: 991px) {
@@ -14198,9 +14249,10 @@ a.down {
     .found-info {
       text-align: left; } }
   .found-info h2 {
-    margin-bottom: 30px !important;
+    margin-bottom: 33px !important;
     line-height: 42px;
-    text-align: left !important; }
+    text-align: left !important;
+    letter-spacing: 0; }
     @media (max-width: 991px) {
       .found-info h2 {
         text-align: center; }
@@ -14210,10 +14262,12 @@ a.down {
       .found-info h2 {
         text-align: left; } }
   .found-info a {
-    font-family: "Cormac-ExtraLight", sans-serif;
-    font-size: 16px;
-    letter-spacing: 0.1px; }
+    font-family: "cormac-extralight", sans-serif;
+    font-size: 16px; }
     .found-info a i {
+      position: relative;
+      left: 7px;
+      top: -1px;
       -webkit-transition: -webkit-transform .2s ease;
       transition: -webkit-transform .2s ease;
       transition: transform .2s ease;
@@ -14323,34 +14377,40 @@ a.down {
     .carousel .owl-dots {
       padding-left: 0; } }
 
-@media (max-width: 991px) {
-  .carousel-found {
-    width: 100%;
-    padding-top: 40px;
-    clear: both; } }
-
-.carousel-found .carousel-item {
-  text-align: center; }
-  @media (max-width: 1199px) {
-    .carousel-found .carousel-item {
-      padding: 20px; } }
-  .carousel-found .carousel-item figure {
-    width: 140px;
-    margin: 0 auto 40px auto;
-    -webkit-border-radius: 50%;
-    border-radius: 50%; }
-    .carousel-found .carousel-item figure img {
+.carousel-found {
+  width: 630px;
+  position: relative;
+  left: -19px; }
+  @media (max-width: 991px) {
+    .carousel-found {
+      width: 100%;
+      padding-top: 40px;
+      clear: both;
+      left: 0; } }
+  .carousel-found .carousel-item {
+    text-align: center; }
+    @media (max-width: 1199px) {
+      .carousel-found .carousel-item {
+        padding: 20px; } }
+    .carousel-found .carousel-item figure {
       width: 140px;
-      height: 140px;
-      overflow: hidden; }
-    .carousel-found .carousel-item figure figcaption {
-      margin-top: 25px;
-      letter-spacing: 0.2px;
-      font-family: "Cormac-ExtraLight", sans-serif;
-      font-size: 14px;
-      line-height: 1;
-      letter-spacing: 0.4px;
-      font-weight: 200; }
+      margin: 0 auto 48px auto;
+      -webkit-border-radius: 50%;
+      border-radius: 50%; }
+      .carousel-found .carousel-item figure img {
+        width: 140px;
+        height: 140px;
+        overflow: hidden; }
+      .carousel-found .carousel-item figure figcaption {
+        margin-top: 16px;
+        letter-spacing: 0.2px;
+        font-family: "cormac-extralight", sans-serif;
+        font-size: 16px;
+        line-height: 1;
+        letter-spacing: 0.4px;
+        font-weight: 200; }
+  .carousel-found .owl-dots {
+    padding-left: 50px; }
 
 .carousel-testimonials_1 .carousel-wrap, .carousel-testimonials_2 .carousel-wrap {
   position: relative; }
@@ -14361,7 +14421,7 @@ a.down {
   left: 0;
   width: 100%; }
   .carousel-testimonials_1 .carousel-item figure figcaption, .carousel-testimonials_2 .carousel-item figure figcaption {
-    font-family: "Cormac-ExtraLight", sans-serif;
+    font-family: "cormac-extralight", sans-serif;
     font-size: 34px;
     line-height: 43px;
     letter-spacing: 0; }
@@ -14369,7 +14429,7 @@ a.down {
       .carousel-testimonials_1 .carousel-item figure figcaption br, .carousel-testimonials_2 .carousel-item figure figcaption br {
         display: none; } }
     .carousel-testimonials_1 .carousel-item figure figcaption span, .carousel-testimonials_2 .carousel-item figure figcaption span {
-      font-family: "Cormac-ExtraLight", sans-serif;
+      font-family: "cormac-extralight", sans-serif;
       font-size: 16px;
       line-height: 24px;
       letter-spacing: 0.5px;
@@ -14427,36 +14487,53 @@ a.down {
     .carousel-testimonials_1 .carousel-wrap {
       height: 790px; } }
 
-.carousel-testimonials_1 .carousel-item figure {
-  text-align: left; }
-  @media (max-width: 767px) {
-    .carousel-testimonials_1 .carousel-item figure {
-      text-align: center;
-      width: 100%;
-      margin-bottom: 60px; } }
-  .carousel-testimonials_1 .carousel-item figure img {
-    width: 68px;
-    height: 68px;
-    margin-right: 20px; }
+.carousel-testimonials_1 .carousel-item {
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  padding-left: 8.5%; }
+  .carousel-testimonials_1 .carousel-item figure {
+    text-align: left; }
     @media (max-width: 767px) {
-      .carousel-testimonials_1 .carousel-item figure img {
-        margin: 0 0 15px 0; } }
+      .carousel-testimonials_1 .carousel-item figure {
+        text-align: center;
+        width: 100%;
+        margin-bottom: 60px; } }
+    .carousel-testimonials_1 .carousel-item figure img {
+      width: 80px;
+      height: 80px;
+      margin-right: 20px;
+      margin-top: 5px; }
+      @media (max-width: 767px) {
+        .carousel-testimonials_1 .carousel-item figure img {
+          margin: 0 0 15px 0; } }
+    .carousel-testimonials_1 .carousel-item figure figcaption span {
+      letter-spacing: 0;
+      margin-top: 13px; }
+  .carousel-testimonials_1 .carousel-item section {
+    padding-left: 5.2%;
+    width: 58.8%; }
+    .carousel-testimonials_1 .carousel-item section p {
+      line-height: 24px;
+      letter-spacing: 0.8px;
+      padding: 11px 50px 0;
+      position: relative; }
+      .carousel-testimonials_1 .carousel-item section p i {
+        content: '';
+        display: block;
+        width: 28px;
+        height: 28px;
+        position: absolute; }
+        .carousel-testimonials_1 .carousel-item section p i.icon-quotes-left {
+          left: -2px;
+          top: -1px; }
+        .carousel-testimonials_1 .carousel-item section p i.icon-quotes-right {
+          right: 1px;
+          bottom: -16px; }
 
-.carousel-testimonials_1 .carousel-item section p {
-  padding: 0 50px;
-  position: relative; }
-  .carousel-testimonials_1 .carousel-item section p i {
-    content: '';
-    display: block;
-    width: 28px;
-    height: 28px;
-    position: absolute; }
-    .carousel-testimonials_1 .carousel-item section p i.icon-quotes-left {
-      left: 0;
-      top: 0; }
-    .carousel-testimonials_1 .carousel-item section p i.icon-quotes-right {
-      right: 0;
-      bottom: 0; }
+.carousel-testimonials_1 .navigation {
+  margin-top: 48px !important; }
 
 .carousel-testimonials_2 .carousel-wrap {
   min-height: 200px; }
@@ -14485,31 +14562,45 @@ a.down {
     .carousel-testimonials_2 .carousel-wrap {
       height: 690px; } }
 
-.carousel-testimonials_2 .carousel-item figure {
-  text-align: center;
-  width: 35%; }
-  @media (max-width: 767px) {
-    .carousel-testimonials_2 .carousel-item figure {
-      width: 100%;
-      margin-bottom: 30px; } }
-  .carousel-testimonials_2 .carousel-item figure img {
-    width: 180px;
-    height: 180px;
-    overflow: hidden;
-    -webkit-border-radius: 50%;
-    border-radius: 50%; }
-
-.carousel-testimonials_2 .carousel-item section {
-  width: 55%; }
-  @media (max-width: 767px) {
-    .carousel-testimonials_2 .carousel-item section {
-      width: 100%; } }
-  .carousel-testimonials_2 .carousel-item section h2 {
-    text-align: left;
-    margin-bottom: 40px; }
+.carousel-testimonials_2 .carousel-item {
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  padding-left: 86px; }
+  .carousel-testimonials_2 .carousel-item figure {
+    text-align: center;
+    width: 19%; }
     @media (max-width: 767px) {
-      .carousel-testimonials_2 .carousel-item section h2 {
-        text-align: center; } }
+      .carousel-testimonials_2 .carousel-item figure {
+        width: 100%;
+        margin-bottom: 30px; } }
+    .carousel-testimonials_2 .carousel-item figure img {
+      width: 180px;
+      height: 180px;
+      overflow: hidden;
+      -webkit-border-radius: 50%;
+      border-radius: 50%; }
+  .carousel-testimonials_2 .carousel-item section {
+    width: 69.7%;
+    padding-left: 9.7%; }
+    @media (max-width: 767px) {
+      .carousel-testimonials_2 .carousel-item section {
+        width: 100%;
+        padding-left: 0; } }
+    .carousel-testimonials_2 .carousel-item section h2 {
+      text-align: left;
+      letter-spacing: 0;
+      margin-bottom: 34px; }
+      @media (max-width: 767px) {
+        .carousel-testimonials_2 .carousel-item section h2 {
+          text-align: center; } }
+    .carousel-testimonials_2 .carousel-item section p {
+      line-height: 24px;
+      letter-spacing: 0.7px; }
+
+.carousel-testimonials_2 .navigation {
+  margin-top: 25px !important; }
 
 .carousel-kids {
   display: inline-block;
@@ -14894,7 +14985,7 @@ a.down {
             width: 100%;
             padding-right: 5px; } }
         .list-goods.type_1 > li a article h2 {
-          font-family: "Cormac-ExtraLight", sans-serif;
+          font-family: "cormac-extralight", sans-serif;
           font-size: 18px;
           line-height: 1;
           letter-spacing: -0.5px;
@@ -14931,7 +15022,7 @@ a.down {
               letter-spacing: 0.5px;
               display: block; }
           .list-goods.type_1 > li a article div > span {
-            font-family: "Cormac-ExtraLight", sans-serif;
+            font-family: "cormac-extralight", sans-serif;
             font-size: 18px;
             line-height: 1;
             letter-spacing: -0.5px; }
@@ -15120,7 +15211,7 @@ a.down {
         padding-right: 50px; }
     .list-goods.type_2 tr td {
       text-align: right;
-      font-family: "Cormac-ExtraLight", sans-serif;
+      font-family: "cormac-extralight", sans-serif;
       padding: 20px 0; }
       @media (max-width: 991px) {
         .list-goods.type_2 tr td {
@@ -15161,7 +15252,7 @@ a.down {
           .list-goods.type_2 tr td span.value {
             display: block; } }
       .list-goods.type_2 tr td > a {
-        font-family: "Cormac-ExtraLight", sans-serif;
+        font-family: "cormac-extralight", sans-serif;
         font-size: 18px;
         line-height: 22px;
         letter-spacing: 0.3px;
@@ -15292,13 +15383,13 @@ a.down {
       .list-projects.type_1 li article ul li:last-child {
         border-bottom: 1px solid #D9E4EA; }
       .list-projects.type_1 li article ul li h4 {
-        font-family: "Cormac-ExtraLight", sans-serif;
+        font-family: "cormac-extralight", sans-serif;
         font-size: 16px;
         line-height: 19px;
         letter-spacing: 0.2px;
         color: #000; }
       .list-projects.type_1 li article ul li dl dt, .list-projects.type_1 li article ul li dl dd {
-        font-family: "Cormac-ExtraLight", sans-serif;
+        font-family: "cormac-extralight", sans-serif;
         font-size: 18px;
         font-weight: 100;
         text-align: right; }
@@ -15321,7 +15412,7 @@ a.down {
         letter-spacing: 0.2px;
         color: #89A1B3; }
         .list-projects.type_1 li article footer h4 strong {
-          font-family: "Cormac-ExtraLight", sans-serif;
+          font-family: "cormac-extralight", sans-serif;
           font-size: 22px;
           line-height: 28px;
           letter-spacing: -0.2px;
@@ -15352,7 +15443,7 @@ a.down {
       letter-spacing: 0.1px;
       line-height: 22px; }
     .list-projects.type_2 > li article > a {
-      font-family: "Cormac-ExtraLight", sans-serif;
+      font-family: "cormac-extralight", sans-serif;
       font-size: 16px;
       line-height: 18px;
       letter-spacing: 0.3px;
@@ -15385,7 +15476,7 @@ a.down {
         font-size: 14px;
         display: block; }
       .list-projects.type_2 > li .info .price p {
-        font-family: "Cormac-ExtraLight", sans-serif;
+        font-family: "cormac-extralight", sans-serif;
         font-size: 34px;
         line-height: 38px;
         letter-spacing: 0.5px; }
@@ -15403,7 +15494,7 @@ a.down {
         width: 50%;
         height: 47px; }
         .list-projects.type_2 > li .info .progress-wrapp ul li p {
-          font-family: "Cormac-ExtraLight", sans-serif;
+          font-family: "cormac-extralight", sans-serif;
           font-size: 18px;
           line-height: 22px;
           letter-spacing: 0;
@@ -15430,7 +15521,7 @@ a.down {
         color: #000;
         font-weight: 600; }
     .list-projects.type_2 > li .info a {
-      font-family: "Cormac-ExtraLight", sans-serif;
+      font-family: "cormac-extralight", sans-serif;
       font-size: 16px;
       line-height: 18px;
       letter-spacing: 0;
@@ -15465,7 +15556,7 @@ a.down {
         letter-spacing: 0.1px;
         line-height: 22px; }
       .list-reports > li article > a {
-        font-family: "Cormac-ExtraLight", sans-serif;
+        font-family: "cormac-extralight", sans-serif;
         font-size: 16px;
         line-height: 18px;
         letter-spacing: 0.3px;
@@ -15539,7 +15630,7 @@ a.down {
         .list-bookmarks > li > ul > li ul li i {
           margin-right: 10px; }
       .list-bookmarks > li > ul > li p {
-        font-family: "Cormac-ExtraLight", sans-serif;
+        font-family: "cormac-extralight", sans-serif;
         font-size: 24px;
         line-height: 28px;
         letter-spacing: 0.3px;
@@ -15827,7 +15918,7 @@ a.down {
         padding-right: 50px; }
     .list-ads tr td {
       text-align: right;
-      font-family: "Cormac-ExtraLight", sans-serif;
+      font-family: "cormac-extralight", sans-serif;
       padding: 20px 0; }
       @media (max-width: 991px) {
         .list-ads tr td {
@@ -15868,7 +15959,7 @@ a.down {
           .list-ads tr td span.value {
             display: block; } }
       .list-ads tr td > a {
-        font-family: "Cormac-ExtraLight", sans-serif;
+        font-family: "cormac-extralight", sans-serif;
         font-size: 18px;
         line-height: 22px;
         letter-spacing: 0.3px;
@@ -16045,7 +16136,7 @@ a.down {
         margin: 25px 0 0 0; } }
     .user-me section ul li span {
       color: #000;
-      font-family: "Cormac-ExtraLight", sans-serif;
+      font-family: "cormac-extralight", sans-serif;
       font-size: 24px; }
       @media (max-width: 991px) {
         .user-me section ul li span {
@@ -16193,7 +16284,7 @@ a.down {
         margin: 25px 0 0 0; } }
     .found-me section ul li span {
       color: #000;
-      font-family: "Cormac-ExtraLight", sans-serif;
+      font-family: "cormac-extralight", sans-serif;
       font-size: 24px; }
       @media (max-width: 991px) {
         .found-me section ul li span {
@@ -16241,7 +16332,7 @@ a.down {
       width: 100%;
       min-width: 320px; } }
   .popup-login h2 {
-    font-family: "Cormac-ExtraLight", sans-serif;
+    font-family: "cormac-extralight", sans-serif;
     font-size: 32px;
     line-height: 36px;
     letter-spacing: -0.5px;

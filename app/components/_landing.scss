@@ -15,6 +15,43 @@
 			.col-md-12 {
 				& > section {
 					padding: 80px 0;
+
+					&.working {
+						padding: 80px 0 86px;
+					}
+
+					&.help {
+						padding: 72px 0 40px;
+						h2 {
+							letter-spacing: 0;
+						}
+					}
+
+					&.ads {
+						padding: 61px 0 69px;
+					}
+
+					&.doings {
+						padding: 67px 0 86px;
+
+						h2 {
+							letter-spacing: 0;
+							margin-bottom: 54px;
+						}
+					}
+
+					&.carousel-testimonials {
+						&_1 {
+							padding: 98px 0 86px;
+						}
+						&_2 {
+							padding: 84px 0 53px;
+						}
+					}
+
+					&.thanks {
+						padding: 80px 0 89px;
+					}
 				}
 			}
 			&.mobile_hide {@include respond-to(sm) {display: none;}}
@@ -22,7 +59,7 @@
 
 		h2 {
 			font-size: 34px; text-align: center;
-			margin-bottom: 65px;
+			margin-bottom: 63px;
 		}
 
 		.footer {width: 100%; left: 0; bottom: 0;}
@@ -32,7 +69,6 @@
 
 // HOW IT WORK http://prntscr.com/gi7muf
 .working {
-	padding: 80px 0;
 	
 	&-wrapp {
 		& > div {
@@ -40,7 +76,7 @@
 			@include respond-to(md) {justify-content: center;}
 			@include respond-to(xs) {flex-direction: column;}
 
-			h4 {letter-spacing: 0.1px; font-size: 22px; line-height: 32px;}
+			h4 {letter-spacing: 0px; font-size: 22px; line-height: 32px;}
 
 			&.placement {
 				justify-content: flex-end;
@@ -56,7 +92,7 @@
 			}
 
 			& > section {
-				margin-top: 10px;
+				margin-top: 10px; padding-top: 4px;
 				a {
 					display: flex; align-items: center; letter-spacing: 0.2px;
 
@@ -73,14 +109,14 @@
 		position: relative;
 
 		& > div {
-			width: 42%;
+			width: 41.68%;
 			@include respond-to(md) {width: 100%; margin: 50px 0;}
 			@include respond-to(xs) {text-align: center;}
 
 			& > section {
 				a {
-					margin-top: 10px; font-size: 16px; font-family: $CormacEL;
-					i {position: relative; top: 1px; margin-left: 10px;}
+					margin-top: 12px; font-size: 16px; font-family: $CormacEL; letter-spacing: 0;
+					i {position: relative; top: 3px; right: 1px; margin-left: 10px;}
 				}
 			}
 
@@ -90,7 +126,7 @@
 		}
 
 		.dotted-line {
-			position: absolute; left: 50%; top: 30px; margin-left: -100px; display: block; width: 239px; height: 170px;
+			position: absolute; left: 49.2%; top: 24px; margin-left: -100px; display: block; width: 239px; height: 170px;
 			background: url(../img/dotted-line.png) no-repeat;
 			@include respond-to(md) {
 				display: none;
@@ -103,21 +139,36 @@
 		}
 
 		.purchase {
-			float: right;
+			float: right; width: 43.67%;
 			@include respond-to(md) {float: none; clear: both;}
 			a {@include respond-to(xs) {display: inline-block; text-align: center;}}
+
+			figure {
+				margin-right: 7px;
+			}
 		}
 
 		.payment {
 			align-items: center;
 
-			clear: both; margin-left: 20%;
-			padding-top: 25px;
+			clear: both; margin-left: 20.1%;
+			padding-top: 30px;
 			@include respond-to(md) {
 				padding-top: 0; margin-left: 0;
 			}
 
-			a {float:right;}
+			a {
+				float:right; margin-top: 17px; position: relative; left: 3px;
+				i {
+					margin-left: 17px;
+				}
+			}
+			section {
+				padding-top: 18px;
+			}
+			figure {
+				margin-left: 15px;
+			}
 		}
 
 		.placement, .payment {

@@ -11,16 +11,23 @@
 			////////////////////////////////////////////////////////////////////////////////////////////////////////////
 			////////////////////////////////////////////////////////////////////////////////////////////////////////////
 			////////////////////////////////////////////////////////////////////////////////////////////////////////////
-			display: flex; flex-wrap: wrap;
+			display: flex; flex-wrap: wrap; padding-top: 0;
 			////////////////////////////////////////////////////////////////////////////////////////////////////////////
 			////////////////////////////////////////////////////////////////////////////////////////////////////////////
 			////////////////////////////////////////////////////////////////////////////////////////////////////////////
 			& > li {
-				width: 16.6%; margin-bottom: 25px;
+				width: 16.6%; margin-bottom: 34px;
 				@include respond-to(md) {width: 100%; margin-bottom: 0;}
 
 				a {
-					.icon-buy-wrapp {height: 50px !important;}
+					.icon-buy-wrapp {height: 55px !important;}
+
+					span {
+						font-size: 16px;
+						&.icon-buy-wrapp {
+							margin: 0 auto 16px;
+						}
+					}
 				}
 			}
 		}
@@ -43,7 +50,7 @@
 		
 		&-item {
 			text-align: center;
-			width: 32%; padding: 20px 30px;
+			width: 32%; padding: 23px 30px 41px;
 			background: #fff; 
 			@include respond-to(md) {width: 100%; margin: 10px 0;}
 
@@ -53,15 +60,26 @@
 
 			section {
 				img, h4, p {margin-bottom: 20px; letter-spacing: 0;}
-				p {@include font-type($CormacEL, 16px, 24px, 0.4px); color: #4b5769;}
+				p {
+					@include font-type($CormacEL, 16px, 24px, 0); color: #4b5769;
+					margin-bottom: 43px;
+				}
+				h4 {
+					font-size: 22px; line-height: 32px;
+					margin-bottom: 12px;
+				}
 			}
 
-			a {letter-spacing: 0.2px;}
+			a {
+				font-family: $CormacEL; font-size: 16px; letter-spacing: 0;
+			}
 		}
 }
 
 //DOINGS -- http://prntscr.com/gpkdlh
 .doings {
+
+
 	////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -93,18 +111,18 @@
 		}
 
 		section {
-			padding: 40px 20px;
+			padding: 36px 20px 40px 27px;
 			@include respond-to(md) {padding: 15px 20px;}
 
 			h4 {
-				font-size: 22px; line-height: 32px; letter-spacing: 0.1px;
+				font-size: 22px; line-height: 32px; letter-spacing: 0;
 				margin-bottom: 25px;
 			}
 			p {
-				@include font-type($HelveticaL, 16px, 24px, 0.6px); color: #4b5769;
-				margin-bottom: 25px;
+				@include font-type($HelveticaL, 16px, 24px, 0.7px); color: #4b5769;
+				margin-bottom: 14px;
 			}
-			span {@include font-type($HelveticaL, 10px, 18px, 0.5px); text-transform: uppercase; color: #4b5769;}
+			span {@include font-type($HelveticaL, 10px, 18px, 1.1px); text-transform: uppercase; color: #4b5769;}
 		}
 	}
 }
@@ -126,7 +144,7 @@
 
 		section {
 			@include font-type($HelveticaL, 16px, 24px, 0.5px); color: #4b5769;
-			position: relative; min-height: 260px; padding: 30px; 
+			position: relative; min-height: 240px; padding: 30px 40px 17px; 
 			background: #fff;
 			&:after {
 				content: '';
@@ -134,7 +152,7 @@
 				border-style: solid; border-width: 15px 15px 0 15px; border-color: #fff transparent transparent transparent;
 			}
 
-			p {letter-spacing: 0.7px;}
+			p {letter-spacing: 0.6px;}
 		}
 
 		figure {
@@ -147,12 +165,12 @@
 			}
 
 			figcaption {
-				@include font-type($CormacEL, 22px, 32px, 0.2px); color: #000;
-				margin-top: 10px;
+				@include font-type($CormacEL, 22px, 32px, 0px); color: #000;
+				margin-top: 20px;
 
 				span {
-					color: #4b5769; font-size: 16px; line-height: 24px; letter-spacing: 0.4px;
-					display: block;
+					color: #4b5769; font-size: 16px; line-height: 24px; letter-spacing: 0px;
+					display: block; margin-top: 7px;
 				}
 			}
 		}
@@ -164,11 +182,12 @@
 .about {
 	&.style2 {
 		text-align: center;
+		padding-bottom: 100px;
 		.btn-wrapp {
-			margin-bottom: 60px;
+			margin-bottom: 105px;
 			a {
-				@include font-type($CormacEL, 22px, 26px, 0.2px); color: #fff; text-align: center;
-				display: block; width: 50%; padding: 30px 0; 
+				@include font-type($CormacEL, 22px, 26px, 0px); color: #fff; text-align: center;
+				display: block; width: 50%; padding: 38px 0 41px; 
 				background: $btn-color;
 				@include respond-to(sm) {width: 100%;}
 
@@ -194,7 +213,7 @@
 		.social {
 			display: flex; justify-content: center;
 			li {
-				display: table; padding: 0 15px; box-sizing: content-box; width: 60px;
+				display: table; padding: 0 10px; box-sizing: content-box; width: 60px;
 				@include respond-to(xs) {margin: 0 10px; padding: 0;}
 
 				a {
@@ -208,8 +227,8 @@
 			}
 		}
 		.about-tell {
-			padding: 60px 0; margin: 0;
-			p {@include font-type($CormacEL, 22px, 26px, 0.2px);}
+			padding: 30px 0 0; margin: 0;
+			p {@include font-type($CormacEL, 22px, 26px, 0px);}
 		}
 	}
 }
@@ -219,7 +238,7 @@
 //PARTNERS-STYLE2 -- http://prntscr.com/gpgn4d
 //PARTNERS-STYLE2
 .partners-style2 {
-	padding: 70px 0;
+	padding: 66px 0 53px;
 	background: #f4f7fb; border-bottom: 1px solid #e7edf2;
 
 	ul {
@@ -249,9 +268,9 @@ footer.footer {
 			img {filter: grayscale(100%);}
 			p {color: #000;}
 			a {
-				color: #4b5769; letter-spacing: 0.2px;
+				color: #4b5769; letter-spacing: 0px;
 				&:after {border-color: $link-color;}
-				i {color: $link-color; font-weight: 600; margin-left: 15px;}
+				i {color: $link-color; font-weight: 600; margin-left: 11px;}
 			}
 
 		}
