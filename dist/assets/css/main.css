@@ -11063,6 +11063,9 @@ span.rub {
   top: 0; }
   .header a.logo {
     margin-top: 20px; }
+    @media (max-width: 991px) {
+      .header a.logo {
+        z-index: 9995; } }
 
 .menu-top > ul {
   display: -webkit-box;
@@ -11094,6 +11097,32 @@ span.rub {
     width: -webkit-calc(100% - 86px);
     width: calc(100% - 86px); } }
 
+.menu-top:before {
+  content: '';
+  display: none;
+  width: 100%;
+  height: 79px;
+  position: absolute;
+  left: 0;
+  top: -25px;
+  -webkit-transform: translateX(-110%);
+  -ms-transform: translateX(-110%);
+  transform: translateX(-110%);
+  z-index: 5;
+  background: #4489ff;
+  -webkit-box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.08);
+  box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.08);
+  -webkit-transition: .4s ease-out;
+  transition: .4s ease-out; }
+  @media (max-width: 991px) {
+    .menu-top:before {
+      display: block; } }
+
+.menu-top.active:before {
+  -webkit-transform: translateX(0);
+  -ms-transform: translateX(0);
+  transform: translateX(0); }
+
 .menu-top a.burger {
   position: relative;
   float: right;
@@ -11103,7 +11132,8 @@ span.rub {
   display: none; }
   @media (max-width: 991px) {
     .menu-top a.burger {
-      display: block; } }
+      display: block;
+      z-index: 9995; } }
   .menu-top a.burger span {
     display: block;
     width: 100%;
@@ -11112,13 +11142,13 @@ span.rub {
     background: #4489ff; }
 
 .menu-top ul {
-  margin-top: 25px; }
+  margin-top: 25px;
+  z-index: 4; }
   @media (max-width: 991px) {
     .menu-top ul {
       display: block;
       margin: 0;
-      padding: 0;
-      display: none;
+      padding: 0 0 20px;
       position: absolute;
       left: 0;
       top: 54px;
@@ -11126,16 +11156,44 @@ span.rub {
       z-index: 9999;
       background: #fff;
       -webkit-box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.08);
-      box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.08); }
+      box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.08);
+      pointer-events: none;
+      left: -25px;
+      right: -25px;
+      top: -25px;
+      width: auto;
+      padding-top: 79px;
+      z-index: 9990;
+      -webkit-transform: translateX(-110%);
+      -ms-transform: translateX(-110%);
+      transform: translateX(-110%);
+      height: 100vh;
+      overflow-y: auto;
+      z-index: 4; }
       .menu-top ul.active {
-        display: block; } }
+        pointer-events: all;
+        -webkit-transform: translateX(0);
+        -ms-transform: translateX(0);
+        transform: translateX(0); } }
+  @media (max-width: 767px) {
+    .menu-top ul {
+      left: 0;
+      right: 0; } }
   .menu-top ul li {
     margin-left: 40px; }
     @media (max-width: 991px) {
       .menu-top ul li {
+        text-align: center;
         display: block;
         width: -webkit-calc(100% - 86px);
-        width: calc(100% - 86px); } }
+        width: calc(100% - 86px);
+        width: auto;
+        margin: 0 45px !important; } }
+    @media (max-width: 767px) {
+      .menu-top ul li {
+        margin: 0 20px; } }
+    .menu-top ul li:first-child a {
+      margin-top: 0; }
     .menu-top ul li a {
       font-family: "cormac-extralight", sans-serif;
       font-size: 14px;
@@ -11297,6 +11355,10 @@ span.rub {
 .menu-top > ul {
   -webkit-transition: max-height 0.2s cubic-bezier(0.42, 0.6, 0.61, 0.42);
   transition: max-height 0.2s cubic-bezier(0.42, 0.6, 0.61, 0.42); }
+  @media (max-width: 991px) {
+    .menu-top > ul {
+      -webkit-transition: 0.4s ease-out;
+      transition: 0.4s ease-out; } }
 
 .menu-general > a i {
   -webkit-transform: rotate(0deg);
@@ -11349,6 +11411,9 @@ span.rub {
         border-color: #ffffff; }
   .header-land .logo {
     display: none; }
+    @media (max-width: 991px) {
+      .header-land .logo-white {
+        z-index: 9995; } }
   .header-land .menu-top {
     margin-top: 0; }
     .header-land .menu-top > ul {
@@ -11385,10 +11450,12 @@ span.rub {
           margin-top: 0; } }
       .header-land.styled .logo-white {
         display: none; }
+    .header-land.styled .menu-top:before {
+      background: #ffffff; }
     .header-land.styled .menu-top a.burger span {
       background: #4489ff; }
     .header-land.styled .menu-top ul {
-      margin-top: -12px; }
+      background: #fff; }
       .header-land.styled .menu-top ul.active {
         background: #fff; }
       .header-land.styled .menu-top ul li.active a {

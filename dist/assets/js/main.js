@@ -451,6 +451,7 @@ var app = function ($) {
         event.preventDefault();
         $('.js-open_menu-top').toggleClass('active');
         $('.menu-top ul').toggleClass('active');
+        $('.menu-top').toggleClass('active');
       },
       hideNotice: function hideNotice(event) {
         event.preventDefault();

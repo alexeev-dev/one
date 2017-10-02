@@ -1,7 +1,13 @@
 // HEADER
 .header {
 	top: 0;
-	a.logo {margin-top: 20px;}
+	a.logo {
+		margin-top: 20px;
+
+		@include respond-to(md) {
+			z-index: 9995;
+		}
+	}
 }
 
 // MENU
@@ -23,11 +29,32 @@
 	&-top {
 		@include respond-to(md) {width: calc(100% - 86px);}
 
+		&:before {
+			content: '';
+			display: none; width: 100%; height: 79px; position: absolute; left: 0; top: -25px; transform: translateX(-110%); z-index: 5;
+			background: $btn-color; box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.08);
+			transition: .4s ease-out;
+			@include respond-to(md) {
+				display: block;
+			}
+		}
+
+		&.active {
+			&:before {
+				transform: translateX(0);
+			}
+		}
+
+
 		a.burger {
 			position: relative; float: right; width: 28px; height: 28px; margin: 0 15px 18px 15px;
 			
 			display: none;
-			@include respond-to(md) {display: block;}
+			@include respond-to(md) {
+				display: block;
+
+				z-index: 9995;
+			}
 
 			span {
 				display: block; width: 100%; height: 4px; margin: 4px 0;
@@ -36,26 +63,48 @@
 		}
 
 		ul {
-			margin-top: 25px;
+			margin-top: 25px; z-index: 4;
 
 			@include respond-to(md) {
-				display: block; margin: 0; padding: 0; display: none;
+				display: block; margin: 0; padding: 0 0 20px;
 				position: absolute; left: 0; top: 54px; width: 100%; z-index: 9999;
 				background: #fff; box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.08);
+				pointer-events: none;
 
-				&.active {display: block;}
+				left: -25px; right: -25px; top: -25px; width: auto; padding-top: 79px; z-index: 9990; transform: translateX(-110%);height: 100vh; overflow-y: auto; z-index: 4;
+
+				&.active {
+					pointer-events: all; transform: translateX(0);
+				}
+			}
+
+			@include respond-to(sm) {
+				left: 0; right: 0; 
 			}
 			
 			li {
 				margin-left: 40px;
-				@include respond-to(md) {display: block; width: calc(100% - 86px);}
+				@include respond-to(md) {
+					text-align: center;
+					display: block; width: calc(100% - 86px);
+					width: auto; margin: 0 45px !important;
+				}
+				@include respond-to(sm) {
+					margin: 0 20px;
+				}
+
+				&:first-child {
+					a {
+						margin-top: 0;
+					}
+				}
 
 				a {
 					@include font-type($CormacEL, 14px, 20px, -0.5px); color: $main-color-text; letter-spacing: 0.4px;
 					display: inline-block; padding-bottom: 10px; border-bottom: 2px solid transparent;
 					@include respond-to(md) {font-size: 18px; display: block; width: 100%; margin-top: 20px;}
-					
-					 &:hover {cursor: pointer;}
+
+					&:hover {cursor: pointer;}
 					 
 					i {margin-right: 5px;}
 				}
@@ -158,7 +207,12 @@
 			}
 		}
 
-		& > ul {transition: max-height .2s cubic-bezier(.42,.6,.61,.42);}
+		& > ul {
+			transition: max-height .2s cubic-bezier(.42,.6,.61,.42);
+			@include respond-to(md) {
+				transition: 0.4s ease-out;
+			}
+		}
 	}
 
 	&-general {
@@ -214,7 +268,15 @@
 			}
 		}
 
-		.logo {display: none;}
+		.logo {
+			display: none;
+
+			&-white {
+				@include respond-to(md) {
+					z-index: 9995;
+				}
+			}
+		}
 
 		.menu-top {
 			margin-top: 0;
@@ -252,18 +314,24 @@
 			.logo {
 				display: inline-block; margin-top: 0;
 				@include respond-to(sm) {margin-top: 0;}
-				&-white {display: none;}
+				&-white {
+					display: none;
+				}
 			}
 
 
 			.menu-top {
+
+				&:before {
+					background: #ffffff;
+				}
 
 				a.burger {
 					span {background: #4489ff;}
 				}
 
 				ul {
-					margin-top: -12px;
+					background: #fff;
 					&.active {background: #fff;}
 					
 					li {
