@@ -10869,6 +10869,11 @@ span.rub {
     width: 239px;
     height: 170px;
     background: url(../img/dotted-line.png) no-repeat; }
+    @media (max-width: 1199px) {
+      .working-wrapp .dotted-line {
+        width: 183px;
+        left: 51.2%;
+        top: 40px; } }
     @media (max-width: 991px) {
       .working-wrapp .dotted-line {
         display: none; } }
@@ -10884,7 +10889,8 @@ span.rub {
     @media (max-width: 991px) {
       .working-wrapp .purchase {
         float: none;
-        clear: both; } }
+        clear: both;
+        width: 100%; } }
     @media (max-width: 480px) {
       .working-wrapp .purchase a {
         display: inline-block;

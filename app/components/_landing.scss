@@ -128,6 +128,9 @@
 		.dotted-line {
 			position: absolute; left: 49.2%; top: 24px; margin-left: -100px; display: block; width: 239px; height: 170px;
 			background: url(../img/dotted-line.png) no-repeat;
+			@include respond-to(lg) {
+				width: 183px; left: 51.2%; top: 40px;
+			}
 			@include respond-to(md) {
 				display: none;
 			}
@@ -140,7 +143,7 @@
 
 		.purchase {
 			float: right; width: 43.67%;
-			@include respond-to(md) {float: none; clear: both;}
+			@include respond-to(md) {float: none; clear: both; width: 100%;}
 			a {@include respond-to(xs) {display: inline-block; text-align: center;}}
 
 			figure {
