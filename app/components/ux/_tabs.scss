@@ -11,6 +11,13 @@
 		}
 	}
 
+	&-shop {
+		ul {
+			display: flex; justify-content: center;
+			@include respond-to(xs) {justify-content: space-between;}
+		}
+	}
+
 
 	////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -82,6 +89,42 @@
 				&:hover {color: $link-color; border-color: $link-color;}
 			}
 			&.active {a {color: $link-color; border-color: $link-color; background: #fff; cursor: default;}}
+		}
+	}
+
+	//TABS-SHOP - http://prntscr.com/gtkuci
+	&-shop {
+		ul {
+			li {
+				margin: 0 55px;
+				@include respond-to(sm) {margin: 0 20px;}
+				@include respond-to(xs) {margin: 0;}
+
+				&.active {
+					a {
+						&:before, &:after {width: 50%;}
+					}
+				}
+				a {
+					@include font-type ($CormacEL, 16px, 22px, 0); color: #726e64;
+					display: block; padding-bottom: 20px; position: relative;
+					&:before, &:after {
+						content: ''; 
+						display: block; height: 3px; width: 0; position: absolute; bottom: 0; 
+						background: #726e64;
+						transition: width 0.3s ease-in-out;
+					} 
+					&:before {right: 50%;}
+					&:after {left: 50%;}
+
+					&:hover {
+						&:before {width: 50%;}
+						&:after {width: 50%;}
+
+					}
+					
+				}
+			}
 		}
 	}
 

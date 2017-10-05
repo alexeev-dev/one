@@ -5603,8 +5603,8 @@ button.close {
  * -------------------------- */
 @font-face {
   font-family: 'FontAwesome';
-  src: url("../fonts/FontAwesome/fontawesome-webfont.eot?v=4.7.0");
-  src: url("../fonts/FontAwesome/fontawesome-webfont.eot?#iefix&v=4.7.0") format("embedded-opentype"), url("../fonts/FontAwesome/fontawesome-webfont.woff2?v=4.7.0") format("woff2"), url("../fonts/FontAwesome/fontawesome-webfont.woff?v=4.7.0") format("woff"), url("../fonts/FontAwesome/fontawesome-webfont.ttf?v=4.7.0") format("truetype"), url("../fonts/FontAwesome/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular") format("svg");
+  src: url("../fonts/fontawesome/fontawesome-webfont.eot?v=4.7.0");
+  src: url("../fonts/fontawesome/fontawesome-webfont.eot?#iefix&v=4.7.0") format("embedded-opentype"), url("../fonts/fontawesome/fontawesome-webfont.woff2?v=4.7.0") format("woff2"), url("../fonts/fontawesome/fontawesome-webfont.woff?v=4.7.0") format("woff"), url("../fonts/fontawesome/fontawesome-webfont.ttf?v=4.7.0") format("truetype"), url("../fonts/fontawesome/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular") format("svg");
   font-weight: normal;
   font-style: normal; }
 
@@ -11395,8 +11395,8 @@ span.rub {
       color: #fff;
       font-size: 18px;
       padding: 0 15px;
-      height: 48px;
-      line-height: 47px;
+      height: 44px;
+      line-height: 34px;
       border: 2px solid transparent;
       -webkit-border-radius: 50px;
       border-radius: 50px;
@@ -11492,6 +11492,49 @@ span.rub {
           display: inline-block; }
         .header-land.styled .menu-top ul li a i.icon-header_search-white, .header-land.styled .menu-top ul li a i.icon-header_plus-white {
           display: none; }
+
+.header-shop .menu-top:before {
+  display: none; }
+
+.header-shop .menu-top .burger {
+  margin-top: 20px; }
+
+.header-shop .menu-top ul {
+  margin-top: 13px;
+  left: -50px;
+  right: -50px; }
+  .header-shop .menu-top ul.active {
+    background: #fff; }
+    .header-shop .menu-top ul.active:before {
+      display: none; }
+    .header-shop .menu-top ul.active:after {
+      display: none; }
+  .header-shop .menu-top ul > li {
+    margin-left: 20px; }
+    .header-shop .menu-top ul > li a {
+      color: #4489ff;
+      font-size: 18px;
+      padding: 0 15px;
+      height: 44px;
+      line-height: 34px;
+      border: 2px solid transparent;
+      -webkit-border-radius: 50px;
+      border-radius: 50px;
+      /*transition: .5s ease-in-out;*/ }
+      .header-shop .menu-top ul > li a:hover {
+        border-color: #4489ff; }
+    .header-shop .menu-top ul > li.active {
+      color: #ffffff;
+      font-size: 18px; }
+      .header-shop .menu-top ul > li.active a {
+        color: #fff;
+        background: #4489ff; }
+      .header-shop .menu-top ul > li.active:hover {
+        cursor: pointer; }
+    .header-shop .menu-top ul > li.active a {
+      border-color: #ffffff; }
+      .header-shop .menu-top ul > li.active a:hover {
+        border-color: #ffffff; }
 
 .filter {
   position: relative; }
@@ -14060,6 +14103,22 @@ a.down {
       -ms-flex-direction: column;
       flex-direction: column; } }
 
+.tabs-shop ul {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
+  @media (max-width: 480px) {
+    .tabs-shop ul {
+      -webkit-box-pack: justify;
+      -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+      justify-content: space-between; } }
+
 @media (max-width: 767px) {
   .tabs-main {
     width: -webkit-calc(100% + 30px);
@@ -14174,6 +14233,44 @@ a.down {
       border-color: #4489ff;
       background: #fff;
       cursor: default; }
+
+.tabs-shop ul li {
+  margin: 0 55px; }
+  @media (max-width: 767px) {
+    .tabs-shop ul li {
+      margin: 0 20px; } }
+  @media (max-width: 480px) {
+    .tabs-shop ul li {
+      margin: 0; } }
+  .tabs-shop ul li.active a:before, .tabs-shop ul li.active a:after {
+    width: 50%; }
+  .tabs-shop ul li a {
+    font-family: "cormac-extralight", sans-serif;
+    font-size: 16px;
+    line-height: 22px;
+    letter-spacing: 0;
+    color: #726e64;
+    display: block;
+    padding-bottom: 20px;
+    position: relative; }
+    .tabs-shop ul li a:before, .tabs-shop ul li a:after {
+      content: '';
+      display: block;
+      height: 3px;
+      width: 0;
+      position: absolute;
+      bottom: 0;
+      background: #726e64;
+      -webkit-transition: width 0.3s ease-in-out;
+      transition: width 0.3s ease-in-out; }
+    .tabs-shop ul li a:before {
+      right: 50%; }
+    .tabs-shop ul li a:after {
+      left: 50%; }
+    .tabs-shop ul li a:hover:before {
+      width: 50%; }
+    .tabs-shop ul li a:hover:after {
+      width: 50%; }
 
 .tabs-main ul {
   -webkit-transition: max-height 0.7s linear;
@@ -16363,6 +16460,133 @@ a.down {
         .found-me section ul li span {
           display: block;
           margin-bottom: 10px; } }
+
+.shop-me {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center; }
+
+.shop-about {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: distribute;
+  justify-content: space-around; }
+  .shop-about address ul {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex; }
+  @media (max-width: 991px) {
+    .shop-about {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column; } }
+
+.shop_logo {
+  text-align: center;
+  display: block;
+  width: 100%;
+  margin: 25px 0; }
+
+.shop-me {
+  text-align: center;
+  margin-bottom: 67px; }
+  .shop-me section {
+    width: 730px; }
+    @media (max-width: 767px) {
+      .shop-me section {
+        width: 100%; } }
+    .shop-me section h2 {
+      font-size: 34px;
+      margin: 47px 0 28px 0; }
+    .shop-me section p {
+      font-family: "cormac-extralight", sans-serif;
+      font-size: 22px;
+      line-height: 32px;
+      letter-spacing: 0; }
+      @media (max-width: 480px) {
+        .shop-me section p {
+          font-size: 18px;
+          line-height: 28px; } }
+
+.shop-about {
+  margin-top: 25px; }
+  .shop-about section {
+    width: 580px;
+    padding-left: 18px; }
+    @media (max-width: 991px) {
+      .shop-about section {
+        width: 100%;
+        padding-left: 0; } }
+    .shop-about section p {
+      font-size: 16px;
+      line-height: 24px;
+      margin-bottom: 37px; }
+    .shop-about section img {
+      margin-bottom: 43px; }
+      @media (max-width: 767px) {
+        .shop-about section img {
+          max-width: 100%;
+          height: auto; } }
+  .shop-about address {
+    width: 280px; }
+    @media (max-width: 991px) {
+      .shop-about address {
+        width: 100%; } }
+    .shop-about address h4 {
+      font-size: 16px;
+      line-height: 24px; }
+    .shop-about address > a {
+      font-family: "cormac-extralight", sans-serif;
+      font-size: 16px;
+      line-height: 20px;
+      letter-spacing: 0;
+      color: #9d988c;
+      display: block;
+      margin: 17px 0; }
+    .shop-about address ul {
+      padding-top: 5px;
+      margin-bottom: 46px; }
+      .shop-about address ul li {
+        display: table;
+        margin-right: 10px; }
+        .shop-about address ul li a {
+          color: #fff;
+          text-align: center;
+          vertical-align: middle;
+          display: table-cell;
+          width: 28px;
+          height: 28px;
+          background: #9d988c;
+          -webkit-border-radius: 50%;
+          border-radius: 50%;
+          -webkit-transition: background 0.4s ease;
+          transition: background 0.4s ease; }
+          .shop-about address ul li a:hover {
+            background: #4489ff; }
+    .shop-about address p {
+      color: #000;
+      font-size: 16px;
+      line-height: 24px;
+      margin-bottom: 23px; }
 
 .popup-login > ul {
   display: -webkit-box;

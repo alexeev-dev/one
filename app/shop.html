@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+	//= components/base/head.html
+<body>
+	//= components/base/counter.html
+
+	<!-- Application -->
+	<div class="app">
+		//= components/base/menu-top-shop.html
+		<!-- Login Form //= components/popup/login.html-->
+		<!-- Notice Form //= components/popup/notice.html-->
+		//= components/base/breadcrumbs.html
+
+		<section class="wr bg_white">
+			<div class="container">
+				<div class="content-block">
+					<div class="row">
+						<div class="col-md-12">
+
+							<a href="#" class="shop_logo">
+								<img src="assets/img/logo_shop.png" alt="">
+							</a>
+
+							<div class="tabs-shop js-tab_direct">
+								<ul>
+									<li class="active"><a href="#tab-I">О магазине</a></li>
+									<li><a href="#tab-II">Отзывы</a></li>
+									<li><a href="#tab-III">Каталог</a></li>
+									<li></a></li>
+								</ul>
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="wr bg_white">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+
+						<div class="js-tab_direct-wr">
+
+							<!-- TAB I -->
+							<div id="tab-I" class="tab tab--active">
+								//= components/ui/shop-me.html
+								//= components/ui/shop-about.html
+							</div>
+
+							<!-- TAB II -->
+							<div id="tab-II" class="tab">
+								//= components/ui/list-rated.html
+							</div>
+
+							<!-- TAB III -->
+							<div id="tab-III" class="tab">
+								//= components/ui/list-goods_1.html
+							</div>
+
+							<!-- TAB IV -->
+							<div id="tab-IV" class="tab">
+								<ul class="bookmarks">
+									
+									//= components/ui/list-bookmarks.html
+								</ul>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</section>
+		
+		<!-- Footer -->
+		//= components/base/footer-style-2.html
+
+	</div>
+	
+	<!-- Scripts -->
+	//= components/base/scripts.html
+
+</body>
+</html>

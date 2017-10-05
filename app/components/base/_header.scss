@@ -246,7 +246,7 @@
 						margin-left: 20px;
 						a {
 							color: #fff; font-size: 18px;
-							padding: 0 15px; height: 48px; line-height: 47px;
+							padding: 0 15px; height: 44px; line-height: 34px;
 							border: 2px solid transparent; border-radius: 50px;
 							/*transition: .5s ease-in-out;*/ 
 							&:hover {border-color: #fff;}
@@ -372,3 +372,48 @@
 
 	}
 }	
+
+// MENU-SHOP - http://prntscr.com/gtlbfv
+.header {
+	&-shop {
+		.menu {
+			&-top {
+				&:before {display: none;}
+
+				.burger {margin-top: 20px;}
+
+				ul {
+					margin-top: 13px; left: -50px; right: -50px;
+					&.active {
+						background: #fff;
+						&:before {display: none;}
+						&:after {display: none;}
+					}
+					& > li {
+						margin-left: 20px;
+						a {
+							color: $link-color; font-size: 18px;
+							padding: 0 15px; height: 44px; line-height: 34px;
+							border: 2px solid transparent; border-radius: 50px;
+							/*transition: .5s ease-in-out;*/ 
+							&:hover {border-color: $link-color;}
+						}
+
+						&.active {
+							a {color: #fff; background: $link-color;}
+							color: #ffffff; font-size: 18px; &:hover {cursor: pointer;}
+						}
+
+						&.active {
+							a {
+								border-color: #ffffff;
+								&:hover {border-color: #ffffff;}
+							}
+						}
+					}
+				}
+			}
+		}
+		
+	}
+}
