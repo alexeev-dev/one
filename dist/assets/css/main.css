@@ -11514,7 +11514,7 @@ span.rub {
   .header-shop .menu-top .burger {
     margin-top: 20px; }
   .header-shop .menu-top ul {
-    margin-top: 13px;
+    margin-top: 15px;
     left: -50px;
     right: -50px; }
     .header-shop .menu-top ul.active {
@@ -11524,31 +11524,54 @@ span.rub {
       .header-shop .menu-top ul.active:after {
         display: none; }
     .header-shop .menu-top ul > li {
-      margin-left: 12px; }
+      margin-left: 15px; }
       .header-shop .menu-top ul > li a {
         color: #4489ff;
         font-size: 16px;
         letter-spacing: 0.1px;
-        padding: 0 15px;
-        height: 44px;
-        line-height: 34px;
+        padding: 7px 14px 0;
+        height: 41px;
+        position: relative;
         border: 2px solid transparent;
-        -webkit-border-radius: 50px;
-        border-radius: 50px;
-        /*transition: .5s ease-in-out;*/ }
+        cursor: pointer;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        -webkit-transition: .3s ease-out;
+        transition: .3s ease-out; }
+        .header-shop .menu-top ul > li a:after {
+          content: '';
+          display: block;
+          width: 100%;
+          height: 2px;
+          position: absolute;
+          left: 50%;
+          bottom: -13px;
+          -webkit-transform: translateX(-50%);
+          -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+          background: #4489ff;
+          opacity: 0;
+          -webkit-transition: .3s ease-out;
+          transition: .3s ease-out;
+          pointer-events: none; }
         .header-shop .menu-top ul > li a:hover {
-          border-color: #4489ff; }
-      .header-shop .menu-top ul > li.active {
-        color: #ffffff;
-        font-size: 18px; }
-        .header-shop .menu-top ul > li.active a {
-          color: #fff;
-          background: #4489ff; }
-        .header-shop .menu-top ul > li.active:hover {
-          cursor: pointer; }
-      .header-shop .menu-top ul > li.active a {
+          color: #4489ff; }
+          .header-shop .menu-top ul > li a:hover:after {
+            opacity: 1; }
+      .header-shop .menu-top ul > li.active1 a {
+        color: #fff;
+        background: #4489ff;
+        -webkit-border-radius: 100px;
+        border-radius: 100px;
         border-color: #ffffff; }
-        .header-shop .menu-top ul > li.active a:hover {
+        .header-shop .menu-top ul > li.active1 a:hover {
+          color: #4489ff;
+          background: #ffffff; }
+      .header-shop .menu-top ul > li.active2 a {
+        border-color: #4489ff;
+        -webkit-border-radius: 100px;
+        border-radius: 100px; }
+        .header-shop .menu-top ul > li.active2 a:hover {
           border-color: #ffffff; }
 
 .filter {

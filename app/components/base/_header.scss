@@ -384,31 +384,53 @@
 				.burger {margin-top: 20px;}
 
 				ul {
-					margin-top: 13px; left: -50px; right: -50px;
+					margin-top: 15px; left: -50px; right: -50px;
 					&.active {
 						background: #fff;
 						&:before {display: none;}
 						&:after {display: none;}
 					}
 					& > li {
-						margin-left: 12px;
+						margin-left: 15px;
 						a {
 							color: $link-color; font-size: 16px; letter-spacing: 0.1px;
-							padding: 0 15px; height: 44px; line-height: 34px;
-							border: 2px solid transparent; border-radius: 50px;
-							/*transition: .5s ease-in-out;*/ 
-							&:hover {border-color: $link-color;}
+							padding: 7px 14px 0; height: 41px; position: relative;
+							border: 2px solid transparent;
+							cursor: pointer;
+							box-sizing: border-box;
+							transition: .3s ease-out;
+							&:after {
+								content: '';
+								display: block; width: 100%; height: 2px; position: absolute; left: 50%; bottom: -13px; transform: translateX(-50%);
+								background: $link-color;
+								opacity: 0; transition: .3s ease-out;
+								pointer-events: none;
+							}
+							&:hover {
+								color: $link-color;
+								&:after {
+									opacity: 1;
+								}
+							}
 						}
 
-						&.active {
-							a {color: #fff; background: $link-color;}
-							color: #ffffff; font-size: 18px; &:hover {cursor: pointer;}
-						}
-
-						&.active {
+						&.active1 {
 							a {
-								border-color: #ffffff;
-								&:hover {border-color: #ffffff;}
+								color: #fff; background: $link-color;
+								border-radius: 100px; border-color: #ffffff;
+								&:hover {
+									color: $link-color; background: #ffffff;
+								}
+							}
+						}
+
+						&.active2 {
+							a {
+								border-color: $link-color;
+								border-radius: 100px;
+								&:hover {
+									border-color: #ffffff;
+								}
 							}
 						}
 					}
