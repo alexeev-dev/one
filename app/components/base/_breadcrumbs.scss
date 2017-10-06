@@ -1,8 +1,12 @@
 // BREADCRUMBS – http://prntscr.com/gg229x
 .breadcrumbs {
 	@include font-type($HelveticaL, 12px, 1, 0.5px); color: #89a1b3;
-	display: flex; justify-content: space-between; padding: 10px 30px 15px 30px;
-	border-bottom: 1px solid #eff3f5;
+	display: flex; justify-content: space-between; padding: 6px 0px 2px; position: relative;
+	&:after {
+		content: '';
+		display: block; width: 10000px; height: 1px; position: absolute; left: 50%; bottom: 0; transform: translateX(-50%);
+		background: #eff3f5;
+	}
 
 	@include respond-to(sm) {
 		flex-direction: column; width: calc(100% + 30px); margin-left: -15px;
@@ -33,18 +37,30 @@
 					&:after {display: none;}
 				}
 				
-				a {color: #89a1b3;}
+				a {
+					color: #4b5769; font-size: 9px; font-family: $HelveticaL; line-height: 24px; text-transform: uppercase; letter-spacing: 2.1px;
+				}
 			}
 		}
 
 		&.share {
+			padding-top: 2px;
 			@include respond-to(sm) {margin-top: 10px;}
 
 			li {
-				margin-left: 17px; 
+				color: #4b5769; font-size: 9px; font-family: $HelveticaL; line-height: 24px; text-transform: uppercase; letter-spacing: 2.1px;
+				margin-left: 11px;
 				&:first-child {margin-left: 0;}
 
-				a {i {font-size: 20px;}}
+				a {
+					i {
+						color: #c0d1dd; font-size: 17px;
+						position: relative; top: 2px;
+						&:hover {
+							color: $link-color;
+						}
+					}
+				}
 			}
 		}
 		

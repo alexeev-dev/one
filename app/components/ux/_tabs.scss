@@ -96,7 +96,8 @@
 	&-shop {
 		ul {
 			li {
-				margin: 0 55px;
+				text-align: center;
+				width: 185px;
 				@include respond-to(sm) {margin: 0 20px;}
 				@include respond-to(xs) {margin: 0;}
 
@@ -107,7 +108,7 @@
 				}
 				a {
 					@include font-type ($CormacEL, 16px, 22px, 0); color: #726e64;
-					display: block; padding-bottom: 20px; position: relative;
+					display: inline-block; padding-bottom: 20px; position: relative;
 					&:before, &:after {
 						content: ''; 
 						display: block; height: 3px; width: 0; position: absolute; bottom: 0; 

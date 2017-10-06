@@ -7,9 +7,10 @@
 	&-contacts {display: flex;}
 	
 	&-info {
+		padding-bottom: 45px;
 
 		li {
-			width: 49%; padding-left: 45px; padding-top: 20px;
+			width: 49%; padding-left: 61px; padding-top: 35px;
 			@include respond-to(sm) {padding: 10px 0; width: 100%;}
 
 			&:first-child {
@@ -35,7 +36,7 @@
 
 	&-contacts {
 		@include font-type($HelveticaL, 12px, 22px, 0.5px);
-		position: relative; padding-top: 20px; padding-bottom: 20px; margin-top: 26px;
+		position: relative; padding-top: 20px; padding-bottom: 20px;
 		@include respond-to(sm) {font-size: 20px; letter-spacing: 0.2px;}
 		
 		&:after {

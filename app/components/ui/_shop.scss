@@ -5,7 +5,7 @@
 	}
 
 	&-about {
-		display: flex; justify-content: space-around;
+		display: flex; justify-content: center;
 		address {ul {display: flex;} }
 		@include respond-to(md) {flex-direction: column;}
 	}
@@ -15,11 +15,11 @@
 .shop {
 	&_logo {
 		text-align: center;
-		display: block; width: 100%; margin: 25px 0;
+		display: block; width: 100%; margin: 42px 0 19px;
 	}
 
 	&-me {
-		text-align: center; margin-bottom: 67px;
+		text-align: center; margin-bottom: 64px;
 
 		section {
 			width: 730px;
@@ -37,18 +37,23 @@
 	}
 
 	&-about {
-		margin-top: 25px;
 
 		section {
-			width: 580px; padding-left: 18px;
+			width: 580px; padding-top: 4px; margin-right: 120px;
 			@include respond-to(md) {width: 100%; padding-left: 0;}
 
 			p {
-				font-size: 16px; line-height: 24px;
-				margin-bottom: 37px;
+				font-size: 16px; line-height: 24px; letter-spacing: 0.05px;
+				margin-bottom: 24px;
+				&:last-child {
+					margin-bottom: 0;
+				}
 			}
 			img {
-				margin-bottom: 43px;
+				margin-bottom: 42px; margin-top: 12px;
+				&:last-child {
+					margin-bottom: 0;
+				}
 				@include respond-to(sm) {max-width: 100%; height: auto;}
 			}
 		}
@@ -60,13 +65,27 @@
 			h4 {font-size: 16px; line-height: 24px;}
 			& > a {
 				@include font-type ($CormacEL, 16px, 20px, 0); color: #9d988c;
-				display: block; margin: 17px 0; 
+				display: inline-block; margin: 20px 0 18px; position: relative;
+				&:after {
+					content: '';
+					display: block; width: 0%; height: 1px; position: absolute; left: 50%; bottom: 0; transform: translateX(-50%);
+					background: #9d988c;
+					transition: .4s ease-out;
+				}
 				&:hover {
-
+					&:after {
+						width: 100%;
+					}
+				}
+				&:last-child {
+					margin-bottom: 0;
 				}
 			}
 			ul {
-				padding-top: 5px; margin-bottom: 46px;
+				padding-top: 5px; margin-bottom: 44px;
+				&:last-child {
+					margin-bottom: 0;
+				}
 				li {
 					display: table; margin-right: 10px;
 					a {
@@ -81,7 +100,10 @@
 
 			p {
 				color: #000; font-size: 16px; line-height: 24px; 
-				margin-bottom: 23px;
+				margin-bottom: 24px;
+				&:last-child {
+					margin-bottom: 0;
+				}
 			}
 		}
 
