@@ -2,6 +2,9 @@
 .breadcrumbs {
 	@include font-type($HelveticaL, 12px, 1, 0.5px); color: #89a1b3;
 	display: flex; justify-content: space-between; padding: 7px 0px 2px; position: relative;
+	@include respond-to(sm) {
+		padding: 7px 15px 2px;
+	}
 	&:after {
 		content: '';
 		display: block; width: 10000px; height: 1px; position: absolute; left: 50%; bottom: 0; transform: translateX(-50%);
@@ -38,7 +41,7 @@
 				}
 				
 				a {
-					color: #4b5769; font-size: 9px; font-family: $HelveticaL; line-height: 24px; text-transform: uppercase; letter-spacing: 2.1px;
+					color: #4b5769; font-size: 9px; font-family: $HelveticaL; line-height: 24px; text-transform: uppercase; letter-spacing: 1.3px;
 				}
 			}
 		}
@@ -48,7 +51,7 @@
 			@include respond-to(sm) {margin-top: 10px;}
 
 			li {
-				color: #4b5769; font-size: 9px; font-family: $HelveticaL; line-height: 24px; text-transform: uppercase; letter-spacing: 2.1px;
+				color: #4b5769; font-size: 9px; font-family: $HelveticaL; line-height: 24px; text-transform: uppercase; letter-spacing: 1.3px;
 				margin-left: 12px;
 				&:first-child {margin-left: 0;}
 

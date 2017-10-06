@@ -385,8 +385,17 @@
 
 				ul {
 					margin-top: 15px; left: -50px; right: -50px;
+					@include respond-to(md) {
+						left: -25px; right: -25px; margin-top: 0; top: 0; height: auto; transform: translateX(-130%);
+					}
+					@include respond-to(sm) {
+						height: 100vh;
+					}
 					&.active {
 						background: #fff;
+						@include respond-to(md) {
+							transform: translateX(0%);
+						}
 						&:before {display: none;}
 						&:after {display: none;}
 					}
