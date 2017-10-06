@@ -1,7 +1,7 @@
 // BREADCRUMBS – http://prntscr.com/gg229x
 .breadcrumbs {
 	@include font-type($HelveticaL, 12px, 1, 0.5px); color: #89a1b3;
-	display: flex; justify-content: space-between; padding: 6px 0px 2px; position: relative;
+	display: flex; justify-content: space-between; padding: 7px 0px 2px; position: relative;
 	&:after {
 		content: '';
 		display: block; width: 10000px; height: 1px; position: absolute; left: 50%; bottom: 0; transform: translateX(-50%);
@@ -49,7 +49,7 @@
 
 			li {
 				color: #4b5769; font-size: 9px; font-family: $HelveticaL; line-height: 24px; text-transform: uppercase; letter-spacing: 2.1px;
-				margin-left: 11px;
+				margin-left: 12px;
 				&:first-child {margin-left: 0;}
 
 				a {

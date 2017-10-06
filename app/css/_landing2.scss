@@ -276,6 +276,7 @@ footer.footer {
 		}
 
 		.footer-contacts {
+			padding-top: 29px; padding-bottom: 28px;
 			@include respond-to(md){flex-direction: column;}
 			@include respond-to(sm) {font-size: 16px;}
 
@@ -295,9 +296,12 @@ footer.footer {
 				@include respond-to(md) {width: 100%;}
 
 				&:first-child {
-					margin-right: 60px;
+					padding-right: 9px;
 					@include respond-to(md) {margin-right: 0; margin-bottom: 40px;}
 					@include respond-to(xs) {margin-bottom: 10px;}
+				}
+				&:last-child {
+					padding-left: 49px;
 				}
 
 				& > li {
@@ -323,8 +327,12 @@ footer.footer {
 							}
 						}
 						li {
+							margin-bottom: 3px;
+							&:last-child {
+								margin-bottom: 0;
+							}
 							a {
-								color: #4b5769;
+								color: #4b5769; font-size: 14px; letter-spacing: 0.1px;
 								position: relative; padding-bottom: 5px;
 								&:after {
 										content: '';

@@ -7,18 +7,18 @@
 	&-contacts {display: flex;}
 	
 	&-info {
-		padding-bottom: 45px;
+		padding-bottom: 41px;
 
 		li {
-			width: 49%; padding-left: 61px; padding-top: 35px;
+			width: 49%; padding-left: 61px; padding-top: 33px;
 			@include respond-to(sm) {padding: 10px 0; width: 100%;}
 
 			&:first-child {
 				text-align: right;
-				padding: 28px 0px 10px 0;
+				padding: 31px 0px 10px 0;
 				@include respond-to(sm) {text-align: center; padding-right: 0;}
 				
-				p {@include font-type($CormacEL, 23px, 29px, -0.7px); color: #fff; margin-bottom: 5px;}
+				p {@include font-type($CormacEL, 23px, 29px, -0.5px); color: #fff; margin-bottom: 7px;}
 				a {@include font-type($CormacEL, 16px, 22px, 0); color: #fff;}
 			}
 

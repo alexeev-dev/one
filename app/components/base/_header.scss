@@ -376,6 +376,7 @@
 // MENU-SHOP - http://prntscr.com/gtlbfv
 .header {
 	&-shop {
+		height: 65px;
 		.menu {
 			&-top {
 				&:before {display: none;}
@@ -390,9 +391,9 @@
 						&:after {display: none;}
 					}
 					& > li {
-						margin-left: 20px;
+						margin-left: 12px;
 						a {
-							color: $link-color; font-size: 16px;
+							color: $link-color; font-size: 16px; letter-spacing: 0.1px;
 							padding: 0 15px; height: 44px; line-height: 34px;
 							border: 2px solid transparent; border-radius: 50px;
 							/*transition: .5s ease-in-out;*/ 
