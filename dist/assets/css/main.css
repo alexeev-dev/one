@@ -16871,9 +16871,19 @@ form.form {
           font-size: 18px;
           line-height: 28px; } }
   .shop-me_edit figure {
-    position: relative; }
+    position: relative;
+    text-align: center; }
     .shop-me_edit figure img {
-      height: 270px; }
+      width: 100%; }
+      @media (max-width: 767px) {
+        .shop-me_edit figure img {
+          height: 200px;
+          width: auto;
+          position: relative;
+          left: 50%;
+          -webkit-transform: translateX(-50%);
+          -ms-transform: translateX(-50%);
+          transform: translateX(-50%); } }
     .shop-me_edit figure figcaption {
       text-align: center;
       position: absolute;
