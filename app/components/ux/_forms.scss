@@ -4,13 +4,26 @@ form.form {
 	//////////////////////////////////////
 	.form-btn-group {
 		display: flex; justify-content: space-between;
+		@include respond-to(sm)  {
+			display: block;
+		}
+	}
+	//////////////////////////////////////
+	//////////////////////////////////////
+	//////////////////////////////////////
+
+	width: 580px; margin: 0 auto;
+	@include respond-to(sm) {
+		width: 100%;
 	}
 
-	//////////////////////////////////////
-	//////////////////////////////////////
-	//////////////////////////////////////
+
 	& > span {
 		margin-bottom: 18px;
+	}
+
+	input, textarea, label {
+		width: 100%;
 	}
 	input, textarea {
 		color: #000;
@@ -83,6 +96,9 @@ form.form {
 				color: $link-color;
 				width: 294px; left: -4px;
 				border: 2px solid #4489ff; 
+			}
+			@include respond-to(sm) {
+				display: block; margin: 10px auto; position: static;
 			}
 		}
 		

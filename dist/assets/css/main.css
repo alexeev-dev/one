@@ -15020,113 +15020,119 @@ a.down {
     .carousel .navigation li.active:hover, .carousel .navigation .owl-dot.active:hover, .carousel .owl-dots li.active:hover, .carousel .owl-dots .owl-dot.active:hover {
       cursor: default; }
 
-form.form .form-btn-group {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between; }
-
-form.form > span {
-  margin-bottom: 18px; }
-
-form.form input, form.form textarea {
-  color: #000;
-  display: block;
-  background: #f4f7fb;
-  -webkit-border-radius: 5px;
-  border-radius: 5px;
-  border: 1px solid transparent; }
-  form.form input:focus, form.form textarea:focus {
-    border: 1px solid #4489ff; }
-
-form.form input {
-  padding: 15px 10px 0 10px;
-  font-family: "HelveticaNeueThin";
-  font-size: 16px;
-  line-height: 24px;
-  letter-spacing: 0.3px;
-  height: 50px;
-  padding-left: 10px; }
-
-form.form textarea {
-  font-family: "HelveticaRegular", sans-serif;
-  font-size: 16px;
-  line-height: 24px;
-  letter-spacing: 0.1px;
-  height: 180px;
-  padding: 19px 10px; }
-
-form.form .wr-input, form.form .wr-textarea {
-  position: relative;
-  padding: 26px 0;
-  display: block; }
-  form.form .wr-input label, form.form .wr-textarea label {
+form.form {
+  width: 580px;
+  margin: 0 auto; }
+  form.form .form-btn-group {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between; }
+    @media (max-width: 767px) {
+      form.form .form-btn-group {
+        display: block; } }
+  @media (max-width: 767px) {
+    form.form {
+      width: 100%; } }
+  form.form > span {
+    margin-bottom: 18px; }
+  form.form input, form.form textarea, form.form label {
+    width: 100%; }
+  form.form input, form.form textarea {
+    color: #000;
+    display: block;
+    background: #f4f7fb;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    border: 1px solid transparent; }
+    form.form input:focus, form.form textarea:focus {
+      border: 1px solid #4489ff; }
+  form.form input {
+    padding: 15px 10px 0 10px;
     font-family: "HelveticaNeueThin";
-    font-size: 9px;
-    line-height: 24px;
-    letter-spacing: 1.86px;
-    color: #4b5769;
-    text-transform: uppercase;
-    position: absolute;
-    width: 100%;
-    top: 0;
-    left: 10px; }
-
-form.form .wr-input input.big {
-  font-family: "cormac-extralight", sans-serif;
-  font-size: 34px;
-  line-height: 38px;
-  letter-spacing: 0;
-  color: #000;
-  height: 70px;
-  padding-top: 0px; }
-
-form.form .wr-input .color {
-  position: absolute;
-  width: 30px;
-  height: 30px;
-  left: -60px;
-  top: 37px;
-  -webkit-border-radius: 50%;
-  border-radius: 50%; }
-
-form.form .wr-textarea {
-  margin-bottom: 18px; }
-  form.form .wr-textarea.contact {
-    margin-top: 28px;
-    margin-bottom: 5px; }
-  form.form .wr-textarea textarea.short-desc {
-    padding: 14px 10px;
-    font-family: "cormac-extralight", sans-serif;
-    font-size: 22px;
-    line-height: 32px;
-    letter-spacing: 0;
-    color: #000; }
-
-form.form .social .wr-input {
-  padding-bottom: 13px; }
-
-form.form .form-btn-group {
-  margin-top: 52px; }
-  form.form .form-btn-group .btn, form.form .form-btn-group .new_post-confirm li button, .new_post-confirm li form.form .form-btn-group button {
-    font-family: "cormac-extralight", sans-serif;
     font-size: 16px;
     line-height: 24px;
-    letter-spacing: 0;
-    height: 59px;
-    width: 220px;
-    padding-bottom: 14px;
+    letter-spacing: 0.3px;
+    height: 50px;
+    padding-left: 10px; }
+  form.form textarea {
+    font-family: "HelveticaRegular", sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.1px;
+    height: 180px;
+    padding: 19px 10px; }
+  form.form .wr-input, form.form .wr-textarea {
     position: relative;
-    right: -2px; }
-    form.form .form-btn-group .btn.white, form.form .form-btn-group .new_post-confirm li button.white, .new_post-confirm li form.form .form-btn-group button.white {
-      color: #4489ff;
-      width: 294px;
-      left: -4px;
-      border: 2px solid #4489ff; }
+    padding: 26px 0;
+    display: block; }
+    form.form .wr-input label, form.form .wr-textarea label {
+      font-family: "HelveticaNeueThin";
+      font-size: 9px;
+      line-height: 24px;
+      letter-spacing: 1.86px;
+      color: #4b5769;
+      text-transform: uppercase;
+      position: absolute;
+      width: 100%;
+      top: 0;
+      left: 10px; }
+  form.form .wr-input input.big {
+    font-family: "cormac-extralight", sans-serif;
+    font-size: 34px;
+    line-height: 38px;
+    letter-spacing: 0;
+    color: #000;
+    height: 70px;
+    padding-top: 0px; }
+  form.form .wr-input .color {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    left: -60px;
+    top: 37px;
+    -webkit-border-radius: 50%;
+    border-radius: 50%; }
+  form.form .wr-textarea {
+    margin-bottom: 18px; }
+    form.form .wr-textarea.contact {
+      margin-top: 28px;
+      margin-bottom: 5px; }
+    form.form .wr-textarea textarea.short-desc {
+      padding: 14px 10px;
+      font-family: "cormac-extralight", sans-serif;
+      font-size: 22px;
+      line-height: 32px;
+      letter-spacing: 0;
+      color: #000; }
+  form.form .social .wr-input {
+    padding-bottom: 13px; }
+  form.form .form-btn-group {
+    margin-top: 52px; }
+    form.form .form-btn-group .btn, form.form .form-btn-group .new_post-confirm li button, .new_post-confirm li form.form .form-btn-group button {
+      font-family: "cormac-extralight", sans-serif;
+      font-size: 16px;
+      line-height: 24px;
+      letter-spacing: 0;
+      height: 59px;
+      width: 220px;
+      padding-bottom: 14px;
+      position: relative;
+      right: -2px; }
+      form.form .form-btn-group .btn.white, form.form .form-btn-group .new_post-confirm li button.white, .new_post-confirm li form.form .form-btn-group button.white {
+        color: #4489ff;
+        width: 294px;
+        left: -4px;
+        border: 2px solid #4489ff; }
+      @media (max-width: 767px) {
+        form.form .form-btn-group .btn, form.form .form-btn-group .new_post-confirm li button, .new_post-confirm li form.form .form-btn-group button {
+          display: block;
+          margin: 10px auto;
+          position: static; } }
 
 .list-goods.type_1 {
   display: -webkit-box;
@@ -16912,11 +16918,6 @@ form.form .form-btn-group {
 .shop-about_edit {
   padding-top: 79px;
   margin-bottom: 35px; }
-  .shop-about_edit form {
-    width: 580px;
-    margin: 0 auto; }
-    .shop-about_edit form input, .shop-about_edit form textarea, .shop-about_edit form label {
-      width: 100%; }
 
 .popup-login > ul {
   display: -webkit-box;
