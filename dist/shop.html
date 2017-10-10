@@ -35,7 +35,7 @@
 
 	<!-- Application -->
 	<div class="app">
-		<header class="header header-shop js-header active">
+		<!--<header class="header header-shop js-header active">
 			<div class="container">
 				<div class="row">
 					<div class="col-md-12">
@@ -53,6 +53,31 @@
 								<li><a href="#">Войти</a></li>
 								<li class="active2"><a href="#">Подать объявление</a></li>
 								<li class="active1"><a href="#">Вещи</a></li>
+							</ul>
+						</nav>
+						
+					</div>
+				</div>
+			</div>
+		</header>-->
+		<header class="header header-shop js-header active">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<a href="index.html" class="logo"><img src="assets/img/logoBlue.svg"></a>
+						<nav class="menu-top">
+							<a href="#" class="burger js-open_menu-top">
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+							</a>
+							<ul>
+								<li><a href="#">О проекте</a></li>
+								<li><a href="#">Фонды</a></li>
+								<li class="active"><a href="#">Charity Shop <i class="fa fa-angle-down"></i></a></li>
+								<li class="active3"><a href="#">Подать объявление</a></li>
+								<li class="active3"><a href="#">Вещи</a></li>
 							</ul>
 						</nav>
 						
@@ -95,15 +120,26 @@
 					<div class="row">
 						<div class="col-md-12">
 
+							<div class="shop-edit">
+								<span>Управление страницей</span>
+								<input type="checkbox" id="edit"><label for="edit"></label>
+							</div>
+
 							<a href="#" class="shop_logo">
-								<img src="assets/img/logo_shop.png" alt="">
+								<figure>
+									<img src="assets/img/logo_shop.png" alt="">
+									<figcaption>Обновить логотип</figcaption>
+								</figure>
+								
 							</a>
 
 							<div class="tabs-shop js-tab_direct">
 								<ul>
 									<li class="active"><a href="#tab-I">О магазине</a></li>
-									<li><a href="#tab-II">Отзывы</a></li>
-									<li><a href="#tab-III">Каталог</a></li>
+									<li><a href="#tab-II">Добрые дела</a></li>
+									<li><a href="#tab-III">Отзывы</a></li>
+									<li><a href="#tab-IV">Каталог</a></li>
+									<li><a href="#tab-V">Настройки</a></li>
 								</ul>
 							</div>
 
@@ -118,16 +154,14 @@
 
 				<!-- TAB I -->
 				<div id="tab-I" class="tab tab--active">
-				<div class="shop-me figure">
-						<figure>
-							<img src="assets/img/shop-img.png">
-						</figure>
-					</div>
-
-
 					<div class="container">
 						<div class="row">
 							<div class="col-md-12">
+								<div class="shop-me figure">
+									<figure>
+										<img src="assets/img/shop-img.png">
+									</figure>
+								</div>
 								<div class="shop-me">
 									<section>
 										<h2>Charity shop</h2>
@@ -186,8 +220,8 @@
 					</div>
 				</div>
 
-				<!-- TAB II -->
-				<div id="tab-II" class="tab">
+				<!-- TAB III -->
+				<div id="tab-III" class="tab">
 
 					<div class="container">
 						<div class="row">
@@ -268,8 +302,8 @@
 					</div>
 				</div>
 
-				<!-- TAB III -->
-				<div id="tab-III" class="tab">
+				<!-- TAB IV -->
+				<div id="tab-IV" class="tab">
 
 					<div class="container">
 						<div class="row">
@@ -294,6 +328,90 @@
 										</span>
 									</li>
 								</ul>
+
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- TAB V -->
+				<div id="tab-V" class="tab">
+
+					<div class="container">
+						<div class="row">
+							<div class="col-md-12">
+
+								<div class="shop-me_edit">
+								<figure>
+									<img src="assets/img/shop-me_edit.png">
+									<figcaption><a href="#" class="btn white">Обновить изображение</a>
+									</figcaption>
+								</figure>
+										
+								</div>
+								<div class="shop-about_edit">
+								
+									<form class="form">
+										<span class="wr-input">
+											<label for="shop">Название магазина</label>
+											<input class="big" type="text" id="shop" value="Charity Shop">
+										</span>
+								
+										<span class="wr-input">
+											<span class="color" style="background: #4489ff;"></span>
+											<label for="color">цвет кнопок и ссылок на странице магазина</label>
+											<input type="text" value="#4489FF" id="color">
+										</span>
+								
+										<span class="wr-textarea">
+											<label for="short-desc">Краткое описание магазина</label>
+											<textarea name="" id="short-desc" class="short-desc"></textarea>
+										</span>
+										
+										<span class="wr-textarea">
+											<label for="full-desc">Подробное описание магазина</label>
+											<textarea name="" id="full-desc"></textarea>
+										</span>
+								
+										<span class="wr-textarea contact">
+											<label for="cont">Контактная информация</label>
+											<textarea name="" id="cont"></textarea>
+										</span>
+								
+										<div class="social">
+											<span class="wr-input">
+												<label for="vk">Vkontakte</label>
+												<input type="text" id="vk">
+											</span>
+								
+											
+											<span class="wr-input">
+												<label for="fc">Facebook</label>
+												<input type="text" id="fc">
+											</span>
+											
+											<span class="wr-input">
+												<label for="odn">Odnoklassnilki</label>
+												<input type="text" id="odn">
+											</span>
+											
+											<span class="wr-input">
+												<label for="twit">Twitter</label>
+												<input type="text" id="twit">
+											</span>
+										</div>
+								
+										
+										
+								
+										<div class="form-btn-group">
+											<button type="button" class="btn white">Показать в режиме просмотра</button>
+											<button type="submit" class="btn">Сохранить</button>
+										</div> 
+								
+									</form>
+									
+								</div>
 
 							</div>
 						</div>

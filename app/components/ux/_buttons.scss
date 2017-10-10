@@ -34,6 +34,11 @@
 			i.icon-header_search-white {background: url('../img/header_search.png') 0 0 no-repeat;}
 		}
 	}
+
+	&.white {
+		@include font-type($CormacEL, 16px, 20px, 0.5px); color: $link-color;
+		background: #fff;
+	}
 }
 
 

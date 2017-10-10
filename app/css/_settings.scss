@@ -48,8 +48,9 @@
 	}
 }
 
-//Cormac-ExtraLight
+//Cormac
 @include font-face('cormac-extralight', Cormac-ExtraLight);
+@include font-face('cormac-book', cormac-book);
 
 //Helvetica
 @include font-face('HelveticaLight', HelveticaLight);

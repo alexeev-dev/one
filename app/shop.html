@@ -17,15 +17,26 @@
 					<div class="row">
 						<div class="col-md-12">
 
+							<div class="shop-edit">
+								<span>Управление страницей</span>
+								<input type="checkbox" id="edit"><label for="edit"></label>
+							</div>
+
 							<a href="#" class="shop_logo">
-								<img src="assets/img/logo_shop.png" alt="">
+								<figure>
+									<img src="assets/img/logo_shop.png" alt="">
+									<figcaption>Обновить логотип</figcaption>
+								</figure>
+								
 							</a>
 
 							<div class="tabs-shop js-tab_direct">
 								<ul>
 									<li class="active"><a href="#tab-I">О магазине</a></li>
-									<li><a href="#tab-II">Отзывы</a></li>
-									<li><a href="#tab-III">Каталог</a></li>
+									<li><a href="#tab-II">Добрые дела</a></li>
+									<li><a href="#tab-III">Отзывы</a></li>
+									<li><a href="#tab-IV">Каталог</a></li>
+									<li><a href="#tab-V">Настройки</a></li>
 								</ul>
 							</div>
 
@@ -40,31 +51,11 @@
 
 				<!-- TAB I -->
 				<div id="tab-I" class="tab tab--active">
-				<div class="shop-me figure">
-						<figure>
-							<img src="assets/img/shop-img.png">
-						</figure>
-					</div>
-
-
 					<div class="container">
 						<div class="row">
 							<div class="col-md-12">
 								//= components/ui/shop-me.html
 								//= components/ui/shop-about.html
-
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<!-- TAB II -->
-				<div id="tab-II" class="tab">
-
-					<div class="container">
-						<div class="row">
-							<div class="col-md-12">
-								//= components/ui/list-rated.html
 
 							</div>
 						</div>
@@ -77,7 +68,35 @@
 					<div class="container">
 						<div class="row">
 							<div class="col-md-12">
+								//= components/ui/list-rated.html
+
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- TAB IV -->
+				<div id="tab-IV" class="tab">
+
+					<div class="container">
+						<div class="row">
+							<div class="col-md-12">
 								//= components/ui/list-goods_1.html
+
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- TAB V -->
+				<div id="tab-V" class="tab">
+
+					<div class="container">
+						<div class="row">
+							<div class="col-md-12">
+
+								//= components/ui/shop-me_edit.html
+								//= components/ui/shop-about_edit.html
 
 							</div>
 						</div>

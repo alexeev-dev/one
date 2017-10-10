@@ -1,0 +1,91 @@
+form.form {
+	//////////////////////////////////////
+	//////////////////////////////////////
+	//////////////////////////////////////
+	.form-btn-group {
+		display: flex; justify-content: space-between;
+	}
+
+	//////////////////////////////////////
+	//////////////////////////////////////
+	//////////////////////////////////////
+	& > span {
+		margin-bottom: 18px;
+	}
+	input, textarea {
+		color: #000;
+		display: block;
+		background: #f4f7fb; border-radius: 5px; border: 1px solid transparent;
+
+		&:focus {
+			border: 1px solid #4489ff;
+		}
+	} 
+
+	input {
+		padding: 15px 10px 0 10px;
+		@include font-type($HelveticaNeue, 16px, 24px, 0.3px);
+		height: 50px; padding-left: 10px;
+	}
+	textarea {
+		@include font-type($HelveticaR, 16px, 24px, 0.1px);
+		height: 180px; padding: 19px 10px;
+	}
+
+	.wr-input, .wr-textarea {
+		position: relative; padding: 26px 0; display: block;
+		label {
+			@include font-type($HelveticaNeue, 9px, 24px, 1.86px); color: #4b5769; text-transform: uppercase;
+			position: absolute; width: 100%; top: 0; left: 10px;
+		}
+	}
+
+	.wr-input {
+		input {
+			&.big {
+				@include font-type($CormacEL, 34px, 38px, 0); color: #000;
+				height: 70px; padding-top: 0px;
+			}
+		}
+
+		.color {
+			position: absolute; width: 30px; height: 30px; left: -60px; top: 37px;
+			border-radius: 50%;
+		}
+	}
+
+	.wr-textarea {
+		margin-bottom: 18px;
+		&.contact {
+			margin-top: 28px; margin-bottom: 5px;
+		}
+		textarea {
+			
+			&.short-desc {
+				padding: 14px 10px;
+				@include font-type($CormacEL, 22px, 32px, 0); color: #000;
+			}
+		}
+	}
+
+	.social {
+		.wr-input {
+			padding-bottom: 13px;
+		}
+	}
+
+	.form-btn-group {
+		margin-top: 52px;
+		.btn {
+			@include font-type($CormacEL, 16px, 24px, 0); 
+			height: 59px; width: 220px; padding-bottom: 14px; position: relative; right: -2px;
+			&.white {
+				color: $link-color;
+				width: 294px; left: -4px;
+				border: 2px solid #4489ff; 
+			}
+		}
+		
+	}
+	
+}

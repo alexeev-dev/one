@@ -376,7 +376,47 @@
 // MENU-SHOP - http://prntscr.com/gtlbfv
 .header {
 	&-shop {
-		height: 65px;
+		height: 66px;
+		.menu {
+			&-top {
+				ul {
+					margin-top: 24px; padding-right: 15px;
+					li {
+						margin-left: 41px;
+						&.active {
+							a {
+								position: relative; border: none;
+								&:after {
+									content: '';
+									position: absolute; bottom: -13px; left: 0; height: 3px; width: 100%;
+									background: $link-color;
+								}
+							}
+						}
+						&.active3 {
+							a {font-family: $CormacB;}
+						}
+
+						a {
+							color: $link-color; font-size: 16px; letter-spacing: 0.1px; line-height: 15px;
+							padding-bottom: 10px; position: relative;
+							&:hover {
+								&:after {
+									content: '';
+									position: absolute; bottom: -13px; left: 0; height: 3px; width: 100%;
+									background: $link-color;
+								}
+							}
+							i {
+								color: $link-color;
+							}
+						}
+
+					}
+				}
+			}
+		}
+		/*height: 65px;
 		.menu {
 			&-top {
 				&:before {display: none;}
@@ -445,7 +485,7 @@
 					}
 				}
 			}
-		}
+		}*/
 		
 	}
 }
