@@ -14,7 +14,7 @@
 	&-shop {
 		ul {
 			display: flex; justify-content: center;
-			@include respond-to(xs) {justify-content: space-between;}
+			@include respond-to(md) {flex-direction: column;}
 		}
 	}
 
@@ -94,12 +94,28 @@
 
 	//TABS-SHOP - http://prntscr.com/gtkuci
 	&-shop {
+		a.js-toggle-menu {
+			@include font-type($CormacEL, 18px, 22px, -1px); color: #000;
+			position: relative; width: 100%; padding-bottom: 20px; margin-bottom: 25px;
+			border-bottom: 3px solid #eff3f5;
+			
+			// hide-show
+			display: none; @include respond-to(md) {display: block;}
+
+			i {
+				color: #726e64; position: absolute; right: 0; top: 7px;
+				&.active {transform: rotate(180deg);}
+			}
+			
+		}
+
 		ul {
+			@include respond-to(md) {border-bottom: none; @include slide_me();}
+
 			li {
 				text-align: center;
 				width: 183px;
-				@include respond-to(sm) {margin: 0 20px;}
-				@include respond-to(xs) {margin: 0;}
+				@include respond-to(md) {margin-bottom: 10px; width: 100%; &:last-child {margin-bottom: 0; padding-bottom: 3px;}}
 
 				&.active {
 					a {
@@ -109,6 +125,8 @@
 				a {
 					@include font-type ($CormacEL, 16px, 22px, 0); color: #726e64;
 					display: inline-block; padding-bottom: 20px; position: relative;
+					@include respond-to(md) {width: 100%;}
+
 					&:before, &:after {
 						content: ''; 
 						display: block; height: 3px; width: 0; position: absolute; bottom: 0; 
@@ -133,6 +151,6 @@
 	////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	////////////////////////////////////////////////////////////////////////////////////////////////////////////
-	&-main {ul {transition: max-height 0.7s linear;}}
+	&-main, &-shop {ul {transition: max-height 0.7s linear;}}
 	&-inner {li a {transition: 0.3s ease-out;}}
 }

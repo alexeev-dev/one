@@ -11591,6 +11591,8 @@ span.rub {
 				}
 			}
 		}*/ }
+  .header-shop .menu-top .burger {
+    margin-top: 20px; }
   .header-shop .menu-top ul {
     margin-top: 24px;
     padding-right: 15px; }
@@ -14244,12 +14246,13 @@ a.down {
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center; }
-  @media (max-width: 480px) {
+  @media (max-width: 991px) {
     .tabs-shop ul {
-      -webkit-box-pack: justify;
-      -webkit-justify-content: space-between;
-      -ms-flex-pack: justify;
-      justify-content: space-between; } }
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column; } }
 
 @media (max-width: 767px) {
   .tabs-main {
@@ -14366,15 +14369,49 @@ a.down {
       background: #fff;
       cursor: default; }
 
+.tabs-shop a.js-toggle-menu {
+  font-family: "cormac-extralight", sans-serif;
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: -1px;
+  color: #000;
+  position: relative;
+  width: 100%;
+  padding-bottom: 20px;
+  margin-bottom: 25px;
+  border-bottom: 3px solid #eff3f5;
+  display: none; }
+  @media (max-width: 991px) {
+    .tabs-shop a.js-toggle-menu {
+      display: block; } }
+  .tabs-shop a.js-toggle-menu i {
+    color: #726e64;
+    position: absolute;
+    right: 0;
+    top: 7px; }
+    .tabs-shop a.js-toggle-menu i.active {
+      -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+      transform: rotate(180deg); }
+
+@media (max-width: 991px) {
+  .tabs-shop ul {
+    border-bottom: none;
+    overflow: hidden;
+    max-height: 0; }
+    .tabs-shop ul.active {
+      max-height: 1000px; } }
+
 .tabs-shop ul li {
   text-align: center;
   width: 183px; }
-  @media (max-width: 767px) {
+  @media (max-width: 991px) {
     .tabs-shop ul li {
-      margin: 0 20px; } }
-  @media (max-width: 480px) {
-    .tabs-shop ul li {
-      margin: 0; } }
+      margin-bottom: 10px;
+      width: 100%; }
+      .tabs-shop ul li:last-child {
+        margin-bottom: 0;
+        padding-bottom: 3px; } }
   .tabs-shop ul li.active a:before, .tabs-shop ul li.active a:after {
     width: 50%; }
   .tabs-shop ul li a {
@@ -14386,6 +14423,9 @@ a.down {
     display: inline-block;
     padding-bottom: 20px;
     position: relative; }
+    @media (max-width: 991px) {
+      .tabs-shop ul li a {
+        width: 100%; } }
     .tabs-shop ul li a:before, .tabs-shop ul li a:after {
       content: '';
       display: block;
@@ -14405,7 +14445,7 @@ a.down {
     .tabs-shop ul li a:hover:after {
       width: 50%; }
 
-.tabs-main ul {
+.tabs-main ul, .tabs-shop ul {
   -webkit-transition: max-height 0.7s linear;
   transition: max-height 0.7s linear; }
 

@@ -434,7 +434,7 @@ var app = function ($) {
       },
       showProfileMenu: function showProfileMenu(event) {
         event.preventDefault();
-        $('.tabs-main ul').toggleClass('active');
+        $('.tabs-main ul, .tabs-shop ul').toggleClass('active');
         $('.js-toggle-menu i').toggleClass('active');
       },
       showThingsMenu: function showThingsMenu(event) {
