@@ -39,6 +39,7 @@ form.form {
 		padding: 15px 10px 0 10px;
 		@include font-type($HelveticaNeue, 16px, 24px, 0.3px);
 		height: 50px; padding-left: 10px;
+		transition: .2s ease;
 	}
 	textarea {
 		@include font-type($HelveticaR, 16px, 24px, 0.1px);
@@ -47,18 +48,35 @@ form.form {
 
 	.wr-input, .wr-textarea {
 		position: relative; padding: 26px 0; display: block;
+
 		label {
+			@include font-type($HelveticaNeue, 9px, 24px, 2px);
+			position: absolute; top: 40px; left: 10px;
+		}
+
+		input:focus ~ label, textarea:focus ~ label {
 			@include font-type($HelveticaNeue, 9px, 24px, 2px); color: #4b5769; text-transform: uppercase;
-			position: absolute; width: 100%; top: 0; left: 10px;
+			width: 100%; top: 0; left: 10px;
 		}
 	}
 
 	.wr-input {
-		input {
-			&.big {
+		&.big {
+			input {
 				@include font-type($CormacEL, 34px, 38px, 0); color: #000;
 				height: 70px; padding-top: 0px;
 			}
+			label {
+				@include font-type($CormacEL, 34px, 38px, 0); color: #79879e; font-weight: 200;
+				top: 40px; left: 10px;
+				transition: .2s ease;
+			}
+		}
+
+		label {
+			@include font-type($HelveticaNeue, 16px, 24px, 0.3px); font-weight: 300; color: #79879e;
+			top: 44px;
+			transition: .2s ease;
 		}
 
 		.color {
@@ -72,12 +90,23 @@ form.form {
 		&.contact {
 			margin-top: 28px; margin-bottom: 5px;
 		}
-		textarea {
-			
-			&.short-desc {
+
+		&.short-desc {
+			textarea {
 				padding: 14px 10px;
 				@include font-type($CormacEL, 22px, 32px, 0); color: #000;
 			}
+			label {
+				@include font-type($CormacEL, 22px, 32px, 0); font-weight: 200; color: #79879e;
+				top: 38px; left: 10px;
+				transition: .2s ease;
+			}
+		}
+
+		label {
+			@include font-type($HelveticaNeue, 16px, 24px, 0.8px); color: #79879e;
+			top: 45px; left: 11px; 
+			transition: .2s ease;
 		}
 	}
 
