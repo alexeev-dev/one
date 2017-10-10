@@ -48,7 +48,7 @@ form.form {
 	.wr-input, .wr-textarea {
 		position: relative; padding: 26px 0; display: block;
 		label {
-			@include font-type($HelveticaNeue, 9px, 24px, 1.86px); color: #4b5769; text-transform: uppercase;
+			@include font-type($HelveticaNeue, 9px, 24px, 2px); color: #4b5769; text-transform: uppercase;
 			position: absolute; width: 100%; top: 0; left: 10px;
 		}
 	}

@@ -11137,9 +11137,9 @@ span.rub {
   position: absolute;
   left: 0;
   top: -25px;
-  -webkit-transform: translateX(-110%);
-  -ms-transform: translateX(-110%);
-  transform: translateX(-110%);
+  -webkit-transform: translateX(-130%);
+  -ms-transform: translateX(-130%);
+  transform: translateX(-130%);
   z-index: 5;
   background: #4489ff;
   -webkit-box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.08);
@@ -11196,9 +11196,9 @@ span.rub {
       width: auto;
       padding-top: 79px;
       z-index: 9990;
-      -webkit-transform: translateX(-110%);
-      -ms-transform: translateX(-110%);
-      transform: translateX(-110%);
+      -webkit-transform: translateX(-130%);
+      -ms-transform: translateX(-130%);
+      transform: translateX(-130%);
       height: 100vh;
       overflow-y: auto;
       z-index: 4; }
@@ -11591,41 +11591,65 @@ span.rub {
 				}
 			}
 		}*/ }
+  .header-shop .menu-top:before {
+    height: 91px;
+    background: #fff; }
   .header-shop .menu-top .burger {
     margin-top: 20px; }
   .header-shop .menu-top ul {
     margin-top: 24px;
-    padding-right: 15px; }
+    padding-right: 15px;
+    left: 0;
+    right: 0; }
+    @media (max-width: 991px) {
+      .header-shop .menu-top ul {
+        padding-top: 90px; } }
     .header-shop .menu-top ul li {
       margin-left: 41px; }
-      .header-shop .menu-top ul li.active a {
-        position: relative;
-        border: none; }
-        .header-shop .menu-top ul li.active a:after {
-          content: '';
-          position: absolute;
-          bottom: -13px;
-          left: 0;
-          height: 3px;
-          width: 100%;
-          background: #4489ff; }
+      @media (max-width: 991px) {
+        .header-shop .menu-top ul li {
+          margin-bottom: 20px !important; } }
+      .header-shop .menu-top ul li.active a:after {
+        content: '';
+        position: absolute;
+        bottom: -26px;
+        left: 0;
+        height: 3px;
+        width: 100%;
+        background: #4489ff; }
+        @media (max-width: 991px) {
+          .header-shop .menu-top ul li.active a:after {
+            bottom: -15px; } }
       .header-shop .menu-top ul li.active3 a {
         font-family: "cormac-book", sans-serif; }
+      .header-shop .menu-top ul li.drop-down a {
+        position: relative;
+        padding-right: 20px; }
+        .header-shop .menu-top ul li.drop-down a i {
+          position: absolute;
+          right: 0;
+          font-weight: 600; }
       .header-shop .menu-top ul li a {
         color: #4489ff;
         font-size: 16px;
         letter-spacing: 0.1px;
         line-height: 15px;
-        padding-bottom: 10px;
-        position: relative; }
+        position: relative;
+        padding-bottom: 0;
+        display: inline-block;
+        width: auto;
+        border: none; }
         .header-shop .menu-top ul li a:hover:after {
           content: '';
           position: absolute;
-          bottom: -13px;
+          bottom: -26px;
           left: 0;
           height: 3px;
           width: 100%;
           background: #4489ff; }
+          @media (max-width: 991px) {
+            .header-shop .menu-top ul li a:hover:after {
+              bottom: -15px; } }
         .header-shop .menu-top ul li a i {
           color: #4489ff; }
 
@@ -15114,7 +15138,7 @@ form.form {
       font-family: "HelveticaNeueThin";
       font-size: 9px;
       line-height: 24px;
-      letter-spacing: 1.86px;
+      letter-spacing: 2px;
       color: #4b5769;
       text-transform: uppercase;
       position: absolute;
@@ -16847,15 +16871,12 @@ form.form {
           font-size: 18px;
           line-height: 28px; } }
   .shop-me_edit figure {
-    position: relative;
-    left: -50px;
-    right: -50px; }
+    position: relative; }
     .shop-me_edit figure img {
       height: 270px; }
     .shop-me_edit figure figcaption {
       text-align: center;
       position: absolute;
-      padding-left: 103px;
       bottom: 32px;
       width: 100%; }
       .shop-me_edit figure figcaption .btn, .shop-me_edit figure figcaption .new_post-confirm li button, .new_post-confirm li .shop-me_edit figure figcaption button {
