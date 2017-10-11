@@ -42,6 +42,15 @@
 				
 				a {
 					color: #4b5769; font-size: 9px; font-family: $HelveticaL; line-height: 24px; text-transform: uppercase; letter-spacing: 1.3px;
+					&:after {
+						content: '';
+						position: absolute;
+						border-bottom: 1px solid $link-color;
+						top: 100%;
+						transition: all 0.4s;
+					}
+					&:after {right: 100%; left: 0;}
+					&:hover:after {right: 0;}
 				}
 			}
 		}

@@ -376,65 +376,7 @@
 // MENU-SHOP - http://prntscr.com/gtlbfv
 .header {
 	&-shop {
-		height: 66px;
-		.menu {
-			&-top {
-				&:before {
-					height: 91px;
-					background: #fff;
-				}
-				.burger {margin-top: 20px;}
-				ul {
-					margin-top: 24px; padding-right: 15px; left: 0; right: 0;
-					@include respond-to(md) {padding-top: 90px;}
-
-					li {
-						margin-left: 41px; 
-						@include respond-to(md) {margin-bottom: 20px !important;}
-						&.active {
-							a {
-								&:after {
-									content: '';
-									position: absolute; bottom: -26px; left: 0; height: 3px; width: 100%;
-									background: $link-color;
-									@include respond-to(md) {bottom: -15px;}
-								}
-							}
-						}
-						&.active3 {
-							a {font-family: $CormacB;}
-						}
-						&.drop-down {
-							a {
-								position: relative; padding-right: 20px;
-								i {
-									position: absolute; right: 0; font-weight: 600;
-								}
-							}
-						}
-
-						a {
-							color: $link-color; font-size: 16px; letter-spacing: 0.1px; line-height: 15px;
-							position: relative; padding-bottom: 0; display: inline-block; width: auto;
-							border: none;
-							&:hover {
-								&:after {
-									content: '';
-									position: absolute; bottom: -26px; left: 0; height: 3px; width: 100%;
-									background: $link-color;
-									@include respond-to(md) {bottom: -15px;}
-								}
-							}
-							i {
-								color: $link-color;
-							}
-						}
-
-					}
-				}
-			}
-		}
-		/*height: 65px;
+		height: 65px;
 		.menu {
 			&-top {
 				&:before {display: none;}
@@ -503,7 +445,75 @@
 					}
 				}
 			}
-		}*/
-		
+		}
 	}
+
+	&-shop_edit {
+			height: 66px;
+			.menu {
+				&-top {
+					&:before {
+						height: 91px;
+						background: #fff;
+					}
+					.burger {margin-top: 20px;}
+					ul {
+						margin-top: 24px; padding-right: 15px; left: 0; right: 0;
+						@include respond-to(md) {padding-top: 90px;}
+
+						li {
+							margin-left: 41px; 
+							@include respond-to(md) {margin-bottom: 20px !important;}
+							&.active {
+								a {
+									&:after {
+										content: '';
+										position: absolute; bottom: -26px; left: 0; height: 3px; width: 100%;
+										background: $link-color;
+										@include respond-to(md) {bottom: -15px;}
+									}
+								}
+							}
+							&.active3 {
+								a {font-family: $CormacB;}
+							}
+							&.drop-down {
+								a {
+									position: relative; padding-right: 20px;
+									i {
+										position: absolute; right: 0; font-weight: 600;
+									}
+								}
+							}
+
+							a {
+								color: $link-color; font-size: 16px; letter-spacing: 0.1px; line-height: 15px;
+								position: relative; padding-bottom: 0; display: inline-block; width: auto;
+								border: none;
+								&:before, &:after {
+									content: ''; 
+									display: block; height: 3px; width: 0; position: absolute; bottom: -26px; 
+									background: $link-color;
+									transition: width 0.3s ease-in-out;
+								} 
+								&:before {right: 50%;}
+								&:after {left: 50%;}
+
+								&:hover {
+									&:before {width: 50%;}
+									&:after {width: 50%;}
+
+								}
+								
+								i {
+									color: $link-color;
+								}
+							}
+
+						}
+					}
+				}
+			}
+		}
+		
 }

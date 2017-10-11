@@ -35,7 +35,8 @@
 
 	<!-- Application -->
 	<div class="app">
-		<header class="header header-shop js-header active">
+		
+		<header class="header header-shop_edit js-header active">
 			<div class="container">
 				<div class="row">
 					<div class="col-md-12">
@@ -50,9 +51,9 @@
 							<ul>
 								<li><a href="#">О проекте</a></li>
 								<li><a href="#">Фонды</a></li>
-								<li><a href="#">Войти</a></li>
-								<li class="active2"><a href="#">Подать объявление</a></li>
-								<li class="active1"><a href="#">Вещи</a></li>
+								<li class="active drop-down"><a href="#">Charity Shop <i class="fa fa-angle-down"></i></a></li>
+								<li class="active3"><a href="#">Подать объявление</a></li>
+								<li class="active3"><a href="#">Вещи</a></li>
 							</ul>
 						</nav>
 						
@@ -95,7 +96,12 @@
 					<div class="row">
 						<div class="col-md-12">
 
-							<a href="#" class="shop_logo">
+							<div class="shop-edit">
+								<span>Управление страницей</span>
+								<input type="checkbox" id="edit"><label for="edit"></label>
+							</div>
+
+							<a href="#" class="shop_logo_edit">
 								<figure>
 									<img src="assets/img/logo_shop.png" alt="">
 									<figcaption>Обновить логотип</figcaption>
@@ -107,8 +113,10 @@
 								<a href="#" class="js-toggle-menu">Меню магазина <i class="fa fa-angle-down"></i></a>
 								<ul>
 									<li class="active"><a href="#tab-I">О магазине</a></li>
-									<li><a href="#tab-II">Отзывы</a></li>
-									<li><a href="#tab-III">Каталог</a></li>
+									<li><a href="#tab-II">Добрые дела</a></li>
+									<li><a href="#tab-III">Отзывы</a></li>
+									<li><a href="#tab-IV">Каталог</a></li>
+									<li><a href="#tab-V">Настройки</a></li>
 								</ul>
 							</div>
 
@@ -123,74 +131,83 @@
 
 				<!-- TAB I -->
 				<div id="tab-I" class="tab tab--active">
-					<div class="shop-me figure">
+					<div class="shop-me_edit figure">
 						<figure>
-							<img src="assets/img/shop-img.png">
-						</figure>
+							<img src="assets/img/shop-me_edit.png">
+							<figcaption><a href="#" class="btn white">Обновить изображение</a>
+							</figcaption>
+						</figure>	
 					</div>
 					<div class="container">
 						<div class="row">
 							<div class="col-md-12">
-								<div class="shop-me">
-									<section>
-										<h2>Charity shop</h2>
-										<p>В наших руках ненужная одежда становится ценным ресурсом для социальных изменений и дает шанс на лучшее будущее людям, попавшим в сложную жизненную ситуацию.</p>
-									</section>
+								<div class="shop-about_edit">
+									<form class="form">
+										<span class="wr-input big">
+											<input class="big" type="text" id="shop">
+											<label for="shop">Название магазина</label>
+										</span>
+								
+										<span class="wr-input">
+											<span class="color" style="background: #4489ff;"></span>
+											<input type="text" id="color">
+											<label for="color">цвет кнопок и ссылок на странице магазина</label>
+										</span>
+								
+										<span class="wr-textarea short-desc">
+											<textarea name="" id="short-desc" class="short-desc"></textarea>
+											<label for="short-desc">Краткое описание магазина</label>
+										</span>
+										
+										<span class="wr-textarea">
+											<textarea name="" id="full-desc"></textarea>
+											<label for="full-desc">Подробное описание магазина</label>
+										</span>
+								
+										<span class="wr-textarea contact">
+											<textarea name="" id="cont"></textarea>
+											<label for="cont">Контактная информация</label>
+										</span>
+								
+										<div class="social">
+											<span class="wr-input">
+												<input type="text" id="vk">
+												<label for="vk">Vkontakte</label>
+											</span>
+								
+											
+											<span class="wr-input">
+												<input type="text" id="fc">
+												<label for="fc">Facebook</label>
+											</span>
+											
+											<span class="wr-input">
+												<input type="text" id="odn">
+												<label for="odn">Odnoklassnilki</label>
+											</span>
+											
+											<span class="wr-input">
+												<input type="text" id="twit">
+												<label for="twit">Twitter</label>
+											</span>
+										</div>
+								
+										<div class="form-btn-group">
+											<button type="button" class="btn white">Показать в режиме просмотра</button>
+											<button type="submit" class="btn">Сохранить</button>
+										</div> 
+								
+									</form>
+									
 								</div>
-								<article class="shop-about">
-									<section>
-										<p>Образование является неотъемлемой и значимой частью нашей жизни. С появлением на свет и до последних дней человек все время учится. Самый интенсивный период получения новых знаний, умений и навыков приходится на дошкольные и школьные годы. И очень важно именно в тот момент, когда человек наиболее восприимчив к обучению, когда он находится в естественном его природе поиске новых информационных потоков и себя, помочь, направить его, дать необходимые инструменты для наиболее эффективного роста и развития.</p>
-								
-										<img src="assets/img/shop-img_content.png" alt="">
-								
-										<p>В 2004 году мы решили приложить свои усилия в этой важной для любого общества сфере и, используя имеющийся финансовый и кадровый ресурс, внести свой вклад в осуществление качественного перехода от имеющихся внутри школьного образовательного сектора задач к их решению.</p>
-								
-										<p>Основной своей целью мы видим создание школы нового поколения, площадки с мощным потенциалом обучения не только стандартному набору предметов, но и с возможностью углубленного изучения различных научных и творческих областей, практического знакомства с множеством профессий; с выстраиванием целостной картины мира, с вариантами живого моделирования собственного будущего.</p>
-									</section>
-								
-									<address>
-										<h4>Контакты</h4>
-										<a href="http://charity-shop.ru/">charity-shop.ru</a>
-										<ul>
-											<li>
-												<a href="#"><i class="fa fa-vk"></i></a>
-											</li>
-								
-											<li>
-												<a href="#"><i class="fa fa-facebook"></i></a>
-											</li>
-								
-											<li>
-												<a href="#"><i class="fa fa-odnoklassniki" aria-hidden="true"></i></a>
-											</li>
-								
-											<li>
-												<a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-											</li>
-										</ul>
-								
-										<p>М. Новокузнецкая: <br>	
-										Новокузнецкая дом 1 (вход через проходную, коричневая дверь)</p>
-								
-										<p>М. Новослободская, Маяковская:<br>
-										Фадеева дом 7 строение 1</p>
-								
-										<p>М. Сухаревская, Красные ворота:<br>
-										Садовая-Спасская дом 12/23</p>
-								
-										<p>М. Динамо:<br>
-										1-й Боткинский проезд д. 7 стр. 1 (2-й этаж, Блогосфера)</p>
-									</address>
-								
-								</article>
 
 							</div>
 						</div>
 					</div>
 				</div>
 
-				<!-- TAB II -->
-				<div id="tab-II" class="tab">
+				<!-- TAB III -->
+				<div id="tab-III" class="tab">
 
 					<div class="container">
 						<div class="row">
@@ -271,8 +288,8 @@
 					</div>
 				</div>
 
-				<!-- TAB III -->
-				<div id="tab-III" class="tab">
+				<!-- TAB IV -->
+				<div id="tab-IV" class="tab">
 
 					<div class="container">
 						<div class="row">
@@ -302,6 +319,84 @@
 					</div>
 				</div>
 
+				<!-- TAB V -->
+				<div id="tab-V" class="tab">
+					<div class="shop-me_edit figure">
+						<figure>
+							<img src="assets/img/shop-me_edit.png">
+							<figcaption><a href="#" class="btn white">Обновить изображение</a>
+							</figcaption>
+						</figure>	
+					</div>
+
+					<div class="container">
+						<div class="row">
+							<div class="col-md-12">
+
+								<div class="shop-about_edit">
+									<form class="form">
+										<span class="wr-input big">
+											<input class="big" type="text" id="shop">
+											<label for="shop">Название магазина</label>
+										</span>
+								
+										<span class="wr-input">
+											<span class="color" style="background: #4489ff;"></span>
+											<input type="text" id="color">
+											<label for="color">цвет кнопок и ссылок на странице магазина</label>
+										</span>
+								
+										<span class="wr-textarea short-desc">
+											<textarea name="" id="short-desc" class="short-desc"></textarea>
+											<label for="short-desc">Краткое описание магазина</label>
+										</span>
+										
+										<span class="wr-textarea">
+											<textarea name="" id="full-desc"></textarea>
+											<label for="full-desc">Подробное описание магазина</label>
+										</span>
+								
+										<span class="wr-textarea contact">
+											<textarea name="" id="cont"></textarea>
+											<label for="cont">Контактная информация</label>
+										</span>
+								
+										<div class="social">
+											<span class="wr-input">
+												<input type="text" id="vk">
+												<label for="vk">Vkontakte</label>
+											</span>
+								
+											
+											<span class="wr-input">
+												<input type="text" id="fc">
+												<label for="fc">Facebook</label>
+											</span>
+											
+											<span class="wr-input">
+												<input type="text" id="odn">
+												<label for="odn">Odnoklassnilki</label>
+											</span>
+											
+											<span class="wr-input">
+												<input type="text" id="twit">
+												<label for="twit">Twitter</label>
+											</span>
+										</div>
+								
+										<div class="form-btn-group">
+											<button type="button" class="btn white">Показать в режиме просмотра</button>
+											<button type="submit" class="btn">Сохранить</button>
+										</div> 
+								
+									</form>
+									
+								</div>
+
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
 
 		</section>

@@ -6,7 +6,7 @@
 
 	<!-- Application -->
 	<div class="app">
-		//= components/base/menu-top-shop.html
+		//= components/base/menu-top-shop_edit.html
 		<!-- Login Form //= components/popup/login.html-->
 		<!-- Notice Form //= components/popup/notice.html-->
 		//= components/base/breadcrumbs.html
@@ -17,7 +17,12 @@
 					<div class="row">
 						<div class="col-md-12">
 
-							<a href="#" class="shop_logo">
+							<div class="shop-edit">
+								<span>Управление страницей</span>
+								<input type="checkbox" id="edit"><label for="edit"></label>
+							</div>
+
+							<a href="#" class="shop_logo_edit">
 								<figure>
 									<img src="assets/img/logo_shop.png" alt="">
 									<figcaption>Обновить логотип</figcaption>
@@ -29,8 +34,10 @@
 								<a href="#" class="js-toggle-menu">Меню магазина <i class="fa fa-angle-down"></i></a>
 								<ul>
 									<li class="active"><a href="#tab-I">О магазине</a></li>
-									<li><a href="#tab-II">Отзывы</a></li>
-									<li><a href="#tab-III">Каталог</a></li>
+									<li><a href="#tab-II">Добрые дела</a></li>
+									<li><a href="#tab-III">Отзывы</a></li>
+									<li><a href="#tab-IV">Каталог</a></li>
+									<li><a href="#tab-V">Настройки</a></li>
 								</ul>
 							</div>
 
@@ -45,29 +52,17 @@
 
 				<!-- TAB I -->
 				<div id="tab-I" class="tab tab--active">
-					<div class="shop-me figure">
+					<div class="shop-me_edit figure">
 						<figure>
-							<img src="assets/img/shop-img.png">
-						</figure>
+							<img src="assets/img/shop-me_edit.png">
+							<figcaption><a href="#" class="btn white">Обновить изображение</a>
+							</figcaption>
+						</figure>	
 					</div>
 					<div class="container">
 						<div class="row">
 							<div class="col-md-12">
-								//= components/ui/shop-me.html
-								//= components/ui/shop-about.html
-
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<!-- TAB II -->
-				<div id="tab-II" class="tab">
-
-					<div class="container">
-						<div class="row">
-							<div class="col-md-12">
-								//= components/ui/list-rated.html
+								//= components/ui/shop-about_edit.html
 
 							</div>
 						</div>
@@ -80,12 +75,45 @@
 					<div class="container">
 						<div class="row">
 							<div class="col-md-12">
+								//= components/ui/list-rated.html
+
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- TAB IV -->
+				<div id="tab-IV" class="tab">
+
+					<div class="container">
+						<div class="row">
+							<div class="col-md-12">
 								//= components/ui/list-goods_1.html
 							</div>
 						</div>
 					</div>
 				</div>
 
+				<!-- TAB V -->
+				<div id="tab-V" class="tab">
+					<div class="shop-me_edit figure">
+						<figure>
+							<img src="assets/img/shop-me_edit.png">
+							<figcaption><a href="#" class="btn white">Обновить изображение</a>
+							</figcaption>
+						</figure>	
+					</div>
+
+					<div class="container">
+						<div class="row">
+							<div class="col-md-12">
+
+								//= components/ui/shop-about_edit.html
+
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
 
 		</section>

@@ -47,7 +47,10 @@
 
 	&_logo {
 		text-align: center;
-		display: block; width: 100%; margin: 0 0 41px;
+		display: block; width: 100%; margin: 45px 0 41px;
+		&_edit {
+			margin: 0 0 41px;
+		}
 
 		figure {
 			figcaption {
@@ -55,6 +58,8 @@
 				margin-top: 16px;
 			}
 		}
+
+
 	}
 
 	&-me {

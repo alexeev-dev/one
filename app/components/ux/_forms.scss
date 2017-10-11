@@ -65,11 +65,17 @@ form.form {
 			input {
 				@include font-type($CormacEL, 34px, 38px, 0); color: #000;
 				height: 70px; padding-top: 0px;
+				@include respond-to(xs) {
+					font-size: 14px;
+				}
 			}
 			label {
 				@include font-type($CormacEL, 34px, 38px, 0); color: #79879e; font-weight: 200;
 				top: 40px; left: 10px;
 				transition: .2s ease;
+				@include respond-to(xs) {
+					font-size: 22px;
+				}
 			}
 		}
 
@@ -125,6 +131,11 @@ form.form {
 				color: $link-color;
 				width: 294px; left: -4px;
 				border: 2px solid #4489ff; 
+				transition: 0.4s all ease;
+				&:hover {
+					color: #fff;
+					background: #4489ff; 
+				}
 			}
 			@include respond-to(sm) {
 				display: block; margin: 10px auto; position: static;
