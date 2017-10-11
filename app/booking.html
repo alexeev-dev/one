@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+//= components/base/head.html
+<body>
+	//= components/base/counter.html
+
+	<!-- Application -->
+	<div class="app booking-wr">
+		//= components/base/menu-top-shop_edit.html
+
+		<section class="wr bg_white border_grey">
+			<div class="container">
+				<div class="content-block">
+					<div class="row">
+						<div class="col-md-12">
+
+							<div class="tabs-book js-tab_direct">
+								<!--<a href="#" class="js-toggle-menu">Меню магазина <i class="fa fa-angle-down"></i></a>-->
+								<ul>
+									<li class="active"><a href="#registration">Регистрация</a></li>
+									<li><a href="#reservation">Резервирование суммы</a></li>
+									<li><a href="#complete">Завершение</a></li>
+								</ul>
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="wr wr-book">
+
+			<div class="js-tab_direct-wr">
+
+				<!-- TAB I -->
+				<div id="registration" class="tab tab--active">
+
+					<div class="container">
+						<div class="row">
+							<div class="col-md-12">
+								<article class="booking-proc">
+									<header>
+										<h3><span>1. </span> Регистрация</h3>
+										<p>Регистрация позволит вам отслеживать состояние ваших заказов и вести статистику своих пожертвований.</p>
+										
+										<div class="wr-soc">
+											<span>Войти с помощью:</span>
+											<ul class="soc">
+												<li>
+													<a href="#"><i class="fa fa-vk"></i></a>
+												</li>
+												<li>
+													<a href="#"><i class="fa fa-facebook"></i></a>
+												</li>
+												<li>
+													<a href="#"><i class="fa fa-odnoklassniki"></i></a>
+												</li>
+												<li>
+													<a href="#"><i class="fa fa-twitter"></i></a>
+												</li>
+											</ul>
+										</div>
+									</header>
+
+									<section>
+										<form class="form">
+
+											<span class="wr-input">
+												<input type="text" id="color">
+												<label for="color">Имя</label>
+											</span>
+
+											<span class="wr-input">
+												<input type="text" id="color">
+												<label for="color">E-mail</label>
+											</span>
+
+											<span class="wr-input">
+												<input type="text" id="color">
+												<label for="color">Телефон</label>
+											</span>
+
+											<div class="form-btn-group">
+												<button type="submit" class="btn">Зарегистрировться</button>
+												<a href="#">У меня есть аккаунт!</a>
+											</div> 
+
+										</form>
+									</section>
+								</article>
+
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- TAB II -->
+				<div id="reservation" class="tab">
+
+					<div class="container">
+						<div class="row">
+							<div class="col-md-12">
+								<article class="booking-proc">
+									<header>
+										<h3><span>2. </span> Резервирование<br> средств</h3>
+										<p>Для завершения бронирования вещи воспользуйтесь безопасной оплатой через Яндекс.Кассу. Вам потребуется ввести номер Вашей карты, Вы сможете отменить бронь и деньги вернутся на Вашу карту.</p>
+										
+									</header>
+
+									<section>
+										<h4>Итого</h4>
+										<ul class="score">
+											<li>
+												<p>На вашем счету<br> будет зарезервирована сумма:</p>
+												<div class="summ">
+													6 200 <span class="rub">a</span>
+												</div>
+											</li>
+											<li>
+												<p>Из которых будет выделено <br>на благотворительность:</p>
+												<div class="summ">
+													<i class="fa fa-heart" aria-hidden="true"></i>94%
+													<p>5 828 <span class="rub">a</span> </p>
+												</div>
+												
+											</li>
+										</ul>
+
+										<p class="agree">
+											<input type="checkbox">
+											Я соглашаюсь c Условиями обработки персональных данных в соответствии с Условиями использования сайта, Политикой обработки персональных данных и на получение сообщений в процессе обработки заказа.
+										</p>
+									</section>
+								</article>
+
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- TAB III -->
+				<div id="complete" class="tab">
+
+					<div class="container">
+						<div class="row">
+							<div class="col-md-12">
+								<article class="booking-proc">
+									<header>
+										<h3><span>3. </span> Завершение<br> бронирования</h3>
+										<div class="cancel">
+											<p>В любой момент до получения вещи, <br>
+											вы можете отменить бронирование.
+											<a href="#">Отменить</a>
+											</p>
+										</div>
+										
+									</header>
+
+									<section>
+										<h3>Успешно!</h3>
+										<div class="info">
+											<span class="success">6 200 <span class="rub">a</span> Зарезервировы на вашем счету</span>
+											<p>Свяжитесь с продавцом. После получения вещи, деньги будут перечислены на счет благотворительного фонда.</p>
+
+											<div class="btn-gr">
+												<button type="submit" class="btn">Связаться с продавцом</button>
+												<a href="#">Продолжить покупки</a>
+											</div> 
+										</div>
+										
+									</section>
+								</article>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+
+		</section>
+		
+		<!-- Footer -->
+		//= components/base/footer-style-2.html
+
+	</div>
+	
+	<!-- Scripts -->
+	//= components/base/scripts.html
+
+</body>
+</html>

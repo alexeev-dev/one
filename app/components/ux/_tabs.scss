@@ -18,6 +18,13 @@
 		}
 	}
 
+	&-book {
+		ul {
+			display: flex;
+			@include respond-to(md) {flex-direction: column;}
+		}
+	}
+
 
 	////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -142,6 +149,38 @@
 
 					}
 					
+				}
+			}
+		}
+	}
+	
+	//TABS-BOOKING - http://prntscr.com/gw1r4r
+	&-book {
+		padding: 27px 0 17px 11px;
+		ul {
+			counter-reset: list;
+			li {
+				position: relative; padding-left: 58px; height: 38px;
+				opacity: 0.4; margin-right: 69px;
+				transition: .4s all ease;
+
+				&:last-child {
+					margin-right: 0;
+				}
+				&:before {
+					counter-increment: list;
+					content: counter(list);
+					@include font-type($CormacEL, 22px, 22px, 0); color: #000; text-align: center; vertical-align: middle;
+					position: absolute; left: 0; top: -6px; display: inline-block; width: 38px; height: 38px; 
+					border: 2px solid #7487f5; border-radius: 50%;
+				}
+				&.active, &:hover   {
+					opacity: 1;
+				}
+	
+
+				a {
+					@include font-type($CormacB, 22px, 32px, 0);  color: #000;
 				}
 			}
 		}
