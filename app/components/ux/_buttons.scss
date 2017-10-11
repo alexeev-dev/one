@@ -38,6 +38,10 @@
 	&.white {
 		@include font-type($CormacEL, 16px, 20px, 0.5px); color: $link-color;
 		background: #fff;
+		&:hover {
+			color: #fff;
+			background: $link-color;
+		}
 	}
 }
 

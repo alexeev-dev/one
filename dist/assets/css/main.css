@@ -14167,6 +14167,9 @@ a.down {
     letter-spacing: 0.5px;
     color: #4489ff;
     background: #fff; }
+    .btn.white:hover, .new_post-confirm li button.white:hover {
+      color: #fff;
+      background: #4489ff; }
 
 /*********************************************/
 /* 
@@ -16960,7 +16963,7 @@ form.form {
   display: block;
   width: 100%;
   margin: 45px 0 41px; }
-  .shop_logo_edit {
+  .shop_logo.edit {
     margin: 0 0 41px; }
   .shop_logo figure figcaption {
     font-family: "cormac-extralight", sans-serif;
