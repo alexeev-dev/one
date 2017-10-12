@@ -36,9 +36,8 @@ form.form {
 	} 
 
 	input {
-		padding: 15px 10px 0 10px;
-		@include font-type($HelveticaNeue, 16px, 24px, 0.3px);
-		height: 50px; padding-left: 10px;
+		font-family: $HelveticaNeue; font-size: 16px; letter-spacing: 0.3px;
+		padding: 17px 10px 7px 10px;
 		transition: .2s ease;
 	}
 	textarea {
@@ -126,8 +125,8 @@ form.form {
 	.form-btn-group {
 		margin-top: 52px;
 		.btn {
-			@include font-type($CormacEL, 16px, 24px, 0); 
-			height: 59px; width: 220px; padding-bottom: 14px; position: relative; right: -2px;
+			font-family: $CormacEL; font-size: 16px;
+			width: 220px; position: relative; right: -2px;
 			&.white {
 				color: $link-color;
 				width: 294px; left: -4px;
