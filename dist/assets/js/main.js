@@ -4,6 +4,19 @@ var _slicedToArray = function () { function sliceIterator(arr, i) { var _arr = [
 
 var app = function ($) {
 
+  $(function () {
+    $('#js-registration').click(function () {
+      $('.booking-proc section > form').addClass('hide');
+      $('.booking-proc section .verification').addClass('active');
+    });
+
+    $('#js-confirm').click(function () {
+      $('.booking-proc section .verification > p').addClass('active');
+      $('.booking-proc section .verification > .form').addClass('hide');
+      $('.reservation .booking-proc').addClass('active');
+    });
+  });
+
   // ======================================================================== //
   //                        ВСПОМОГАТЕЛЬНЫЕ ФУНКЦИИ                           //
   // ======================================================================== //

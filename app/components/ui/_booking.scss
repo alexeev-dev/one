@@ -4,6 +4,48 @@
 	}
 }
 
+//TABS-BOOKING - http://prntscr.com/gw1r4r
+.stap-book {
+	////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	ul {
+		display: flex;
+		@include respond-to(md) {flex-direction: column;}
+	}
+
+	////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	padding: 27px 0 17px 11px;
+	ul {
+		counter-reset: list;
+		li {
+			@include font-type($CormacB, 22px, 32px, 0);  color: #000;
+			position: relative; padding-left: 58px; height: 38px;
+			opacity: 0.4; margin-right: 69px;
+			transition: .4s all ease;
+			@include respond-to(md) {margin-bottom: 10px; margin-right: 0;}
+			@include respond-to(xs) {font-size: 18px; height: auto; margin-bottom: 25px; padding-left: 50px;}
+
+			&:last-child {
+				margin-right: 0;
+				@include respond-to(md) {margin-bottom: 0;}
+			}
+			&:before {
+				counter-increment: list;
+				content: counter(list);
+				@include font-type($CormacEL, 22px, 1, 0); color: #000; text-align: center; vertical-align: middle;
+				position: absolute; left: 0; top: -6px; padding-top: 4px; display: inline-block; width: 38px; height: 38px; 
+				border: 2px solid #7487f5; border-radius: 50%;
+			}
+			&.active  {
+				opacity: 1;
+			}
+		}
+	}
+}
+
 .booking {
 	////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -19,51 +61,59 @@
 				}
 			}
 		}
-
+		
 		section {
 			ul.score {
 				display: flex; 
 				@include respond-to(md) {display: block;}
 			}
 		}
+
 	}
 
 	////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	////////////////////////////////////////////////////////////////////////////////////////////////////////////
-	&-proc {
-		@extend .neo-bg;
-		 width: calc(100% + 3px); position: relative; left: -12px; margin-bottom: 40px !important; margin-top: 51px !important; 
+	margin-bottom: 18px;
 
-		&.registration {
-			padding-bottom: 38px; padding-top: 43px;  
+	&.registration {
+		padding-top: 41px; 
+		.booking-proc {
+			padding-bottom: 49px; padding-top: 41px;
 		}
+		 
+	}
 
-		&.reservation {
+	&.reservation {
+		.booking-proc {
 			padding-bottom: 70px;
 			header {
 				padding-top: 26px;
+				* {
+					&:last-child {margin-bottom: 0;} 
+				}
 				h3 {
 					margin-bottom: 32px;
 				}
 			}
-
 			section {
 				padding-top: 32px; padding-left: 42px;
 				@include respond-to(xs) {padding-left: 0;}
 
 			}
+			&.active {
+				.btn-reserve {opacity: 0.5; pointer-events: none;}
+			}
 		}
+	}
 
-		&.complete {
-			padding-bottom: 35px;
+	&.complete {
+		.booking-proc {
+			padding-bottom: 61px;
 			header {
 				padding-top: 24px;
 
-				h3 {
-					margin-bottom: 35px;
-
-				}
+				h3 {margin-bottom: 35px;}
 			}
 
 			section {
@@ -76,6 +126,21 @@
 				}
 			}
 		}
+	}
+	
+	
+	&-proc {
+		@extend .neo-bg;
+		width: calc(100% + 3px); position: relative; left: -12px; padding-top: 43px !important;
+		& > * {
+			opacity: 0.3; pointer-events: none;
+			transition: .5s all ease;
+		}
+		&.active {
+			& > * {
+				opacity: 1; pointer-events: auto;
+			}
+		} 
 
 		h3 {
 			@include font-type($CormacB, 34px, 42px, 0); color: #000;
@@ -89,7 +154,7 @@
 		header {
 			padding-left: 60px; width: 44%;
 			@include respond-to(md) {width: 100%; margin-bottom: 30px;}
-			@include respond-to(xs) {padding-left: 5px;}
+			@include respond-to(xs) {padding-left: 0;}
 
 			h3 {
 				span {
@@ -101,12 +166,14 @@
 			p {
 				@include font-type($HelveticaL, 18px, 28px, 1.5px); color: #636f81; font-weight: 300;
 				margin-bottom: 36px;
+				@include respond-to(xs) {font-size: 16px; line-height: 24px;}
 			}
 
 			.wr-soc {
 				span {
 					@include font-type($HelveticaL, 9px, 28px, 1.9px); color: #636f81; text-transform: uppercase;
 				}
+
 				ul.soc {
 					padding: 7px 0 0 10px;
 					li {
@@ -156,12 +223,14 @@
 		}
 
 		section {
-			width: 61%;
+			width: 61%; position: relative;
 			@include respond-to(md) {width: 100%; padding-left: 40px;}
 			@include respond-to(xs) {padding-left: 0;}
 
 			.form {
 				@include respond-to(lg) {width: 100%;}
+				transition: .4s all aese;
+				&.hide {opacity: 0;}
 				.wr-input {
 					padding-top: 27px; padding-bottom: 0; margin-bottom: 13px;
 					label {
@@ -172,7 +241,7 @@
 
 				&-btn-group {
 					justify-content: flex-start; align-items: center;
-					margin-top: 0; padding-top: 21px; 
+					margin-top: 0; padding-top: 28px; 
 					@include respond-to(md) {display: flex; padding-right: 10px;}
 					@include respond-to(sm) {display: block; text-align: center;}
 
@@ -183,24 +252,76 @@
 						}
 					}
 					a {
-						@include font-type($CormacB, 16px, 68px, 0); color: $link-color;
-						position: relative;
+						@include font-type($CormacB, 16px, 1, 0); color: $link-color;
+						position: relative; padding-top: 3px;
 						@include respond-to(sm) {display: inline-block;}
 
-						&:before, &:after {
+						&:after {
 							content: ''; 
-							display: block; height: 3px; width: 0; position: absolute; bottom: 15px; 
-							background: $link-color;
+							display: block; height: 3px; width: 0; position: absolute; bottom: -10px;  transform: translateX(-50%);
+							background: $link-color; 
 							transition: width 0.3s ease-in-out;
 						} 
-						&:before {right: 50%;}
-						&:after {left: 50%;}
+						&:after {width: 0%; left: 50%;}
 
 						&:hover {
-							&:before {width: 50%;}
-							&:after {width: 50%;}
+							&:after {width: 100%;}
 
 						}
+					}
+				}
+			}
+
+			.verification {
+				display: inline-block; padding: 28px 0 0 42px; position: absolute; opacity: 0;  transform: translate(50px, 50px);
+				background: #fff;
+				z-index: 2;  pointer-events: none;
+				transition: 1s all ease;
+				@include respond-to(xs) {padding-left: 0;}
+
+				&.active {
+					position: relative; transform: translate(0);
+					opacity: 1;  pointer-events: auto; 
+				}
+				&.hide {opacity: 0; pointer-events: none;}
+
+				
+				.mail {
+					margin-bottom: 32px;
+					img {
+						position: absolute; left: 42px; top: 35px;
+						@include respond-to(xs) {position: static; margin-bottom: 22px;}
+					}
+					p {
+						@include font-type($HelveticaL, 16px, 28px, 2px);
+						padding-left: 92px;
+						@include respond-to(xs) {
+							font-size: 14px; line-height: 26px;
+							padding-left: 0;
+						}
+						br {
+							@include respond-to(sm) {display: none;}
+						}
+					}
+				}
+
+				& > .form {
+					.wr-input {
+						margin-bottom: 27px;
+					}
+					&-btn-group {
+						a {font-family: $CormacEL;}
+					}
+
+				}
+				p.success {
+					@include font-type($CormacB, 22px, 32px, -0.1px); color: #00b54b; 
+					padding-left: 90px; padding-top: 10px; transform: translate(30px, 30px);
+					opacity: 0; pointer-events: none;
+					transition: 1s all ease;
+					@include respond-to(xs) {padding-left: 0;}
+					&.active {
+						opacity: 1; pointer-events: auto; transform: translate(0, 0);
 					}
 				}
 			}
@@ -224,6 +345,9 @@
 					& > p {
 						@include font-type($HelveticaL, 10px, 18px, 1px); text-transform: uppercase; color: #4b5769;
 						margin-bottom: 14px;
+						br {
+							@include respond-to(xs) {display: none;}
+						}
 					}
 
 					& > div.summ {
@@ -246,29 +370,27 @@
 				}
 			}
 
-			.agree {
+			.agree-labl {
 				@include font-type($HelveticaL, 10px, 18px, 1.3px); color: #4b5769; text-transform: uppercase;
 				position: relative; padding: 0 40px; margin-bottom: 45px;
-				
-				& > input {
-					position: absolute; left: 0; top: 0;
-					opacity: 0; cursor: pointer;
-				}
-
-				input:checked + label {
-					
-					&:after {
-						content: '\2714';
-						color: $link-color; font-size: 20px;
-						position: absolute; left: 0; bottom: 0;
-					}
-				}
-
-				& > label {
-					position: relative;
-					width: 16px; height: 16px; display: block; position: absolute; left: 5px; top: 0;
+				height: auto; display: block;
+				cursor: pointer;
+				@include respond-to(xs) {padding-right: 0;}
+			}
+			input.agree {opacity: 0;}
+			input.agree + label {
+				&:before {
+					content: '';
+					position: absolute; display: block; width: 16px; height: 16px; left: 6px; top: 0;
 					border: 2px solid #678198; border-radius: 2px;
-					cursor: pointer;
+				}
+			}
+
+			input.agree:checked + label {
+				&:after {
+					content: '\2714';
+					color: $link-color; font-size: 20px; 
+					position: absolute; left: 7px; top: -3px;
 				}
 			}
 

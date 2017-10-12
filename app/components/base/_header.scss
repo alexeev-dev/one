@@ -71,7 +71,7 @@
 				background: #fff; box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.08);
 				pointer-events: none;
 
-				left: -25px; right: -25px; top: -25px; width: auto; padding-top: 79px; z-index: 9990; transform: translateX(-130%);height: 100vh; overflow-y: auto; z-index: 4;
+				left: -25px; right: -25px; top: -25px; width: auto; padding-top: 79px; z-index: 9990; transform: translateX(-130%); overflow-y: auto; z-index: 4;
 
 				&.active {
 					pointer-events: all; transform: translateX(0);
@@ -79,7 +79,7 @@
 			}
 
 			@include respond-to(sm) {
-				left: 0; right: 0; 
+				left: 0; right: 0;  height: 100vh;
 			}
 			
 			li {
@@ -481,7 +481,7 @@
 								a {
 									position: relative; padding-right: 20px;
 									i {
-										position: absolute; right: 0; font-weight: 600;
+										position: absolute; right: 0; top: 0; font-weight: 600;
 									}
 								}
 							}
