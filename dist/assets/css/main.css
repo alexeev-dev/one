@@ -15252,6 +15252,8 @@ form.form {
       position: absolute;
       top: 40px;
       left: 10px;
+      -webkit-transition: .2 all ease;
+      transition: .2 all ease;
       pointer-events: none; }
     form.form .wr-input input:focus ~ label, form.form .wr-input textarea:focus ~ label, form.form .wr-textarea input:focus ~ label, form.form .wr-textarea textarea:focus ~ label {
       font-family: "HelveticaLight", sans-serif;

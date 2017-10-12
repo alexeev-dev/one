@@ -51,10 +51,11 @@ form.form {
 		label {
 			@include font-type($HelveticaL, 10px, 24px, 2px);
 			position: absolute; top: 40px; left: 10px;
+			transition: .2 all ease;
 			pointer-events: none;
 		}
 
-		input:focus ~ label, textarea:focus ~ label  {
+		input:focus ~ label, textarea:focus ~ label {
 			@include font-type($HelveticaL, 10px, 24px, 2px); color: #4b5769; text-transform: uppercase;
 			width: 100%; top: 0; left: 10px;
 		}
