@@ -11675,6 +11675,7 @@ span.rub {
         .header-shop_edit .menu-top ul li.drop-down a i {
           position: absolute;
           right: 0;
+          top: 0;
           font-weight: 600; }
       .header-shop_edit .menu-top ul li a {
         color: #4489ff;
@@ -14609,7 +14610,7 @@ a.down {
         content: counter(list);
         font-family: "cormac-extralight", sans-serif;
         font-size: 22px;
-        line-height: 30px;
+        line-height: 1;
         letter-spacing: 0;
         color: #000;
         text-align: center;
@@ -14617,6 +14618,7 @@ a.down {
         position: absolute;
         left: 0;
         top: -6px;
+        padding-top: 4px;
         display: inline-block;
         width: 38px;
         height: 38px;
@@ -17568,8 +17570,11 @@ form.form {
         color: #4489ff;
         font-size: 20px;
         position: absolute;
+        display: block;
+        width: 16px;
+        height: 20px;
         left: 0;
-        bottom: 0; }
+        bottom: -2px; }
       .booking-proc section .agree > label {
         position: relative;
         width: 16px;
