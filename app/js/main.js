@@ -9,6 +9,7 @@ let app = (function ($) {
       $('#js-confirm').click(function(){
           $('.booking-proc section .verification > p').addClass('active');
           $('.booking-proc section .verification > .form').addClass('hide');
+          $('.reservation .booking-proc').addClass('active');
       });
   });
 
