@@ -8168,13 +8168,13 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
 
 .icon-arrow-grey {
   background-image: url(../img/sprite.png);
-  background-position: -221px -138px;
+  background-position: -221px -155px;
   width: 9px;
   height: 16px; }
 
 .icon-arrow-r {
   background-image: url(../img/sprite.png);
-  background-position: -205px -179px;
+  background-position: -163px -28px;
   width: 6px;
   height: 8px; }
 
@@ -8222,7 +8222,7 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
 
 .icon-buy-search {
   background-image: url(../img/sprite.png);
-  background-position: -205px -138px;
+  background-position: -205px -155px;
   width: 16px;
   height: 16px; }
 
@@ -8252,13 +8252,13 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
 
 .icon-close-lit {
   background-image: url(../img/sprite.png);
-  background-position: -134px -95px;
+  background-position: -157px -95px;
   width: 9px;
   height: 9px; }
 
 .icon-close {
   background-image: url(../img/sprite.png);
-  background-position: 0px -187px;
+  background-position: -28px -187px;
   width: 28px;
   height: 28px; }
 
@@ -8270,7 +8270,7 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
 
 .icon-down {
   background-image: url(../img/sprite.png);
-  background-position: -205px -168px;
+  background-position: -170px -140px;
   width: 18px;
   height: 11px; }
 
@@ -8294,31 +8294,31 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
 
 .icon-header_plus-white {
   background-image: url(../img/sprite.png);
-  background-position: -195px -140px;
+  background-position: -159px -83px;
   width: 10px;
   height: 10px; }
 
 .icon-header_plus {
   background-image: url(../img/sprite.png);
-  background-position: -221px -154px;
+  background-position: -221px -171px;
   width: 10px;
   height: 10px; }
 
 .icon-header_search-white {
   background-image: url(../img/sprite.png);
-  background-position: -122px -95px;
+  background-position: -135px -95px;
   width: 12px;
   height: 11px; }
 
 .icon-header_search {
   background-image: url(../img/sprite.png);
-  background-position: -183px -140px;
+  background-position: -188px -140px;
   width: 12px;
   height: 11px; }
 
 .icon-heart-big {
   background-image: url(../img/sprite.png);
-  background-position: -205px -154px;
+  background-position: -205px -171px;
   width: 16px;
   height: 14px; }
 
@@ -8330,7 +8330,7 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
 
 .icon-heart {
   background-image: url(../img/sprite.png);
-  background-position: -170px -140px;
+  background-position: -122px -95px;
   width: 13px;
   height: 12px; }
 
@@ -8342,7 +8342,7 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
 
 .icon-marker {
   background-image: url(../img/sprite.png);
-  background-position: -223px -168px;
+  background-position: -223px -138px;
   width: 8px;
   height: 11px; }
 
@@ -8366,15 +8366,21 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
 
 .icon-quotes-left {
   background-image: url(../img/sprite.png);
-  background-position: -56px -187px;
+  background-position: 0px -187px;
   width: 28px;
   height: 28px; }
 
 .icon-quotes-right {
   background-image: url(../img/sprite.png);
-  background-position: -28px -187px;
+  background-position: -56px -187px;
   width: 28px;
   height: 28px; }
+
+.icon-refresh {
+  background-image: url(../img/sprite.png);
+  background-position: -205px -138px;
+  width: 18px;
+  height: 17px; }
 
 .icon-religion {
   background-image: url(../img/sprite.png);
@@ -8402,7 +8408,7 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
 
 .icon-view-more {
   background-image: url(../img/sprite.png);
-  background-position: -159px -83px;
+  background-position: -147px -95px;
   width: 10px;
   height: 10px; }
 
@@ -14160,9 +14166,21 @@ a.down {
   border: solid 1px #4489ff;
   -webkit-border-radius: 100px;
   border-radius: 100px; }
+  .btn-reserve {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center; }
   .btn:hover, .new_post-confirm li button:hover {
     color: #4489ff;
     background: #fff; }
+  .btn.shadow, .new_post-confirm li button.shadow {
+    -webkit-box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1); }
   .land .btn, .land .new_post-confirm li button, .new_post-confirm li .land button {
     font-family: "cormac-extralight", sans-serif;
     font-size: 20px;
@@ -14196,6 +14214,21 @@ a.down {
     .btn.white:hover, .new_post-confirm li button.white:hover {
       color: #fff;
       background: #4489ff; }
+  .btn-reserve {
+    font-family: "cormac-book", sans-serif;
+    font-size: 16px;
+    line-height: 80px;
+    letter-spacing: 0;
+    height: 80px;
+    background: #fff;
+    -webkit-box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    -webkit-border-radius: 40px;
+    border-radius: 40px;
+    -webkit-transition: .4s all ease;
+    transition: .4s all ease; }
+    .btn-reserve:hover {
+      background: #f4f7fb; }
 
 /*********************************************/
 /* 
@@ -14557,14 +14590,26 @@ a.down {
       margin-right: 69px;
       -webkit-transition: .4s all ease;
       transition: .4s all ease; }
+      @media (max-width: 991px) {
+        .tabs-book ul li {
+          margin-bottom: 10px;
+          margin-right: 0; } }
+      @media (max-width: 480px) {
+        .tabs-book ul li {
+          height: auto;
+          margin-bottom: 25px;
+          padding-left: 50px; } }
       .tabs-book ul li:last-child {
         margin-right: 0; }
+        @media (max-width: 991px) {
+          .tabs-book ul li:last-child {
+            margin-bottom: 0; } }
       .tabs-book ul li:before {
         counter-increment: list;
         content: counter(list);
         font-family: "cormac-extralight", sans-serif;
         font-size: 22px;
-        line-height: 22px;
+        line-height: 30px;
         letter-spacing: 0;
         color: #000;
         text-align: center;
@@ -14586,6 +14631,9 @@ a.down {
         line-height: 32px;
         letter-spacing: 0;
         color: #000; }
+        @media (max-width: 480px) {
+          .tabs-book ul li a {
+            font-size: 18px; } }
 
 .tabs-main ul, .tabs-shop ul {
   -webkit-transition: max-height 0.7s linear;
@@ -17223,6 +17271,13 @@ form.form {
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between; }
+  @media (max-width: 991px) {
+    .booking-proc {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column; } }
   .booking-proc header .wr-soc ul.soc {
     display: -webkit-box;
     display: -webkit-flex;
@@ -17233,14 +17288,49 @@ form.form {
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex; }
+    @media (max-width: 991px) {
+      .booking-proc section ul.score {
+        display: block; } }
 
 .booking-proc {
-  margin-top: 51px !important;
-  padding-top: 43px !important;
   width: -webkit-calc(100% + 3px);
   width: calc(100% + 3px);
   position: relative;
-  left: -12px; }
+  left: -12px;
+  margin-bottom: 40px !important;
+  margin-top: 51px !important; }
+  .booking-proc.registration {
+    padding-bottom: 38px;
+    padding-top: 43px; }
+  .booking-proc.reservation {
+    padding-bottom: 70px; }
+    .booking-proc.reservation header {
+      padding-top: 26px; }
+      .booking-proc.reservation header h3 {
+        margin-bottom: 32px; }
+    .booking-proc.reservation section {
+      padding-top: 32px;
+      padding-left: 42px; }
+      @media (max-width: 480px) {
+        .booking-proc.reservation section {
+          padding-left: 0; } }
+  .booking-proc.complete {
+    padding-bottom: 35px; }
+    .booking-proc.complete header {
+      padding-top: 24px; }
+      .booking-proc.complete header h3 {
+        margin-bottom: 35px; }
+    .booking-proc.complete section {
+      padding-top: 24px;
+      padding-left: 42px; }
+      @media (max-width: 480px) {
+        .booking-proc.complete section {
+          padding-left: 0; } }
+      .booking-proc.complete section h3 {
+        margin-bottom: 14px; }
+        @media (max-width: 480px) {
+          .booking-proc.complete section h3 {
+            padding-left: 0; } }
   .booking-proc h3 {
     font-family: "cormac-book", sans-serif;
     font-size: 34px;
@@ -17249,12 +17339,27 @@ form.form {
     color: #000;
     position: relative;
     margin-bottom: 29px; }
+    @media (max-width: 480px) {
+      .booking-proc h3 {
+        font-size: 26px;
+        line-height: 28px;
+        padding-left: 30px; } }
   .booking-proc header {
     padding-left: 60px;
     width: 44%; }
+    @media (max-width: 991px) {
+      .booking-proc header {
+        width: 100%;
+        margin-bottom: 30px; } }
+    @media (max-width: 480px) {
+      .booking-proc header {
+        padding-left: 5px; } }
     .booking-proc header h3 span {
       position: absolute;
       left: -39px; }
+      @media (max-width: 480px) {
+        .booking-proc header h3 span {
+          left: 0; } }
     .booking-proc header p {
       font-family: "HelveticaLight", sans-serif;
       font-size: 18px;
@@ -17274,6 +17379,9 @@ form.form {
       padding: 7px 0 0 10px; }
       .booking-proc header .wr-soc ul.soc li {
         margin-right: 42px; }
+        @media (max-width: 480px) {
+          .booking-proc header .wr-soc ul.soc li {
+            margin-right: 35px; } }
         .booking-proc header .wr-soc ul.soc li:last-child {
           margin-right: 0; }
         .booking-proc header .wr-soc ul.soc li a:hover i {
@@ -17283,21 +17391,46 @@ form.form {
           color: #c0d1dd;
           -webkit-transition: .4s all ease;
           transition: .4s all ease; }
-    .booking-proc header .cancel p {
-      font-family: "HelveticaLight", sans-serif;
-      font-size: 10px;
-      line-height: 18px;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-      margin-bottom: 20px; }
-      .booking-proc header .cancel p a {
-        color: #ff6e63;
-        text-decoration: underline;
-        display: block;
-        margin-top: 20px; }
+    .booking-proc header .cancel {
+      position: relative; }
+      .booking-proc header .cancel p {
+        font-family: "HelveticaLight", sans-serif;
+        font-size: 10px;
+        line-height: 18px;
+        letter-spacing: 1.2px;
+        text-transform: uppercase;
+        margin-bottom: 20px; }
+        @media (max-width: 480px) {
+          .booking-proc header .cancel p {
+            padding-left: 30px; } }
+        .booking-proc header .cancel p a {
+          color: #ff6e63;
+          text-decoration: underline;
+          letter-spacing: 1.4px;
+          display: block;
+          padding-top: 13px; }
+      .booking-proc header .cancel a.refresh {
+        letter-spacing: 1.4px;
+        width: 16px;
+        height: 16px;
+        position: absolute;
+        left: -36px;
+        top: 5px; }
+        @media (max-width: 480px) {
+          .booking-proc header .cancel a.refresh {
+            left: -3px; } }
   .booking-proc section {
-    width: 61%;
-    padding-left: 40px; }
+    width: 61%; }
+    @media (max-width: 991px) {
+      .booking-proc section {
+        width: 100%;
+        padding-left: 40px; } }
+    @media (max-width: 480px) {
+      .booking-proc section {
+        padding-left: 0; } }
+    @media (max-width: 1199px) {
+      .booking-proc section .form {
+        width: 100%; } }
     .booking-proc section .form .wr-input {
       padding-top: 27px;
       padding-bottom: 0;
@@ -17317,27 +17450,74 @@ form.form {
       -webkit-align-items: center;
       -ms-flex-align: center;
       align-items: center;
-      margin-top: 36px; }
+      margin-top: 0;
+      padding-top: 21px; }
+      @media (max-width: 991px) {
+        .booking-proc section .form-btn-group {
+          display: -webkit-box;
+          display: -webkit-flex;
+          display: -ms-flexbox;
+          display: flex;
+          padding-right: 10px; } }
+      @media (max-width: 767px) {
+        .booking-proc section .form-btn-group {
+          display: block;
+          text-align: center; } }
       .booking-proc section .form-btn-group .btn, .booking-proc section .form-btn-group .new_post-confirm li button, .new_post-confirm li .booking-proc section .form-btn-group button {
-        margin-right: 40px; }
+        margin-right: 40px;
+        height: 50px;
+        left: 3px;
+        right: auto; }
+        @media (max-width: 767px) {
+          .booking-proc section .form-btn-group .btn, .booking-proc section .form-btn-group .new_post-confirm li button, .new_post-confirm li .booking-proc section .form-btn-group button {
+            display: inline-block;
+            margin-right: 0; } }
       .booking-proc section .form-btn-group a {
         font-family: "cormac-book", sans-serif;
         font-size: 16px;
-        line-height: 42px;
+        line-height: 68px;
         letter-spacing: 0;
-        color: #4489ff; }
+        color: #4489ff;
+        position: relative; }
+        @media (max-width: 767px) {
+          .booking-proc section .form-btn-group a {
+            display: inline-block; } }
+        .booking-proc section .form-btn-group a:before, .booking-proc section .form-btn-group a:after {
+          content: '';
+          display: block;
+          height: 3px;
+          width: 0;
+          position: absolute;
+          bottom: 15px;
+          background: #4489ff;
+          -webkit-transition: width 0.3s ease-in-out;
+          transition: width 0.3s ease-in-out; }
+        .booking-proc section .form-btn-group a:before {
+          right: 50%; }
+        .booking-proc section .form-btn-group a:after {
+          left: 50%; }
+        .booking-proc section .form-btn-group a:hover:before {
+          width: 50%; }
+        .booking-proc section .form-btn-group a:hover:after {
+          width: 50%; }
     .booking-proc section h4 {
       font-family: "cormac-book", sans-serif;
       font-size: 22px;
       line-height: 32px;
       letter-spacing: 0.2px;
-      margin-bottom: 35px; }
+      margin-bottom: 26px; }
     .booking-proc section ul.score {
-      margin-bottom: 35px; }
+      margin-bottom: 27px; }
       .booking-proc section ul.score li {
-        margin-right: 85px; }
+        margin-right: 99px; }
+        @media (max-width: 767px) {
+          .booking-proc section ul.score li {
+            margin-bottom: 50px; } }
         .booking-proc section ul.score li:last-child {
           margin-right: 0; }
+          @media (max-width: 767px) {
+            .booking-proc section ul.score li:last-child {
+              margin-bottom: 0; } }
         .booking-proc section ul.score li > p {
           font-family: "HelveticaLight", sans-serif;
           font-size: 10px;
@@ -17345,57 +17525,158 @@ form.form {
           letter-spacing: 1px;
           text-transform: uppercase;
           color: #4b5769;
-          margin-bottom: 30px; }
+          margin-bottom: 14px; }
         .booking-proc section ul.score li > div.summ {
           position: relative;
           font-family: "cormac-book", sans-serif;
           font-size: 34px;
           line-height: 42px;
           letter-spacing: 0.2px; }
+          .booking-proc section ul.score li > div.summ.percent {
+            padding: 5px 0 0 45px; }
           .booking-proc section ul.score li > div.summ i.fa-heart {
             color: #dae7ff;
-            margin-right: 15px; }
+            font-size: 28px;
+            margin-right: 15px;
+            position: absolute;
+            left: 1px;
+            top: 14px; }
           .booking-proc section ul.score li > div.summ > p {
             font-family: "cormac-book", sans-serif;
             font-size: 16px;
             line-height: 22px;
             letter-spacing: 0.2px;
-            color: #000;
-            padding-left: 52px; }
+            color: #000; }
     .booking-proc section .agree {
       font-family: "HelveticaLight", sans-serif;
       font-size: 10px;
       line-height: 18px;
-      letter-spacing: 1px;
+      letter-spacing: 1.3px;
+      color: #4b5769;
       text-transform: uppercase;
       position: relative;
-      padding-left: 30px; }
+      padding: 0 40px;
+      margin-bottom: 45px; }
       .booking-proc section .agree > input {
         position: absolute;
         left: 0;
-        top: 0; }
+        top: 0;
+        opacity: 0;
+        cursor: pointer; }
+      .booking-proc section .agree input:checked + label:after {
+        content: '\2714';
+        color: #4489ff;
+        font-size: 20px;
+        position: absolute;
+        left: 0;
+        bottom: 0; }
+      .booking-proc section .agree > label {
+        position: relative;
+        width: 16px;
+        height: 16px;
+        display: block;
+        position: absolute;
+        left: 5px;
+        top: 0;
+        border: 2px solid #678198;
+        -webkit-border-radius: 2px;
+        border-radius: 2px;
+        cursor: pointer; }
+    .booking-proc section .btn-reserve {
+      width: 580px;
+      position: relative;
+      left: -4px;
+      padding-left: 90px; }
+      @media (max-width: 1199px) {
+        .booking-proc section .btn-reserve {
+          -webkit-box-pack: center;
+          -webkit-justify-content: center;
+          -ms-flex-pack: center;
+          justify-content: center;
+          width: 100%;
+          padding-left: 0; } }
+      @media (max-width: 767px) {
+        .booking-proc section .btn-reserve {
+          text-align: center;
+          line-height: 44px;
+          display: block;
+          height: auto;
+          padding: 10px 0; } }
+      @media (max-width: 480px) {
+        .booking-proc section .btn-reserve {
+          line-height: 24px; } }
+      .booking-proc section .btn-reserve img {
+        margin-right: 47px;
+        position: relative;
+        top: -4px; }
+        @media (max-width: 767px) {
+          .booking-proc section .btn-reserve img {
+            display: inline-block;
+            margin-right: 0; } }
+        @media (max-width: 480px) {
+          .booking-proc section .btn-reserve img {
+            margin-bottom: 10px; } }
+      @media (max-width: 767px) {
+        .booking-proc section .btn-reserve span {
+          display: block; } }
     .booking-proc section .info span {
       font-family: "cormac-book", sans-serif;
       font-size: 22px;
       line-height: 32px;
-      letter-spacing: 0.5px;
-      margin-bottom: 35px;
+      letter-spacing: -0.1px;
+      margin-bottom: 29px;
       display: inline-block; }
       .booking-proc section .info span.success {
         color: #00b54b; }
       .booking-proc section .info span span {
         margin-bottom: 0; }
     .booking-proc section .info p {
-      font-family: "helveticaneuemedium", sans-serif;
+      font-family: "HelveticaMedium", sans-serif;
       font-size: 18px;
       line-height: 28px;
-      letter-spacing: 0.8px;
-      margin-bottom: 35px; }
+      letter-spacing: 1px;
+      margin-bottom: 34px;
+      padding-right: 40px; }
+      @media (max-width: 480px) {
+        .booking-proc section .info p {
+          font-size: 16px;
+          line-height: 26px;
+          padding-right: 0; } }
     .booking-proc section .info .btn-gr {
       font-family: "cormac-extralight", sans-serif; }
+      @media (max-width: 767px) {
+        .booking-proc section .info .btn-gr {
+          text-align: center; } }
       .booking-proc section .info .btn-gr .btn, .booking-proc section .info .btn-gr .new_post-confirm li button, .new_post-confirm li .booking-proc section .info .btn-gr button {
         font-family: "cormac-extralight", sans-serif;
-        margin-right: 30px; }
+        margin-right: 33px;
+        height: 50px;
+        padding: 0 28px; }
+        @media (max-width: 767px) {
+          .booking-proc section .info .btn-gr .btn, .booking-proc section .info .btn-gr .new_post-confirm li button, .new_post-confirm li .booking-proc section .info .btn-gr button {
+            margin-bottom: 20px;
+            margin-right: 0; } }
+      .booking-proc section .info .btn-gr a {
+        font-size: 16px;
+        position: relative; }
+        .booking-proc section .info .btn-gr a:before, .booking-proc section .info .btn-gr a:after {
+          content: '';
+          display: block;
+          height: 3px;
+          width: 0;
+          position: absolute;
+          bottom: -10px;
+          background: #4489ff;
+          -webkit-transition: width 0.3s ease-in-out;
+          transition: width 0.3s ease-in-out; }
+        .booking-proc section .info .btn-gr a:before {
+          right: 50%; }
+        .booking-proc section .info .btn-gr a:after {
+          left: 50%; }
+        .booking-proc section .info .btn-gr a:hover:before {
+          width: 50%; }
+        .booking-proc section .info .btn-gr a:hover:after {
+          width: 50%; }
 
 .popup-login > ul {
   display: -webkit-box;

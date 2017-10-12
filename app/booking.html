@@ -38,7 +38,7 @@
 					<div class="container">
 						<div class="row">
 							<div class="col-md-12">
-								<article class="booking-proc">
+								<article class="booking-proc registration">
 									<header>
 										<h3><span>1. </span> Регистрация</h3>
 										<p>Регистрация позволит вам отслеживать состояние ваших заказов и вести статистику своих пожертвований.</p>
@@ -81,7 +81,7 @@
 											</span>
 
 											<div class="form-btn-group">
-												<button type="submit" class="btn">Зарегистрировться</button>
+												<button type="submit" class="btn shadow">Зарегистрировться</button>
 												<a href="#">У меня есть аккаунт!</a>
 											</div> 
 
@@ -100,7 +100,7 @@
 					<div class="container">
 						<div class="row">
 							<div class="col-md-12">
-								<article class="booking-proc">
+								<article class="booking-proc reservation">
 									<header>
 										<h3><span>2. </span> Резервирование<br> средств</h3>
 										<p>Для завершения бронирования вещи воспользуйтесь безопасной оплатой через Яндекс.Кассу. Вам потребуется ввести номер Вашей карты, Вы сможете отменить бронь и деньги вернутся на Вашу карту.</p>
@@ -118,8 +118,8 @@
 											</li>
 											<li>
 												<p>Из которых будет выделено <br>на благотворительность:</p>
-												<div class="summ">
-													<i class="fa fa-heart" aria-hidden="true"></i>94%
+												<div class="summ percent">
+													<i class="fa fa-heart"></i>94%
 													<p>5 828 <span class="rub">a</span> </p>
 												</div>
 												
@@ -127,9 +127,14 @@
 										</ul>
 
 										<p class="agree">
-											<input type="checkbox">
+											<input type="checkbox" id="agree"> <label for="agree"></label>
 											Я соглашаюсь c Условиями обработки персональных данных в соответствии с Условиями использования сайта, Политикой обработки персональных данных и на получение сообщений в процессе обработки заказа.
 										</p>
+
+										<a href="#" class="btn-reserve">
+											<img src="assets/img/yandex.png" alt="">
+											<span>Зарезервировать сумму к оплате</span>
+										</a>
 									</section>
 								</article>
 
@@ -144,10 +149,13 @@
 					<div class="container">
 						<div class="row">
 							<div class="col-md-12">
-								<article class="booking-proc">
+								<article class="booking-proc complete">
 									<header>
 										<h3><span>3. </span> Завершение<br> бронирования</h3>
 										<div class="cancel">
+											<a href="#" class="refresh">
+												<i class="icon icon-refresh"></i>
+											</a>
 											<p>В любой момент до получения вещи, <br>
 											вы можете отменить бронирование.
 											<a href="#">Отменить</a>
@@ -163,7 +171,7 @@
 											<p>Свяжитесь с продавцом. После получения вещи, деньги будут перечислены на счет благотворительного фонда.</p>
 
 											<div class="btn-gr">
-												<button type="submit" class="btn">Связаться с продавцом</button>
+												<button type="submit" class="btn shadow">Связаться с продавцом</button>
 												<a href="#">Продолжить покупки</a>
 											</div> 
 										</div>
