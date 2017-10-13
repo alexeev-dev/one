@@ -2,4 +2,6 @@
 /node_modules/
 /bower_components/
 /materials/
+/dist/assets/css/
+/dist/assets/js/
 One.zip
