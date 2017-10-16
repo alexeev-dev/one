@@ -1,3 +1,12 @@
+.wr-shop {
+	.tab {
+		padding: 40px 0;
+		&:first-child {
+			padding: 0;
+		}
+	}
+}
+
 .shop {
 	&-me {
 		display: flex; flex-direction: column; flex-wrap: nowrap; align-items: center;
@@ -115,7 +124,7 @@
 	}
 
 	&-about {
-
+		padding-bottom: 53px;
 		section {
 			width: 580px; padding-top: 6px; margin-right: 125px;
 			@include respond-to(md) {width: 100%; padding-left: 0;}

@@ -10723,6 +10723,8 @@ span.rub {
     /*********************************/
     /******** Class Helpers **********/
     /*********************************/ }
+    .app .wr-light {
+      background: #f6f8fb; }
     .app .wr.mobile_titles .tab > h2, .app .wr.mobile_titles .tab > p {
       display: none; }
       @media (max-width: 991px) {
@@ -10771,9 +10773,6 @@ span.rub {
       background: url(../img/left-bg.png) no-repeat left 0 #edf2f8; }
     .app .wr.bg-right {
       background: url(../img/right-bg.png) no-repeat right bottom #edf2f8; }
-
-.app .wr-shop {
-  padding-bottom: 53px; }
 
 .app.land {
   padding-top: 0; }
@@ -14464,18 +14463,21 @@ a.down {
   border-bottom: 3px solid #4489ff; }
 
 .tabs-inner {
-  display: inline-block;
+  /*display: inline-block; margin: 25px 0 35px 0;*/
   padding-left: 20px;
-  margin: 25px 0 35px 0;
-  background: #ECEFF4;
+  background: #e6f2f8;
   -webkit-border-radius: 100px;
-  border-radius: 100px; }
+  border-radius: 100px;
+  display: block;
+  width: 415px;
+  margin: 25px auto 35px auto; }
   @media (max-width: 480px) {
     .tabs-inner {
       width: 100%;
       padding: 20px 25px 20px 70px; } }
   .tabs-inner li {
     color: #616060;
+    font-family: "cormac-extralight", sans-serif;
     display: inline-block; }
     @media (max-width: 480px) {
       .tabs-inner li {
@@ -14492,15 +14494,21 @@ a.down {
       color: #616060;
       display: inline-block;
       padding: 3px 18px 6px;
+      font-family: "cormac-extralight", sans-serif;
       border: 1px solid transparent;
       -webkit-border-radius: 100px;
       border-radius: 100px; }
       .tabs-inner li a:hover {
-        color: #4489ff;
-        border-color: #4489ff; }
+        /*color: $link-color; border-color: $link-color;*/
+        color: #4b5769;
+        background: #fff;
+        -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); }
     .tabs-inner li.active a {
-      color: #4489ff;
-      border-color: #4489ff;
+      /*color: $link-color; border-color: $link-color;*/
+      color: #4b5769;
+      -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
       background: #fff;
       cursor: default; }
 
@@ -16070,119 +16078,131 @@ form.form {
           font-weight: 100;
           margin-left: 10px; }
 
-.list-projects.type_2 > li {
-  margin-bottom: 10px;
-  padding: 20px 80px 20px 100px;
-  overflow: hidden; }
-  @media (max-width: 767px) {
-    .list-projects.type_2 > li {
-      padding: 20px 25px 20px 25px; } }
-  .list-projects.type_2 > li article {
-    width: 82%;
-    padding: 30px 0 100px 0;
-    position: relative; }
-    @media (max-width: 991px) {
-      .list-projects.type_2 > li article {
-        width: 100%; } }
-    .list-projects.type_2 > li article h3 {
-      line-height: 31px;
-      width: 90%;
-      margin-bottom: 25px; }
-    .list-projects.type_2 > li article p {
-      font-size: 16px;
-      letter-spacing: 0.1px;
-      line-height: 22px; }
-    .list-projects.type_2 > li article > a {
-      font-family: "cormac-extralight", sans-serif;
-      font-size: 16px;
-      line-height: 18px;
-      letter-spacing: 0.3px;
-      position: absolute;
-      left: 0;
-      bottom: 45px; }
-  .list-projects.type_2 > li .line-sep {
-    width: 1px;
-    height: auto;
-    margin: 0 40px;
-    background: #dae2ea; }
-    @media (max-width: 991px) {
-      .list-projects.type_2 > li .line-sep {
-        width: 100%;
-        height: 1px;
-        margin-bottom: 30px;
-        margin-left: 0; } }
-  .list-projects.type_2 > li .info {
-    width: 30%;
-    padding: 10px 0 105px 0;
-    position: relative; }
-    @media (max-width: 991px) {
-      .list-projects.type_2 > li .info {
-        width: 100%; } }
-    .list-projects.type_2 > li .info .price {
-      text-align: right;
-      margin-bottom: 40px; }
-      .list-projects.type_2 > li .info .price > span {
-        color: #89a1b3;
-        font-size: 14px;
-        display: block; }
-      .list-projects.type_2 > li .info .price p {
+.list-projects.type_2 {
+  padding: 40px 0; }
+  .list-projects.type_2 > li {
+    margin-bottom: 10px;
+    padding: 20px 80px 20px 100px;
+    overflow: hidden;
+    background: #f6f8fb;
+    -webkit-border-radius: 5px;
+    border-radius: 5px; }
+    @media (max-width: 767px) {
+      .list-projects.type_2 > li {
+        padding: 20px 25px 20px 25px; } }
+    .list-projects.type_2 > li article {
+      width: 82%;
+      padding: 30px 0 100px 0;
+      position: relative; }
+      @media (max-width: 991px) {
+        .list-projects.type_2 > li article {
+          width: 100%; } }
+      .list-projects.type_2 > li article h3 {
+        line-height: 31px;
+        width: 90%;
+        margin-bottom: 25px; }
+      .list-projects.type_2 > li article p {
+        font-size: 16px;
+        letter-spacing: 0.1px;
+        line-height: 22px; }
+      .list-projects.type_2 > li article > a {
         font-family: "cormac-extralight", sans-serif;
-        font-size: 34px;
-        line-height: 38px;
-        letter-spacing: 0.5px; }
-    .list-projects.type_2 > li .info .progress-wrapp .progress-bar {
-      margin-bottom: 17px; }
-    .list-projects.type_2 > li .info .progress-wrapp ul {
-      display: -webkit-box;
-      display: -webkit-flex;
-      display: -ms-flexbox;
-      display: flex;
-      clear: both; }
-      .list-projects.type_2 > li .info .progress-wrapp ul li {
+        font-size: 16px;
+        line-height: 18px;
+        letter-spacing: 0.3px;
+        position: absolute;
+        left: 0;
+        bottom: 45px; }
+    .list-projects.type_2 > li .line-sep {
+      width: 1px;
+      height: auto;
+      margin: 0 40px;
+      background: #dae2ea; }
+      @media (max-width: 991px) {
+        .list-projects.type_2 > li .line-sep {
+          width: 100%;
+          height: 1px;
+          margin-bottom: 30px;
+          margin-left: 0; } }
+    .list-projects.type_2 > li .info {
+      width: 30%;
+      padding: 10px 0 105px 0;
+      position: relative; }
+      @media (max-width: 991px) {
+        .list-projects.type_2 > li .info {
+          width: 100%; } }
+      .list-projects.type_2 > li .info .price {
         text-align: right;
-        position: relative;
-        width: 50%;
-        height: 47px; }
-        .list-projects.type_2 > li .info .progress-wrapp ul li p {
-          font-family: "cormac-extralight", sans-serif;
-          font-size: 18px;
-          line-height: 22px;
-          letter-spacing: 0;
-          font-weight: 600;
-          text-align: right;
-          display: inline-block;
-          width: 100%; }
-          .list-projects.type_2 > li .info .progress-wrapp ul li p > span {
-            font-weight: 400; }
-        .list-projects.type_2 > li .info .progress-wrapp ul li > span {
+        margin-bottom: 40px; }
+        .list-projects.type_2 > li .info .price > span {
           color: #89a1b3;
-          font-size: 12px;
-          position: absolute;
-          bottom: 0;
-          display: block;
-          width: 100%; }
-    .list-projects.type_2 > li .info .progress-wrapp .term {
-      text-align: right;
-      font-size: 12px;
-      margin-top: 16px; }
-      .list-projects.type_2 > li .info .progress-wrapp .term span {
-        color: #89a1b3; }
-      .list-projects.type_2 > li .info .progress-wrapp .term p {
-        color: #000;
-        font-weight: 600; }
-    .list-projects.type_2 > li .info a {
-      font-family: "cormac-extralight", sans-serif;
-      font-size: 16px;
-      line-height: 18px;
-      letter-spacing: 0;
-      position: absolute;
-      bottom: 45px;
-      right: 0; }
+          font-size: 14px;
+          display: block; }
+        .list-projects.type_2 > li .info .price p {
+          font-family: "cormac-extralight", sans-serif;
+          font-size: 34px;
+          line-height: 38px;
+          letter-spacing: 0.5px; }
+      .list-projects.type_2 > li .info .progress-wrapp .progress-bar {
+        margin-bottom: 17px; }
+      .list-projects.type_2 > li .info .progress-wrapp ul {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        clear: both; }
+        .list-projects.type_2 > li .info .progress-wrapp ul li {
+          text-align: right;
+          position: relative;
+          width: 50%;
+          height: 47px; }
+          .list-projects.type_2 > li .info .progress-wrapp ul li p {
+            font-family: "cormac-extralight", sans-serif;
+            font-size: 18px;
+            line-height: 22px;
+            letter-spacing: 0;
+            font-weight: 600;
+            text-align: right;
+            display: inline-block;
+            width: 100%; }
+            .list-projects.type_2 > li .info .progress-wrapp ul li p > span {
+              font-weight: 400; }
+          .list-projects.type_2 > li .info .progress-wrapp ul li > span {
+            color: #89a1b3;
+            font-size: 12px;
+            position: absolute;
+            bottom: 0;
+            display: block;
+            width: 100%; }
+      .list-projects.type_2 > li .info .progress-wrapp .term {
+        text-align: right;
+        font-size: 12px;
+        margin-top: 16px; }
+        .list-projects.type_2 > li .info .progress-wrapp .term span {
+          color: #89a1b3; }
+        .list-projects.type_2 > li .info .progress-wrapp .term p {
+          color: #000;
+          font-weight: 600; }
+      .list-projects.type_2 > li .info a {
+        font-family: "cormac-extralight", sans-serif;
+        font-size: 16px;
+        line-height: 18px;
+        letter-spacing: 0;
+        position: absolute;
+        bottom: 45px;
+        right: 0; }
 
 .list-reports {
-  margin-top: 25px; }
+  margin-top: 25px;
+  padding: 40px 0; }
   .list-reports > li {
-    padding: 0 0 0 100px; }
+    padding: 0 0 0 100px;
+    margin-bottom: 10px;
+    background: #f6f8fb;
+    -webkit-border-radius: 5px;
+    border-radius: 5px; }
+    .list-reports > li:last-child {
+      margin-bottom: 0; }
     @media (max-width: 991px) {
       .list-reports > li {
         padding: 0 50px 50px 50px; } }
@@ -16418,6 +16438,8 @@ form.form {
   margin-top: 15px;
   border-spacing: 0 10px;
   border-collapse: separate; }
+  .list-ads tbody {
+    width: 100%; }
   @media (max-width: 991px) {
     .list-ads {
       width: 100%;
@@ -16425,7 +16447,8 @@ form.form {
       .list-ads tbody {
         width: 100%; } }
   .list-ads tr {
-    position: relative; }
+    position: relative;
+    width: 100%; }
     @media (max-width: 991px) {
       .list-ads tr {
         width: 100%;
@@ -16446,7 +16469,9 @@ form.form {
     .list-ads tr.open.mark td {
       border: 2px solid #4489ff;
       border-right: none;
-      border-left: none; }
+      border-left: none;
+      -webkit-border-radius: 4px;
+      border-radius: 4px; }
       @media (max-width: 991px) {
         .list-ads tr.open.mark td {
           padding: 20px;
@@ -16941,6 +16966,11 @@ form.form {
           display: block;
           margin-bottom: 10px; } }
 
+.wr-shop .tab {
+  padding: 40px 0; }
+  .wr-shop .tab:first-child {
+    padding: 0; }
+
 .shop-me {
   display: -webkit-box;
   display: -webkit-flex;
@@ -17104,99 +17134,99 @@ form.form {
         width: 239px;
         border: none; }
 
-.shop-about section {
-  width: 580px;
-  padding-top: 6px;
-  margin-right: 125px; }
-  @media (max-width: 991px) {
-    .shop-about section {
-      width: 100%;
-      padding-left: 0; } }
-  .shop-about section p {
-    font-size: 16px;
-    line-height: 24px;
-    letter-spacing: 0.1px;
-    margin-bottom: 24px; }
-    .shop-about section p:last-child {
-      margin-bottom: 0; }
-  .shop-about section img {
-    margin-bottom: 42px;
-    margin-top: 12px; }
-    .shop-about section img:last-child {
-      margin-bottom: 0; }
-    @media (max-width: 767px) {
-      .shop-about section img {
-        max-width: 100%;
-        height: auto; } }
-
-.shop-about address {
-  width: 280px; }
-  @media (max-width: 991px) {
-    .shop-about address {
-      width: 100%; } }
-  .shop-about address h4 {
-    font-size: 16px;
-    line-height: 24px; }
-  .shop-about address > a {
-    font-family: "cormac-extralight", sans-serif;
-    font-size: 16px;
-    line-height: 20px;
-    letter-spacing: 0;
-    color: #9d988c;
-    display: inline-block;
-    margin: 22px 0 18px;
-    position: relative; }
-    .shop-about address > a:after {
-      content: '';
-      display: block;
-      width: 0%;
-      height: 1px;
-      position: absolute;
-      left: 50%;
-      bottom: 0;
-      -webkit-transform: translateX(-50%);
-      -ms-transform: translateX(-50%);
-      transform: translateX(-50%);
-      background: #9d988c;
-      -webkit-transition: .4s ease-out;
-      transition: .4s ease-out; }
-    .shop-about address > a:hover:after {
-      width: 100%; }
-    .shop-about address > a:last-child {
-      margin-bottom: 0; }
-  .shop-about address ul {
-    padding-top: 5px;
-    margin-bottom: 44px; }
-    .shop-about address ul:last-child {
-      margin-bottom: 0; }
-    .shop-about address ul li {
-      display: table;
-      margin-right: 10px; }
-      .shop-about address ul li a {
-        color: #fff;
-        text-align: center;
-        vertical-align: middle;
-        display: table-cell;
-        width: 28px;
-        height: 28px;
+.shop-about {
+  padding-bottom: 53px; }
+  .shop-about section {
+    width: 580px;
+    padding-top: 6px;
+    margin-right: 125px; }
+    @media (max-width: 991px) {
+      .shop-about section {
+        width: 100%;
+        padding-left: 0; } }
+    .shop-about section p {
+      font-size: 16px;
+      line-height: 24px;
+      letter-spacing: 0.1px;
+      margin-bottom: 24px; }
+      .shop-about section p:last-child {
+        margin-bottom: 0; }
+    .shop-about section img {
+      margin-bottom: 42px;
+      margin-top: 12px; }
+      .shop-about section img:last-child {
+        margin-bottom: 0; }
+      @media (max-width: 767px) {
+        .shop-about section img {
+          max-width: 100%;
+          height: auto; } }
+  .shop-about address {
+    width: 280px; }
+    @media (max-width: 991px) {
+      .shop-about address {
+        width: 100%; } }
+    .shop-about address h4 {
+      font-size: 16px;
+      line-height: 24px; }
+    .shop-about address > a {
+      font-family: "cormac-extralight", sans-serif;
+      font-size: 16px;
+      line-height: 20px;
+      letter-spacing: 0;
+      color: #9d988c;
+      display: inline-block;
+      margin: 22px 0 18px;
+      position: relative; }
+      .shop-about address > a:after {
+        content: '';
+        display: block;
+        width: 0%;
+        height: 1px;
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+        transform: translateX(-50%);
         background: #9d988c;
-        -webkit-border-radius: 50%;
-        border-radius: 50%;
-        -webkit-transition: background 0.4s ease;
-        transition: background 0.4s ease; }
-        .shop-about address ul li a:hover {
-          background: #4489ff; }
-  .shop-about address p {
-    color: #000;
-    font-size: 16px;
-    line-height: 24px;
-    margin-bottom: 25px; }
-    .shop-about address p:last-child {
-      margin-bottom: 0; }
-
-.shop-about_edit {
-  padding-top: 79px;
-  margin-bottom: 35px; }
+        -webkit-transition: .4s ease-out;
+        transition: .4s ease-out; }
+      .shop-about address > a:hover:after {
+        width: 100%; }
+      .shop-about address > a:last-child {
+        margin-bottom: 0; }
+    .shop-about address ul {
+      padding-top: 5px;
+      margin-bottom: 44px; }
+      .shop-about address ul:last-child {
+        margin-bottom: 0; }
+      .shop-about address ul li {
+        display: table;
+        margin-right: 10px; }
+        .shop-about address ul li a {
+          color: #fff;
+          text-align: center;
+          vertical-align: middle;
+          display: table-cell;
+          width: 28px;
+          height: 28px;
+          background: #9d988c;
+          -webkit-border-radius: 50%;
+          border-radius: 50%;
+          -webkit-transition: background 0.4s ease;
+          transition: background 0.4s ease; }
+          .shop-about address ul li a:hover {
+            background: #4489ff; }
+    .shop-about address p {
+      color: #000;
+      font-size: 16px;
+      line-height: 24px;
+      margin-bottom: 25px; }
+      .shop-about address p:last-child {
+        margin-bottom: 0; }
+  .shop-about_edit {
+    padding-top: 79px;
+    margin-bottom: 35px; }
 
 .app.booking-wr header.header {
   -webkit-box-shadow: none;
@@ -17975,7 +18005,7 @@ form.form {
   .popup-notice ul li a:hover {
     border: solid 1px #4489ff; }
 
-.neo-bg, .list-goods.type_2 tr.goods-header, .list-goods.type_2 tr.goods-content, .list-goods.type_2 tr.goods-single, .list-projects.type_1 li article, .list-projects.type_2 > li, .list-reports > li, .list-bookmarks > li, .list-ads tr.goods-header, .list-ads tr.goods-content, .list-ads tr.goods-single, .found-about, .booking-proc {
+.neo-bg, .list-goods.type_2 tr.goods-header, .list-goods.type_2 tr.goods-content, .list-goods.type_2 tr.goods-single, .list-projects.type_1 li article, .list-bookmarks > li, .list-ads tr.goods-header, .list-ads tr.goods-content, .list-ads tr.goods-single, .found-about, .booking-proc {
   margin: 10px;
   padding: 20px;
   background: #fff;
