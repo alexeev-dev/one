@@ -450,9 +450,11 @@
 
 		// – http://prntscr.com/goynff
 		&.type_2 {
+			padding: 40px 0;
 			& > li {
 				margin-bottom: 10px; padding: 20px 80px 20px 100px; overflow: hidden;
-				@extend .neo-bg;
+				//@extend .neo-bg; 
+				background: #f6f8fb; border-radius: 5px;
 				@include respond-to(sm) {padding: 20px 25px 20px 25px;}
 
 				article {
@@ -520,11 +522,13 @@
 	
 	// 	FOUND-REPORT http://prntscr.com/ggtwon
 	&-reports {
-		margin-top: 25px;
+		margin-top: 25px; padding: 40px 0;
 
 		& > li {
-			padding: 0 0 0 100px;
-			@extend .neo-bg;
+			padding: 0 0 0 100px; margin-bottom: 10px;
+			&:last-child {margin-bottom: 0;}
+			//@extend .neo-bg;
+			background: #f6f8fb; border-radius: 5px;
 			@include respond-to(md) {padding: 0 50px 50px 50px;}
 			@include respond-to(xs) {padding: 0 25px 25px 25px;}
 
@@ -676,10 +680,12 @@
 		width: 100%; margin-top: 15px;
 		border-spacing: 0 10px;  border-collapse: separate;
 
+		tbody {width: 100%;}
+
 		@include respond-to(md) {width: 100%; margin-top: 0; tbody {width: 100%;}}
 
 		tr {
-			position: relative;
+			position: relative; width: 100%;
 
 			@include respond-to(md) {
 				width: 100%; margin: 10px 0 !important; padding: 0 10%;
@@ -697,7 +703,7 @@
 					@include respond-to(md) {padding: 0;}
 					
 					td {
-						border: 2px solid #4489ff; border-right: none; border-left: none;
+						border: 2px solid #4489ff; border-right: none; border-left: none; border-radius: 4px;
 						@include respond-to(md) {padding: 20px; border-top: none; border-radius: 4px;}
 						
 						&:first-child {
