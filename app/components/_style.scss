@@ -252,11 +252,14 @@ span.rub {font-family: $ruble !important;}
 
 // RATING – http://prntscr.com/gg2034
 .rating {
-	p {color: #000; text-align: right; margin-bottom: 10px;}
+	p {color: #000; text-align: right; margin-bottom: 6px;}
 	ul {
 		li {
-			display: inline-block;
-			i {color: #c0d1dd; font-size: 18px; margin-left: 5px;}
+			display: inline-block; float: right; margin-left: 10px;
+			&:last-child {margin-left: 0;}
+			i {
+				color: #c0d1dd; font-size: 20px; margin-left: 5px;
+			}
 		}
 	}
 }

@@ -1,6 +1,6 @@
 .user {
 	&-me {
-		display: flex; flex-direction: row; flex-wrap: nowrap; align-items: center;
+		display: flex; flex-direction: row; flex-wrap: nowrap;
 		@include respond-to(sm) {flex-direction: column; align-items: start;}
 
 		section {ul {display: flex; @include respond-to(sm) {flex-direction: column; overflow: hidden;}}}
@@ -17,7 +17,7 @@
 		}
 
 		figure {
-			width: 119px; height: 119px; margin-right: 40px; overflow: hidden;
+			width: 119px; height: 119px; margin-right: 82px; overflow: hidden;
 			border-radius: 50%;
 			
 			@include respond-to(sm) {width: 72px; height: 72px; margin-right: 20px; margin-bottom: 10px;}
@@ -26,21 +26,23 @@
 		}
 
 		section {
-
+			padding-top: 10px;
 			h1 {
-				margin-bottom: 25px;
+				margin-bottom: 27px;
 				@include respond-to(sm) {font-size: 28px; margin-bottom: 0;}
 			}
 
 			ul {
 				li {
-					@include font-type($HelveticaL, 12px, 1, 0.2px); color: #89A1B3;
-					margin-right: 25px;
+					@include font-type($HelveticaL, 10px, 1, 1px); color: #89A1B3; text-transform: uppercase;
+					margin-right: 86px;
+					&:last-child {margin-right: 0;}
 					
 					@include respond-to(sm) {margin: 25px 0 0 0;}
 
 					span {
-						color: #000; font-family: $CormacEL; font-size: 24px;
+						@include font-type($CormacEL, 22px, 1, 0.2px); color: #000;
+						display: block; margin-bottom: 16px;
 						@include respond-to(md) {display: block; margin-bottom: 10px;}
 					}
 				}
