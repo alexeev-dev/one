@@ -302,6 +302,7 @@ footer.footer {
 				}
 				&:last-child {
 					padding-left: 49px;
+					@include respond-to(xs) {padding-left: 0;}
 				}
 
 				& > li {
