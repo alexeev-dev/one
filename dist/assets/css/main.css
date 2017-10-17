@@ -8154,6 +8154,12 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
 // HTML
 <i class="icon icon-home"></i>
 */
+.icon-adult {
+  background-image: url(../img/sprite.png);
+  background-position: -33px -153px;
+  width: 33px;
+  height: 33px; }
+
 .icon-animal {
   background-image: url(../img/sprite.png);
   background-position: -122px -60px;
