@@ -267,7 +267,7 @@
 		/////////////////////////////////////////////////////////////////////////////////
 		/////////////////////////////////////////////////////////////////////////////////
 		/////////////////////////////////////////////////////////////////////////////////
-		& > ul {
+		&_goods {
 			& > li {
 				& > ul {
 					display: flex; align-items: center; justify-content: space-between;
@@ -282,6 +282,11 @@
 				}
 			}
 		}
+		
+		&_pagination {
+			display: flex; justify-content: center;
+		}
+
 			 
 		/////////////////////////////////////////////////////////////////////////////////
 		/////////////////////////////////////////////////////////////////////////////////
@@ -290,12 +295,20 @@
 
 		.filter-add {
 			@extend .neo-bg;
-			text-align: center; @include font-type ($CormacB, 16px, 20px, 0); color: #9d988c;
-			margin-left: 0 !important; margin-right: 0 !important;
-			i {font-size: 9px; font-weight: 200;}
+			text-align: center; 
+			& > a {
+				@include font-type ($CormacB, 16px, 20px, 0); color: #9d988c;
+				margin-left: 0 !important; margin-right: 0 !important;
+				transition: .4s all ease;
+				&:hover {
+					color: $link-color;
+				}
+				i {font-size: 9px; font-weight: 200;}
+
+			}
 		}
 
-		& > ul {
+		&_goods  {
 			& > li {
 				@extend .neo-bg;
 				display: block; margin: 10px 0 !important; padding: 0 !important; overflow: hidden;
@@ -380,6 +393,20 @@
 							
 							i {color: #89a1b3; font-size: 18px;}
 						}
+					}
+				}
+			}
+		}
+
+		&_pagination {
+			padding-top: 25px;
+			li {
+				padding: 0 10px;
+				a {
+					font-size: 16px; color: $link-color;
+					transition: .4s all ease;
+					&:hover {
+						color: #000;
 					}
 				}
 			}
