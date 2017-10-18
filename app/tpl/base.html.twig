@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ru">
+{% set baseUrl = app.request.getScheme ~ '://' ~ app.request.getHttpHost ~ app.request.getBasePath %}
+{% set siteTitle = "Один+Один — Торговая благотворительная площадка" %}
+
+{% set appRoute = '' %}
+{% if app.request is defined %}
+    {% set appRoute = app.request.attributes.get('_route') %}
+{% endif %}
+
+<head>
+	<!-- META -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- FAVICON -->
+	<link rel="icon" href="{{ asset('favicon.ico') }}" type="image/x-icon">
+	<link rel="shortcut icon" href="{{ asset('favicon.ico') }}" type="image/x-icon">
+
+	<!-- SEO -->
+   {% block meta_description %}
+       <meta name="Description" content="">
+   {% endblock meta_description %}
+	<meta name="Author" content="Один+Один">
+	<meta name="Robots" content="index,follow">
+
+	<!-- CONFIG -->
+	<meta name="format-detection" content="telephone=no">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<!-- CSS -->
+	{% block stylesheets %}
+	    <link rel="stylesheet" href="{{ asset('css/main.css') }}">
+	    <link rel="stylesheet" href="{{ asset('css/print.css') }}" media="print">
+    {% endblock %}
+
+    <title>{% block title %}{% if pageTitle is defined %}{{ pageTitle ~ ' | ' ~ siteTitle }}{% else %}{{ siteTitle }}{% endif %}{% endblock %}</title>
+</head>
+
+<body class="on-load">
+
+	<!--[if lt IE 10]>
+	<p class="browsehappy">Вы используете <strong>УСТАРЕВШИЙ Internet Explorer</strong> браузер. Пожалуйста, <a href="http://browsehappy.com/">обновите ваш Браузер</a> чтобы увидеть больше возможностей на сайтах!</p>
+	<![endif]-->
+
+	<!-- Preloader  -->
+	<div class="preloader"></div>
+
+	<!-- Application -->
+    <div class="app {% block app_class %}{% endblock %}">
+
+        {% block header %}
+            <header class="header {% block header_class %}header-shop_edit js-header active{% endblock %}">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <a href="{{ path('homepage') }}" class="logo"><img src="{{ asset('img/logoBlue.svg') }}"></a>
+                            <nav class="menu-top">
+                                <a href="#" class="burger js-open_menu-top">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </a>
+                                <ul>
+                                    <li><a href="{{ path('page', {'slug': 'about'}) }}">О проекте</a></li>
+                                    <li><a href="{{ path('funds') }}">Фонды</a></li>
+
+                                    {% if is_granted("ROLE_USER") %}
+                                        <li><a href="{{ path('fos_user_profile_show') }}">Мой кабинет</a></li>
+                                            {% if user_service.isAdmin is defined and user_service.isAdmin %}
+                                                <li><a href="{{ path('sonata_admin_dashboard') }}">Админка</a></li>
+                                            {% endif %}
+                                        <li><a href="{{ logout_path() }}">Выйти</a></li>
+                                    {% else %}
+                                        <li><a href="{{ path('fos_user_security_login') }}">Войти</a></li>
+                                    {% endif %}
+
+                                    <li class="active3"><a href="#">Подать объявление</a></li>
+                                    <li class="active3"><a href="#">Вещи</a></li>
+                                </ul>
+                            </nav>
+                            
+                        </div>
+                    </div>
+                </div>
+            </header>
+        {% endblock %}
+
+        {% block body %}{% endblock %}
+        
+        {% block footer %}
+            <footer class="footer style2">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+            
+                            <ul class="footer-info">
+                                <li>
+                                    <p>Просто и безопасно</p>
+                                    <a href="#">Узнать больше <i class="fa fa-angle-right"></i></a>
+                                </li>
+                                <li class="logo">
+                                    <img src="{{ asset('img/footer-grey.png') }}">
+                                </li>
+                            </ul>
+            
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="footer-contacts">
+                                <ul>
+                                    <li>
+                                        <a href="#"><img src="{{ asset('img/logoBlue.svg') }}"></a>
+                                    </li>
+            
+                                    <li>
+                                        <ul>
+                                            <li><a href="{{ path('contacts') }}">Контакты</a></li>
+                                            <li><a href="{{ path('page', {'slug': 'terms'}) }}">Оферта</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <ul>
+                                            <li><a href="mailto:{{ store.store.email }}">E-mail: {{ store.store.email }}</a></li>
+                                            <li><a href="tel:{{ store.store.phone|replace({' ': '', ')': '', '(': '', '-': ''}) }}">Телефон: {{ store.store.phone }}</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+            
+                                <ul>
+                                    <li>
+                                        <ul>
+                                            <li><a href="{{ path('page', {'slug': 'privacy'}) }}">Политика конфидециальности</a></li>
+                                            <li><small>2017 &copy; ООО “ТБП”</small></li>
+                                        </ul>
+                                    </li>
+            
+                                    <li>
+                                        <ul class="soc">
+                                            <li><a href="http://vk.com/club147946456"><i class="fa fa-vk" aria-hidden="true"></i></a></li>
+                                            <li><a href="https://www.facebook.com/oneplus1.ru/"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                                            <li><a href="https://ok.ru/group/54493224042613"><i class="fa fa-odnoklassniki" aria-hidden="true"></i></a></li>
+                                            <!-- <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li> -->
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+            
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        {% endblock %}
+    </div>
+
+    {% block javascripts %}
+	    <script type="text/javascript" src="{{ asset('js/libs.min.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('js/main.js') }}"></script>
+    {% endblock javascripts %}
+
+</body>
+
+</html>

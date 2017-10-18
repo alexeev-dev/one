@@ -1,0 +1,1204 @@
+{% extends 'base.vadim.html.twig' %}
+
+{% block app_class %}land{% endblock %}
+
+{% block header_class %}header-land js-header active{% endblock %}
+{% block header_class %} {{ parent() }} xxx{% endblock %} {# <header class="header header-shop_edit js-header active xxx"> #}
+{% block header_class %} yyy {{ parent() }}{% endblock %} {# <header class="header yyy header-shop_edit js-header active"> #}
+
+{% block stylesheets %}
+    {{ parent() }}
+{% endblock %}
+
+{% block body %}
+    <div class="scroll-parallax">
+        <div class="scroll-parallax-inner">
+            <div class="intro slide" style="background: url('assets/img/blender.jpg') no-repeat center center #4086ff; background-size: contain;">
+                <hgroup>
+                    <h1>Превратите вещи в помощь  другим людям.</h1>
+                    <h2>Легко.</h2>
+                </hgroup>
+            </div>
+            <div class="intro slide" style="background: url(assets/img/wash.jpg) no-repeat center center #4086ff; background-size: contain;">
+                <hgroup>
+                    <h1>Превратите вещи в помощь другим людям.</h1>
+                    <h2>Легко.</h2>
+                </hgroup>
+            </div>
+            <a href="#" class="down">
+                <i class="icon icon-down"></i>
+            </a>
+        </div>
+
+        <div class="scroll-parallax-inner">
+            <div class="intro slide" style="background: url(assets/img/girl.jpg) no-repeat right bottom #4086ff; background-size: contain;">
+                <figure>
+                    <img src="assets/img/one.png" alt="">
+                    <figcaption>к здоровью</figcaption>
+                </figure>
+            </div>
+            <div class="intro slide" style="background: url(assets/img/dog.jpg) no-repeat center bottom #4086ff; background-size: contain;">
+                <figure>
+                    <img src="assets/img/one.png" alt="">
+                    <figcaption>к шансам найти&nbsp;хозяина</figcaption>
+                </figure>
+            </div>
+        </div>
+    </div>
+
+    <!-- LANDING CONTENT -->
+    <div class="land-content" scrollbar>
+        <div class="parallax-area"></div>
+        <section class="wr bg_white">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+
+                        <section class="working">
+                            <h2>Как это работает?</h2>
+                            <div class="working-wrapp">
+                                <div class="dotted-line"></div>
+
+                                <div class="placement">
+                                    <section>
+                                        <h4>Вы размещаете<br>
+                                            вещи на сайте</h4>
+                                        <a href="#">Разместь объявление <i class="icon icon-arrow-r"></i></a>
+                                    </section>
+                                    <figure>
+                                        <img src="{{ asset('img/boy.png') }}" alt="">
+                                    </figure>
+
+                                </div>
+
+                                <div class="purchase">
+                                    <figure>
+                                        <img src="assets/img/girl.png" alt="">
+                                    </figure>
+
+                                    <section>
+                                        <h4>Люди, которым нужны <br>
+                                            эти вещи, их покупают</h4>
+                                        <a href="#">Я как раз ищу кое-что <i class="icon icon-arrow-r"></i></a>
+                                    </section>
+                                </div>
+
+                                <div class="payment">
+                                    <section>
+                                        <h4>А оплата идёт на <br>
+                                            благотворительность</h4>
+                                        <a href="https://www.youtube.com/watch?v=Rk6_hdRtJOE" data-lity>Посмотреть видео <i class="icon icon-video"></i></a>
+                                    </section>
+
+                                    <figure>
+                                        <img src="assets/img/people.png" alt="">
+                                    </figure>
+                                </div>
+                            </div><!--/working-wrapp-->
+                        </section>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="wr ptb_80 bg-left" style="padding: 73px 0 54px;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <!-- <div class="row carousel found"> -->
+                        <div class="row">
+
+                            <div class="col-md-5">
+                                <section class="found-info">
+                                    <h2>Сегодня <br>
+                                        вы можете помочь <br>
+                                        этим людям</h2>
+                                    <a href="#">Благотворительные фонды <i class="icon icon-arrow-r"></i></a>
+                                </section>
+                            </div>
+
+                            <div class="col-md-7">
+                                <div class="carousel carousel-found">
+                                    <div class="carousel-wrap owl-carousel">
+                                        <!-- <div class="found-list-land owl-carousel"> -->
+
+                                        <div class="carousel-item">
+                                            <figure>
+                                                <img src="assets/img/participant-3.png" alt="">
+                                                <figcaption>Рома Ш.</figcaption>
+                                            </figure>
+                                            <figure>
+                                                <img src="assets/img/participant-2.png" alt="">
+                                                <figcaption>Настя К.</figcaption>
+                                            </figure>
+                                        </div>
+                                        <div class="carousel-item">
+                                            <figure>
+                                                <img src="assets/img/participant-4.png" alt="">
+                                                <figcaption>Рома Ш.</figcaption>
+                                            </figure>
+                                            <figure>
+                                                <img src="assets/img/participant-1.png" alt="">
+                                                <figcaption>Настя К.</figcaption>
+                                            </figure>
+                                        </div>
+                                        <div class="carousel-item">
+                                            <figure>
+                                                <img src="assets/img/participant-3.png" alt="">
+                                                <figcaption>Рома Ш.</figcaption>
+                                            </figure>
+                                            <figure>
+                                                <img src="assets/img/participant-2.png" alt="">
+                                                <figcaption>Настя К.</figcaption>
+                                            </figure>
+                                        </div>
+                                        <div class="carousel-item">
+                                            <figure>
+                                                <img src="assets/img/participant-3.png" alt="">
+                                                <figcaption>Рома Ш.</figcaption>
+                                            </figure>
+                                            <figure>
+                                                <img src="assets/img/participant-2.png" alt="">
+                                                <figcaption>Настя К.</figcaption>
+                                            </figure>
+                                        </div>
+                                        <div class="carousel-item">
+                                            <figure>
+                                                <img src="assets/img/participant-4.png" alt="">
+                                                <figcaption>Рома Ш.</figcaption>
+                                            </figure>
+                                            <figure>
+                                                <img src="assets/img/participant-1.png" alt="">
+                                                <figcaption>Настя К.</figcaption>
+                                            </figure>
+                                        </div>
+                                        <div class="carousel-item">
+                                            <figure>
+                                                <img src="assets/img/participant-3.png" alt="">
+                                                <figcaption>Рома Ш.</figcaption>
+                                            </figure>
+                                            <figure>
+                                                <img src="assets/img/participant-2.png" alt="">
+                                                <figcaption>Настя К.</figcaption>
+                                            </figure>
+                                        </div>
+                                        <!-- </div> -->
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+
+                            <!-- <ul class="navigation">
+                                <li class="active"></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                            </ul> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="wr bg_white">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+
+                        <section class="help">
+                            <h2>Что можно купить, или продать? </h2>
+
+                            <section class="wr bg_white">
+
+                                <!-- Navigation -->
+                                <nav class="menu-general style2">
+                                    <a href="#" class="js-open_menu-general">Все благотворительные направления <i class="fa fa-angle-down"></i></a>
+                                    <ul>
+                                        <li class="active">
+                                            <a href="#">
+                                                <span class="icon-buy-wrapp"><img src="assets/img/menu-img/img1.png" alt=""></span>
+                                                <span>Личные вещи</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <span class="icon-buy-wrapp"><img src="assets/img/menu-img/img2.png" alt=""></span>
+                                                <span>Электроника</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <span class="icon-buy-wrapp"><img src="assets/img/menu-img/img3.png" alt=""></span>
+                                                <span>Транспорт</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <span class="icon-buy-wrapp"><img src="assets/img/menu-img/img4.png" alt=""></span>
+                                                <span>Дом и дача</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <span class="icon-buy-wrapp"><img src="assets/img/menu-img/img5.png" alt=""></span>
+                                                <span>Детям</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <span class="icon-buy-wrapp"><img src="assets/img/menu-img/img6.png" alt=""></span>
+                                                <span>Животным</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <span class="icon-buy-wrapp"><img src="assets/img/menu-img/img7.png" alt=""></span>
+                                                <span>Бизнесу</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <span class="icon-buy-wrapp"><img src="assets/img/menu-img/img8.png" alt=""></span>
+                                                <span>Хобби и отдых</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <span class="icon-buy-wrapp"><img src="assets/img/menu-img/img9.png" alt=""></span>
+                                                <span>Вещи звезд</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <span class="icon-buy-wrapp"><img src="assets/img/menu-img/img10.png" alt=""></span>
+                                                <span>Токены</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <span class="icon-buy-wrapp"><img src="assets/img/menu-img/img11.png" alt=""></span>
+                                                <span>Вещи звезд</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <span class="icon-buy-wrapp"><img src="assets/img/menu-img/img12.png" alt=""></span>
+                                                <span>Токены</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </section>
+
+                        </section>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="wr bg-left">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+
+                        <section class="ads">
+
+                            <div class="ads-item">
+                                <section>
+                                    <img src="assets/img/ads/img1.png" alt="">
+                                    <h4>Объявления <br>
+                                        от пользователей</h4>
+                                    <p>Стандрартные объявления от физических лиц, публикуемые пользователями сайта</p>
+                                </section>
+                                <a href="#">Посмотреть</a>
+                            </div>
+
+                            <div class="ads-item">
+                                <section>
+                                    <img src="assets/img/ads/img2.png" alt="">
+                                    <h4>Объявления <br>
+                                        от пользователей</h4>
+                                    <p>Новые товары от производителей, часть стоимости которых пойдет
+                                        на благотворительнсть</p>
+                                </section>
+                                <a href="#">Посмотреть</a>
+                            </div>
+
+                            <div class="ads-item">
+                                <section>
+                                    <img src="assets/img/ads/img3.png" alt="">
+                                    <h4>Объявления <br>
+                                        от пользователей</h4>
+                                    <p>Объявления с ценой определяемой
+                                        по принципу аукциона</p>
+                                </section>
+                                <a href="#">Скоро...</a>
+                            </div>
+
+                        </section>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="wr bg_white">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+
+                        <section class="doings">
+
+                            <h2>События проекта</h2>
+
+                            <div class="doings-wr">
+
+                                <a href="#" class="doings-item">
+                                    <figure>
+                                        <img src="assets/img/doings/img1.png" alt="">
+                                    </figure>
+
+                                    <section>
+                                        <h4>Наталья Водянова
+                                            о проекте One+One</h4>
+                                        <p>Национальная акция «Подари детям заботу», сбор денежных средств сотрудниками московского офиса и Осенний праздник к</p>
+                                        <span class="date">12 октября 2017</span>
+                                    </section>
+                                </a>
+
+
+                                <a href="#" class="doings-item">
+                                    <figure>
+                                        <img src="assets/img/doings/img2.png" alt="">
+                                    </figure>
+
+                                    <section>
+                                        <h4>Анимационные фильмы Disney станут доступны в кино для людей с инвалидностью</h4>
+                                        <p>В рамках акции «Собери портфель!» было передано 5 371 канцелярских товаров на сумму около 300</p>
+                                        <span class="date">12 октября 2017</span>
+                                    </section>
+                                </a>
+
+
+
+                                <a href="#" class="doings-item">
+                                    <figure>
+                                        <img src="assets/img/doings/img3.png" alt="">
+                                    </figure>
+
+                                    <section>
+                                        <h4>Премия «СоУчастие» – общественная награда за вклад в развитие донорства крови</h4>
+                                        <p>В 2017 и 2018 году в России проводится прием заявок на основной, творческий и детский</p>
+                                        <span class="date">12 октября 2017</span>
+                                    </section>
+                                </a>
+
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="wr bg-right">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <section class="carousel carousel-testimonials_2">
+                            <div class="carousel-wrap">
+                                <div class="carousel-item">
+                                    <figure>
+                                        <img src="assets/img/participant-1.png" alt="">
+                                    </figure>
+
+                                    <section>
+                                        <h2>22 000 ₽ Семье Касаткиных</h2>
+                                        <p>Фонд «Благодарность» оказал благотворительную помощь в виде продуктов питания (макаронные изделия, крупы, яйца, фрукты, конфеты, печенье и др.) на общую сумму: 22 000 рублей, детям из неполной многодетной семьи Косаткиных, проживающей по адресу: Воронежская область, Таловский район, посёлок Солонцовка, улица Набережная, дом 2.</p>
+                                    </section>
+                                </div>
+
+                                <div class="carousel-item">
+                                    <figure>
+                                        <img src="assets/img/participant-2.png" alt="">
+                                    </figure>
+
+                                    <section>
+                                        <h2>22 000 ₽ Семье Касаткиных</h2>
+                                        <p>Фонд «Благодарность» оказал благотворительную помощь в виде продуктов питания (макаронные изделия, крупы, яйца, фрукты, конфеты, печенье и др.) на общую сумму: 22 000 рублей, детям из неполной многодетной семьи Косаткиных, проживающей по адресу: Воронежская область, Таловский район, посёлок Солонцовка, улица Набережная, дом 2.</p>
+                                    </section>
+                                </div>
+
+                                <div class="carousel-item">
+                                    <figure>
+                                        <img src="assets/img/participant-1.png" alt="">
+                                    </figure>
+
+                                    <section>
+                                        <h2>22 000 ₽ Семье Касаткиных</h2>
+                                        <p>Фонд «Благодарность» оказал благотворительную помощь в виде продуктов питания (макаронные изделия, крупы, яйца, фрукты, конфеты, печенье и др.) на общую сумму: 22 000 рублей, детям из неполной многодетной семьи Косаткиных, проживающей по адресу: Воронежская область, Таловский район, посёлок Солонцовка, улица Набережная, дом 2.</p>
+                                    </section>
+                                </div>
+                            </div>
+
+                            <ul class="navigation"></ul>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="wr bg_white">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <section class="carousel carousel-testimonials_1">
+                            <div class="carousel-wrap js-carousel">
+                                <div class="carousel-item">
+                                    <figure>
+                                        <img src="assets/img/participant-2.png" alt="">
+                                        <figcaption>Любовь <br> Маяковская <span>Администратор фонда “Дар”</span>	</figcaption>
+                                    </figure>
+
+                                    <section>
+                                        <p><i class="icon icon-quotes-left"></i><i class="icon icon-quotes-right"></i>Спасибо всем, кто помогает нашим детям! Деньги на их лечение собраны, и все необходимое оплачено или куплено. Без Вашей поддержки мы не смогли бы оплатить поиск и активацию донора костного мозга, лечение за рубежом, покупку дорогих лекарств и операций. Спасибо!</p>
+                                    </section>
+                                </div>
+                                <div class="carousel-item">
+                                    <figure>
+                                        <img src="assets/img/participant-1.png" alt="">
+                                        <figcaption>Любовь <br> Маяковская <span>Администратор фонда “Дар”</span>	</figcaption>
+                                    </figure>
+
+                                    <section>
+                                        <p><i class="icon icon-quotes-left"></i><i class="icon icon-quotes-right"></i>Спасибо всем, кто помогает нашим детям! Деньги на их лечение собраны, и все необходимое оплачено или куплено. Без Вашей поддержки мы не смогли бы оплатить поиск и активацию донора костного мозга, лечение за рубежом, покупку дорогих лекарств и операций. Спасибо!</p>
+                                    </section>
+                                </div>
+                                <div class="carousel-item">
+                                    <figure>
+                                        <img src="assets/img/participant-2.png" alt="">
+                                        <figcaption>Любовь <br> Маяковская <span>Администратор фонда “Дар”</span>	</figcaption>
+                                    </figure>
+
+                                    <section>
+                                        <p><i class="icon icon-quotes-left"></i><i class="icon icon-quotes-right"></i>Спасибо всем, кто помогает нашим детям! Деньги на их лечение собраны, и все необходимое оплачено или куплено. Без Вашей поддержки мы не смогли бы оплатить поиск и активацию донора костного мозга, лечение за рубежом, покупку дорогих лекарств и операций. Спасибо!</p>
+                                    </section>
+                                </div>
+                            </div>
+
+                            <ul class="navigation"></ul>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="wr bg-left">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+
+                        <section class="thanks">
+
+                            <div class="thanks-item">
+                                <section>
+                                    <p>Фонд «Благодарность» оказал благотворительную помощь в виде продуктов питания (макаронные изделия, крупы, яйца, фрукты, конфеты, печенье и др.) на общую сумму: 22 000 рублей, детям из неполной многодетной семьи Косаткиных, проживающей по адресу</p>
+                                </section>
+
+                                <figure>
+                                    <img src="assets/img/actris.png" alt="">
+                                    <figcaption>
+                                        Дженифер Лоуренс
+                                        <span>Актриса</span>
+                                    </figcaption>
+                                </figure>
+                            </div>
+
+                            <div class="thanks-item">
+                                <section>
+                                    <p>Оказал благотворительную помощь в виде продуктов питания (макаронные изделия, крупы, яйца, фрукты, конфеты, печенье и др.) на общую сумму: 22 000 рублей, детям из неполной многодетной семьи Косаткиных.</p>
+                                </section>
+
+                                <figure>
+                                    <img src="assets/img/actris.png" alt="">
+                                    <figcaption>
+                                        Дженифер Лоуренс
+                                        <span>Актриса</span>
+                                    </figcaption>
+                                </figure>
+                            </div>
+
+                            <div class="thanks-item">
+                                <section>
+                                    <p>«Благодарность» оказал помощь в виде продуктов питания (макаронные изделия, крупы, яйца, фрукты, конфеты, печенье и др.) на общую сумму: 22 000 рублей, детям из неполной многодетной семьи Косаткиных, проживающей по адресу</p>
+                                </section>
+
+                                <figure>
+                                    <img src="assets/img/actris.png" alt="">
+                                    <figcaption>
+                                        Дженифер Лоуренс
+                                        <span>Актриса</span>
+                                    </figcaption>
+                                </figure>
+                            </div>
+
+
+
+                        </section>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="wr bg_white">
+            <section class="about style2">
+
+                <div class="btn-wrapp">
+                    <a href="#"><span><i class="icon icon-header_plus-white"></i>Купить и помочь</a></span>
+
+                    <a href="#" class="light"><span><i class="icon icon-header_search-white"></i>Продать и помочь</a></span>
+                </div>
+
+                <ul class="social">
+                    <li><a href="#"><i class="fa fa-vk" aria-hidden="true"></i></a></li>
+                    <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                    <li><a href="#"><i class="fa fa-odnoklassniki" aria-hidden="true"></i></a></li>
+                    <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                </ul>
+
+                <div class="about-tell">
+                    <p>Ещё один способ сделать доброе дело &ndash; рассказать о нас</p>
+                </div>
+
+            </section>
+
+        </section>
+
+        <!-- <div class="footer-rasporka" style="background: #3f86ff;"></div> -->
+        <section class="pb_30 partners-style2">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <!-- Partners -->
+                        <ul>
+                            <li><a href="#"><img src="assets/img/for-footer/img1.png" alt=""></a></li>
+                            <li><a href="#"><img src="assets/img/for-footer/img2.png" alt=""></a></li>
+                            <li><a href="#"><img src="assets/img/for-footer/img3.png" alt=""></a></li>
+                            <li><a href="#"><img src="assets/img/for-footer/img4.png" alt=""></a></li>
+                            <li><a href="#"><img src="assets/img/for-footer/img5.png" alt=""></a></li>
+                            <li><a href="#"><img src="assets/img/for-footer/img1.png" alt=""></a></li>
+                            <li><a href="#"><img src="assets/img/for-footer/img2.png" alt=""></a></li>
+                            <li><a href="#"><img src="assets/img/for-footer/img3.png" alt=""></a></li>
+                            <li><a href="#"><img src="assets/img/for-footer/img4.png" alt=""></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer class="footer style2">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+
+                        <ul class="footer-info">
+                            <li>
+                                <p>Просто и безопасно</p>
+                                <a href="#">Узнать больше <i class="fa fa-angle-right"></i></a>
+                            </li>
+                            <li class="logo">
+                                <img src="assets/img/footer-grey.png">
+                            </li>
+                        </ul>
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+
+
+                        <div class="footer-contacts">
+                            <ul>
+                                <li>
+                                    <a href="#"><img src="assets/img/logoBlue.svg"></a>
+                                </li>
+
+                                <li>
+                                    <ul>
+                                        <li><a href="#">Контакты</a></li>
+                                        <li><a href="#">Оферта</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <ul>
+                                        <li><a href="mailto:contact@1plus1.shop">E-mail: contact@1plus1.shop</a></li>
+                                        <li><a href="tel:+79163493246">Телефон: +7 (916) 349-3246</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+
+                            <ul>
+                                <li>
+                                    <ul>
+                                        <li><a href="#">Политика конфидециальности</a></li>
+                                        <li><small>2017 &copy; ООО “ТБП”</small></li>
+                                    </ul>
+                                </li>
+
+                                <li>
+                                    <ul class="soc">
+                                        <li><a href="#"><i class="fa fa-vk" aria-hidden="true"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-odnoklassniki" aria-hidden="true"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+
+
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+    <!-- LANDING CONTENT -->
+
+    <!-- нИЖЕ НАДО ПЕРЕСМОТРЕТЬ -->
+
+    <section class="wr bg_white">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+
+                    <section class="working">
+                        <h2>Как это работает?</h2>
+                        <div class="working-wrapp">
+                            <div class="dotted-line"></div>
+
+                            <div class="placement">
+                                <section>
+                                    <h4>Вы размещаете<br>
+                                    вещи на сайте</h4>
+                                    <a href="#">Разместь объявление <i class="icon icon-arrow-r"></i></a>
+                                </section>
+                                <figure>
+                                    <img src="{{ asset('img/vadim/boy.png') }}" alt="">
+                                </figure>
+
+                            </div>
+
+                            <div class="purchase">
+                                <figure>
+                                    <img src="{{ asset('img/vadim/girl.png') }}" alt="">
+                                </figure>
+
+                                <section>
+                                    <h4>Люди, которым нужны <br>
+                                    эти вещи, их покупают</h4>
+                                    <a href="#">Я как раз ищу кое-что <i class="icon icon-arrow-r"></i></a>
+                                </section>
+                            </div>
+
+                            <div class="payment">
+                                <section>
+                                    <h4>А оплата идёт на <br>
+                                    благотворительность</h4>
+                                    <a href="https://www.youtube.com/watch?v=Rk6_hdRtJOE" data-lity>Посмотреть видео <i class="icon icon-video"></i></a>
+                                </section>
+
+                                <figure>
+                                    <img src="{{ asset('img/vadim/people.png') }}" alt="">
+                                </figure>
+                            </div>
+                        </div><!--/working-wrapp-->
+                    </section>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="wr ptb_80 bg-left" style="padding: 73px 0 54px;">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <!-- <div class="row carousel found"> -->
+                    <div class="row">
+                    
+                        <div class="col-md-5">
+                            <section class="found-info">
+                                <h2>Сегодня <br>
+                                вы можете помочь <br>
+                                этим людям</h2>
+                                <a href="#">Благотворительные фонды <i class="icon icon-arrow-r"></i></a>
+                            </section>
+                        </div>
+                            
+                        <div class="col-md-7">
+                            <div class="carousel carousel-found">
+                                <div class="carousel-wrap owl-carousel">
+                                    <!-- <div class="found-list-land owl-carousel"> -->
+                    
+                                        <div class="carousel-item">
+                                            <figure>
+                                                <img src="{{ asset('img/vadim/participant-3.png') }}" alt="">
+                                                <figcaption>Рома Ш.</figcaption>
+                                            </figure>
+                                            <figure>
+                                                <img src="{{ asset('img/vadim/participant-2.png') }}" alt="">
+                                                <figcaption>Настя К.</figcaption>
+                                            </figure>
+                                        </div>
+                                        <div class="carousel-item">
+                                            <figure>
+                                                <img src="{{ asset('img/vadim/participant-4.png') }}" alt="">
+                                                <figcaption>Рома Ш.</figcaption>
+                                            </figure>
+                                            <figure>
+                                                <img src="{{ asset('img/vadim/participant-1.png') }}" alt="">
+                                                <figcaption>Настя К.</figcaption>
+                                            </figure>
+                                        </div>
+                                        <div class="carousel-item">
+                                            <figure>
+                                                <img src="{{ asset('img/vadim/participant-3.png') }}" alt="">
+                                                <figcaption>Рома Ш.</figcaption>
+                                            </figure>
+                                            <figure>
+                                                <img src="{{ asset('img/vadim/participant-2.png') }}" alt="">
+                                                <figcaption>Настя К.</figcaption>
+                                            </figure>               
+                                        </div>
+                                        <div class="carousel-item">
+                                            <figure>
+                                                <img src="{{ asset('img/vadim/participant-3.png') }}" alt="">
+                                                <figcaption>Рома Ш.</figcaption>
+                                            </figure>
+                                            <figure>
+                                                <img src="{{ asset('img/vadim/participant-2.png') }}" alt="">
+                                                <figcaption>Настя К.</figcaption>
+                                            </figure>               
+                                        </div>
+                                        <div class="carousel-item">
+                                            <figure>
+                                                <img src="{{ asset('img/vadim/participant-4.png') }}" alt="">
+                                                <figcaption>Рома Ш.</figcaption>
+                                            </figure>
+                                            <figure>
+                                                <img src="{{ asset('img/vadim/participant-1.png') }}" alt="">
+                                                <figcaption>Настя К.</figcaption>
+                                            </figure>               
+                                        </div>
+                                        <div class="carousel-item">
+                                            <figure>
+                                                <img src="{{ asset('img/vadim/participant-3.png') }}" alt="">
+                                                <figcaption>Рома Ш.</figcaption>
+                                            </figure>
+                                            <figure>
+                                                <img src="{{ asset('img/vadim/participant-2.png') }}" alt="">
+                                                <figcaption>Настя К.</figcaption>
+                                            </figure>
+                                        </div>
+                                    <!-- </div> -->
+                                </div>
+                            </div>
+                        </div>
+                
+                        <!-- <ul class="navigation">
+                            <li class="active"></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                        </ul> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="wr bg_white">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+
+                    <section class="help">
+                        <h2>Что можно купить, или продать? </h2>
+
+                        <section class="wr bg_white">
+                            
+                            <!-- Navigation -->
+                            <nav class="menu-general style2">
+                                <a href="#" class="js-open_menu-general">Все благотворительные направления <i class="fa fa-angle-down"></i></a>
+                                <ul>
+                                    <li class="active">
+                                        <a href="#">
+                                            <span class="icon-buy-wrapp"><img src="{{ asset('img/vadim/menu-img/img1.png') }}" alt=""></span>
+                                            <span>Личные вещи</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <span class="icon-buy-wrapp"><img src="{{ asset('img/vadim/menu-img/menu-img/img2.png') }}" alt=""></span>
+                                            <span>Электроника</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <span class="icon-buy-wrapp"><img src="{{ asset('img/vadim/menu-img/menu-img/img3.png') }}" alt=""></span>
+                                            <span>Транспорт</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <span class="icon-buy-wrapp"><img src="{{ asset('img/vadim/menu-img/menu-img/img4.png') }}" alt=""></span>
+                                            <span>Дом и дача</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <span class="icon-buy-wrapp"><img src="{{ asset('img/vadim/menu-img/menu-img/img5.png') }}" alt=""></span>
+                                            <span>Детям</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <span class="icon-buy-wrapp"><img src="{{ asset('img/vadim/menu-img/menu-img/img6.png') }}" alt=""></span>
+                                            <span>Животным</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <span class="icon-buy-wrapp"><img src="{{ asset('img/vadim/menu-img/menu-img/img7.png') }}" alt=""></span>
+                                            <span>Бизнесу</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <span class="icon-buy-wrapp"><img src="{{ asset('img/vadim/menu-img/menu-img/img8.png') }}" alt=""></span>
+                                            <span>Хобби и отдых</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <span class="icon-buy-wrapp"><img src="{{ asset('img/vadim/menu-img/menu-img/img9.png') }}" alt=""></span>
+                                            <span>Вещи звезд</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <span class="icon-buy-wrapp"><img src="{{ asset('img/vadim/menu-img/menu-img/img10.png') }}" alt=""></span>
+                                            <span>Токены</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <span class="icon-buy-wrapp"><img src="{{ asset('img/vadim/menu-img/menu-img/img11.png') }}" alt=""></span>
+                                            <span>Вещи звезд</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <span class="icon-buy-wrapp"><img src="{{ asset('img/vadim/menu-img/menu-img/img12.png') }}" alt=""></span>
+                                            <span>Токены</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </section>
+
+                    </section>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="wr bg-left">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+
+                    <section class="ads">
+
+                        <div class="ads-item">
+                            <section>
+                                <img src="{{ asset('img/vadim/ads/img1.png') }}" alt="">
+                                <h4>Объявления <br>
+                                от пользователей</h4>
+                                <p>Стандрартные объявления от физических лиц, публикуемые пользователями сайта</p>
+                            </section>
+                            <a href="#">Посмотреть</a>
+                        </div>
+
+                        <div class="ads-item">
+                            <section>
+                                <img src="{{ asset('img/vadim/ads/img2.png') }}" alt="">
+                                <h4>Объявления <br>
+                                от пользователей</h4>
+                                <p>Новые товары от производителей, часть стоимости которых пойдет 
+                                на благотворительнсть</p>
+                            </section>
+                            <a href="#">Посмотреть</a>
+                        </div>
+
+                        <div class="ads-item">
+                            <section>
+                                <img src="{{ asset('img/vadim/ads/img3.png') }}" alt="">
+                                <h4>Объявления <br>
+                                от пользователей</h4>
+                                <p>Объявления с ценой определяемой
+                                по принципу аукциона</p>
+                            </section>
+                            <a href="#">Скоро...</a>
+                        </div>
+
+                    </section>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="wr bg_white">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    
+                    <section class="doings">
+
+                        <h2>События проекта</h2>
+
+                        <div class="doings-wr">
+
+                            <a href="#" class="doings-item">
+                                <figure>
+                                    <img src="{{ asset('img/vadim/doings/img1.png') }}" alt="">
+                                </figure>
+
+                                <section>
+                                    <h4>Наталья Водянова
+                                    о проекте One+One</h4>
+                                    <p>Национальная акция «Подари детям заботу», сбор денежных средств сотрудниками московского офиса и Осенний праздник к</p>
+                                    <span class="date">12 октября 2017</span>
+                                </section>
+                            </a>
+
+
+                            <a href="#" class="doings-item">
+                                <figure>
+                                    <img src="{{ asset('img/vadim/doings/img2.png') }}" alt="">
+                                </figure>
+
+                                <section>
+                                    <h4>Анимационные фильмы Disney станут доступны в кино для людей с инвалидностью</h4>
+                                    <p>В рамках акции «Собери портфель!» было передано 5 371 канцелярских товаров на сумму около 300</p>
+                                    <span class="date">12 октября 2017</span>
+                                </section>
+                            </a>
+
+
+
+                            <a href="#" class="doings-item">
+                                <figure>
+                                    <img src="{{ asset('img/vadim/doings/img3.png') }}" alt="">
+                                </figure>
+
+                                <section>
+                                    <h4>Премия «СоУчастие» – общественная награда за вклад в развитие донорства крови</h4>
+                                    <p>В 2017 и 2018 году в России проводится прием заявок на основной, творческий и детский</p>
+                                    <span class="date">12 октября 2017</span>
+                                </section>
+                            </a>
+                            
+                        </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="wr bg-right">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <section class="carousel carousel-testimonials_2">
+                        <div class="carousel-wrap">
+                            <div class="carousel-item">
+                                <figure>
+                                    <img src="{{ asset('img/vadim/participant-1.png') }}" alt="">
+                                </figure>
+                    
+                                <section>
+                                    <h2>22 000 ₽ Семье Касаткиных</h2>
+                                    <p>Фонд «Благодарность» оказал благотворительную помощь в виде продуктов питания (макаронные изделия, крупы, яйца, фрукты, конфеты, печенье и др.) на общую сумму: 22 000 рублей, детям из неполной многодетной семьи Косаткиных, проживающей по адресу: Воронежская область, Таловский район, посёлок Солонцовка, улица Набережная, дом 2.</p>
+                                </section>
+                            </div>
+                    
+                            <div class="carousel-item">
+                                <figure>
+                                    <img src="{{ asset('img/vadim/participant-2.png') }}" alt="">
+                                </figure>
+                    
+                                <section>
+                                    <h2>22 000 ₽ Семье Касаткиных</h2>
+                                    <p>Фонд «Благодарность» оказал благотворительную помощь в виде продуктов питания (макаронные изделия, крупы, яйца, фрукты, конфеты, печенье и др.) на общую сумму: 22 000 рублей, детям из неполной многодетной семьи Косаткиных, проживающей по адресу: Воронежская область, Таловский район, посёлок Солонцовка, улица Набережная, дом 2.</p>
+                                </section>
+                            </div>
+                    
+                            <div class="carousel-item">
+                                <figure>
+                                    <img src="{{ asset('img/vadim/participant-1.png') }}" alt="">
+                                </figure>
+                    
+                                <section>
+                                    <h2>22 000 ₽ Семье Касаткиных</h2>
+                                    <p>Фонд «Благодарность» оказал благотворительную помощь в виде продуктов питания (макаронные изделия, крупы, яйца, фрукты, конфеты, печенье и др.) на общую сумму: 22 000 рублей, детям из неполной многодетной семьи Косаткиных, проживающей по адресу: Воронежская область, Таловский район, посёлок Солонцовка, улица Набережная, дом 2.</p>
+                                </section>
+                            </div>
+                        </div>
+                    
+                        <ul class="navigation"></ul>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="wr bg_white">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <section class="carousel carousel-testimonials_1">
+                        <div class="carousel-wrap js-carousel">
+                            <div class="carousel-item">
+                                <figure>
+                                    <img src="{{ asset('img/vadim/participant-2.png') }}" alt="">
+                                    <figcaption>Любовь <br> Маяковская <span>Администратор фонда “Дар”</span>   </figcaption>
+                                </figure>
+                    
+                                <section>
+                                    <p><i class="icon icon-quotes-left"></i><i class="icon icon-quotes-right"></i>Спасибо всем, кто помогает нашим детям! Деньги на их лечение собраны, и все необходимое оплачено или куплено. Без Вашей поддержки мы не смогли бы оплатить поиск и активацию донора костного мозга, лечение за рубежом, покупку дорогих лекарств и операций. Спасибо!</p>
+                                </section>
+                            </div>
+                            <div class="carousel-item">
+                                <figure>
+                                    <img src="{{ asset('img/vadim/participant-1.png') }}" alt="">
+                                    <figcaption>Любовь <br> Маяковская <span>Администратор фонда “Дар”</span>   </figcaption>
+                                </figure>
+                    
+                                <section>
+                                    <p><i class="icon icon-quotes-left"></i><i class="icon icon-quotes-right"></i>Спасибо всем, кто помогает нашим детям! Деньги на их лечение собраны, и все необходимое оплачено или куплено. Без Вашей поддержки мы не смогли бы оплатить поиск и активацию донора костного мозга, лечение за рубежом, покупку дорогих лекарств и операций. Спасибо!</p>
+                                </section>
+                            </div>
+                            <div class="carousel-item">
+                                <figure>
+                                    <img src="{{ asset('img/vadim/participant-2.png') }}" alt="">
+                                    <figcaption>Любовь <br> Маяковская <span>Администратор фонда “Дар”</span>   </figcaption>
+                                </figure>
+                    
+                                <section>
+                                    <p><i class="icon icon-quotes-left"></i><i class="icon icon-quotes-right"></i>Спасибо всем, кто помогает нашим детям! Деньги на их лечение собраны, и все необходимое оплачено или куплено. Без Вашей поддержки мы не смогли бы оплатить поиск и активацию донора костного мозга, лечение за рубежом, покупку дорогих лекарств и операций. Спасибо!</p>
+                                </section>
+                            </div>
+                        </div>
+                    
+                        <ul class="navigation"></ul>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="wr bg-left">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+
+                    <section class="thanks">
+
+                        <div class="thanks-item">
+                            <section>
+                                <p>Фонд «Благодарность» оказал благотворительную помощь в виде продуктов питания (макаронные изделия, крупы, яйца, фрукты, конфеты, печенье и др.) на общую сумму: 22 000 рублей, детям из неполной многодетной семьи Косаткиных, проживающей по адресу</p>
+                            </section>
+
+                            <figure>
+                                <img src="{{ asset('img/vadim/actris.png') }}" alt="">
+                                <figcaption>
+                                    Дженифер Лоуренс
+                                    <span>Актриса</span>
+                                </figcaption>
+                            </figure>
+                        </div>
+
+                        <div class="thanks-item">
+                            <section>
+                                <p>Оказал благотворительную помощь в виде продуктов питания (макаронные изделия, крупы, яйца, фрукты, конфеты, печенье и др.) на общую сумму: 22 000 рублей, детям из неполной многодетной семьи Косаткиных.</p>
+                            </section>
+
+                            <figure>
+                                <img src="{{ asset('img/vadim/actris.png') }}" alt="">
+                                <figcaption>
+                                    Дженифер Лоуренс
+                                    <span>Актриса</span>
+                                </figcaption>
+                            </figure>
+                        </div>
+
+                        <div class="thanks-item">
+                            <section>
+                                <p>«Благодарность» оказал помощь в виде продуктов питания (макаронные изделия, крупы, яйца, фрукты, конфеты, печенье и др.) на общую сумму: 22 000 рублей, детям из неполной многодетной семьи Косаткиных, проживающей по адресу</p>
+                            </section>
+
+                            <figure>
+                                <img src="{{ asset('img/vadim/actris.png') }}" alt="">
+                                <figcaption>
+                                    Дженифер Лоуренс
+                                    <span>Актриса</span>
+                                </figcaption>
+                            </figure>
+                        </div>
+
+                    </section>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="wr bg_white">
+        <section class="about style2">
+
+            <div class="btn-wrapp">
+                <a href="#"><span><i class="icon icon-header_plus-white"></i>Купить и помочь</a></span>
+
+                <a href="#" class="light"><span><i class="icon icon-header_search-white"></i>Продать и помочь</a></span>
+            </div>
+            
+            <ul class="social">
+                <li><a href="#"><i class="fa fa-vk" aria-hidden="true"></i></a></li>
+                <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                <li><a href="#"><i class="fa fa-odnoklassniki" aria-hidden="true"></i></a></li>
+                <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+            </ul>
+
+            <div class="about-tell">
+                <p>Ещё один способ сделать доброе дело &ndash; рассказать о нас</p>
+            </div>
+
+        </section>
+
+    </section>
+
+{% endblock %}
+
+{% block footer %}{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+    <script type="text/javascript" src="{{ asset('js/landing.js') }}"></script>
+{% endblock %}
